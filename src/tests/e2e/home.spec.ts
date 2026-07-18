@@ -295,10 +295,16 @@ test('protects the CMS and exposes the secure administrative login', async ({
 }) => {
   await page.goto('/admin/dashboard');
   await expect(page).toHaveURL(/\/admin\/sign-in/);
-  await expect(
-    page.getByRole('textbox', { name: 'Email address' }),
-  ).toBeVisible();
-  await expect(
-    page.getByText('Development mode', { exact: true }),
-  ).toBeVisible();
+  if (process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    await expect(
+      page.getByRole('textbox', { name: 'Email address' }),
+    ).toBeVisible();
+    await expect(
+      page.getByText('Development mode', { exact: true }),
+    ).toBeVisible();
+  } else {
+    await expect(
+      page.getByRole('heading', { name: 'Autenticação indisponível' }),
+    ).toBeVisible();
+  }
 });
