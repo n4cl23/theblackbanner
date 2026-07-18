@@ -103,3 +103,6 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - `ContentEntity` persists the common editorial core for characters, creatures, kingdoms, collections, timeline events, and lore articles.
 - Media persistence stores descriptors and provider keys only. The storage abstraction rejects binary uploads until a dedicated provider is configured.
 - Public repository adapters remain independent from Prisma during this sprint; no automatic import of local mocks occurs.
+# Asset import boundary
+
+Final Asterheim media is consumed through `src/content/asterheim-media-manifest.ts`. Generated records are validated with Zod and remain independent of UI components. Editorial PDF extraction is stored separately in `review`; it does not bypass repositories or publication workflow. Private geometry and print artifacts are metadata-only and must use authenticated storage in a future delivery phase. See ADR 0007.

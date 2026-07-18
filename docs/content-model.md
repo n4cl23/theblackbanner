@@ -81,3 +81,6 @@ Supporting records exist only to validate relationships. Content from V1 was not
 Zod schemas in `src/features/content/domain/content-schemas.ts` own runtime validation. TypeScript models are inferred from those schemas. `validateContentIntegrity` verifies global slug uniqueness and cross-record references.
 
 Consumers depend on `ContentRepository`, never on local files. `LocalContentAdapter` validates the versioned dataset. Database and CMS adapters define future boundaries through injected loaders but establish no connection in this sprint.
+# Imported source records
+
+User-provided final documents are retained as traceable imported records with source path, page count, locale, content hash, provenance, and `review` status. They remain separate from canonical entities until an editor maps and approves them. Media records include stable ID, type, URL, poster, accessible alternative, caption, credit, dimensions/duration, locale, entity link, usage, and editorial status.

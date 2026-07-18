@@ -19,3 +19,6 @@ Vercel is the intended hosting platform. Sprint 0 performs no deployment and cha
 - Pull requests must pass the validation workflow before merge.
 - Preview deployments may be introduced in a future authorized sprint.
 - Production promotion and rollback procedures will be defined before first release.
+# Imported asset deployment
+
+Preview may include only files registered in the validated public media manifest. STL, 3MF, GLB, printer jobs, archives, executables, and system artifacts are prohibited from `public/`. Production promotion remains a separate explicit approval after Preview validation.
