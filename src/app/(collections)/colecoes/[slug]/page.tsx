@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { JsonLd } from '@/components/shared/json-ld';
+import { absoluteUrl } from '@/config/site';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { getCollectionPageData } from '@/features/collections/data/collection-repository';
 type Props = { params: Promise<{ slug: string }> };
@@ -31,8 +33,46 @@ export default async function CollectionPage({ params }: Props) {
   const data = await getCollectionPageData(slug);
   if (!data || !data.presentation) notFound();
   const { collection, presentation, miniatures, included, related } = data;
+  const schemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: collection.title,
+      description: collection.excerpt,
+      url: absoluteUrl(`/colecoes/${collection.slug}`),
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: miniatures.length,
+        itemListElement: miniatures.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.title,
+          url: absoluteUrl(`/miniaturas/${item.slug}`),
+        })),
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Coleções',
+          item: absoluteUrl('/colecoes'),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: collection.title,
+          item: absoluteUrl(`/colecoes/${collection.slug}`),
+        },
+      ],
+    },
+  ];
   return (
     <main>
+      <JsonLd data={schemas} />
       <section className="relative min-h-[82vh] overflow-hidden">
         <Image
           alt={`Banner provisório de ${collection.title}`}

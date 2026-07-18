@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 11 — Experience quality
+
+- Branch: `sprint-11-quality`
+- Scope: complete metadata baseline, robots, sitemap enhancements, RSS, 404, redirects, JSON-LD, security headers, accessibility corrections, performance budget, CI browser gate, and quality reports.
+- Accessibility: axe reported no serious or critical violations on five representative primary pages after contrast corrections.
+- Validation: lint, typecheck, 69 Vitest tests, 30 Playwright tests, and the 46-route production build passed on 2026-07-18.
+- Security: final `npm audit` reported 0 known vulnerabilities.
+- Performance: build artifacts were measured; Lighthouse could not complete because of host-level Chrome/Windows connection exhaustion, so category scores remain explicitly unverified.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 9 — Administrative CMS and persistence
 
 - Branch: `sprint-09-cms-persistence`

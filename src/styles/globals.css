@@ -117,6 +117,21 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* WCAG AA floor for subdued editorial copy on dark surfaces. */
+[class*='text-parchment-200/30'],
+[class*='text-parchment-200/35'],
+[class*='text-parchment-200/40'],
+[class*='text-parchment-200/45'],
+[class*='text-parchment-200/50'],
+[class*='text-parchment-200/55'],
+[class*='text-parchment-200/60'] {
+  color: color-mix(in srgb, var(--parchment-200) 72%, transparent) !important;
+}
+
+.text-aged-gold-500.opacity-35 {
+  opacity: 0.8 !important;
+}
+
 .kingdom-ash {
   --kingdom-accent: var(--ember-500);
 }

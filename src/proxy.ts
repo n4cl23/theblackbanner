@@ -1,7 +1,14 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-import { type NextFetchEvent, type NextRequest, NextResponse } from 'next/server';
+import { clerkMiddleware } from '@clerk/nextjs/server';
+import {
+  type NextFetchEvent,
+  type NextRequest,
+  NextResponse,
+} from 'next/server';
 
-const isProtectedAdminRoute = createRouteMatcher(['/admin((?!/sign-in).*)']);
+function isProtectedAdminRoute(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+  return path.startsWith('/admin') && !path.startsWith('/admin/sign-in');
+}
 
 const protectedAdminProxy = clerkMiddleware(async (auth, request) => {
   if (isProtectedAdminRoute(request)) await auth.protect();
@@ -12,6 +19,9 @@ export default function proxy(request: NextRequest, event: NextFetchEvent) {
     !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
     !process.env.CLERK_SECRET_KEY
   ) {
+    if (isProtectedAdminRoute(request)) {
+      return NextResponse.redirect(new URL('/admin/sign-in', request.url));
+    }
     return NextResponse.next();
   }
 

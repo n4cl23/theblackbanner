@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { JsonLd } from '@/components/shared/json-ld';
+import { absoluteUrl } from '@/config/site';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { getLoreArticleData } from '@/features/lore/data/lore-repository';
 type Props = { params: Promise<{ slug: string }> };
@@ -24,8 +26,39 @@ export default async function LoreArticlePage({ params }: Props) {
   const data = await getLoreArticleData(slug);
   if (!data) notFound();
   const { article, mentioned, related } = data;
+  const schemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: article.title,
+      description: article.excerpt,
+      dateCreated: article.createdAt,
+      dateModified: article.updatedAt,
+      inLanguage: article.locale,
+      mainEntityOfPage: absoluteUrl(`/lore/${article.slug}`),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Lore',
+          item: absoluteUrl('/lore'),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: article.title,
+          item: absoluteUrl(`/lore/${article.slug}`),
+        },
+      ],
+    },
+  ];
   return (
     <main className="mx-auto max-w-[80rem] px-5 py-16">
+      <JsonLd data={schemas} />
       <header className="mx-auto max-w-[52rem] py-16 text-center">
         <p className="text-aged-gold-500 text-xs uppercase">
           Artigo provisório · {article.locale}

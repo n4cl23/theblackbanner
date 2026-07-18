@@ -10,7 +10,9 @@ import {
   featuredStories,
 } from '@/content/home.mock';
 import { SiteHeader } from '@/components/layout/site-header';
+import { JsonLd } from '@/components/shared/json-ld';
 import { ImageWithFallback } from '@/components/ui/interactive';
+import { siteConfig } from '@/config/site';
 import {
   Badge,
   Container,
@@ -21,8 +23,7 @@ import {
   SkipLink,
 } from '@/components/ui/primitives';
 
-const provisionalBaseUrl =
-  process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
+const provisionalBaseUrl = siteConfig.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(provisionalBaseUrl),
@@ -70,6 +71,22 @@ const creativeWorkJsonLd = {
     'Digital dark-fantasy universe and editorial experience in development.',
   isAccessibleForFree: true,
   url: provisionalBaseUrl,
+} as const;
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteConfig.creator,
+  url: siteConfig.url,
+} as const;
+
+const heroImageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: `${siteConfig.url}${siteConfig.socialImage}`,
+  caption: 'Asterheim beyond a valley covered in ash',
+  width: 1920,
+  height: 818,
 } as const;
 
 function MockLabel() {
@@ -616,13 +633,13 @@ export default function HomePage() {
         <NewsletterSection />
       </main>
       <SiteFooter />
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        type="application/ld+json"
-      />
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkJsonLd) }}
-        type="application/ld+json"
+      <JsonLd
+        data={[
+          websiteJsonLd,
+          creativeWorkJsonLd,
+          organizationJsonLd,
+          heroImageJsonLd,
+        ]}
       />
     </>
   );

@@ -298,5 +298,7 @@ test('protects the CMS and exposes the secure administrative login', async ({
   await expect(
     page.getByRole('textbox', { name: 'Email address' }),
   ).toBeVisible();
-  await expect(page.getByText('Development mode')).toBeVisible();
+  await expect(
+    page.getByText('Development mode', { exact: true }),
+  ).toBeVisible();
 });

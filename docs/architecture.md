@@ -1,5 +1,9 @@
 # Architecture
 
+## Quality boundary
+
+`src/config/site.ts` is the canonical public-origin and brand source for metadata, structured data, sitemap, robots, and RSS. Public SEO uses App Router metadata APIs; JSON-LD is serialized through the shared escaped renderer. Global defensive headers live in `next.config.ts`, while authentication and authorization remain enforced at the proxy and server-action boundaries.
+
 The Black Banner V2 is a new Next.js application. It has no technical dependency on V1.
 
 ## Principles
