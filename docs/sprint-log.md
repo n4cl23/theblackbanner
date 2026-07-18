@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 10 — Internationalization
+
+- Branch: `sprint-10-internationalization`
+- Scope: real Portuguese, English, and Spanish routes, translated semantic slugs, route-preserving selector, localized interface/editorial examples, explicit missing-translation state, localized formats, SEO, sitemap, tests, and documentation.
+- CMS: multilingual Zod contracts cover locale status, original content, linked translation, incompleteness, and preview; no operational CMS or database was created because Sprint 9 was not provided.
+- Content: English and Spanish translations remain clearly marked mock, draft, review, or unavailable as appropriate.
+- SEO: localized canonical, hreflang, `x-default`, Open Graph locale, and sitemap entries are generated.
+- Validation: formatting, lint, typecheck, 60 Vitest tests, 20 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 8 — Timeline and connected lore
 
 - Branch: `sprint-08-timeline-lore`

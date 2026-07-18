@@ -1,5 +1,11 @@
 # Content model
 
+## Localized editorial variants
+
+Future CMS documents retain an `originalLocale` and `originalId`. Every locale variant owns its status, slug, title, body, alt text, translation link, and incompleteness flag. Previewable locales are explicit.
+
+Supported locale statuses are `unavailable`, `draft`, `review`, and `published`. Interface copy never falls back to another language. Editorial fallback is allowed only through an explicit unavailable or identified fallback state; Sprint 10 implements the unavailable state and does not silently substitute content.
+
 Sprint 3 defines local, versioned editorial contracts only. There is no database, ORM, migration, CMS connection, authentication, or administrative workflow.
 
 All records in the current dataset use `provenance: "mock"`, `noIndex: true`, and provisional copy. They validate architecture and do not establish official canon.

@@ -81,3 +81,12 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - Narrative relationships are semantic, navigable editorial records; no graph engine, canvas renderer, or graph database is installed.
 - Unified search operates only over serialized local repository records and includes characters, creatures, kingdoms, events, articles, and collections.
 - Chronicle markers use versioned, per-story local-storage keys. They contain only a chapter index and no user identity.
+
+## Internationalization
+
+- Locale-first public routes use `pt-br`, `en`, and `es`; a semantic route registry maps translated slugs and preserves destinations during language changes.
+- Interface dictionaries, editorial variants, route slugs, metadata, alt text, dates, and numbers have independent localization boundaries.
+- The root document uses `lang="und"`; each localized application boundary declares the precise language because the root layout cannot derive a static locale safely.
+- Missing editorial translations render an explicit localized unavailable state. Draft and review variants carry visible status and never masquerade as approved content.
+- Localized routes emit canonical, hreflang, `x-default`, Open Graph locale data, and sitemap entries without middleware or runtime translation services.
+- CMS multilingual support is a Zod contract only; no CMS connection or persistence was introduced.

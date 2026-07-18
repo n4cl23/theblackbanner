@@ -243,3 +243,49 @@ test('reads chronicles with keyboard navigation and a local marker', async ({
     page.getByRole('button', { name: /Capítulo anterior/i }),
   ).toBeVisible();
 });
+
+test('switches real interface content between all locales', async ({
+  page,
+}) => {
+  await page.goto('/pt-br');
+  await expect(
+    page.getByRole('heading', { name: 'Toda bandeira lança uma sombra' }),
+  ).toBeVisible();
+  await page.getByLabel('Language').selectOption('en');
+  await expect(page).toHaveURL(/\/en$/);
+  await expect(
+    page.getByRole('heading', { name: 'Every banner casts a shadow' }),
+  ).toBeVisible();
+  await page.getByLabel('Language').selectOption('es');
+  await expect(page).toHaveURL(/\/es$/);
+  await expect(
+    page.getByRole('heading', { name: 'Toda bandera proyecta una sombra' }),
+  ).toBeVisible();
+});
+
+test('preserves translated semantic routes when changing language', async ({
+  page,
+}) => {
+  await page.goto('/pt-br/lore/estradas-e-ruinas');
+  await page.getByLabel('Language').selectOption('en');
+  await expect(page).toHaveURL('/en/lore/roads-and-ruins');
+  await expect(
+    page.getByRole('heading', { name: 'Roads and Ruins' }),
+  ).toBeVisible();
+  await expect(
+    page.getByText('Draft translation', { exact: true }),
+  ).toBeVisible();
+});
+
+test('shows an explicit unavailable state without Portuguese fallback', async ({
+  page,
+}) => {
+  await page.goto('/es/lore/caminos-y-ruinas');
+  await expect(
+    page.getByRole('heading', {
+      name: 'Contenido no disponible en este idioma',
+    }),
+  ).toBeVisible();
+  await expect(page.getByText(/estradas de Asterheim/i)).toHaveCount(0);
+  await expect(page.locator('[lang="es"]')).toBeVisible();
+});
