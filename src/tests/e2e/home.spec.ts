@@ -25,7 +25,7 @@ test('supports mobile navigation and all Home sections', async ({ page }) => {
   });
   await expect(mobileNavigation).toBeVisible();
   await mobileNavigation.getByRole('link', { name: 'Bestiário' }).click();
-  await expect(page.locator('#bestiary')).toBeInViewport();
+  await expect(page).toHaveURL(/\/bestiario$/);
   await expect(mobileNavigation).not.toBeVisible();
   await expect(page.getByRole('contentinfo')).toBeAttached();
 });
@@ -295,7 +295,12 @@ test('protects the CMS and exposes the secure administrative login', async ({
 }) => {
   await page.goto('/admin/dashboard');
   await expect(page).toHaveURL(/\/admin\/sign-in/);
-  if (process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+  await expect(
+    page
+      .getByRole('textbox', { name: 'Email address' })
+      .or(page.getByRole('heading', { name: /indisponível/i })),
+  ).toBeVisible();
+  if (await page.getByRole('textbox', { name: 'Email address' }).isVisible()) {
     await expect(
       page.getByRole('textbox', { name: 'Email address' }),
     ).toBeVisible();

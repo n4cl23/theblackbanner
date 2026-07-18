@@ -1,10 +1,14 @@
 import type { ReactNode } from 'react';
-import { CharacterHeader } from '@/features/characters/components/character-header';
+
+import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
+
 export default function ArchivesLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <CharacterHeader />
+      <SiteHeader position="sticky" />
       {children}
+      <SiteFooter />
     </>
   );
 }

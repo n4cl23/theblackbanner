@@ -10,6 +10,7 @@ import {
   featuredStories,
 } from '@/content/home.mock';
 import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter as UnifiedSiteFooter } from '@/components/layout/site-footer';
 import { JsonLd } from '@/components/shared/json-ld';
 import { ImageWithFallback } from '@/components/ui/interactive';
 import { siteConfig } from '@/config/site';
@@ -561,7 +562,7 @@ function NewsletterSection() {
   );
 }
 
-function SiteFooter() {
+export function LegacyHomeFooter() {
   return (
     <footer className="border-t border-stone-600/25 bg-black py-14">
       <Container>
@@ -637,7 +638,7 @@ export default function HomePage() {
         <EditorialSection />
         <NewsletterSection />
       </main>
-      <SiteFooter />
+      <UnifiedSiteFooter />
       <JsonLd
         data={[
           websiteJsonLd,

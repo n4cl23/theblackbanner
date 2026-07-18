@@ -44,12 +44,14 @@ export default async function CollectionsPage() {
           — sem venda ou distribuição nesta etapa.
         </p>
       </header>
-      <Suspense fallback={<p>Organizando coleções…</p>}>
-        <CollectionExplorer
-          categories={collectionCategories}
-          records={records}
-        />
-      </Suspense>
+      <div id="miniaturas">
+        <Suspense fallback={<p>Organizando coleções…</p>}>
+          <CollectionExplorer
+            categories={collectionCategories}
+            records={records}
+          />
+        </Suspense>
+      </div>
     </main>
   );
 }

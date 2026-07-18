@@ -1,11 +1,14 @@
 import type { ReactNode } from 'react';
-import { WorldHeader } from '@/features/world/components/world-header';
+
+import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
 
 export default function WorldLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <WorldHeader />
+      <SiteHeader position="sticky" />
       {children}
+      <SiteFooter />
     </>
   );
 }
