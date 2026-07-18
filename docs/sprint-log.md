@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 6 — Bestiary and Atlas of Asterheim
+
+- Branch: `sprint-06-bestiary-atlas`
+- Scope: filtered creature codex, four rich dynamic species pages, kingdom Atlas, three biome experiences, accessible field lightbox, 3D contract, SEO, tests, and documentation.
+- Content: taxonomy, anatomy, behavior, evidence, biomes, migrations, and legends are explicitly provisional mocks.
+- 3D: interface and GLB contract only; no renderer or heavy dependency was installed.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 41 Vitest tests, 11 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 5 — Characters and Guardians
 
 - Branch: `sprint-05-characters-guardians`

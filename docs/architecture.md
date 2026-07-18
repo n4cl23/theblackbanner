@@ -58,3 +58,10 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - Discovery filtering is the only client boundary; filter state is encoded in URL query parameters.
 - Typed presentation mocks provide non-canonical biography, personality, treatment, and media framing.
 - Current media uses the shared image fallback; video and 3D remain explicit empty extension slots.
+
+## Bestiary and Atlas
+
+- Creature and kingdom-biome projections read only from `ContentRepository` and resolve related records in parallel.
+- Codex filters are a client boundary with shareable URL state; pages and metadata remain server-rendered.
+- Field evidence uses the shared optimized-image fallback inside a keyboard-operable lightbox.
+- The 3D boundary is a typed GLB contract with no viewer dependency until a real test asset exists.

@@ -104,3 +104,56 @@ test('keeps character filters and profile content usable on mobile', async ({
     page.getByRole('heading', { name: 'Personalidade' }),
   ).toBeVisible();
 });
+
+test('filters the codex and inspects creature field evidence', async ({
+  page,
+}) => {
+  await page.goto('/bestiario');
+  await page.getByLabel('Nível de ameaça').selectOption('severe');
+  await expect(page).toHaveURL(/ameaca=severe/);
+  await page.getByRole('link', { name: /The Fog Stalker/i }).click();
+  await expect(page.getByRole('heading', { name: 'Taxonomia' })).toBeVisible();
+  await page
+    .getByRole('button', { name: /Abrir evidência/ })
+    .first()
+    .click();
+  await expect(
+    page.getByRole('dialog', { name: 'Visualizador de evidência' }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Fechar galeria' }),
+  ).toBeFocused();
+  await page.keyboard.press('ArrowRight');
+  await expect(
+    page.getByText('Estudo ambiental associado ao habitat.'),
+  ).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).toBeHidden();
+});
+
+test('connects Atlas biomes to kingdoms and endemic species', async ({
+  page,
+}) => {
+  await page.goto('/atlas');
+  await page.getByRole('link', { name: /Tempestade e ferro/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Tempestade e ferro', level: 1 }),
+  ).toBeVisible();
+  await expect(page.getByText('Espécie dominante')).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: /The Fog Stalker/i }),
+  ).toBeVisible();
+});
+
+test('keeps the bestiary and Atlas usable on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/bestiario');
+  await expect(page.getByLabel('Documentação')).toBeVisible();
+  await page.goto('/atlas/kingdom-veiled-crown');
+  await expect(
+    page.getByRole('heading', {
+      name: 'Floresta ancestral e abismo',
+      level: 1,
+    }),
+  ).toBeVisible();
+});
