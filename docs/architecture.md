@@ -51,3 +51,10 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - Related regions, factions, characters, creatures, events, and gallery records are resolved in a cached world projection.
 - The SVG map has an equivalent list model for accessibility and mobile fallback.
 - Geographic layers beyond kingdom regions remain future extension points.
+
+## Character archives
+
+- Character and Guardian detail projections resolve repository records and related entities in parallel and are cached per request.
+- Discovery filtering is the only client boundary; filter state is encoded in URL query parameters.
+- Typed presentation mocks provide non-canonical biography, personality, treatment, and media framing.
+- Current media uses the shared image fallback; video and 3D remain explicit empty extension slots.

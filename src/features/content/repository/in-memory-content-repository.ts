@@ -5,9 +5,13 @@ import type {
   Creature,
   Faction,
   GalleryItem,
+  Guardian,
   Kingdom,
   Location,
   Region,
+  Relationship,
+  Weapon,
+  PrintProfile,
   TimelineEvent,
 } from '@/features/content/domain/content-types';
 import type { ContentRepository } from '@/features/content/repository/content-repository';
@@ -79,6 +83,22 @@ export class InMemoryContentRepository implements ContentRepository {
 
   getGalleryItems(): Promise<readonly GalleryItem[]> {
     return Promise.resolve(byOrder(this.dataset.galleryItems));
+  }
+
+  getGuardians(): Promise<readonly Guardian[]> {
+    return Promise.resolve(byOrder(this.dataset.guardians));
+  }
+
+  getWeapons(): Promise<readonly Weapon[]> {
+    return Promise.resolve(byOrder(this.dataset.weapons));
+  }
+
+  getRelationships(): Promise<readonly Relationship[]> {
+    return Promise.resolve(byOrder(this.dataset.relationships));
+  }
+
+  getPrintProfiles(): Promise<readonly PrintProfile[]> {
+    return Promise.resolve(byOrder(this.dataset.printProfiles));
   }
 }
 

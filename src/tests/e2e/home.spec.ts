@@ -68,3 +68,39 @@ test('uses the accessible list as the mobile map fallback', async ({
   await expect(page.getByLabel('Mapa interativo de Asterheim')).toBeHidden();
   await expect(page.getByText('Legenda e alternativa acessível')).toBeVisible();
 });
+
+test('filters characters through URL state and opens a rich profile', async ({
+  page,
+}) => {
+  await page.goto('/personagens');
+  await page.getByLabel('Buscar personagens').fill('Watcher');
+  await expect(page).toHaveURL(/q=Watcher/);
+  await page.getByRole('link', { name: /The Far Watcher/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Personalidade' }),
+  ).toBeVisible();
+  await expect(page.getByText('Conflitos internos')).toBeVisible();
+  await expect(page.getByText(/Crédito:/)).toBeVisible();
+});
+
+test('renders the monumental guardian experience', async ({ page }) => {
+  await page.goto('/guardioes');
+  await page.getByRole('link', { name: /Guardian of the Black Gate/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Guardian of the Black Gate', level: 1 }),
+  ).toBeVisible();
+  await expect(page.getByText('Vínculo com as Coroas')).toBeVisible();
+  await expect(page.getByText('Relíquia')).toBeVisible();
+});
+
+test('keeps character filters and profile content usable on mobile', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/personagens');
+  await expect(page.getByLabel('Reino')).toBeVisible();
+  await page.getByRole('link', { name: /The Far Watcher/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Personalidade' }),
+  ).toBeVisible();
+});

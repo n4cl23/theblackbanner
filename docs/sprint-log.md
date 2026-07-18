@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 5 — Characters and Guardians
+
+- Branch: `sprint-05-characters-guardians`
+- Scope: asymmetric character archive, URL-synchronized discovery, rich dynamic profiles, monumental Guardian archive, media framing, repository projections, SEO, tests, and documentation.
+- Content: biographies, personality dimensions, epithets, motivations, oaths, relics, and visual assignments are explicitly provisional mocks.
+- Media: optimized images include fallback, caption, and credit; video/WebM/GIF and 3D slots are prepared without inventing assets.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 36 Vitest tests, 8 Playwright tests, and the production build passed on 2026-07-17.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 4 — Kingdoms and map of Asterheim
 
 - Branch: `sprint-04-kingdoms-map`
