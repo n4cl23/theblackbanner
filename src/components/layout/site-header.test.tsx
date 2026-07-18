@@ -10,16 +10,29 @@ describe('SiteHeader', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Asterheim' })).toHaveAttribute(
       'href',
-      '#asterheim',
+      '/world',
     );
     expect(
-      screen.getByRole('button', {
-        name: 'Language selector — prepared for future localization',
+      screen.getByRole('link', {
+        name: 'Selecionar idioma',
       }),
     ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Busca' })).toBeInTheDocument();
+  });
+
+  it('exposes recovered areas and closes the mobile menu with Escape', () => {
+    render(<SiteHeader />);
+    fireEvent.click(screen.getByRole('button', { name: 'Open navigation' }));
+    const mobile = screen.getByRole('navigation', {
+      name: 'Mobile navigation',
+    });
+    expect(mobile).toHaveTextContent('Atlas');
+    expect(mobile).toHaveTextContent('Miniaturas');
+    expect(mobile).toHaveTextContent('Guardiões');
+    fireEvent.keyDown(window, { key: 'Escape' });
     expect(
-      screen.getByRole('link', { name: 'Search — coming in a future sprint' }),
-    ).toBeInTheDocument();
+      screen.queryByRole('navigation', { name: 'Mobile navigation' }),
+    ).not.toBeInTheDocument();
   });
 
   it('opens, navigates, and closes the mobile menu', () => {

@@ -127,3 +127,12 @@
 - Structurally validated 145 GLB files and withheld all model/print binaries.
 - Connected the approved environmental artwork to the home hero and social metadata.
 - Production was not changed.
+
+# Sprint 13 — Auditoria funcional e recuperação da navegação
+
+- Branch: `sprint-13-navigation-audit`
+- Inventário recursivo de rotas públicas, localizadas, internas, administrativas e do health check.
+- Fonte tipada única para a hierarquia pública; header, mobile e footer consolidados nos grupos públicos.
+- Auditorias específicas de miniaturas e Atlas registradas sem antecipar as Sprints 14 e 15.
+- Validação local: lint aprovado; typecheck aprovado; 75/75 testes unitários; build com 46 páginas estáticas; Playwright 21/21 cenários desktop e 2/2 mobile aprovados em execuções combinadas.
+- Production não alterada.
