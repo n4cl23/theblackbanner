@@ -26,3 +26,7 @@ CI runs lint, typecheck, unit/component tests, a production build, and the Chrom
 - `reports/security`: headers, administrative boundaries, and dependency audit.
 
 Lighthouse category scores may only be documented when a run completes. A failed or blocked run is recorded as a risk, never estimated from bundle sizes or other tools.
+
+# CMS integration tests in CI
+
+The credential-free GitHub Actions workflow runs all unit and contract tests but skips the PostgreSQL integration case when `CI=true`. The Prisma CMS integration remains active locally or in an authorized environment with `DATABASE_URL`; CI must not depend on database secrets.

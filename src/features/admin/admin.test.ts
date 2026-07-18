@@ -17,7 +17,8 @@ import {
 import { getPrismaClient } from '@/features/admin/persistence/prisma';
 
 config({ path: '.env.local', quiet: true });
-const runIntegration = Boolean(process.env.DATABASE_URL);
+const runIntegration =
+  Boolean(process.env.DATABASE_URL) && process.env.CI !== 'true';
 describe('admin security and CMS', () => {
   it('enforces the initial role matrix', () => {
     expect(can(AdminRole.ADMIN, 'publish')).toBe(true);
@@ -64,11 +65,13 @@ describe('admin security and CMS', () => {
 });
 
 describe.skipIf(!runIntegration)('Prisma CMS integration', () => {
-  const prisma = getPrismaClient();
-  const repository = new PrismaCmsRepository();
+  let prisma: ReturnType<typeof getPrismaClient>;
+  let repository: PrismaCmsRepository;
   let actorId = '';
   let entityId = '';
   beforeAll(async () => {
+    prisma = getPrismaClient();
+    repository = new PrismaCmsRepository();
     const actor = await prisma.adminUser.upsert({
       where: { externalAuthId: 'integration-test-admin' },
       update: {},
