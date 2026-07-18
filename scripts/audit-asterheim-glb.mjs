@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
 
-const inventory = JSON.parse(await fs.readFile('reports/asterheim-assets-inventory.json', 'utf8'));
+const inventory = JSON.parse(
+  await fs.readFile('reports/asterheim-assets-inventory.json', 'utf8'),
+);
 const glbs = inventory.filter((item) => item.extension === '.glb');
 const results = [];
 
@@ -14,8 +16,19 @@ for (const item of glbs) {
     const declaredLength = header.readUInt32LE(8);
     const jsonLength = header.readUInt32LE(12);
     const chunkType = header.toString('ascii', 16, 20);
-    if (magic !== 'glTF' || version !== 2 || chunkType !== 'JSON' || declaredLength !== item.sizeBytes || jsonLength > 64 * 1024 * 1024) {
-      results.push({ relativePath: item.relativePath, valid: false, reason: 'invalid-header-or-length', sizeBytes: item.sizeBytes });
+    if (
+      magic !== 'glTF' ||
+      version !== 2 ||
+      chunkType !== 'JSON' ||
+      declaredLength !== item.sizeBytes ||
+      jsonLength > 64 * 1024 * 1024
+    ) {
+      results.push({
+        relativePath: item.relativePath,
+        valid: false,
+        reason: 'invalid-header-or-length',
+        sizeBytes: item.sizeBytes,
+      });
       continue;
     }
     const jsonBuffer = Buffer.alloc(jsonLength);
@@ -32,15 +45,31 @@ for (const item of glbs) {
       materials: document.materials?.length ?? 0,
       textures: document.textures?.length ?? 0,
       animations: document.animations?.length ?? 0,
-      externalUris: (document.buffers ?? []).filter((entry) => entry.uri).length + (document.images ?? []).filter((entry) => entry.uri).length,
+      externalUris:
+        (document.buffers ?? []).filter((entry) => entry.uri).length +
+        (document.images ?? []).filter((entry) => entry.uri).length,
       publicStatus: 'withheld-pending-commercial-authorization',
     });
   } catch (error) {
-    results.push({ relativePath: item.relativePath, valid: false, reason: error.name, sizeBytes: item.sizeBytes });
+    results.push({
+      relativePath: item.relativePath,
+      valid: false,
+      reason: error.name,
+      sizeBytes: item.sizeBytes,
+    });
   } finally {
     await handle.close();
   }
 }
 
-await fs.writeFile('reports/asterheim-glb-audit.json', `${JSON.stringify(results, null, 2)}\n`);
-console.log(JSON.stringify({ files: results.length, valid: results.filter((item) => item.valid).length, invalid: results.filter((item) => !item.valid).length }));
+await fs.writeFile(
+  'reports/asterheim-glb-audit.json',
+  `${JSON.stringify(results, null, 2)}\n`,
+);
+console.log(
+  JSON.stringify({
+    files: results.length,
+    valid: results.filter((item) => item.valid).length,
+    invalid: results.filter((item) => !item.valid).length,
+  }),
+);

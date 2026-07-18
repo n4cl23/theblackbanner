@@ -17,11 +17,20 @@ describe('Asterheim import contracts', () => {
 
   it('keeps imported editorial documents in review', () => {
     expect(asterheimEditorialImport).toHaveLength(30);
-    expect(asterheimEditorialImport.every((record) => record.status === 'review')).toBe(true);
-    expect(new Set(asterheimEditorialImport.map((record) => record.contentHash)).size).toBe(30);
+    expect(
+      asterheimEditorialImport.every((record) => record.status === 'review'),
+    ).toBe(true);
+    expect(
+      new Set(asterheimEditorialImport.map((record) => record.contentHash))
+        .size,
+    ).toBe(30);
   });
 
   it('never exposes private print or model formats through the media manifest', () => {
-    expect(asterheimMediaManifest.some((media) => /\.(?:stl|3mf|glb|cxdlpv4)$/i.test(media.src))).toBe(false);
+    expect(
+      asterheimMediaManifest.some((media) =>
+        /\.(?:stl|3mf|glb|cxdlpv4)$/i.test(media.src),
+      ),
+    ).toBe(false);
   });
 });

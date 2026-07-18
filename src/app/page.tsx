@@ -39,7 +39,10 @@ export const metadata: Metadata = {
     url: new URL('/', provisionalBaseUrl),
     images: [
       {
-        url: new URL('/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp', provisionalBaseUrl),
+        url: new URL(
+          '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
+          provisionalBaseUrl,
+        ),
         width: 1920,
         height: 1080,
         alt: 'Fortaleza monumental nas montanhas de Asterheim',
@@ -50,7 +53,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Black Banner V2 — Chronicles of Asterheim',
     description: 'Mistério, guerra e descoberta em um mundo antigo.',
-    images: ['/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp'],
+    images: [
+      '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
+    ],
   },
 };
 

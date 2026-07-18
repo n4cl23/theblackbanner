@@ -15,7 +15,13 @@ export const asterheimMediaSchema = z.object({
   height: z.number().int().positive().nullable(),
   duration: z.number().nonnegative().nullable(),
   locale: z.enum(['pt-BR', 'en', 'es', 'und']),
-  entityType: z.enum(['character', 'creature', 'guardian', 'collection', 'map']),
+  entityType: z.enum([
+    'character',
+    'creature',
+    'guardian',
+    'collection',
+    'map',
+  ]),
   entitySlug: z.string().min(1),
   usage: z.enum(['hero', 'gallery', 'thumbnail', 'poster', 'reference']),
   status: z.enum(['draft', 'review', 'published', 'archived']),
@@ -25,8 +31,13 @@ export type AsterheimMedia = z.infer<typeof asterheimMediaSchema>;
 
 export const asterheimMediaManifest = z
   .array(asterheimMediaSchema)
-  .parse([...generatedManifest, ...generatedVideoManifest]) as readonly AsterheimMedia[];
+  .parse([
+    ...generatedManifest,
+    ...generatedVideoManifest,
+  ]) as readonly AsterheimMedia[];
 
 export function getAsterheimMedia(entitySlug: string) {
-  return asterheimMediaManifest.filter((media) => media.entitySlug === entitySlug);
+  return asterheimMediaManifest.filter(
+    (media) => media.entitySlug === entitySlug,
+  );
 }

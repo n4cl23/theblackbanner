@@ -4,16 +4,16 @@ Audit date: 2026-07-18. Source: user-provided `Chronicles of Asterheim` director
 
 These assets were inventoried but were **not copied into `public/`**, committed as binaries, uploaded, or exposed through the media manifest.
 
-| Format | Files | Bytes | Decision |
-| --- | ---: | ---: | --- |
-| STL | 193 | 18,620,369,762 | Private print source; metadata only |
-| GLB | 145 | 10,511,736,460 | Withheld pending explicit commercial/public authorization |
-| 3MF | 2 | 105,523,427 | Private print source; metadata only |
-| CXDLPV4 | 1 | 187,448,804 | Proprietary printer job; quarantined |
-| EXE | 1 | 1,438,752 | Executable; quarantined and never executed |
-| WINMD | 1 | 5,120 | System metadata; quarantined |
-| CFGX | 1 | 18,041 | Printer/configuration artifact; quarantined |
-| ZIP | 1 | 5,849 | Archive; quarantined pending manual review |
+| Format  | Files |          Bytes | Decision                                                  |
+| ------- | ----: | -------------: | --------------------------------------------------------- |
+| STL     |   193 | 18,620,369,762 | Private print source; metadata only                       |
+| GLB     |   145 | 10,511,736,460 | Withheld pending explicit commercial/public authorization |
+| 3MF     |     2 |    105,523,427 | Private print source; metadata only                       |
+| CXDLPV4 |     1 |    187,448,804 | Proprietary printer job; quarantined                      |
+| EXE     |     1 |      1,438,752 | Executable; quarantined and never executed                |
+| WINMD   |     1 |          5,120 | System metadata; quarantined                              |
+| CFGX    |     1 |         18,041 | Printer/configuration artifact; quarantined               |
+| ZIP     |     1 |          5,849 | Archive; quarantined pending manual review                |
 
 ## GLB structural audit
 

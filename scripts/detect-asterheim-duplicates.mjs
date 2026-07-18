@@ -5,10 +5,23 @@ import path from 'node:path';
 
 const inventoryPath = path.resolve('reports/asterheim-assets-inventory.json');
 const duplicatesPath = path.resolve('reports/asterheim-assets-duplicates.json');
-const source = JSON.parse((await fs.readFile(inventoryPath, 'utf8')).replace(/^\uFEFF/, ''));
+const source = JSON.parse(
+  (await fs.readFile(inventoryPath, 'utf8')).replace(/^\uFEFF/, ''),
+);
 const comparableExtensions = new Set([
-  '.png', '.jpg', '.jpeg', '.gif', '.webp', '.avif', '.svg', '.mp4', '.webm',
-  '.glb', '.pdf', '.stl', '.3mf',
+  '.png',
+  '.jpg',
+  '.jpeg',
+  '.gif',
+  '.webp',
+  '.avif',
+  '.svg',
+  '.mp4',
+  '.webm',
+  '.glb',
+  '.pdf',
+  '.stl',
+  '.3mf',
 ]);
 
 async function walk(directory) {
@@ -17,7 +30,9 @@ async function walk(directory) {
     for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
       const location = path.join(directory, entry.name);
       if (entry.isDirectory()) files.push(...(await walk(location)));
-      else if (comparableExtensions.has(path.extname(entry.name).toLowerCase())) {
+      else if (
+        comparableExtensions.has(path.extname(entry.name).toLowerCase())
+      ) {
         const stat = await fs.stat(location);
         files.push({ path: location, sizeBytes: stat.size, origin: 'project' });
       }
@@ -31,7 +46,10 @@ async function walk(directory) {
 function digest(location) {
   return new Promise((resolve, reject) => {
     const hash = createHash('sha256');
-    createReadStream(location).on('data', (chunk) => hash.update(chunk)).on('error', reject).on('end', () => resolve(hash.digest('hex')));
+    createReadStream(location)
+      .on('data', (chunk) => hash.update(chunk))
+      .on('error', reject)
+      .on('end', () => resolve(hash.digest('hex')));
   });
 }
 
@@ -59,11 +77,20 @@ for (const group of bySize.values()) {
     const sha256 = await digest(file.path);
     hashedFiles += 1;
     const matches = byHash.get(sha256) ?? [];
-    matches.push({ path: file.path, origin: file.origin, sizeBytes: file.sizeBytes });
+    matches.push({
+      path: file.path,
+      origin: file.origin,
+      sizeBytes: file.sizeBytes,
+    });
     byHash.set(sha256, matches);
   }
   for (const [sha256, matches] of byHash) {
-    if (matches.length > 1) exactGroups.push({ sha256, sizeBytes: matches[0].sizeBytes, files: matches });
+    if (matches.length > 1)
+      exactGroups.push({
+        sha256,
+        sizeBytes: matches[0].sizeBytes,
+        files: matches,
+      });
   }
 }
 
@@ -91,18 +118,34 @@ const nameConflicts = [...normalizedNameGroups.entries()]
     })),
   }));
 
-const exactPaths = new Set(exactGroups.flatMap(({ files }) => files.filter(({ origin }) => origin === 'source').map(({ path: filePath }) => filePath)));
-const conflictByPath = new Map(nameConflicts.flatMap((group) => group.files.map((file) => [file.path, group.classification])));
+const exactPaths = new Set(
+  exactGroups.flatMap(({ files }) =>
+    files
+      .filter(({ origin }) => origin === 'source')
+      .map(({ path: filePath }) => filePath),
+  ),
+);
+const conflictByPath = new Map(
+  nameConflicts.flatMap((group) =>
+    group.files.map((file) => [file.path, group.classification]),
+  ),
+);
 for (const item of source) {
   item.classification = exactPaths.has(item.originalPath)
     ? 'DUPLICADO_EXATO'
-    : conflictByPath.get(item.originalPath) ?? 'NOVO';
+    : (conflictByPath.get(item.originalPath) ?? 'NOVO');
 }
 
-await fs.writeFile(inventoryPath, `${JSON.stringify(source, null, 2)}\n`, 'utf8');
+await fs.writeFile(
+  inventoryPath,
+  `${JSON.stringify(source, null, 2)}\n`,
+  'utf8',
+);
 await fs.writeFile(
   duplicatesPath,
   `${JSON.stringify({ exactGroups, nameConflicts, hashedFiles, projectFilesCompared: projectFiles.length }, null, 2)}\n`,
   'utf8',
 );
-process.stdout.write(`${JSON.stringify({ exactGroups: exactGroups.length, exactFiles: exactPaths.size, nameConflicts: nameConflicts.length, hashedFiles, projectFilesCompared: projectFiles.length })}\n`);
+process.stdout.write(
+  `${JSON.stringify({ exactGroups: exactGroups.length, exactFiles: exactPaths.size, nameConflicts: nameConflicts.length, hashedFiles, projectFilesCompared: projectFiles.length })}\n`,
+);

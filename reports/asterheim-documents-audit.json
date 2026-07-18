@@ -6,10 +6,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -20,10 +17,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -34,10 +28,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -48,10 +39,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -62,10 +50,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -76,10 +61,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -90,10 +72,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -104,10 +83,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -118,10 +94,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -132,10 +105,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -146,10 +116,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -160,10 +127,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -174,10 +138,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -188,10 +149,7 @@
     "pageCount": 16,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -202,10 +160,7 @@
     "pageCount": 9,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -216,10 +171,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -230,9 +182,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "print-guide",
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "securityRisks": [],
     "error": null
   },
@@ -243,10 +193,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -257,9 +204,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "pt-br"
-    ],
+    "languages": ["pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -270,10 +215,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -284,10 +226,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -298,9 +237,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "pt-br"
-    ],
+    "languages": ["pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -311,9 +248,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "kingdom",
-    "languages": [
-      "pt-br"
-    ],
+    "languages": ["pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -324,9 +259,7 @@
     "pageCount": 3,
     "extractable": true,
     "classification": "timeline",
-    "languages": [
-      "pt-br"
-    ],
+    "languages": ["pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -337,10 +270,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -351,10 +281,7 @@
     "pageCount": 1,
     "extractable": true,
     "classification": "character",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -365,10 +292,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "print-guide",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -379,10 +303,7 @@
     "pageCount": 3,
     "extractable": true,
     "classification": "creature",
-    "languages": [
-      "en",
-      "pt-br"
-    ],
+    "languages": ["en", "pt-br"],
     "securityRisks": [],
     "error": null
   },
@@ -393,9 +314,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "collection",
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "securityRisks": [],
     "error": null
   },
@@ -406,9 +325,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "collection",
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "securityRisks": [],
     "error": null
   },
@@ -419,9 +336,7 @@
     "pageCount": 2,
     "extractable": true,
     "classification": "collection",
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "securityRisks": [],
     "error": null
   }

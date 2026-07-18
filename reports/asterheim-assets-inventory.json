@@ -92,9 +92,7 @@
     "probableEntity": "Brynn Icefang — Rastreadora do Gelo",
     "recommendedDestination": "pending-private-storage/models/brynn-icefang-rastreadora-do-gelo/brynn-icefang-rastreadora-do-gelo.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -126,10 +124,7 @@
     "probableEntity": "Brynn Icefang — Rastreadora do Gelo",
     "recommendedDestination": "pending-private-storage/print/brynn-icefang-rastreadora-do-gelo/brynn-icefang-rastreadora-do-gelo.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -289,9 +284,7 @@
     "probableEntity": "Darian Stormhook — Lanceiro das Tempestades",
     "recommendedDestination": "pending-private-storage/models/darian-stormhook-lanceiro-das-tempestades/darian-stormhook-lanceiro-das-tempestades.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -339,10 +332,7 @@
     "probableEntity": "Darian Stormhook — Lanceiro das Tempestades",
     "recommendedDestination": "pending-private-storage/print/darian-stormhook-lanceiro-das-tempestades/darian-stormhook-lanceiro-das-tempestades.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -438,9 +428,7 @@
     "probableEntity": "Kael Thorn — Mestre Caçador",
     "recommendedDestination": "pending-private-storage/models/kael-thorn-mestre-cacador/kael-thorn-mestre-cacador.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -488,10 +476,7 @@
     "probableEntity": "Kael Thorn — Mestre Caçador",
     "recommendedDestination": "pending-private-storage/print/kael-thorn-mestre-cacador/kael-thorn-mestre-cacador.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -539,9 +524,7 @@
     "probableEntity": "Roderic Ashbane — Caçador das Cinzas",
     "recommendedDestination": "pending-private-storage/models/roderic-ashbane-cacador-das-cinzas/roderic-ashbane-cacador-das-cinzas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -589,10 +572,7 @@
     "probableEntity": "Roderic Ashbane — Caçador das Cinzas",
     "recommendedDestination": "pending-private-storage/print/roderic-ashbane-cacador-das-cinzas/roderic-ashbane-cacador-das-cinzas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -640,9 +620,7 @@
     "probableEntity": "Sylva Mossarrow — Arqueira da Floresta",
     "recommendedDestination": "pending-private-storage/models/sylva-mossarrow-arqueira-da-floresta/sylva-mossarrow-arqueira-da-floresta.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -690,10 +668,7 @@
     "probableEntity": "Sylva Mossarrow — Arqueira da Floresta",
     "recommendedDestination": "pending-private-storage/print/sylva-mossarrow-arqueira-da-floresta/sylva-mossarrow-arqueira-da-floresta.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -741,9 +716,7 @@
     "probableEntity": "Varek Deepharpoon — Caçador Abissal",
     "recommendedDestination": "pending-private-storage/models/varek-deepharpoon-cacador-abissal/varek-deepharpoon-cacador-abissal.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -791,10 +764,7 @@
     "probableEntity": "Varek Deepharpoon — Caçador Abissal",
     "recommendedDestination": "pending-private-storage/print/varek-deepharpoon-cacador-abissal/varek-deepharpoon-cacador-abissal.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1066,9 +1036,7 @@
     "probableEntity": "Abyss Jelly",
     "recommendedDestination": "pending-private-storage/models/abyss-jelly/abyss-jelly.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1100,10 +1068,7 @@
     "probableEntity": "Abyss Jelly",
     "recommendedDestination": "pending-private-storage/print/abyss-jelly/abyss-jelly.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1151,9 +1116,7 @@
     "probableEntity": "Abyssal Shark",
     "recommendedDestination": "pending-private-storage/models/abyssal-shark/abyssal-shark.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1185,10 +1148,7 @@
     "probableEntity": "Abyssal Shark",
     "recommendedDestination": "pending-private-storage/print/abyssal-shark/abyssal-shark.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1204,9 +1164,7 @@
     "probableEntity": "Coral Crab",
     "recommendedDestination": "pending-private-storage/models/coral-crab/coral-crab.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1238,10 +1196,7 @@
     "probableEntity": "Coral Crab",
     "recommendedDestination": "pending-private-storage/print/coral-crab/coral-crab.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1257,9 +1212,7 @@
     "probableEntity": "Coral Guardian",
     "recommendedDestination": "pending-private-storage/models/coral-guardian/coral-guardian.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1291,10 +1244,7 @@
     "probableEntity": "Coral Guardian",
     "recommendedDestination": "pending-private-storage/print/coral-guardian/coral-guardian.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1310,9 +1260,7 @@
     "probableEntity": "Coral Titan",
     "recommendedDestination": "pending-private-storage/models/coral-titan/coral-titan.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1344,10 +1292,7 @@
     "probableEntity": "Coral Titan",
     "recommendedDestination": "pending-private-storage/print/coral-titan/coral-titan.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1363,9 +1308,7 @@
     "probableEntity": "Deep Horror",
     "recommendedDestination": "pending-private-storage/models/deep-horror/deep-horror.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1397,10 +1340,7 @@
     "probableEntity": "Deep Horror",
     "recommendedDestination": "pending-private-storage/print/deep-horror/deep-horror.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1416,9 +1356,7 @@
     "probableEntity": "Kraken",
     "recommendedDestination": "pending-private-storage/models/kraken/kraken.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1450,10 +1388,7 @@
     "probableEntity": "Kraken",
     "recommendedDestination": "pending-private-storage/print/kraken/kraken.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1469,9 +1404,7 @@
     "probableEntity": "Lantern Eel",
     "recommendedDestination": "pending-private-storage/models/lantern-eel/lantern-eel.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1503,10 +1436,7 @@
     "probableEntity": "Lantern Eel",
     "recommendedDestination": "pending-private-storage/print/lantern-eel/lantern-eel.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1522,9 +1452,7 @@
     "probableEntity": "Leviathan",
     "recommendedDestination": "pending-private-storage/models/leviathan/leviathan.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1556,10 +1484,7 @@
     "probableEntity": "Leviathan",
     "recommendedDestination": "pending-private-storage/print/leviathan/leviathan.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1575,9 +1500,7 @@
     "probableEntity": "Reef Stalker",
     "recommendedDestination": "pending-private-storage/models/reef-stalker/reef-stalker.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1609,10 +1532,7 @@
     "probableEntity": "Reef Stalker",
     "recommendedDestination": "pending-private-storage/print/reef-stalker/reef-stalker.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1628,9 +1548,7 @@
     "probableEntity": "Sea Serpent",
     "recommendedDestination": "pending-private-storage/models/sea-serpent/sea-serpent.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1662,10 +1580,7 @@
     "probableEntity": "Sea Serpent",
     "recommendedDestination": "pending-private-storage/print/sea-serpent/sea-serpent.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1681,9 +1596,7 @@
     "probableEntity": "Shellback Turtle",
     "recommendedDestination": "pending-private-storage/models/shellback-turtle/shellback-turtle.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1715,10 +1628,7 @@
     "probableEntity": "Shellback Turtle",
     "recommendedDestination": "pending-private-storage/print/shellback-turtle/shellback-turtle.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1734,9 +1644,7 @@
     "probableEntity": "Tide Ray",
     "recommendedDestination": "pending-private-storage/models/tide-ray/tide-ray.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1768,10 +1676,7 @@
     "probableEntity": "Tide Ray",
     "recommendedDestination": "pending-private-storage/print/tide-ray/tide-ray.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1819,10 +1724,7 @@
     "probableEntity": "Aegis — The First Sky King",
     "recommendedDestination": "pending-private-storage/print/aegis-the-first-sky-king/aegis-the-first-sky-king.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1902,10 +1804,7 @@
     "probableEntity": "Aster — The World Heart",
     "recommendedDestination": "pending-private-storage/print/aster-the-world-heart/aster-the-world-heart.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1921,9 +1820,7 @@
     "probableEntity": "Aster — The World Heart",
     "recommendedDestination": "pending-private-storage/models/aster-the-world-heart/aster.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1939,9 +1836,7 @@
     "probableEntity": "Beasts of Asterheim",
     "recommendedDestination": "pending-private-storage/models/beasts-of-asterheim/demon-fogo.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1973,10 +1868,7 @@
     "probableEntity": "Beasts of Asterheim",
     "recommendedDestination": "pending-private-storage/print/beasts-of-asterheim/demon-fogo.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -1992,9 +1884,7 @@
     "probableEntity": "Ancient Wolf",
     "recommendedDestination": "pending-private-storage/models/ancient-wolf/ancient-wolf.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2026,10 +1916,7 @@
     "probableEntity": "Ancient Wolf",
     "recommendedDestination": "pending-private-storage/print/ancient-wolf/ancient-wolf.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2045,9 +1932,7 @@
     "probableEntity": "Bark Rhino",
     "recommendedDestination": "pending-private-storage/models/bark-rhino/bark-rhino.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2079,10 +1964,7 @@
     "probableEntity": "Bark Rhino",
     "recommendedDestination": "pending-private-storage/print/bark-rhino/bark-rhino.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2098,9 +1980,7 @@
     "probableEntity": "Bloom Fox",
     "recommendedDestination": "pending-private-storage/models/bloom-fox/bloom-fox.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2132,10 +2012,7 @@
     "probableEntity": "Bloom Fox",
     "recommendedDestination": "pending-private-storage/print/bloom-fox/bloom-fox.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2151,9 +2028,7 @@
     "probableEntity": "Bloom Fungus Beast",
     "recommendedDestination": "pending-private-storage/models/bloom-fungus-beast/bloom-fungus-beast.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2185,10 +2060,7 @@
     "probableEntity": "Bloom Fungus Beast",
     "recommendedDestination": "pending-private-storage/print/bloom-fungus-beast/bloom-fungus-beast.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2204,9 +2076,7 @@
     "probableEntity": "Bloom Moth",
     "recommendedDestination": "pending-private-storage/models/bloom-moth/bloom-moth.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2238,10 +2108,7 @@
     "probableEntity": "Bloom Moth",
     "recommendedDestination": "pending-private-storage/print/bloom-moth/bloom-moth.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2257,9 +2124,7 @@
     "probableEntity": "Blossom Spirit",
     "recommendedDestination": "pending-private-storage/models/blossom-spirit/blossom-spirit.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2291,10 +2156,7 @@
     "probableEntity": "Blossom Spirit",
     "recommendedDestination": "pending-private-storage/print/blossom-spirit/blossom-spirit.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2310,9 +2172,7 @@
     "probableEntity": "Canopy Owl",
     "recommendedDestination": "pending-private-storage/models/canopy-owl/canopy-owl.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2344,10 +2204,7 @@
     "probableEntity": "Canopy Owl",
     "recommendedDestination": "pending-private-storage/print/canopy-owl/canopy-owl.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2363,9 +2220,7 @@
     "probableEntity": "Dryad",
     "recommendedDestination": "pending-private-storage/models/dryad/dryad.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2397,10 +2252,7 @@
     "probableEntity": "Dryad",
     "recommendedDestination": "pending-private-storage/print/dryad/dryad.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2416,9 +2268,7 @@
     "probableEntity": "Emerald Beetle",
     "recommendedDestination": "pending-private-storage/models/emerald-beetle/emerald-beetle.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2450,10 +2300,7 @@
     "probableEntity": "Emerald Beetle",
     "recommendedDestination": "pending-private-storage/print/emerald-beetle/emerald-beetle.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2469,9 +2316,7 @@
     "probableEntity": "Ent",
     "recommendedDestination": "pending-private-storage/models/ent/ent.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2503,10 +2348,7 @@
     "probableEntity": "Ent",
     "recommendedDestination": "pending-private-storage/print/ent/ent.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2522,9 +2364,7 @@
     "probableEntity": "Forest Spirit",
     "recommendedDestination": "pending-private-storage/models/forest-spirit/forest-spirit.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2556,10 +2396,7 @@
     "probableEntity": "Forest Spirit",
     "recommendedDestination": "pending-private-storage/print/forest-spirit/forest-spirit.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2575,9 +2412,7 @@
     "probableEntity": "Great Stag",
     "recommendedDestination": "pending-private-storage/models/great-stag/great-stag.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2609,10 +2444,7 @@
     "probableEntity": "Great Stag",
     "recommendedDestination": "pending-private-storage/print/great-stag/great-stag.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2628,9 +2460,7 @@
     "probableEntity": "Moss Colossus",
     "recommendedDestination": "pending-private-storage/models/moss-colossus/moss-colossus.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2662,10 +2492,7 @@
     "probableEntity": "Moss Colossus",
     "recommendedDestination": "pending-private-storage/print/moss-colossus/moss-colossus.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2681,9 +2508,7 @@
     "probableEntity": "Mycelium Walker",
     "recommendedDestination": "pending-private-storage/models/mycelium-walker/mycelium-walker.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2715,10 +2540,7 @@
     "probableEntity": "Mycelium Walker",
     "recommendedDestination": "pending-private-storage/print/mycelium-walker/mycelium-walker.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2734,9 +2556,7 @@
     "probableEntity": "Root Boar",
     "recommendedDestination": "pending-private-storage/models/root-boar/root-boar.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2768,10 +2588,7 @@
     "probableEntity": "Root Boar",
     "recommendedDestination": "pending-private-storage/print/root-boar/root-boar.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2787,9 +2604,7 @@
     "probableEntity": "Root Warden",
     "recommendedDestination": "pending-private-storage/models/root-warden/root-warden.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2821,10 +2636,7 @@
     "probableEntity": "Root Warden",
     "recommendedDestination": "pending-private-storage/print/root-warden/root-warden.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2840,9 +2652,7 @@
     "probableEntity": "Spore Guardian",
     "recommendedDestination": "pending-private-storage/models/spore-guardian/spore-guardian.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2874,10 +2684,7 @@
     "probableEntity": "Spore Guardian",
     "recommendedDestination": "pending-private-storage/print/spore-guardian/spore-guardian.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2893,9 +2700,7 @@
     "probableEntity": "Thorn Panther",
     "recommendedDestination": "pending-private-storage/models/thorn-panther/thorn-panther.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2927,10 +2732,7 @@
     "probableEntity": "Thorn Panther",
     "recommendedDestination": "pending-private-storage/print/thorn-panther/thorn-panther.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2946,9 +2748,7 @@
     "probableEntity": "Thorn Wasp",
     "recommendedDestination": "pending-private-storage/models/thorn-wasp/thorn-wasp.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2980,10 +2780,7 @@
     "probableEntity": "Thorn Wasp",
     "recommendedDestination": "pending-private-storage/print/thorn-wasp/thorn-wasp.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -2999,9 +2796,7 @@
     "probableEntity": "Treant Elder",
     "recommendedDestination": "pending-private-storage/models/treant-elder/treant-elder.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3033,10 +2828,7 @@
     "probableEntity": "Treant Elder",
     "recommendedDestination": "pending-private-storage/print/treant-elder/treant-elder.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3052,9 +2844,7 @@
     "probableEntity": "Whisper Sprite",
     "recommendedDestination": "pending-private-storage/models/whisper-sprite/whisper-sprite.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3086,10 +2876,7 @@
     "probableEntity": "Whisper Sprite",
     "recommendedDestination": "pending-private-storage/print/whisper-sprite/whisper-sprite.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3105,9 +2892,7 @@
     "probableEntity": "Ember Tick",
     "recommendedDestination": "pending-private-storage/models/ember-tick/ember-tick.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3139,10 +2924,7 @@
     "probableEntity": "Ember Tick",
     "recommendedDestination": "pending-private-storage/print/ember-tick/ember-tick.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3190,10 +2972,7 @@
     "probableEntity": "Fenrir — The Moon Devourer",
     "recommendedDestination": "pending-private-storage/print/fenrir-the-moon-devourer/fenrir-the-moon-devourer.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3209,9 +2988,7 @@
     "probableEntity": "Crystal Bear",
     "recommendedDestination": "pending-private-storage/models/crystal-bear/crystal-bear.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3243,10 +3020,7 @@
     "probableEntity": "Crystal Bear",
     "recommendedDestination": "pending-private-storage/print/crystal-bear/crystal-bear.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3262,9 +3036,7 @@
     "probableEntity": "Frost Drake",
     "recommendedDestination": "pending-private-storage/models/frost-drake/frost-drake.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3296,10 +3068,7 @@
     "probableEntity": "Frost Drake",
     "recommendedDestination": "pending-private-storage/print/frost-drake/frost-drake.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3315,9 +3084,7 @@
     "probableEntity": "Frost Elk",
     "recommendedDestination": "pending-private-storage/models/frost-elk/frost-elk.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3349,10 +3116,7 @@
     "probableEntity": "Frost Elk",
     "recommendedDestination": "pending-private-storage/print/frost-elk/frost-elk.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3368,9 +3132,7 @@
     "probableEntity": "Frost Lynx",
     "recommendedDestination": "pending-private-storage/models/frost-lynx/frost-lynx.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3402,10 +3164,7 @@
     "probableEntity": "Frost Lynx",
     "recommendedDestination": "pending-private-storage/print/frost-lynx/frost-lynx.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3421,9 +3180,7 @@
     "probableEntity": "Frost Troll",
     "recommendedDestination": "pending-private-storage/models/frost-troll/frost-troll.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3455,10 +3212,7 @@
     "probableEntity": "Frost Troll",
     "recommendedDestination": "pending-private-storage/print/frost-troll/frost-troll.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3474,9 +3228,7 @@
     "probableEntity": "Glacier Panther",
     "recommendedDestination": "pending-private-storage/models/glacier-panther/glacier-panther.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3508,10 +3260,7 @@
     "probableEntity": "Glacier Panther",
     "recommendedDestination": "pending-private-storage/print/glacier-panther/glacier-panther.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3527,9 +3276,7 @@
     "probableEntity": "Glacier Stag",
     "recommendedDestination": "pending-private-storage/models/glacier-stag/glacier-stag.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3561,10 +3308,7 @@
     "probableEntity": "Glacier Stag",
     "recommendedDestination": "pending-private-storage/print/glacier-stag/glacier-stag.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3580,9 +3324,7 @@
     "probableEntity": "Ice Basilisk",
     "recommendedDestination": "pending-private-storage/models/ice-basilisk/ice-basilisk.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3614,10 +3356,7 @@
     "probableEntity": "Ice Basilisk",
     "recommendedDestination": "pending-private-storage/print/ice-basilisk/ice-basilisk.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3633,9 +3372,7 @@
     "probableEntity": "Ice Bison",
     "recommendedDestination": "pending-private-storage/models/ice-bison/ice-bison.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3667,10 +3404,7 @@
     "probableEntity": "Ice Bison",
     "recommendedDestination": "pending-private-storage/print/ice-bison/ice-bison.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3686,9 +3420,7 @@
     "probableEntity": "Ice Giant",
     "recommendedDestination": "pending-private-storage/models/ice-giant/ice-giant.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3720,10 +3452,7 @@
     "probableEntity": "Ice Giant",
     "recommendedDestination": "pending-private-storage/print/ice-giant/ice-giant.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3739,9 +3468,7 @@
     "probableEntity": "Ice Wolves",
     "recommendedDestination": "pending-private-storage/models/ice-wolves/ice-wolves.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3773,10 +3500,7 @@
     "probableEntity": "Ice Wolves",
     "recommendedDestination": "pending-private-storage/print/ice-wolves/ice-wolves.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3792,9 +3516,7 @@
     "probableEntity": "Mammoth",
     "recommendedDestination": "pending-private-storage/models/mammoth/frost-mammoth.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3826,10 +3548,7 @@
     "probableEntity": "Mammoth",
     "recommendedDestination": "pending-private-storage/print/mammoth/frost-mammoth.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3845,9 +3564,7 @@
     "probableEntity": "Snow Wraith",
     "recommendedDestination": "pending-private-storage/models/snow-wraith/snow-wraith.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3879,10 +3596,7 @@
     "probableEntity": "Snow Wraith",
     "recommendedDestination": "pending-private-storage/print/snow-wraith/snow-wraith.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3898,9 +3612,7 @@
     "probableEntity": "Snow Yak",
     "recommendedDestination": "pending-private-storage/models/snow-yak/snow-yak.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3932,10 +3644,7 @@
     "probableEntity": "Snow Yak",
     "recommendedDestination": "pending-private-storage/print/snow-yak/snow-yak.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3951,9 +3660,7 @@
     "probableEntity": "Ash Wolf",
     "recommendedDestination": "pending-private-storage/models/ash-wolf/ash-wolf.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -3985,10 +3692,7 @@
     "probableEntity": "Ash Wolf",
     "recommendedDestination": "pending-private-storage/print/ash-wolf/ash-wolf.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4004,9 +3708,7 @@
     "probableEntity": "Cave Troll",
     "recommendedDestination": "pending-private-storage/models/cave-troll/cave-troll.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4038,10 +3740,7 @@
     "probableEntity": "Cave Troll",
     "recommendedDestination": "pending-private-storage/print/cave-troll/cave-troll.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4073,10 +3772,7 @@
     "probableEntity": "Chainmaw",
     "recommendedDestination": "pending-private-storage/print/chainmaw/chainmaw.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4092,9 +3788,7 @@
     "probableEntity": "Chainmaw",
     "recommendedDestination": "pending-private-storage/models/chainmaw/model-1.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -4110,9 +3804,7 @@
     "probableEntity": "Crystal Ram",
     "recommendedDestination": "pending-private-storage/models/crystal-ram/crystal-ram.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4144,10 +3836,7 @@
     "probableEntity": "Crystal Ram",
     "recommendedDestination": "pending-private-storage/print/crystal-ram/crystal-ram.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4163,9 +3852,7 @@
     "probableEntity": "Forge Beast",
     "recommendedDestination": "pending-private-storage/models/forge-beast/forge-beast.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4197,10 +3884,7 @@
     "probableEntity": "Forge Beast",
     "recommendedDestination": "pending-private-storage/print/forge-beast/forge-beast.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4216,9 +3900,7 @@
     "probableEntity": "Forge Sentinel",
     "recommendedDestination": "pending-private-storage/models/forge-sentinel/forge-sentinel.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4250,10 +3932,7 @@
     "probableEntity": "Forge Sentinel",
     "recommendedDestination": "pending-private-storage/print/forge-sentinel/forge-sentinel.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4269,9 +3948,7 @@
     "probableEntity": "Iron Boar",
     "recommendedDestination": "pending-private-storage/models/iron-boar/iron-boar.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4303,10 +3980,7 @@
     "probableEntity": "Iron Boar",
     "recommendedDestination": "pending-private-storage/print/iron-boar/iron-boar.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4322,9 +3996,7 @@
     "probableEntity": "Iron Golem",
     "recommendedDestination": "pending-private-storage/models/iron-golem/iron-golem.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4356,10 +4028,7 @@
     "probableEntity": "Iron Golem",
     "recommendedDestination": "pending-private-storage/print/iron-golem/iron-golem.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4391,10 +4060,7 @@
     "probableEntity": "Iron Wyrm",
     "recommendedDestination": "pending-private-storage/print/iron-wyrm/iron-wyrm.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4410,9 +4076,7 @@
     "probableEntity": "Iron Wyrm",
     "recommendedDestination": "pending-private-storage/models/iron-wyrm/model-1.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -4428,9 +4092,7 @@
     "probableEntity": "Lava Drake",
     "recommendedDestination": "pending-private-storage/models/lava-drake/lava-drake.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4462,10 +4124,7 @@
     "probableEntity": "Lava Drake",
     "recommendedDestination": "pending-private-storage/print/lava-drake/lava-drake.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4481,9 +4140,7 @@
     "probableEntity": "Molten Guardian",
     "recommendedDestination": "pending-private-storage/models/molten-guardian/molten-guardian.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4515,10 +4172,7 @@
     "probableEntity": "Molten Guardian",
     "recommendedDestination": "pending-private-storage/print/molten-guardian/molten-guardian.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4534,9 +4188,7 @@
     "probableEntity": "Obsidian Colossus",
     "recommendedDestination": "pending-private-storage/models/obsidian-colossus/obsidian-colossus.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4568,10 +4220,7 @@
     "probableEntity": "Obsidian Colossus",
     "recommendedDestination": "pending-private-storage/print/obsidian-colossus/obsidian-colossus.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4587,9 +4236,7 @@
     "probableEntity": "Ore Leech",
     "recommendedDestination": "pending-private-storage/models/ore-leech/ore-leech.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4621,10 +4268,7 @@
     "probableEntity": "Ore Leech",
     "recommendedDestination": "pending-private-storage/print/ore-leech/ore-leech.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4640,9 +4284,7 @@
     "probableEntity": "Rock Burrower",
     "recommendedDestination": "pending-private-storage/models/rock-burrower/rock-burrower.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4674,10 +4316,7 @@
     "probableEntity": "Rock Burrower",
     "recommendedDestination": "pending-private-storage/print/rock-burrower/rock-burrower.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4693,9 +4332,7 @@
     "probableEntity": "Stone Giant",
     "recommendedDestination": "pending-private-storage/models/stone-giant/stone-giant.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4727,10 +4364,7 @@
     "probableEntity": "Stone Giant",
     "recommendedDestination": "pending-private-storage/print/stone-giant/stone-giant.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4746,9 +4380,7 @@
     "probableEntity": "Tunnel Reaper",
     "recommendedDestination": "pending-private-storage/models/tunnel-reaper/tunnel-reaper.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4780,10 +4412,7 @@
     "probableEntity": "Tunnel Reaper",
     "recommendedDestination": "pending-private-storage/print/tunnel-reaper/tunnel-reaper.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4799,9 +4428,7 @@
     "probableEntity": "Nimbus Spirit",
     "recommendedDestination": "pending-private-storage/models/nimbus-spirit/nimbus-spirit.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4833,10 +4460,7 @@
     "probableEntity": "Nimbus Spirit",
     "recommendedDestination": "pending-private-storage/print/nimbus-spirit/nimbus-spirit.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4852,9 +4476,7 @@
     "probableEntity": "Ash Demon",
     "recommendedDestination": "pending-private-storage/models/ash-demon/ash-demon.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4886,10 +4508,7 @@
     "probableEntity": "Ash Demon",
     "recommendedDestination": "pending-private-storage/print/ash-demon/ash-demon.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4905,9 +4524,7 @@
     "probableEntity": "Ash Moth",
     "recommendedDestination": "pending-private-storage/models/ash-moth/ash-moth.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4939,10 +4556,7 @@
     "probableEntity": "Ash Moth",
     "recommendedDestination": "pending-private-storage/print/ash-moth/ash-moth.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4958,9 +4572,7 @@
     "probableEntity": "Ash Ram",
     "recommendedDestination": "pending-private-storage/models/ash-ram/ash-ram.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -4992,10 +4604,7 @@
     "probableEntity": "Ash Ram",
     "recommendedDestination": "pending-private-storage/print/ash-ram/ash-ram.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5011,9 +4620,7 @@
     "probableEntity": "Cinder Bison",
     "recommendedDestination": "pending-private-storage/models/cinder-bison/cinder-bison.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5045,10 +4652,7 @@
     "probableEntity": "Cinder Bison",
     "recommendedDestination": "pending-private-storage/print/cinder-bison/cinder-bison.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5064,9 +4668,7 @@
     "probableEntity": "Cinder Leech",
     "recommendedDestination": "pending-private-storage/models/cinder-leech/cinder-leech.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5098,10 +4700,7 @@
     "probableEntity": "Cinder Leech",
     "recommendedDestination": "pending-private-storage/print/cinder-leech/cinder-leech.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5117,9 +4716,7 @@
     "probableEntity": "Cinder Wolf",
     "recommendedDestination": "pending-private-storage/models/cinder-wolf/cinder-wolf.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5151,10 +4748,7 @@
     "probableEntity": "Cinder Wolf",
     "recommendedDestination": "pending-private-storage/print/cinder-wolf/model-1.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -5170,9 +4764,7 @@
     "probableEntity": "Ember Raptor",
     "recommendedDestination": "pending-private-storage/models/ember-raptor/ember-raptor.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5204,10 +4796,7 @@
     "probableEntity": "Ember Raptor",
     "recommendedDestination": "pending-private-storage/print/ember-raptor/ember-raptor.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5223,9 +4812,7 @@
     "probableEntity": "Ember Scarab",
     "recommendedDestination": "pending-private-storage/models/ember-scarab/ember-scarab.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5257,10 +4844,7 @@
     "probableEntity": "Ember Scarab",
     "recommendedDestination": "pending-private-storage/print/ember-scarab/ember-scarab.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5276,9 +4860,7 @@
     "probableEntity": "Fire Drake",
     "recommendedDestination": "pending-private-storage/models/fire-drake/fire-drake.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5310,10 +4892,7 @@
     "probableEntity": "Fire Drake",
     "recommendedDestination": "pending-private-storage/print/fire-drake/fire-drake.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5329,9 +4908,7 @@
     "probableEntity": "Flame Wraith",
     "recommendedDestination": "pending-private-storage/models/flame-wraith/flame-wraith.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5363,10 +4940,7 @@
     "probableEntity": "Flame Wraith",
     "recommendedDestination": "pending-private-storage/print/flame-wraith/flame-wraith.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5382,9 +4956,7 @@
     "probableEntity": "Magma Titan",
     "recommendedDestination": "pending-private-storage/models/magma-titan/magma-titan.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5416,10 +4988,7 @@
     "probableEntity": "Magma Titan",
     "recommendedDestination": "pending-private-storage/print/magma-titan/magma-titan.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5435,9 +5004,7 @@
     "probableEntity": "Obsidian Basilisk",
     "recommendedDestination": "pending-private-storage/models/obsidian-basilisk/obsidian-basilisk.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5469,10 +5036,7 @@
     "probableEntity": "Obsidian Basilisk",
     "recommendedDestination": "pending-private-storage/print/obsidian-basilisk/obsidian-basilisk.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5488,9 +5052,7 @@
     "probableEntity": "Phoenix",
     "recommendedDestination": "pending-private-storage/models/phoenix/phoenix.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5522,10 +5084,7 @@
     "probableEntity": "Phoenix",
     "recommendedDestination": "pending-private-storage/print/phoenix/phoenix.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5541,9 +5100,7 @@
     "probableEntity": "Sand Worm",
     "recommendedDestination": "pending-private-storage/models/sand-worm/sand-worm.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5575,10 +5132,7 @@
     "probableEntity": "Sand Worm",
     "recommendedDestination": "pending-private-storage/print/sand-worm/sand-worm.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5626,10 +5180,7 @@
     "probableEntity": "Skywind — The Storm Sovereign",
     "recommendedDestination": "pending-private-storage/print/skywind-the-storm-sovereign/skywind-the-storm-sovereign.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5645,9 +5196,7 @@
     "probableEntity": "Cloud Manta",
     "recommendedDestination": "pending-private-storage/models/cloud-manta/cloud-manta.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5679,10 +5228,7 @@
     "probableEntity": "Cloud Manta",
     "recommendedDestination": "pending-private-storage/print/cloud-manta/cloud-manta.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5698,9 +5244,7 @@
     "probableEntity": "Cloud Stalker",
     "recommendedDestination": "pending-private-storage/models/cloud-stalker/cloud-stalker.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5732,10 +5276,7 @@
     "probableEntity": "Cloud Stalker",
     "recommendedDestination": "pending-private-storage/print/cloud-stalker/cloud-stalker.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5751,9 +5292,7 @@
     "probableEntity": "Gale Ram",
     "recommendedDestination": "pending-private-storage/models/gale-ram/gale-ram.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5785,10 +5324,7 @@
     "probableEntity": "Gale Ram",
     "recommendedDestination": "pending-private-storage/print/gale-ram/gale-ram.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5804,9 +5340,7 @@
     "probableEntity": "Lightning Serpent",
     "recommendedDestination": "pending-private-storage/models/lightning-serpent/lightning-serpent.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5838,10 +5372,7 @@
     "probableEntity": "Lightning Serpent",
     "recommendedDestination": "pending-private-storage/print/lightning-serpent/lightning-serpent.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5857,9 +5388,7 @@
     "probableEntity": "Sky Elk",
     "recommendedDestination": "pending-private-storage/models/sky-elk/sky-elk.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5891,10 +5420,7 @@
     "probableEntity": "Sky Elk",
     "recommendedDestination": "pending-private-storage/print/sky-elk/sky-elk.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5910,9 +5436,7 @@
     "probableEntity": "Sky Serpent",
     "recommendedDestination": "pending-private-storage/models/sky-serpent/sky-serpent.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5944,10 +5468,7 @@
     "probableEntity": "Sky Serpent",
     "recommendedDestination": "pending-private-storage/print/sky-serpent/sky-serpent.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5963,9 +5484,7 @@
     "probableEntity": "Sky Whale",
     "recommendedDestination": "pending-private-storage/models/sky-whale/sky-whale.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -5997,10 +5516,7 @@
     "probableEntity": "Sky Whale",
     "recommendedDestination": "pending-private-storage/print/sky-whale/sky-whale.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6016,9 +5532,7 @@
     "probableEntity": "Storm Dragon",
     "recommendedDestination": "pending-private-storage/models/storm-dragon/storm-dragon.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6050,10 +5564,7 @@
     "probableEntity": "Storm Dragon",
     "recommendedDestination": "pending-private-storage/print/storm-dragon/storm-dragon.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6069,9 +5580,7 @@
     "probableEntity": "Storm Goat",
     "recommendedDestination": "pending-private-storage/models/storm-goat/storm-goat.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6103,10 +5612,7 @@
     "probableEntity": "Storm Goat",
     "recommendedDestination": "pending-private-storage/print/storm-goat/storm-goat.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6122,9 +5628,7 @@
     "probableEntity": "Storm Griffin",
     "recommendedDestination": "pending-private-storage/models/storm-griffin/storm-griffin.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6156,10 +5660,7 @@
     "probableEntity": "Storm Griffin",
     "recommendedDestination": "pending-private-storage/print/storm-griffin/storm-griffin.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6175,9 +5676,7 @@
     "probableEntity": "Storm Hare",
     "recommendedDestination": "pending-private-storage/models/storm-hare/storm-hare.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6209,10 +5708,7 @@
     "probableEntity": "Storm Hare",
     "recommendedDestination": "pending-private-storage/print/storm-hare/storm-hare.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6228,9 +5724,7 @@
     "probableEntity": "Storm Roc",
     "recommendedDestination": "pending-private-storage/models/storm-roc/storm-roc.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6262,10 +5756,7 @@
     "probableEntity": "Storm Roc",
     "recommendedDestination": "pending-private-storage/print/storm-roc/storm-roc.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6281,9 +5772,7 @@
     "probableEntity": "Tempest Hawk",
     "recommendedDestination": "pending-private-storage/models/tempest-hawk/tempest-hawk.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6315,10 +5804,7 @@
     "probableEntity": "Tempest Hawk",
     "recommendedDestination": "pending-private-storage/print/tempest-hawk/tempest-hawk.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6334,9 +5820,7 @@
     "probableEntity": "Thunder Beetle",
     "recommendedDestination": "pending-private-storage/models/thunder-beetle/thunder-beetle.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6368,10 +5852,7 @@
     "probableEntity": "Thunder Beetle",
     "recommendedDestination": "pending-private-storage/print/thunder-beetle/thunder-beetle.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6387,9 +5868,7 @@
     "probableEntity": "Thunder Golem",
     "recommendedDestination": "pending-private-storage/models/thunder-golem/thunder-golem.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6421,10 +5900,7 @@
     "probableEntity": "Thunder Golem",
     "recommendedDestination": "pending-private-storage/print/thunder-golem/thunder-golem.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6440,9 +5916,7 @@
     "probableEntity": "Wind Drake",
     "recommendedDestination": "pending-private-storage/models/wind-drake/wind-drake.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6474,10 +5948,7 @@
     "probableEntity": "Wind Drake",
     "recommendedDestination": "pending-private-storage/print/wind-drake/wind-drake.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6493,9 +5964,7 @@
     "probableEntity": "Tempest Owl",
     "recommendedDestination": "pending-private-storage/models/tempest-owl/tempest-owl.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6527,10 +5996,7 @@
     "probableEntity": "Tempest Owl",
     "recommendedDestination": "pending-private-storage/print/tempest-owl/tempest-owl.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6562,10 +6028,7 @@
     "probableEntity": "Thalassor",
     "recommendedDestination": "pending-private-storage/print/thalassor/model-1.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -6581,9 +6044,7 @@
     "probableEntity": "Thalassor",
     "recommendedDestination": "pending-private-storage/models/thalassor/thalassor.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6615,9 +6076,7 @@
     "probableEntity": "Varkhul",
     "recommendedDestination": "pending-private-storage/models/varkhul/varkhul.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6649,10 +6108,7 @@
     "probableEntity": "Varkhul",
     "recommendedDestination": "pending-private-storage/print/varkhul/varkhul.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6684,9 +6140,7 @@
     "probableEntity": "Borgrath — O Guardião das Correntes",
     "recommendedDestination": "pending-private-storage/models/borgrath-o-guardiao-das-correntes/borgrath-o-guardiao-das-correntes.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6718,10 +6172,7 @@
     "probableEntity": "Borgrath — O Guardião das Correntes",
     "recommendedDestination": "pending-private-storage/print/borgrath-o-guardiao-das-correntes/borgrath-o-guardiao-das-correntes.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6737,9 +6188,7 @@
     "probableEntity": "Maelwen — A Matriarca dos Espinhos",
     "recommendedDestination": "pending-private-storage/models/maelwen-a-matriarca-dos-espinhos/maelwen-a-matriarca-dos-espinhos.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6771,10 +6220,7 @@
     "probableEntity": "Maelwen — A Matriarca dos Espinhos",
     "recommendedDestination": "pending-private-storage/print/maelwen-a-matriarca-dos-espinhos/maelwen-a-matriarca-dos-espinhos.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6790,9 +6236,7 @@
     "probableEntity": "Nhalor — O Sacerdote da Coroa Afogada",
     "recommendedDestination": "pending-private-storage/models/nhalor-o-sacerdote-da-coroa-afogada/nhalor-o-sacerdote-da-coroa-afogada.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6824,10 +6268,7 @@
     "probableEntity": "Nhalor — O Sacerdote da Coroa Afogada",
     "recommendedDestination": "pending-private-storage/print/nhalor-o-sacerdote-da-coroa-afogada/nhalor-o-sacerdote-da-coroa-afogada.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6843,9 +6284,7 @@
     "probableEntity": "Orun Veyr — O Profeta do Trovão",
     "recommendedDestination": "pending-private-storage/models/orun-veyr-o-profeta-do-trovao/orun-veyr-o-profeta-do-trovao.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6877,10 +6316,7 @@
     "probableEntity": "Orun Veyr — O Profeta do Trovão",
     "recommendedDestination": "pending-private-storage/print/orun-veyr-o-profeta-do-trovao/orun-veyr-o-profeta-do-trovao.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6896,9 +6332,7 @@
     "probableEntity": "Skara — A Caçadora Pálida",
     "recommendedDestination": "pending-private-storage/models/skara-a-cacadora-palida/skara-a-cacadora-palida.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6946,10 +6380,7 @@
     "probableEntity": "Skara — A Caçadora Pálida",
     "recommendedDestination": "pending-private-storage/print/skara-a-cacadora-palida/skara-a-cacadora-palida.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6965,9 +6396,7 @@
     "probableEntity": "Varkhaz — O Carrasco das Cinzas",
     "recommendedDestination": "pending-private-storage/models/varkhaz-o-carrasco-das-cinzas/varkhaz-o-carrasco-das-cinzas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -6999,10 +6428,7 @@
     "probableEntity": "Varkhaz — O Carrasco das Cinzas",
     "recommendedDestination": "pending-private-storage/print/varkhaz-o-carrasco-das-cinzas/varkhaz-o-carrasco-das-cinzas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7018,9 +6444,7 @@
     "probableEntity": "Borin Stonemantle — Explorador das Profundezas",
     "recommendedDestination": "pending-private-storage/models/borin-stonemantle-explorador-das-profundezas/borin-stonemantle-explorador-das-profundezas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7052,10 +6476,7 @@
     "probableEntity": "Borin Stonemantle — Explorador das Profundezas",
     "recommendedDestination": "pending-private-storage/print/borin-stonemantle-explorador-das-profundezas/borin-stonemantle-explorador-das-profundezas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7071,9 +6492,7 @@
     "probableEntity": "Cassian Emberpath — Arqueólogo das Cinzas",
     "recommendedDestination": "pending-private-storage/models/cassian-emberpath-arqueologo-das-cinzas/cassian-emberpath-arqueologo-das-cinzas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7105,10 +6524,7 @@
     "probableEntity": "Cassian Emberpath — Arqueólogo das Cinzas",
     "recommendedDestination": "pending-private-storage/print/cassian-emberpath-arqueologo-das-cinzas/cassian-emberpath-arqueologo-das-cinzas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7124,9 +6540,7 @@
     "probableEntity": "Garrick Frostwalker — Batedor das Geleiras",
     "recommendedDestination": "pending-private-storage/models/garrick-frostwalker-batedor-das-geleiras/garrick-frostwalker-batedor-das-geleiras.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7158,10 +6572,7 @@
     "probableEntity": "Garrick Frostwalker — Batedor das Geleiras",
     "recommendedDestination": "pending-private-storage/print/garrick-frostwalker-batedor-das-geleiras/garrick-frostwalker-batedor-das-geleiras.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7177,9 +6588,7 @@
     "probableEntity": "Marek Tidebinder — Navegador do Abismo",
     "recommendedDestination": "pending-private-storage/models/marek-tidebinder-navegador-do-abismo/marek-tidebinder-navegador-do-abismo.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7211,10 +6620,7 @@
     "probableEntity": "Marek Tidebinder — Navegador do Abismo",
     "recommendedDestination": "pending-private-storage/print/marek-tidebinder-navegador-do-abismo/marek-tidebinder-navegador-do-abismo.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7230,9 +6636,7 @@
     "probableEntity": "Nysa Windtrail — Mensageira dos Céus",
     "recommendedDestination": "pending-private-storage/models/nysa-windtrail-mensageira-dos-ceus/nysa-windtrail-mensageira-dos-ceus.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7264,10 +6668,7 @@
     "probableEntity": "Nysa Windtrail — Mensageira dos Céus",
     "recommendedDestination": "pending-private-storage/print/nysa-windtrail-mensageira-dos-ceus/nysa-windtrail-mensageira-dos-ceus.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7283,9 +6684,7 @@
     "probableEntity": "Seris Vale — Mestra Cartógrafa",
     "recommendedDestination": "pending-private-storage/models/seris-vale-mestra-cartografa/seris-vale-mestra-cartografa.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7317,10 +6716,7 @@
     "probableEntity": "Seris Vale — Mestra Cartógrafa",
     "recommendedDestination": "pending-private-storage/print/seris-vale-mestra-cartografa/seris-vale-mestra-cartografa.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7336,9 +6732,7 @@
     "probableEntity": "Toren Mossstride — Naturalista Ancestral",
     "recommendedDestination": "pending-private-storage/models/toren-mossstride-naturalista-ancestral/toren-mossstride-naturalista-ancestral.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7370,10 +6764,7 @@
     "probableEntity": "Toren Mossstride — Naturalista Ancestral",
     "recommendedDestination": "pending-private-storage/print/toren-mossstride-naturalista-ancestral/toren-mossstride-naturalista-ancestral.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7645,9 +7036,7 @@
     "probableEntity": "Bromar Steelvein — Mestre Ferreiro",
     "recommendedDestination": "pending-private-storage/models/bromar-steelvein-mestre-ferreiro/bromar-steelvein-mestre-ferreiro.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7679,10 +7068,7 @@
     "probableEntity": "Bromar Steelvein — Mestre Ferreiro",
     "recommendedDestination": "pending-private-storage/print/bromar-steelvein-mestre-ferreiro/bromar-steelvein-mestre-ferreiro.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7698,9 +7084,7 @@
     "probableEntity": "Caedric Runeforge — Gravador de Runas",
     "recommendedDestination": "pending-private-storage/models/caedric-runeforge-gravador-de-runas/caedric-runeforge-gravador-de-runas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7732,10 +7116,7 @@
     "probableEntity": "Caedric Runeforge — Gravador de Runas",
     "recommendedDestination": "pending-private-storage/print/caedric-runeforge-gravador-de-runas/caedric-runeforge-gravador-de-runas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7751,9 +7132,7 @@
     "probableEntity": "Helena Gearwright — Engenheira Mecânica",
     "recommendedDestination": "pending-private-storage/models/helena-gearwright-engenheira-mecanica/helena-gearwright-engenheira-mecanica.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7785,10 +7164,7 @@
     "probableEntity": "Helena Gearwright — Engenheira Mecânica",
     "recommendedDestination": "pending-private-storage/print/helena-gearwright-engenheira-mecanica/helena-gearwright-engenheira-mecanica.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7804,9 +7180,7 @@
     "probableEntity": "Liora Ashglass — Mestra Vidreira",
     "recommendedDestination": "pending-private-storage/models/liora-ashglass-mestra-vidreira/liora-ashglass-mestra-vidreira.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7838,10 +7212,7 @@
     "probableEntity": "Liora Ashglass — Mestra Vidreira",
     "recommendedDestination": "pending-private-storage/print/liora-ashglass-mestra-vidreira/liora-ashglass-mestra-vidreira.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7857,9 +7228,7 @@
     "probableEntity": "Neria Loom — Tecelã da Última Bandeira",
     "recommendedDestination": "pending-private-storage/models/neria-loom-tecela-da-ultima-bandeira/neria-loom-tecela-da-ultima-bandeira.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7891,10 +7260,7 @@
     "probableEntity": "Neria Loom — Tecelã da Última Bandeira",
     "recommendedDestination": "pending-private-storage/print/neria-loom-tecela-da-ultima-bandeira/neria-loom-tecela-da-ultima-bandeira.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7910,9 +7276,7 @@
     "probableEntity": "Orik Stonehand — Escultor Real",
     "recommendedDestination": "pending-private-storage/models/orik-stonehand-escultor-real/orik-stonehand-escultor-real.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7944,10 +7308,7 @@
     "probableEntity": "Orik Stonehand — Escultor Real",
     "recommendedDestination": "pending-private-storage/print/orik-stonehand-escultor-real/orik-stonehand-escultor-real.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7963,9 +7324,7 @@
     "probableEntity": "Aldren Voss — Mercador das Seis Estradas",
     "recommendedDestination": "pending-private-storage/models/aldren-voss-mercador-das-seis-estradas/aldren-voss-mercador-das-seis-estradas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -7997,10 +7356,7 @@
     "probableEntity": "Aldren Voss — Mercador das Seis Estradas",
     "recommendedDestination": "pending-private-storage/print/aldren-voss-mercador-das-seis-estradas/aldren-voss-mercador-das-seis-estradas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8016,9 +7372,7 @@
     "probableEntity": "Brom Ironpurse — Mestre dos Comboios",
     "recommendedDestination": "pending-private-storage/models/brom-ironpurse-mestre-dos-comboios/brom-ironpurse-mestre-dos-comboios.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8050,10 +7404,7 @@
     "probableEntity": "Brom Ironpurse — Mestre dos Comboios",
     "recommendedDestination": "pending-private-storage/print/brom-ironpurse-mestre-dos-comboios/brom-ironpurse-mestre-dos-comboios.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8069,9 +7420,7 @@
     "probableEntity": "Kael Embertrade — Negociante das Cinzas",
     "recommendedDestination": "pending-private-storage/models/kael-embertrade-negociante-das-cinzas/kael-embertrade-negociante-das-cinzas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8103,10 +7452,7 @@
     "probableEntity": "Kael Embertrade — Negociante das Cinzas",
     "recommendedDestination": "pending-private-storage/print/kael-embertrade-negociante-das-cinzas/kael-embertrade-negociante-das-cinzas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8122,9 +7468,7 @@
     "probableEntity": "Liora Greenbarter — Mercadora da Floresta",
     "recommendedDestination": "pending-private-storage/models/liora-greenbarter-mercadora-da-floresta/liora-greenbarter-mercadora-da-floresta.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8156,10 +7500,7 @@
     "probableEntity": "Liora Greenbarter — Mercadora da Floresta",
     "recommendedDestination": "pending-private-storage/print/liora-greenbarter-mercadora-da-floresta/liora-greenbarter-mercadora-da-floresta.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8175,9 +7516,7 @@
     "probableEntity": "Selene Tidemarket — Mercadora Abissal",
     "recommendedDestination": "pending-private-storage/models/selene-tidemarket-mercadora-abissal/selene-tidemarket-mercadora-abissal.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8209,10 +7548,7 @@
     "probableEntity": "Selene Tidemarket — Mercadora Abissal",
     "recommendedDestination": "pending-private-storage/print/selene-tidemarket-mercadora-abissal/selene-tidemarket-mercadora-abissal.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8228,9 +7564,7 @@
     "probableEntity": "Ysara Coinveil — Colecionadora de Relíquias",
     "recommendedDestination": "pending-private-storage/models/ysara-coinveil-colecionadora-de-reliquias/ysara-coinveil-colecionadora-de-reliquias.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8262,10 +7596,7 @@
     "probableEntity": "Ysara Coinveil — Colecionadora de Relíquias",
     "recommendedDestination": "pending-private-storage/print/ysara-coinveil-colecionadora-de-reliquias/ysara-coinveil-colecionadora-de-reliquias.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8313,10 +7644,7 @@
     "probableEntity": "Borin Stonebrew",
     "recommendedDestination": "pending-private-storage/print/borin-stonebrew/borin-stonebrew.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8348,10 +7676,7 @@
     "probableEntity": "Brakk Stonehide",
     "recommendedDestination": "pending-private-storage/print/brakk-stonehide/brakk-stonehide.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8383,10 +7708,7 @@
     "probableEntity": "Elias Crow",
     "recommendedDestination": "pending-private-storage/print/elias-crow/elias-crow.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8418,10 +7740,7 @@
     "probableEntity": "Finn Coppercoin",
     "recommendedDestination": "pending-private-storage/print/finn-coppercoin/finn-quickfingers.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8453,10 +7772,7 @@
     "probableEntity": "Gerhard Blackwolf",
     "recommendedDestination": "pending-private-storage/print/gerhard-blackwolf/gerhard-blackwolf.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8488,10 +7804,7 @@
     "probableEntity": "Grukk Iron Mug",
     "recommendedDestination": "pending-private-storage/print/grukk-iron-mug/grukk-iron-mug.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8523,10 +7836,7 @@
     "probableEntity": "Iron Tankard Waitress",
     "recommendedDestination": "pending-private-storage/print/iron-tankard-waitress/iron-tankard-waitress.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8558,10 +7868,7 @@
     "probableEntity": "Lyra",
     "recommendedDestination": "pending-private-storage/print/lyra/lyra.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8593,10 +7900,7 @@
     "probableEntity": "Morwen",
     "recommendedDestination": "pending-private-storage/print/morwen/morwen.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8628,10 +7932,7 @@
     "probableEntity": "Rat King",
     "recommendedDestination": "pending-private-storage/print/rat-king/rat-king-external.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8663,10 +7964,7 @@
     "probableEntity": "Rat King",
     "recommendedDestination": "pending-private-storage/print/rat-king/rat-king.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8698,10 +7996,7 @@
     "probableEntity": "Sir Aldren",
     "recommendedDestination": "pending-private-storage/print/sir-aldren/sir-aldren.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8733,10 +8028,7 @@
     "probableEntity": "Tavern Mimic",
     "recommendedDestination": "pending-private-storage/print/tavern-mimic/tavern-mimic.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8752,9 +8044,7 @@
     "probableEntity": "Leão de Escória",
     "recommendedDestination": "quarantine/chatgpt-installer.exe",
     "proposedAction": "QUARANTINE_AND_REVIEW",
-    "risk": [
-      "executable-or-system-file"
-    ],
+    "risk": ["executable-or-system-file"],
     "classification": "NOVO"
   },
   {
@@ -8770,9 +8060,7 @@
     "probableEntity": "Leão de Escória",
     "recommendedDestination": "pending-private-storage/models/leao-de-escoria/leao-de-escoria.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8820,10 +8108,7 @@
     "probableEntity": "Leão de Escória",
     "recommendedDestination": "pending-private-storage/print/leao-de-escoria/leao-de-escoria.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8839,9 +8124,7 @@
     "probableEntity": "Leão de Escória",
     "recommendedDestination": "quarantine/microsoft-services-store.winmd",
     "proposedAction": "QUARANTINE_AND_REVIEW",
-    "risk": [
-      "executable-or-system-file"
-    ],
+    "risk": ["executable-or-system-file"],
     "classification": "NOVO"
   },
   {
@@ -8921,10 +8204,7 @@
     "probableEntity": "The Ancient Giant",
     "recommendedDestination": "pending-private-storage/print/the-ancient-giant/the-ancient-giant.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -8972,10 +8252,7 @@
     "probableEntity": "The Demon Prince",
     "recommendedDestination": "pending-private-storage/print/the-demon-prince/the-demon-prince.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9055,10 +8332,7 @@
     "probableEntity": "The Fallen King",
     "recommendedDestination": "pending-private-storage/print/the-fallen-king/the-fallen-king.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9106,10 +8380,7 @@
     "probableEntity": "The Forest Guardian",
     "recommendedDestination": "pending-private-storage/print/the-forest-guardian/the-forest-guardian.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9141,9 +8412,7 @@
     "probableEntity": "The Iron Colossus",
     "recommendedDestination": "quarantine/dragon-slayer-print-tools.zip",
     "proposedAction": "QUARANTINE_AND_REVIEW",
-    "risk": [
-      "archive-requires-manual-inspection"
-    ],
+    "risk": ["archive-requires-manual-inspection"],
     "classification": "NOVO"
   },
   {
@@ -9175,10 +8444,7 @@
     "probableEntity": "The Iron Colossus",
     "recommendedDestination": "pending-private-storage/print/the-iron-colossus/the-iron-colossus.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9242,10 +8508,7 @@
     "probableEntity": "The Kraken Caller",
     "recommendedDestination": "pending-private-storage/print/the-kraken-caller/the-kraken-caller.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9341,10 +8604,7 @@
     "probableEntity": "The Last Dragon Slayer",
     "recommendedDestination": "pending-private-storage/print/the-last-dragon-slayer/the-last-dragon-slayer.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9392,10 +8652,7 @@
     "probableEntity": "The Lich King",
     "recommendedDestination": "pending-private-storage/print/the-lich-king/the-lich-king.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9427,10 +8684,7 @@
     "probableEntity": "The White Dragon",
     "recommendedDestination": "pending-private-storage/print/the-white-dragon/the-white-dragon.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9478,9 +8732,7 @@
     "probableEntity": "Aster Vhal — O Arquivista das Seis Coroas",
     "recommendedDestination": "pending-private-storage/models/aster-vhal-o-arquivista-das-seis-coroas/aster-vhal-o-arquivista-das-seis-coroas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9512,10 +8764,7 @@
     "probableEntity": "Aster Vhal — O Arquivista das Seis Coroas",
     "recommendedDestination": "pending-private-storage/print/aster-vhal-o-arquivista-das-seis-coroas/aster-vhal-o-arquivista-das-seis-coroas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9531,9 +8780,7 @@
     "probableEntity": "Durgan Emberhand — Mestre das Forjas Eternas",
     "recommendedDestination": "pending-private-storage/models/durgan-emberhand-mestre-das-forjas-eternas/durgan-emberhand-mestre-das-forjas-eternas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9565,10 +8812,7 @@
     "probableEntity": "Durgan Emberhand — Mestre das Forjas Eternas",
     "recommendedDestination": "pending-private-storage/print/durgan-emberhand-mestre-das-forjas-eternas/durgan-emberhand-mestre-das-forjas-eternas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9584,9 +8828,7 @@
     "probableEntity": "Kaelor Grimm — O Rastreador das Sombras",
     "recommendedDestination": "pending-private-storage/models/kaelor-grimm-o-rastreador-das-sombras/kaelor-grimm-o-rastreador-das-sombras.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9618,10 +8860,7 @@
     "probableEntity": "Kaelor Grimm — O Rastreador das Sombras",
     "recommendedDestination": "pending-private-storage/print/kaelor-grimm-o-rastreador-das-sombras/kaelor-grimm-o-rastreador-das-sombras.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9637,9 +8876,7 @@
     "probableEntity": "Madre Elyndra — Guardiã dos Altares",
     "recommendedDestination": "pending-private-storage/models/madre-elyndra-guardia-dos-altares/madre-elyndra-guardia-dos-altares.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9671,10 +8908,7 @@
     "probableEntity": "Madre Elyndra — Guardiã dos Altares",
     "recommendedDestination": "pending-private-storage/print/madre-elyndra-guardia-dos-altares/madre-elyndra-guardia-dos-altares.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9690,9 +8924,7 @@
     "probableEntity": "Mira Solenne — Mensageira da Última Bandeira",
     "recommendedDestination": "pending-private-storage/models/mira-solenne-mensageira-da-ultima-bandeira/mira-solenne-mensageira-da-ultima-bandeira.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9724,10 +8956,7 @@
     "probableEntity": "Mira Solenne — Mensageira da Última Bandeira",
     "recommendedDestination": "pending-private-storage/print/mira-solenne-mensageira-da-ultima-bandeira/mira-solenne-mensageira-da-ultima-bandeira.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9743,9 +8972,7 @@
     "probableEntity": "Seris Vale — A Cartógrafa Errante",
     "recommendedDestination": "pending-private-storage/models/seris-vale-a-cartografa-errante/seris-vale-a-cartografa-errante.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9777,10 +9004,7 @@
     "probableEntity": "Seris Vale — A Cartógrafa Errante",
     "recommendedDestination": "pending-private-storage/print/seris-vale-a-cartografa-errante/seris-vale-a-cartografa-errante.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9796,9 +9020,7 @@
     "probableEntity": "Aster Vhal — Grão-Arquivista",
     "recommendedDestination": "pending-private-storage/models/aster-vhal-grao-arquivista/aster-vhal-grao-arquivista.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9830,10 +9052,7 @@
     "probableEntity": "Aster Vhal — Grão-Arquivista",
     "recommendedDestination": "pending-private-storage/print/aster-vhal-grao-arquivista/aster-vhal-grao-arquivista.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9849,9 +9068,7 @@
     "probableEntity": "Caelis Dorn — Historiador dos Guardiões",
     "recommendedDestination": "pending-private-storage/models/caelis-dorn-historiador-dos-guardioes/caelis-dorn-historiador-dos-guardioes.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9883,10 +9100,7 @@
     "probableEntity": "Caelis Dorn — Historiador dos Guardiões",
     "recommendedDestination": "pending-private-storage/print/caelis-dorn-historiador-dos-guardioes/caelis-dorn-historiador-dos-guardioes.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9902,9 +9116,7 @@
     "probableEntity": "Ilyon Meris — Escriba Real",
     "recommendedDestination": "pending-private-storage/models/ilyon-meris-escriba-real/ilyon-meris-escriba-real.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9936,10 +9148,7 @@
     "probableEntity": "Ilyon Meris — Escriba Real",
     "recommendedDestination": "pending-private-storage/print/ilyon-meris-escriba-real/ilyon-meris-escriba-real.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9955,9 +9164,7 @@
     "probableEntity": "Maeron Lys — Cronista do Bestiário",
     "recommendedDestination": "pending-private-storage/models/maeron-lys-cronista-do-bestiario/maeron-lys-cronista-do-bestiario.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -9989,10 +9196,7 @@
     "probableEntity": "Maeron Lys — Cronista do Bestiário",
     "recommendedDestination": "pending-private-storage/print/maeron-lys-cronista-do-bestiario/maeron-lys-cronista-do-bestiario.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10008,9 +9212,7 @@
     "probableEntity": "Selene Oris — Guardiã dos Mapas",
     "recommendedDestination": "pending-private-storage/models/selene-oris-guardia-dos-mapas/selene-oris-guardia-dos-mapas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10042,10 +9244,7 @@
     "probableEntity": "Selene Oris — Guardiã dos Mapas",
     "recommendedDestination": "pending-private-storage/print/selene-oris-guardia-dos-mapas/selene-oris-guardia-dos-mapas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10061,9 +9260,7 @@
     "probableEntity": "Vaelor Thorne — Bibliotecário das Ruínas",
     "recommendedDestination": "pending-private-storage/models/vaelor-thorne-bibliotecario-das-ruinas/vaelor-thorne-bibliotecario-das-ruinas.glb",
     "proposedAction": "VALIDATE_AND_KEEP_PRIVATE_PENDING_APPROVAL",
-    "risk": [
-      "over-50mb"
-    ],
+    "risk": ["over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10095,10 +9292,7 @@
     "probableEntity": "Vaelor Thorne — Bibliotecário das Ruínas",
     "recommendedDestination": "pending-private-storage/print/vaelor-thorne-bibliotecario-das-ruinas/vaelor-thorne-bibliotecario-das-ruinas.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10146,10 +9340,7 @@
     "probableEntity": "Black Fang Mercenary",
     "recommendedDestination": "pending-private-storage/print/black-fang-mercenary/black-fang-mercenary.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10197,10 +9388,7 @@
     "probableEntity": "Durgan — Blacksmith",
     "recommendedDestination": "pending-private-storage/print/durgan-blacksmith/default-00.3mf",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10216,9 +9404,7 @@
     "probableEntity": "Durgan — Blacksmith",
     "recommendedDestination": "pending-private-storage/print/durgan-blacksmith/default-00.cfgx",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset"
-    ],
+    "risk": ["private-commercial-asset"],
     "classification": "NOVO"
   },
   {
@@ -10234,10 +9420,7 @@
     "probableEntity": "Durgan — Blacksmith",
     "recommendedDestination": "pending-private-storage/print/durgan-blacksmith/default-durgan-blacksmith-1-00.3mf",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10269,10 +9452,7 @@
     "probableEntity": "Durgan — Blacksmith",
     "recommendedDestination": "pending-private-storage/print/durgan-blacksmith/durgan-blacksmith.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10320,10 +9500,7 @@
     "probableEntity": "Elias — Chronicler",
     "recommendedDestination": "pending-private-storage/print/elias-chronicler/elias-chronicler.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10355,10 +9532,7 @@
     "probableEntity": "Finn — Quartermasters Accountant  Gambler",
     "recommendedDestination": "pending-private-storage/print/finn-quartermasters-accountant-gambler/finn-quartermaster-s-accountant-gambler.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10390,10 +9564,7 @@
     "probableEntity": "Iron Bull",
     "recommendedDestination": "pending-private-storage/print/iron-bull/iron-bull.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10457,10 +9628,7 @@
     "probableEntity": "Morwen — Herbalist",
     "recommendedDestination": "pending-private-storage/print/morwen-herbalist/morwen-herbalist.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10492,10 +9660,7 @@
     "probableEntity": "Old Garrick — Commander",
     "recommendedDestination": "pending-private-storage/print/old-garrick-commander/old-garrick-commander.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10527,10 +9692,7 @@
     "probableEntity": "Rat King — Mascote",
     "recommendedDestination": "pending-private-storage/print/rat-king-mascote/rat-king-mascote.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10562,10 +9724,7 @@
     "probableEntity": "Red Viper — Assassin",
     "recommendedDestination": "pending-private-storage/print/red-viper-assassin/red-viper-assassin.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10597,10 +9756,7 @@
     "probableEntity": "Silent Ash — Scout",
     "recommendedDestination": "pending-private-storage/print/silent-ash-scout/silent-ash-scout.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10632,10 +9788,7 @@
     "probableEntity": "Boris — Tavern Keeper",
     "recommendedDestination": "pending-private-storage/print/boris-tavern-keeper/boris-tavern-keeper.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10667,10 +9820,7 @@
     "probableEntity": "Hugo — Tavern Cook",
     "recommendedDestination": "pending-private-storage/print/hugo-tavern-cook/hugo-tavern-cook.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10702,10 +9852,7 @@
     "probableEntity": "Lily — Tavern Maid",
     "recommendedDestination": "pending-private-storage/print/lily-tavern-maid/lily-tavern-maid.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10737,10 +9884,7 @@
     "probableEntity": "Milo – Stable Boy",
     "recommendedDestination": "pending-private-storage/print/milo-stable-boy/milo-stable-boy.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10772,10 +9916,7 @@
     "probableEntity": "Olaf – The Drunken Giant",
     "recommendedDestination": "pending-private-storage/print/olaf-the-drunken-giant/olaf-the-drunken-giant.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10807,10 +9948,7 @@
     "probableEntity": "Old Bran",
     "recommendedDestination": "pending-private-storage/print/old-bran/old-bran.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10842,10 +9980,7 @@
     "probableEntity": "Rowan — Bard",
     "recommendedDestination": "pending-private-storage/print/rowan-bard/rowan-bard.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10861,10 +9996,7 @@
     "probableEntity": "The Last Dragon Slayer.stl (hollowed out)_0.050_2.300_2026_07_10_21_30_00",
     "recommendedDestination": "pending-private-storage/print/the-last-dragon-slayer-stl-hollowed-out-0-050-2-300-2026-07-10-21-30-00/the-last-dragon-slayer-stl-hollowed-out-0-050-2-300-2026-07-10-21-30-00.cxdlpv4",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-100mb"
-    ],
+    "risk": ["private-commercial-asset", "over-100mb"],
     "classification": "NOVO"
   },
   {
@@ -10928,10 +10060,7 @@
     "probableEntity": "King Aldric — Keeper of the Iron Crown",
     "recommendedDestination": "pending-private-storage/print/king-aldric-keeper-of-the-iron-crown/model-5.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -10963,10 +10092,7 @@
     "probableEntity": "The Kraken Caller",
     "recommendedDestination": "pending-private-storage/print/the-kraken-caller/model-1-6.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -10998,10 +10124,7 @@
     "probableEntity": "The Last Dragon Slayer",
     "recommendedDestination": "pending-private-storage/print/the-last-dragon-slayer/dragon-slayer.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -11033,10 +10156,7 @@
     "probableEntity": "Vaelor - Storm Warden",
     "recommendedDestination": "pending-private-storage/print/vaelor-storm-warden/model-4.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "NOVO"
   },
   {
@@ -11068,10 +10188,7 @@
     "probableEntity": "Vhaldris, o Dragão Branco",
     "recommendedDestination": "pending-private-storage/print/vhaldris-o-dragao-branco/model-1-6.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   },
   {
@@ -11103,10 +10220,7 @@
     "probableEntity": "Yggor - Guardian Of The Oak Crown",
     "recommendedDestination": "pending-private-storage/print/yggor-guardian-of-the-oak-crown/model-1-6.stl",
     "proposedAction": "KEEP_PRIVATE_METADATA_ONLY",
-    "risk": [
-      "private-commercial-asset",
-      "over-50mb"
-    ],
+    "risk": ["private-commercial-asset", "over-50mb"],
     "classification": "CONFLITO_DE_NOME"
   }
 ]
