@@ -15,3 +15,6 @@ Thumbs.db
 *.log
 .agents/
 .codex/
+
+.vercel
+.env*
