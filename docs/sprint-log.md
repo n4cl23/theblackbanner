@@ -9,6 +9,15 @@
 - Security: `npm audit` reported 0 vulnerabilities after compatible patch updates.
 - Deployment: no Preview or Production deployment was performed.
 
+## Sprint 3 — Editorial content model
+
+- Branch: `sprint-03-content-model`
+- Scope: 18 typed entities, Zod validation, explicit relationships, local mock dataset, integrity validation, repository abstraction, future source adapters, tests, and documentation.
+- Dataset: 3 kingdoms, 4 characters, 4 creatures, 2 collections, 5 events, and 2 articles; all records are provisional mock content.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 25 Vitest tests, 3 Playwright smoke tests, and production build passed on 2026-07-17.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 2 — Cinematic Home
 
 - Branch: `sprint-02-cinematic-home`
