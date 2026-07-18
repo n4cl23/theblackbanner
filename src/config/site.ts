@@ -7,7 +7,8 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_APP_URL ?? 'https://the-black-banner-v2.vercel.app',
   locale: 'pt_BR',
   creator: 'The Black Banner',
-  socialImage: '/images/home/asterheim-hero.webp',
+  socialImage:
+    '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
 } as const;
 
 export function absoluteUrl(path = '/') {

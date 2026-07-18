@@ -54,6 +54,33 @@ for (const item of inventory) {
 
 await fs.mkdir('reports', { recursive: true });
 await fs.writeFile('reports/asterheim-optimized-media.json', `${JSON.stringify(results, null, 2)}\n`);
+function inferEntityType(sourcePath) {
+  const normalized = sourcePath.toLowerCase();
+  if (normalized.includes('map')) return 'map';
+  if (normalized.includes('beasts of asterheim') || normalized.includes('atlas') || normalized.includes('bestiary')) return 'creature';
+  if (normalized.includes('six crowns')) return 'collection';
+  if (normalized.includes('legends of the realm')) return 'guardian';
+  return 'character';
+}
+const manifest = results.map((item) => ({
+  id: item.id,
+  type: item.animated ? 'animation' : 'image',
+  src: item.src,
+  poster: null,
+  alt: `Visual de ${item.entityName} no arquivo de Asterheim`,
+  caption: 'Mídia importada; descrição editorial pendente de revisão.',
+  credit: 'The Black Banner — Chronicles of Asterheim',
+  width: item.width,
+  height: item.height,
+  duration: null,
+  locale: 'und',
+  entityType: inferEntityType(item.sourcePath),
+  entitySlug: item.entitySlug,
+  usage: item.sourcePath.toLowerCase().includes('banner') || item.sourcePath.toLowerCase().includes('hero') ? 'hero' : 'gallery',
+  status: 'review',
+}));
+await fs.mkdir('src/content', { recursive: true });
+await fs.writeFile('src/content/asterheim-media-manifest.generated.json', `${JSON.stringify(manifest, null, 2)}\n`);
 const original = results.reduce((sum, item) => sum + item.originalBytes, 0);
 const optimized = results.reduce((sum, item) => sum + item.optimizedBytes, 0);
 console.log(JSON.stringify({ files: results.length, originalBytes: original, optimizedBytes: optimized, reductionPercent: Math.round((1 - optimized / original) * 100) }));
