@@ -1,0 +1,197 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-coal-950: var(--coal-950);
+  --color-coal-900: var(--coal-900);
+  --color-iron-800: var(--iron-800);
+  --color-stone-600: var(--stone-600);
+  --color-parchment-200: var(--parchment-200);
+  --color-ivory-100: var(--ivory-100);
+  --color-aged-gold-500: var(--aged-gold-500);
+  --color-bronze-600: var(--bronze-600);
+  --color-blood-700: var(--blood-700);
+  --color-ember-600: var(--ember-600);
+  --font-sans: var(--font-reading);
+  --font-display: var(--font-title);
+  --font-subtitle: var(--font-literary);
+  --breakpoint-xs: 30rem;
+}
+
+:root {
+  /* Color tokens */
+  --black: #050505;
+  --coal-950: #0a0a09;
+  --coal-900: #121210;
+  --iron-800: #262724;
+  --stone-600: #67675f;
+  --parchment-200: #d4c8ab;
+  --ivory-100: #eee9dc;
+  --aged-gold-500: #a88a45;
+  --bronze-600: #79572f;
+  --blood-700: #681d1d;
+  --ember-600: #a83d1f;
+
+  /* Typography tokens */
+  --font-title: Cinzel, Georgia, 'Times New Roman', serif;
+  --font-literary: 'Cormorant Garamond', Georgia, serif;
+  --font-reading: Inter, ui-sans-serif, system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.125rem, 1rem + 0.35vw, 1.35rem);
+  --text-xl: clamp(1.4rem, 1rem + 1vw, 2rem);
+  --text-2xl: clamp(2rem, 1.25rem + 2.5vw, 4rem);
+  --text-hero: clamp(2.75rem, 1.5rem + 5vw, 7rem);
+  --leading-tight: 1.05;
+  --leading-heading: 1.18;
+  --leading-reading: 1.7;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.12em;
+  --tracking-caps: 0.24em;
+
+  /* Spatial tokens */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius-sharp: 0;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+
+  /* Depth and borders */
+  --border-subtle: 1px solid rgb(212 200 171 / 14%);
+  --border-strong: 1px solid rgb(168 138 69 / 48%);
+  --shadow-low: 0 1rem 3rem rgb(0 0 0 / 35%);
+  --shadow-deep: 0 2rem 7rem rgb(0 0 0 / 70%);
+  --shadow-ember: 0 0 2rem rgb(168 61 31 / 18%);
+
+  /* Texture, opacity, motion, layers */
+  --texture-ash: radial-gradient(
+    circle at 20% 30%,
+    rgb(255 255 255 / 3%) 0 1px,
+    transparent 1.5px
+  );
+  --texture-metal: linear-gradient(
+    115deg,
+    transparent 0 42%,
+    rgb(255 255 255 / 3%) 49%,
+    transparent 56%
+  );
+  --opacity-muted: 0.68;
+  --opacity-disabled: 0.42;
+  --duration-fast: 140ms;
+  --duration-base: 260ms;
+  --duration-slow: 560ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --z-base: 0;
+  --z-sticky: 20;
+  --z-overlay: 60;
+  --z-modal: 80;
+  --z-toast: 100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--coal-950);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    var(--texture-ash) 0 0 / 19rem 19rem,
+    linear-gradient(180deg, var(--black), var(--coal-950));
+  color: var(--ivory-100);
+  font-family: var(--font-reading);
+  line-height: var(--leading-reading);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--blood-700);
+  color: var(--ivory-100);
+}
+
+:focus-visible {
+  outline: 2px solid var(--aged-gold-500);
+  outline-offset: 4px;
+}
+
+.section-reveal {
+  animation: section-reveal var(--duration-slow) var(--ease-reveal) both;
+}
+
+.fade-in {
+  animation: fade-in var(--duration-base) var(--ease-standard) both;
+}
+
+.page-transition {
+  animation: fade-in var(--duration-base) var(--ease-standard) both;
+}
+
+.text-reveal {
+  animation: text-reveal var(--duration-slow) var(--ease-reveal) both;
+}
+
+.light-parallax {
+  transform: translateY(var(--parallax-offset, 0));
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes text-reveal {
+  from {
+    opacity: 0;
+    letter-spacing: 0.22em;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: var(--tracking-wide);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .light-parallax {
+    transform: none;
+  }
+}
