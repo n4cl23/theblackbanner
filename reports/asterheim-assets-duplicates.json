@@ -1,0 +1,300 @@
+{
+  "exactGroups": [
+    {
+      "sha256": "20e4e8e49e353d9377922055237b2b86249017815f438d50ddd5cc8444890bce",
+      "sizeBytes": 24116,
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian (1).pdf",
+          "origin": "source",
+          "sizeBytes": 24116
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian.pdf",
+          "origin": "source",
+          "sizeBytes": 24116
+        }
+      ]
+    }
+  ],
+  "nameConflicts": [
+    {
+      "normalizedName": "43.png",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\43.png",
+          "width": 1448,
+          "height": 1086,
+          "sizeBytes": 2441644
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\43.png",
+          "width": 1448,
+          "height": 1086,
+          "sizeBytes": 2642816
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\43.png",
+          "width": 1448,
+          "height": 1086,
+          "sizeBytes": 2319030
+        }
+      ]
+    },
+    {
+      "normalizedName": "banner.jpg",
+      "classification": "VARIACAO_VALIDA",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Banner.jpg",
+          "width": 4950,
+          "height": 2100,
+          "sizeBytes": 4031984
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 6546964
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 6346081
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Roderic Ashbane — Caçador das Cinzas\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 5551752
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Sylva Mossarrow — Arqueira da Floresta\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 8135211
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Varek Deepharpoon — Caçador Abissal\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 4643108
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Abyss\\Abyss Jelly\\Banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 5585468
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Aegis — The First Sky King\\banner.jpg",
+          "width": 5550,
+          "height": 2800,
+          "sizeBytes": 6596393
+        }
+      ]
+    },
+    {
+      "normalizedName": "banner.svg",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 2209326
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 4901116
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 3479107
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Roderic Ashbane — Caçador das Cinzas\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 2709476
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Sylva Mossarrow — Arqueira da Floresta\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 3086229
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Varek Deepharpoon — Caçador Abissal\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 1693941
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Abyss\\Abyss Jelly\\Banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 447508
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Aegis — The First Sky King\\banner.svg",
+          "width": null,
+          "height": null,
+          "sizeBytes": 3368379
+        }
+      ]
+    },
+    {
+      "normalizedName": "video-sem-titulo.gif",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Vídeo sem título.gif",
+          "width": 640,
+          "height": 360,
+          "sizeBytes": 35882667
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Demon Prince\\Vídeo sem título.gif",
+          "width": 640,
+          "height": 360,
+          "sizeBytes": 7534279
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Iron Colossus\\Vídeo sem título.gif",
+          "width": 640,
+          "height": 360,
+          "sizeBytes": 10398806
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Kraken Caller\\Vídeo sem título.gif",
+          "width": 640,
+          "height": 360,
+          "sizeBytes": 9098728
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The White Dragon\\Vídeo sem título.gif",
+          "width": 640,
+          "height": 360,
+          "sizeBytes": 10771286
+        }
+      ]
+    },
+    {
+      "normalizedName": "video-sem-titulo.mp4",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Vídeo sem título.mp4",
+          "width": null,
+          "height": null,
+          "sizeBytes": 24387940
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Demon Prince\\Vídeo sem título.mp4",
+          "width": null,
+          "height": null,
+          "sizeBytes": 5573993
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Iron Colossus\\Vídeo sem título.mp4",
+          "width": null,
+          "height": null,
+          "sizeBytes": 5546640
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Legends of the Realm\\The Kraken Caller\\Vídeo sem título.mp4",
+          "width": null,
+          "height": null,
+          "sizeBytes": 6914615
+        }
+      ]
+    },
+    {
+      "normalizedName": "34.png",
+      "classification": "VARIACAO_VALIDA",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\34.png",
+          "width": 1086,
+          "height": 1448,
+          "sizeBytes": 2540707
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\34.png",
+          "width": 1054,
+          "height": 1492,
+          "sizeBytes": 2208641
+        }
+      ]
+    },
+    {
+      "normalizedName": "model-1.glb",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Ironhold\\Chainmaw\\Model #1.glb",
+          "width": null,
+          "height": null,
+          "sizeBytes": 73015156
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Ironhold\\Iron Wyrm\\Model #1.glb",
+          "width": null,
+          "height": null,
+          "sizeBytes": 72760032
+        }
+      ]
+    },
+    {
+      "normalizedName": "model-1.stl",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Scorched Wastes\\Cinder Wolf\\Model #1.stl",
+          "width": null,
+          "height": null,
+          "sizeBytes": 96895984
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\Beasts of Asterheim\\Thalassor\\Model #1.stl",
+          "width": null,
+          "height": null,
+          "sizeBytes": 94634984
+        }
+      ]
+    },
+    {
+      "normalizedName": "model-1-6.stl",
+      "classification": "CONFLITO_DE_NOME",
+      "files": [
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\The Six Crowns of Asterheim\\The Kraken Caller\\Model #1 (6).stl",
+          "width": null,
+          "height": null,
+          "sizeBytes": 94573634
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\The Six Crowns of Asterheim\\Vhaldris, o Dragão Branco\\Model #1 (6).stl",
+          "width": null,
+          "height": null,
+          "sizeBytes": 96403234
+        },
+        {
+          "path": "C:\\Users\\Janderson Santos\\Desktop\\Chronicles of Asterheim\\The Six Crowns of Asterheim\\Yggor - Guardian Of The Oak Crown\\Model #1 (6).stl",
+          "width": null,
+          "height": null,
+          "sizeBytes": 96594484
+        }
+      ]
+    }
+  ],
+  "hashedFiles": 2,
+  "projectFilesCompared": 3
+}
