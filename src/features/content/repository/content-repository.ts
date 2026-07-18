@@ -3,6 +3,10 @@ import type {
   Collection,
   Creature,
   Kingdom,
+  Faction,
+  GalleryItem,
+  Location,
+  Region,
   TimelineEvent,
 } from '@/features/content/domain/content-types';
 
@@ -15,4 +19,8 @@ export interface ContentRepository {
   getCreatureBySlug(slug: string): Promise<Creature | null>;
   getCollections(): Promise<readonly Collection[]>;
   getTimelineEvents(): Promise<readonly TimelineEvent[]>;
+  getRegions(): Promise<readonly Region[]>;
+  getFactions(): Promise<readonly Faction[]>;
+  getLocations(): Promise<readonly Location[]>;
+  getGalleryItems(): Promise<readonly GalleryItem[]>;
 }

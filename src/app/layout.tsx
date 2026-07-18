@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
 
+import { getPublicEnvironment } from '@/config/env';
+
 import '@/styles/globals.css';
 
+const publicEnvironment = getPublicEnvironment();
+
 export const metadata: Metadata = {
+  metadataBase: new URL(publicEnvironment.appUrl ?? 'http://localhost:3000'),
   title: {
     default: 'The Black Banner V2',
     template: '%s | The Black Banner V2',

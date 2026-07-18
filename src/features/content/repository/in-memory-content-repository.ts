@@ -3,7 +3,11 @@ import type {
   Collection,
   ContentDataset,
   Creature,
+  Faction,
+  GalleryItem,
   Kingdom,
+  Location,
+  Region,
   TimelineEvent,
 } from '@/features/content/domain/content-types';
 import type { ContentRepository } from '@/features/content/repository/content-repository';
@@ -59,6 +63,22 @@ export class InMemoryContentRepository implements ContentRepository {
         (left, right) => left.chronologyOrder - right.chronologyOrder,
       ),
     );
+  }
+
+  getRegions(): Promise<readonly Region[]> {
+    return Promise.resolve(byOrder(this.dataset.regions));
+  }
+
+  getFactions(): Promise<readonly Faction[]> {
+    return Promise.resolve(byOrder(this.dataset.factions));
+  }
+
+  getLocations(): Promise<readonly Location[]> {
+    return Promise.resolve(byOrder(this.dataset.locations));
+  }
+
+  getGalleryItems(): Promise<readonly GalleryItem[]> {
+    return Promise.resolve(byOrder(this.dataset.galleryItems));
   }
 }
 

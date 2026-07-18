@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 4 — Kingdoms and map of Asterheim
+
+- Branch: `sprint-04-kingdoms-map`
+- Scope: world hub, kingdom index, three dynamic kingdom presentations, accessible SVG map, dynamic SEO, repository projections, tests, and documentation.
+- Content: all geographic shapes and complementary presentation copy are explicitly provisional mocks; no official canon was established.
+- Map: SVG renderer with bounded zoom, pointer pan, keyboard selection, region layer, tooltip/status, legend, future layer controls, and accessible list/mobile fallback.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 31 Vitest tests, 5 Playwright tests, and the production build passed on 2026-07-17.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 0 — Foundation and architecture
 
 - Branch: `sprint-00-foundation`

@@ -43,3 +43,11 @@ The cinematic Home is server-rendered from typed mock records in `src/content/ho
 ## Editorial content boundary
 
 Editorial contracts live under `src/features/content/domain`. Zod schemas are the runtime source of truth and TypeScript types are inferred from them. `ContentRepository` is independent from `ContentSourceAdapter`; the current local adapter and future database/CMS adapters share the same dataset boundary. Referential integrity is validated before a repository is exposed. No adapter in Sprint 3 creates an external connection.
+
+## World exploration
+
+- `/world` routes are Server Components; only the interactive SVG map is a Client Component.
+- Kingdom pages use static route parameters and dynamic metadata derived from the repository.
+- Related regions, factions, characters, creatures, events, and gallery records are resolved in a cached world projection.
+- The SVG map has an equivalent list model for accessibility and mobile fallback.
+- Geographic layers beyond kingdom regions remain future extension points.
