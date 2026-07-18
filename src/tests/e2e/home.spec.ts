@@ -197,3 +197,49 @@ test('renders the printing guide on mobile', async ({ page }) => {
     page.getByText('Troubleshooting', { exact: true }),
   ).toBeVisible();
 });
+
+test('changes timeline views and follows related events', async ({ page }) => {
+  await page.goto('/timeline');
+  await expect(page.getByText('5 eventos documentados')).toBeVisible();
+  await page.getByLabel('Visão da timeline').selectOption('conflict');
+  await expect(page).toHaveURL(/visao=conflict/);
+  await page.getByLabel('Filtro da timeline').selectOption('A Marcha Partida');
+  await expect(page).toHaveURL(/filtro=A(\+|%20)Marcha(\+|%20)Partida/);
+  await expect(page.getByText('2 eventos documentados')).toBeVisible();
+  await page.getByRole('link', { name: 'The Crown Vanishes' }).click();
+  await expect(page.locator('#event-crown-vanishes')).toBeInViewport();
+});
+
+test('searches connected lore and opens an article', async ({ page }) => {
+  await page.goto('/lore');
+  await page.getByLabel('Buscar em Asterheim').fill('Watcher');
+  await expect(page.getByText('1 resultados')).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: /The Far Watcher/i }),
+  ).toBeVisible();
+  await page.getByRole('link', { name: /Roads and Ruins/i }).click();
+  await expect(page.getByRole('navigation', { name: 'Sumário' })).toBeVisible();
+  await expect(page.getByText('Entidades mencionadas')).toBeVisible();
+});
+
+test('reads chronicles with keyboard navigation and a local marker', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/chronicles/the-black-road');
+  await expect(
+    page.getByRole('heading', { name: 'Antes das cinzas' }),
+  ).toBeVisible();
+  await page.getByRole('region', { name: 'Leitor de crônica' }).focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(
+    page.getByRole('heading', { name: 'O marco sem nome' }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByRole('heading', { name: 'O marco sem nome' }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: /Capítulo anterior/i }),
+  ).toBeVisible();
+});

@@ -1,5 +1,15 @@
 # Sprint log
 
+## Sprint 8 — Timeline and connected lore
+
+- Branch: `sprint-08-timeline-lore`
+- Scope: five-view connected timeline experience, semantic narrative relations, unified local search, two article pages, two long-form chronicles, keyboard reading, local progress, SEO, tests, and documentation.
+- Content: eras, years, impacts, conflicts, relation notes, quotations, and chronicle prose are explicitly provisional mocks.
+- Architecture: no graph engine, vector search, database, CMS, or remote search service was added.
+- Privacy: the reading marker stores only a chapter index in a versioned local key.
+- Validation: formatting, lint, typecheck, 53 Vitest tests, 17 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 7 — Collections and miniatures
 
 - Branch: `sprint-07-collections-stl`

@@ -73,3 +73,11 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - The technical model stores public descriptors and version history, never private file URLs, checkout state, payment state, or storage credentials.
 - The existing GLB contract receives a null asset because no approved test model exists; no heavy 3D dependency is installed.
 - All planned collection families are represented by a closed category enum. Records are created only where consistent provisional content exists.
+
+## Connected lore
+
+- Core events and articles remain in `ContentRepository`; Zod-validated presentation records add eras, impacts, conflicts, relations, and chronicle chapters without changing persistence.
+- Timeline and lore routes are server-rendered. URL filters, deferred local search, and chronicle progress are the only Client Component boundaries.
+- Narrative relationships are semantic, navigable editorial records; no graph engine, canvas renderer, or graph database is installed.
+- Unified search operates only over serialized local repository records and includes characters, creatures, kingdoms, events, articles, and collections.
+- Chronicle markers use versioned, per-story local-storage keys. They contain only a chapter index and no user identity.

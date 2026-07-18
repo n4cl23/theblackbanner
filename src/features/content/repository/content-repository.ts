@@ -12,6 +12,7 @@ import type {
   Weapon,
   PrintProfile,
   TimelineEvent,
+  LoreArticle,
 } from '@/features/content/domain/content-types';
 
 export interface ContentRepository {
@@ -23,6 +24,8 @@ export interface ContentRepository {
   getCreatureBySlug(slug: string): Promise<Creature | null>;
   getCollections(): Promise<readonly Collection[]>;
   getTimelineEvents(): Promise<readonly TimelineEvent[]>;
+  getLoreArticles(): Promise<readonly LoreArticle[]>;
+  getLoreArticleBySlug(slug: string): Promise<LoreArticle | null>;
   getRegions(): Promise<readonly Region[]>;
   getFactions(): Promise<readonly Faction[]>;
   getLocations(): Promise<readonly Location[]>;

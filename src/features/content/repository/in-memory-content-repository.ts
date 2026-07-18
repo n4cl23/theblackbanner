@@ -13,6 +13,7 @@ import type {
   Weapon,
   PrintProfile,
   TimelineEvent,
+  LoreArticle,
 } from '@/features/content/domain/content-types';
 import type { ContentRepository } from '@/features/content/repository/content-repository';
 import type { ContentSourceAdapter } from '@/features/content/repository/content-source-adapter';
@@ -66,6 +67,17 @@ export class InMemoryContentRepository implements ContentRepository {
       [...this.dataset.timelineEvents].sort(
         (left, right) => left.chronologyOrder - right.chronologyOrder,
       ),
+    );
+  }
+
+  getLoreArticles(): Promise<readonly LoreArticle[]> {
+    return Promise.resolve(byOrder(this.dataset.loreArticles));
+  }
+
+  getLoreArticleBySlug(slug: string): Promise<LoreArticle | null> {
+    return Promise.resolve(
+      this.dataset.loreArticles.find((article) => article.slug === slug) ??
+        null,
     );
   }
 
