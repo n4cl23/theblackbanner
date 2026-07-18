@@ -52,6 +52,19 @@
     "status": "review"
   },
   {
+    "id": "media-brynn-icefang-rastreadora-do-gelo-2dbbbb4c",
+    "sourcePath": "A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Banner.svg",
+    "src": "/media/asterheim/entities/brynn-icefang-rastreadora-do-gelo/banner-2dbbbb4c.webp",
+    "entityName": "Brynn Icefang — Rastreadora do Gelo",
+    "entitySlug": "brynn-icefang-rastreadora-do-gelo",
+    "width": 1584,
+    "height": 672,
+    "animated": false,
+    "originalBytes": 2209326,
+    "optimizedBytes": 115140,
+    "status": "review"
+  },
+  {
     "id": "media-brynn-icefang-rastreadora-do-gelo-3458072a",
     "sourcePath": "A Irmandade dos Caçadores\\Brynn Icefang — Rastreadora do Gelo\\Brynn Icefang — Rastreadora do Gelo.png",
     "src": "/media/asterheim/entities/brynn-icefang-rastreadora-do-gelo/brynn-icefang-rastreadora-do-gelo-3458072a.webp",
@@ -143,6 +156,19 @@
     "status": "review"
   },
   {
+    "id": "media-darian-stormhook-lanceiro-das-tempestades-3dc41738",
+    "sourcePath": "A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\Banner.svg",
+    "src": "/media/asterheim/entities/darian-stormhook-lanceiro-das-tempestades/banner-3dc41738.webp",
+    "entityName": "Darian Stormhook — Lanceiro das Tempestades",
+    "entitySlug": "darian-stormhook-lanceiro-das-tempestades",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 4901116,
+    "optimizedBytes": 89026,
+    "status": "review"
+  },
+  {
     "id": "media-darian-stormhook-lanceiro-das-tempestades-a158e2d3",
     "sourcePath": "A Irmandade dos Caçadores\\Darian Stormhook — Lanceiro das Tempestades\\Darian Stormhook — Lanceiro das Tempestades.png",
     "src": "/media/asterheim/entities/darian-stormhook-lanceiro-das-tempestades/darian-stormhook-lanceiro-das-tempestades-a158e2d3.webp",
@@ -208,6 +234,19 @@
     "status": "review"
   },
   {
+    "id": "media-kael-thorn-mestre-cacador-581c1fd6",
+    "sourcePath": "A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\Banner.svg",
+    "src": "/media/asterheim/entities/kael-thorn-mestre-cacador/banner-581c1fd6.webp",
+    "entityName": "Kael Thorn — Mestre Caçador",
+    "entitySlug": "kael-thorn-mestre-cacador",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 3479107,
+    "optimizedBytes": 90670,
+    "status": "review"
+  },
+  {
     "id": "media-kael-thorn-mestre-cacador-0e350284",
     "sourcePath": "A Irmandade dos Caçadores\\Kael Thorn — Mestre Caçador\\Kael Thorn — Mestre Caçador.png",
     "src": "/media/asterheim/entities/kael-thorn-mestre-cacador/kael-thorn-mestre-cacador-0e350284.webp",
@@ -231,6 +270,19 @@
     "animated": false,
     "originalBytes": 5551752,
     "optimizedBytes": 95748,
+    "status": "review"
+  },
+  {
+    "id": "media-roderic-ashbane-cacador-das-cinzas-b9c736fe",
+    "sourcePath": "A Irmandade dos Caçadores\\Roderic Ashbane — Caçador das Cinzas\\Banner.svg",
+    "src": "/media/asterheim/entities/roderic-ashbane-cacador-das-cinzas/banner-b9c736fe.webp",
+    "entityName": "Roderic Ashbane — Caçador das Cinzas",
+    "entitySlug": "roderic-ashbane-cacador-das-cinzas",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 2709476,
+    "optimizedBytes": 65272,
     "status": "review"
   },
   {
@@ -260,6 +312,19 @@
     "status": "review"
   },
   {
+    "id": "media-sylva-mossarrow-arqueira-da-floresta-a8cb0d8c",
+    "sourcePath": "A Irmandade dos Caçadores\\Sylva Mossarrow — Arqueira da Floresta\\Banner.svg",
+    "src": "/media/asterheim/entities/sylva-mossarrow-arqueira-da-floresta/banner-a8cb0d8c.webp",
+    "entityName": "Sylva Mossarrow — Arqueira da Floresta",
+    "entitySlug": "sylva-mossarrow-arqueira-da-floresta",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 3086229,
+    "optimizedBytes": 169542,
+    "status": "review"
+  },
+  {
     "id": "media-sylva-mossarrow-arqueira-da-floresta-f487eb2f",
     "sourcePath": "A Irmandade dos Caçadores\\Sylva Mossarrow — Arqueira da Floresta\\Sylva Mossarrow — Arqueira da Floresta.png",
     "src": "/media/asterheim/entities/sylva-mossarrow-arqueira-da-floresta/sylva-mossarrow-arqueira-da-floresta-f487eb2f.webp",
@@ -286,6 +351,19 @@
     "status": "review"
   },
   {
+    "id": "media-varek-deepharpoon-cacador-abissal-1ce7d922",
+    "sourcePath": "A Irmandade dos Caçadores\\Varek Deepharpoon — Caçador Abissal\\Banner.svg",
+    "src": "/media/asterheim/entities/varek-deepharpoon-cacador-abissal/banner-1ce7d922.webp",
+    "entityName": "Varek Deepharpoon — Caçador Abissal",
+    "entitySlug": "varek-deepharpoon-cacador-abissal",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 1693941,
+    "optimizedBytes": 42372,
+    "status": "review"
+  },
+  {
     "id": "media-varek-deepharpoon-cacador-abissal-96382e7f",
     "sourcePath": "A Irmandade dos Caçadores\\Varek Deepharpoon — Caçador Abissal\\Varek Deepharpoon — Caçador Abissal.png",
     "src": "/media/asterheim/entities/varek-deepharpoon-cacador-abissal/varek-deepharpoon-cacador-abissal-96382e7f.webp",
@@ -299,6 +377,32 @@
     "status": "review"
   },
   {
+    "id": "media-arte-visual-c22b9e88",
+    "sourcePath": "Arte, Visual\\Material de divulgação (PT-BR) (1).svg",
+    "src": "/media/asterheim/entities/arte-visual/material-de-divulgacao-pt-br-1-c22b9e88.webp",
+    "entityName": "Arte, Visual",
+    "entitySlug": "arte-visual",
+    "width": 1264,
+    "height": 1264,
+    "animated": false,
+    "originalBytes": 1153951,
+    "optimizedBytes": 52540,
+    "status": "review"
+  },
+  {
+    "id": "media-arte-visual-0aa8c545",
+    "sourcePath": "Arte, Visual\\Material de divulgação (PT-BR) (2).svg",
+    "src": "/media/asterheim/entities/arte-visual/material-de-divulgacao-pt-br-2-0aa8c545.webp",
+    "entityName": "Arte, Visual",
+    "entitySlug": "arte-visual",
+    "width": 1264,
+    "height": 1264,
+    "animated": false,
+    "originalBytes": 1903474,
+    "optimizedBytes": 94620,
+    "status": "review"
+  },
+  {
     "id": "media-arte-visual-a04039ea",
     "sourcePath": "Arte, Visual\\Material de divulgação (PT-BR).png",
     "src": "/media/asterheim/entities/arte-visual/material-de-divulgacao-pt-br-a04039ea.webp",
@@ -309,6 +413,19 @@
     "animated": false,
     "originalBytes": 10383888,
     "optimizedBytes": 197336,
+    "status": "review"
+  },
+  {
+    "id": "media-arte-visual-01fc91b8",
+    "sourcePath": "Arte, Visual\\Material de divulgação (PT-BR).svg",
+    "src": "/media/asterheim/entities/arte-visual/material-de-divulgacao-pt-br-01fc91b8.webp",
+    "entityName": "Arte, Visual",
+    "entitySlug": "arte-visual",
+    "width": 1264,
+    "height": 1264,
+    "animated": false,
+    "originalBytes": 2490639,
+    "optimizedBytes": 107644,
     "status": "review"
   },
   {
@@ -335,6 +452,19 @@
     "animated": false,
     "originalBytes": 5585468,
     "optimizedBytes": 128714,
+    "status": "review"
+  },
+  {
+    "id": "media-abyss-jelly-3c83eed7",
+    "sourcePath": "Beasts of Asterheim\\Abyss\\Abyss Jelly\\Banner.svg",
+    "src": "/media/asterheim/entities/abyss-jelly/banner-3c83eed7.webp",
+    "entityName": "Abyss Jelly",
+    "entitySlug": "abyss-jelly",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 447508,
+    "optimizedBytes": 95068,
     "status": "review"
   },
   {
@@ -517,6 +647,19 @@
     "animated": false,
     "originalBytes": 6596393,
     "optimizedBytes": 142304,
+    "status": "review"
+  },
+  {
+    "id": "media-aegis-the-first-sky-king-94292718",
+    "sourcePath": "Beasts of Asterheim\\Aegis — The First Sky King\\banner.svg",
+    "src": "/media/asterheim/entities/aegis-the-first-sky-king/banner-94292718.webp",
+    "entityName": "Aegis — The First Sky King",
+    "entitySlug": "aegis-the-first-sky-king",
+    "width": 1776,
+    "height": 896,
+    "animated": false,
+    "originalBytes": 3368379,
+    "optimizedBytes": 97536,
     "status": "review"
   },
   {

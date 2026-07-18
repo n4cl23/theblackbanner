@@ -5,7 +5,7 @@ import sharp from 'sharp';
 
 const inventory = JSON.parse(await fs.readFile('reports/asterheim-assets-inventory.json', 'utf8'));
 const outputRoot = path.resolve('public/media/asterheim');
-const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.gif']);
+const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.gif', '.svg']);
 
 function slug(value) {
   return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
