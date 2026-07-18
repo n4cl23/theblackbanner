@@ -1,0 +1,167 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AdminRole {
+  ADMIN
+  EDITOR
+  REVIEWER
+}
+
+enum EditorialStatus {
+  DRAFT
+  REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ContentType {
+  CHARACTER
+  CREATURE
+  KINGDOM
+  COLLECTION
+  TIMELINE_EVENT
+  LORE_ARTICLE
+}
+
+enum ContentLocale {
+  PT_BR
+  EN
+  ES
+}
+
+enum AuditAction {
+  CREATE
+  UPDATE
+  DUPLICATE
+  SUBMIT_REVIEW
+  PUBLISH
+  ARCHIVE
+  RESTORE
+  LOGIN
+  LOGOUT
+}
+
+enum AuditResult {
+  SUCCESS
+  DENIED
+  CONFLICT
+  VALIDATION_ERROR
+  FAILURE
+}
+
+enum MediaKind {
+  IMAGE
+  VIDEO
+  AUDIO
+  MODEL
+  DOCUMENT
+}
+
+model AdminUser {
+  id             String     @id @default(cuid())
+  externalAuthId String     @unique
+  email          String     @unique
+  displayName    String
+  role           AdminRole  @default(EDITOR)
+  active         Boolean    @default(true)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  revisions      Revision[]
+  auditLogs      AuditLog[]
+}
+
+model ContentEntity {
+  id           String          @id @default(cuid())
+  type         ContentType
+  locale       ContentLocale
+  slug         String
+  title        String
+  subtitle     String?
+  excerpt      String?
+  body         Json
+  seo          Json?
+  status       EditorialStatus @default(DRAFT)
+  featured     Boolean         @default(false)
+  sortOrder    Int             @default(0)
+  version      Int             @default(1)
+  originalId   String?
+  original     ContentEntity?  @relation("Translations", fields: [originalId], references: [id], onDelete: Restrict)
+  translations ContentEntity[] @relation("Translations")
+  coverId      String?
+  cover        MediaAsset?     @relation(fields: [coverId], references: [id], onDelete: SetNull)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  publishedAt  DateTime?
+  revisions    Revision[]
+  auditLogs    AuditLog[]
+
+  @@unique([locale, slug])
+  @@index([type, status, locale])
+  @@index([updatedAt])
+}
+
+model Revision {
+  id          String        @id @default(cuid())
+  entityId    String
+  entity      ContentEntity @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  version     Int
+  snapshot    Json
+  changedById String
+  changedBy   AdminUser     @relation(fields: [changedById], references: [id], onDelete: Restrict)
+  reason      String?
+  createdAt   DateTime      @default(now())
+
+  @@unique([entityId, version])
+  @@index([createdAt])
+}
+
+model MediaAsset {
+  id         String          @id @default(cuid())
+  kind       MediaKind
+  storageKey String          @unique
+  provider   String
+  mimeType   String
+  byteSize   BigInt
+  checksum   String?
+  altText    Json
+  metadata   Json?
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+  coverFor   ContentEntity[]
+}
+
+model AuditLog {
+  id         String         @id @default(cuid())
+  actorId    String?
+  actor      AdminUser?     @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action     AuditAction
+  entityId   String?
+  entity     ContentEntity? @relation(fields: [entityId], references: [id], onDelete: SetNull)
+  entityType ContentType?
+  before     Json?
+  after      Json?
+  origin     String
+  result     AuditResult
+  message    String?
+  requestId  String
+  createdAt  DateTime       @default(now())
+
+  @@index([actorId, createdAt])
+  @@index([entityId, createdAt])
+  @@index([action, result, createdAt])
+}
+
+model RateLimitBucket {
+  key        String   @id
+  attempts   Int      @default(0)
+  windowEnds DateTime
+  updatedAt  DateTime @updatedAt
+
+  @@index([windowEnds])
+}

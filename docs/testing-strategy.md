@@ -1,5 +1,12 @@
 # Testing strategy
 
+## Persistence and CMS
+
+- Validate Prisma schema and migration status before build.
+- Integration tests create isolated records in Development Neon, exercise CRUD, workflow, revisions, audit, and optimistic concurrency, then delete their data.
+- Authorization and audit sanitization are tested without external identities.
+- Playwright verifies anonymous route protection and the real Clerk login surface. Authenticated provider flows require a dedicated Clerk test identity and must never reuse a personal or Production account.
+
 Vitest is the unit-test runner. React Testing Library verifies UI through accessible behavior. Playwright covers browser journeys.
 
 ## Test layers

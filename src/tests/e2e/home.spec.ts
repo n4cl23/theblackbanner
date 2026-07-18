@@ -289,3 +289,14 @@ test('shows an explicit unavailable state without Portuguese fallback', async ({
   await expect(page.getByText(/estradas de Asterheim/i)).toHaveCount(0);
   await expect(page.locator('[lang="es"]')).toBeVisible();
 });
+
+test('protects the CMS and exposes the secure administrative login', async ({
+  page,
+}) => {
+  await page.goto('/admin/dashboard');
+  await expect(page).toHaveURL(/\/admin\/sign-in/);
+  await expect(
+    page.getByRole('textbox', { name: 'Email address' }),
+  ).toBeVisible();
+  await expect(page.getByText('Development mode')).toBeVisible();
+});

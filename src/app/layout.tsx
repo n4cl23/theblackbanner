@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { getPublicEnvironment } from '@/config/env';
+import { AuthProviderBoundary } from '@/features/admin/auth/auth-provider-boundary';
 
 import '@/styles/globals.css';
 
@@ -21,7 +22,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="und">
-      <body>{children}</body>
+      <body>
+        <AuthProviderBoundary>{children}</AuthProviderBoundary>
+      </body>
     </html>
   );
 }

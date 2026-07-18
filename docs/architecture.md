@@ -90,3 +90,12 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - Missing editorial translations render an explicit localized unavailable state. Draft and review variants carry visible status and never masquerade as approved content.
 - Localized routes emit canonical, hreflang, `x-default`, Open Graph locale data, and sitemap entries without middleware or runtime translation services.
 - CMS multilingual support is a Zod contract only; no CMS connection or persistence was introduced.
+
+## Administrative persistence and CMS
+
+- Prisma owns the new PostgreSQL schema and versioned migrations; runtime access uses a pooled Neon URL while migrations use the provider's unpooled URL.
+- Clerk protects `/admin`; database roles authorize capabilities independently of identity-provider sessions.
+- CMS mutations are Server Actions with Zod validation, persistent rate limiting, role checks, optimistic concurrency, revision snapshots, and sanitized audit records.
+- `ContentEntity` persists the common editorial core for characters, creatures, kingdoms, collections, timeline events, and lore articles.
+- Media persistence stores descriptors and provider keys only. The storage abstraction rejects binary uploads until a dedicated provider is configured.
+- Public repository adapters remain independent from Prisma during this sprint; no automatic import of local mocks occurs.

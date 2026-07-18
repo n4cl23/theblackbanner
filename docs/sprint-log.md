@@ -1,5 +1,16 @@
 # Sprint log
 
+## Sprint 9 — Administrative CMS and persistence
+
+- Branch: `sprint-09-cms-persistence`
+- Resources: new Neon `black-banner-v2-development` and Clerk `black-banner-v2-admin-auth`, connected only to Development and Preview.
+- Database: Prisma 7.8 schema, reviewed additive initial migration, pooled runtime adapter, versioned revisions, audit, media metadata, roles, and rate-limit buckets.
+- CMS: protected dashboard and archives for characters, creatures, kingdoms, collections, timeline, lore, and media; create, edit, draft, review, publish, archive, duplicate, preview, history, restore, filters, search, pagination, and concurrency feedback.
+- Security: Clerk sessions, route proxy, role capabilities, persistent action throttling, Zod validation, sanitized audit values, and no committed secrets.
+- ADR numbering: requested 0004/0005/0006 were already occupied; decisions were recorded as 0011/0012/0013 without overwriting history.
+- Validation: Prisma schema and migration status, npm audit with 0 vulnerabilities, formatting, lint, typecheck, 65 Vitest tests (including real Neon integration), 21 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Production deployment or Production integration was performed.
+
 ## Sprint 10 — Internationalization
 
 - Branch: `sprint-10-internationalization`

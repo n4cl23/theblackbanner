@@ -6,6 +6,12 @@ Future CMS documents retain an `originalLocale` and `originalId`. Every locale v
 
 Supported locale statuses are `unavailable`, `draft`, `review`, and `published`. Interface copy never falls back to another language. Editorial fallback is allowed only through an explicit unavailable or identified fallback state; Sprint 10 implements the unavailable state and does not silently substitute content.
 
+## Persisted CMS core
+
+`ContentEntity` stores type, locale, unique localized slug, titles, excerpt, JSON body, SEO, workflow status, feature/order flags, optimistic version, original/translation relationship, cover reference, and publication timestamps. `Revision` stores immutable snapshots linked to an actor and version.
+
+Administrative users carry one of `ADMIN`, `EDITOR`, or `REVIEWER`. Audit logs record actor, action, entity, timestamp, sanitized before/after values, origin, request identifier, and result. Credential-like fields are redacted.
+
 Sprint 3 defines local, versioned editorial contracts only. There is no database, ORM, migration, CMS connection, authentication, or administrative workflow.
 
 All records in the current dataset use `provenance: "mock"`, `noIndex: true`, and provisional copy. They validate architecture and do not establish official canon.
