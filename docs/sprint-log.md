@@ -1,5 +1,16 @@
 # Sprint log
 
+## Sprint 7 — Collections and miniatures
+
+- Branch: `sprint-07-collections-stl`
+- Scope: collection archive, two rich collection pages, four technical miniature sheets, URL-synchronized category filtering, locked STL delivery demonstration, printing guide, SEO, tests, and documentation.
+- Content: collection identities, technical specifications, recommendations, and changelogs are explicitly provisional mocks.
+- STL and commerce: no private file, direct URL, checkout, payment, or entitlement flow was created.
+- 3D: the existing GLB contract is rendered with no asset; no viewer dependency was installed.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 47 Vitest tests, 14 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 6 — Bestiary and Atlas of Asterheim
 
 - Branch: `sprint-06-bestiary-atlas`

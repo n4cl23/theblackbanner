@@ -157,3 +157,43 @@ test('keeps the bestiary and Atlas usable on mobile', async ({ page }) => {
     }),
   ).toBeVisible();
 });
+
+test('filters collections and opens a miniature technical sheet', async ({
+  page,
+}) => {
+  await page.goto('/colecoes');
+  await page.getByLabel('Categoria da coleção').selectOption('characters');
+  await expect(page).toHaveURL(/categoria=characters/);
+  await expect(page.getByText('1 coleções encontradas')).toBeVisible();
+  await page.getByRole('link', { name: /Vanguard/i }).click();
+  await expect(page.getByRole('heading', { name: 'Miniaturas' })).toBeVisible();
+  await page.getByRole('link', { name: /Far Watcher/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Especificações' }),
+  ).toBeVisible();
+  await expect(page.getByText('Impressora alvo')).toBeVisible();
+});
+
+test('keeps STL delivery locked without exposing a direct link', async ({
+  page,
+}) => {
+  await page.goto('/miniaturas/far-watcher-32mm');
+  await expect(page.getByRole('link', { name: /download/i })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Download bloqueado' }).click();
+  await expect(
+    page.getByText('Nenhum arquivo privado ou URL direta existe nesta sprint.'),
+  ).toBeVisible();
+  await expect(page.getByText(/checkout|pagamento/i)).toHaveCount(0);
+});
+
+test('renders the printing guide on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/guia-de-impressao');
+  await expect(
+    page.getByRole('heading', { name: /Da resina à relíquia/i, level: 1 }),
+  ).toBeVisible();
+  await expect(page.getByText('Segurança', { exact: true })).toBeVisible();
+  await expect(
+    page.getByText('Troubleshooting', { exact: true }),
+  ).toBeVisible();
+});

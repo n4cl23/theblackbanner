@@ -65,3 +65,11 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 - Codex filters are a client boundary with shareable URL state; pages and metadata remain server-rendered.
 - Field evidence uses the shared optimized-image fallback inside a keyboard-operable lightbox.
 - The 3D boundary is a typed GLB contract with no viewer dependency until a real test asset exists.
+
+## Collections and miniatures
+
+- Collection and miniature routes are Server Components backed by cached projections over `ContentRepository` and local Zod-validated technical mocks.
+- Collection discovery is a small client boundary with shareable URL state; the locked-download explanation is the only other feature-local client state.
+- The technical model stores public descriptors and version history, never private file URLs, checkout state, payment state, or storage credentials.
+- The existing GLB contract receives a null asset because no approved test model exists; no heavy 3D dependency is installed.
+- All planned collection families are represented by a closed category enum. Records are created only where consistent provisional content exists.
