@@ -180,3 +180,13 @@
 - Gate do CMS impede publicação de registros sem resumo ou corpo.
 - Nenhum lore oficial, tradução automática ou fallback silencioso foi criado.
 - Production não foi alterada.
+
+# Sprint 19 — Auditoria e mapa de migração V1 → V2
+
+- Branch: `sprint-19-v1-v2-migration-audit`.
+- 507 rotas V1 e 40 rotas V2 verificadas a partir dos sitemaps públicos.
+- 169 registros semânticos V1 e 77 registros editoriais locais V2 inventariados.
+- Matriz com 212 decisões explícitas, sem importação de conteúdo ou banco.
+- Gap funcional e ordem segura de migração documentados.
+- Encoding, locales, valores inválidos, mídia e links internos auditados.
+- Production não foi alterada e a Sprint 20 não foi iniciada.
