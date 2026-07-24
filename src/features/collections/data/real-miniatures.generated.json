@@ -1,11 +1,16 @@
 {
-  "generatedAt": "2026-07-24T18:00:54.262Z",
+  "generatedAt": "2026-07-24T18:40:36.887Z",
   "source": "local-audit-sanitized",
   "summary": {
     "miniatures": 192,
     "collections": 13,
-    "published": 0,
-    "drafts": 192
+    "published": 14,
+    "drafts": 192,
+    "records": 192,
+    "draft": 174,
+    "review": 4,
+    "publicationBatch": "sprint-22-1-batch-01",
+    "approvedAt": "2026-07-24T00:00:00.000-03:00"
   },
   "collections": [
     {
@@ -536,7 +541,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-abyssal-shark",
@@ -584,7 +593,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-aegis-the-first-sky-king",
@@ -648,7 +661,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ancient-wolf",
@@ -696,7 +713,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ash-demon",
@@ -744,7 +765,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ash-moth",
@@ -792,7 +817,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ash-ram",
@@ -840,19 +869,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ash-wolf",
       "slug": "ash-wolf",
       "title": "Ash Wolf",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-12-ash-wolf",
-      "description": null,
+      "description": "Predador social de Ironhold que caça em matilhas altamente organizadas, usando o terreno vulcânico e antigas galerias para cercar suas presas.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -882,12 +915,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "7fc3a5e3013b6963912204b8e03ec4a75bf21cefb7b5792393ec20ed5fff316f",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_12_Ash_Wolf.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-aster-the-world-heart",
@@ -938,7 +978,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-bark-rhino",
@@ -986,7 +1030,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-bloom-fox",
@@ -1034,7 +1082,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-bloom-fungus-beast",
@@ -1082,7 +1134,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-bloom-moth",
@@ -1130,7 +1186,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-blossom-spirit",
@@ -1178,7 +1238,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-canopy-owl",
@@ -1226,7 +1290,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cave-troll",
@@ -1274,7 +1342,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-chainmaw",
@@ -1321,7 +1393,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cinder-bison",
@@ -1369,7 +1445,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cinder-leech",
@@ -1417,7 +1497,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cinder-wolf",
@@ -1465,7 +1549,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cloud-manta",
@@ -1513,7 +1601,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cloud-stalker",
@@ -1561,7 +1653,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-coral-crab",
@@ -1609,7 +1705,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-coral-guardian",
@@ -1657,7 +1757,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-coral-titan",
@@ -1705,7 +1809,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-crystal-bear",
@@ -1753,19 +1861,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-crystal-ram",
       "slug": "crystal-ram",
       "title": "Crystal Ram",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-10-crystal-ram",
-      "description": null,
+      "description": "Herbívoro territorial das montanhas de Ironhold que percorre penhascos e depósitos minerais. Seus chifres cristalinos servem tanto às disputas territoriais quanto à defesa contra predadores.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -1795,12 +1907,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "9e04f456e910a3f105364eb68fe03636da6bc039b75f50f5287ef4e2b38ae7b5",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_10_Crystal_Ram.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-deep-horror",
@@ -1848,7 +1967,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-demon-fogo",
@@ -1884,7 +2007,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-dryad",
@@ -1932,7 +2059,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ember-raptor",
@@ -1980,7 +2111,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ember-scarab",
@@ -2028,19 +2163,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ember-tick",
       "slug": "ember-tick",
       "title": "Ember Tick",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-16-ember-tick",
-      "description": null,
+      "description": "Pequeno parasita geotérmico que vive em colônias próximas às fissuras vulcânicas de Ironhold. Enxames podem enfraquecer grandes predadores ao absorver calor e minerais.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -2070,12 +2209,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "aaea867210fb03bbe4f12e14fec60bb9568967bc3669248ba6fdda09f0d0681d",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_16_Ember_Tick.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-emerald-beetle",
@@ -2123,7 +2269,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ent",
@@ -2170,7 +2320,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-fenrir-the-moon-devourer",
@@ -2222,7 +2376,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-fire-drake",
@@ -2270,7 +2428,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-flame-wraith",
@@ -2318,7 +2480,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-forest-spirit",
@@ -2366,7 +2532,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-forge-beast",
@@ -2414,19 +2584,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-forge-sentinel",
       "slug": "forge-sentinel",
       "title": "Forge Sentinel",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-08-forge-sentinel",
-      "description": null,
+      "description": "Guardião ancestral das Grandes Forjas, criado para proteger complexos industriais antigos e patrulhar corredores, pontes e câmaras de fundição. Sua silhueta transmite autoridade e resistência.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -2456,12 +2630,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "6109affd19985d9097d9cf6b537672937c582d9be14b7ae2305b17f0868b5a94",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_08_Forge_Sentinel.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-frost-drake",
@@ -2509,7 +2690,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-frost-elk",
@@ -2557,7 +2742,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-frost-lynx",
@@ -2605,7 +2794,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-frost-troll",
@@ -2653,7 +2846,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-gale-ram",
@@ -2701,7 +2898,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-glacier-panther",
@@ -2749,7 +2950,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-glacier-stag",
@@ -2797,7 +3002,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-great-stag",
@@ -2845,7 +3054,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ice-basilisk",
@@ -2893,7 +3106,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ice-bison",
@@ -2941,7 +3158,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ice-giant",
@@ -2989,7 +3210,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ice-wolves",
@@ -3037,19 +3262,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-iron-boar",
       "slug": "iron-boar",
       "title": "Iron Boar",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-11-iron-boar",
-      "description": null,
+      "description": "Onívoro territorial extremamente agressivo que revolve o solo em busca de raízes minerais, fungos subterrâneos e pequenos animais. Suas investidas remodelam trilhas e antigas galerias.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3079,12 +3308,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "ebe2c8a082aff8a9d7ffceba1dc9e600c630579374cc872481d77aa2a2e033f2",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_11_Iron_Boar.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-iron-golem",
@@ -3132,19 +3368,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-iron-wyrm",
       "slug": "iron-wyrm",
       "title": "Iron Wyrm",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-07-iron-wyrm",
-      "description": null,
+      "description": "Predador de emboscada e escavador das minas profundas de Ironhold. Sem asas, o Iron Wyrm atravessa rocha, minério e antigas galerias com mandíbulas de esmagamento e membros anteriores extremamente fortes.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3174,12 +3414,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "b768b56cc8964a75137986699bc1f8aa362e04501c897e5eb628a3d98e93163d",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_07_Iron_Wyrm.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-kraken",
@@ -3226,7 +3473,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-lantern-eel",
@@ -3274,7 +3525,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-lava-drake",
@@ -3322,7 +3577,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-leviathan",
@@ -3370,7 +3629,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-lightning-serpent",
@@ -3418,7 +3681,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-magma-titan",
@@ -3466,7 +3733,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-mammoth",
@@ -3514,19 +3785,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-molten-guardian",
       "slug": "molten-guardian",
       "title": "Molten Guardian",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-09-molten-guardian-1",
-      "description": null,
+      "description": "Colosso ancestral alimentado pelo núcleo magmático de Ironhold. Permanece adormecido por séculos e desperta apenas quando as antigas forjas ou o coração da montanha são ameaçados.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3556,12 +3831,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "20b4f7598d4485ca7e400a11aef2d52c38cae46129d8afe66e949b3ae04743e5",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian (1).pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-moss-colossus",
@@ -3609,7 +3891,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-mycelium-walker",
@@ -3657,7 +3943,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-nimbus-spirit",
@@ -3705,7 +3995,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-obsidian-basilisk",
@@ -3753,19 +4047,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-obsidian-colossus",
       "slug": "obsidian-colossus",
       "title": "Obsidian Colossus",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-17-obsidian-colossus",
-      "description": null,
+      "description": "Titã primordial que representa a vontade ancestral das montanhas vulcânicas de Ironhold. Seu despertar anuncia mudanças geológicas capazes de remodelar regiões inteiras.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3795,24 +4093,31 @@
       "confidence": "ALTA",
       "sourceFingerprint": "d5e069f6097036a28755260ef30531c23cc0fa6eab2eddcedfe3da829b5f3fc5",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_17_Obsidian_Colossus.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-ore-leech",
       "slug": "ore-leech",
       "title": "Ore Leech",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-15-ore-leech",
-      "description": null,
+      "description": "Parasita mineral que se alimenta de depósitos ricos em ferro e cristais energizados. Também se fixa em criaturas feridas para absorver minerais presentes em seu sangue e carapaça.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3842,12 +4147,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "32caf2f8ef0b5f6c2456ec7fa99973610549f8ac1ff62edd8d8df1f4a23f209f",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_15_Ore_Leech.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-phoenix",
@@ -3895,7 +4207,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-reef-stalker",
@@ -3943,19 +4259,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-rock-burrower",
       "slug": "rock-burrower",
       "title": "Rock Burrower",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-13-rock-burrower",
-      "description": null,
+      "description": "Predador subterrâneo especializado em emboscadas. Ocupa galerias estreitas inacessíveis aos gigantes e controla a fauna menor ao caçar pequenos animais, parasitas minerais e filhotes desprotegidos.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -3985,12 +4305,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "8cbd2325fec852b02d291c0364d1cf9dc8e6335fc6fd82ac7e92b9b7961175e4",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_13_Rock_Burrower.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-root-boar",
@@ -4038,7 +4365,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-root-warden",
@@ -4086,7 +4417,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sand-worm",
@@ -4134,7 +4469,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sea-serpent",
@@ -4182,7 +4521,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-shellback-turtle",
@@ -4230,7 +4573,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sky-elk",
@@ -4278,7 +4625,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sky-serpent",
@@ -4326,7 +4677,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sky-whale",
@@ -4374,7 +4729,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-skywind-the-storm-sovereign",
@@ -4426,7 +4785,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-snow-wraith",
@@ -4474,7 +4837,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-snow-yak",
@@ -4522,7 +4889,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-spore-guardian",
@@ -4570,7 +4941,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-stone-giant",
@@ -4618,7 +4993,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-storm-dragon",
@@ -4666,7 +5045,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-storm-goat",
@@ -4714,7 +5097,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-storm-griffin",
@@ -4762,7 +5149,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-storm-hare",
@@ -4810,7 +5201,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-storm-roc",
@@ -4858,7 +5253,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-tempest-hawk",
@@ -4906,7 +5305,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-tempest-owl",
@@ -4954,7 +5357,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-thalassor",
@@ -5005,7 +5412,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-thorn-panther",
@@ -5053,7 +5464,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-thorn-wasp",
@@ -5101,7 +5516,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-thunder-beetle",
@@ -5149,7 +5568,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-thunder-golem",
@@ -5197,7 +5620,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-tide-ray",
@@ -5245,7 +5672,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-treant-elder",
@@ -5293,19 +5724,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-tunnel-reaper",
       "slug": "tunnel-reaper",
       "title": "Tunnel Reaper",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "beasts-of-asterheim",
       "collectionTitle": "Beasts of Asterheim",
       "entityType": "creature",
       "entitySlug": "the-black-banner-ironhold-14-tunnel-reaper",
-      "description": null,
+      "description": "Superpredador das galerias profundas de Ironhold. Permanece imóvel nas paredes e tetos das minas até que a presa entre em alcance, comportamento associado ao desaparecimento de expedições inteiras.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -5335,12 +5770,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "4840d00ab0f8fbf9c6a4a0c76ef5ca4ab90bc54473b9ab1ad2f05a54e187d625",
       "editorialPending": [
-        "aprovação editorial",
         "documentação",
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "Artbook\\The_Black_Banner_Ironhold_14_Tunnel_Reaper.pdf",
+        "sourceLanguage": "pt-br"
+      }
     },
     {
       "id": "miniature-varkhul",
@@ -5391,7 +5833,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-whisper-sprite",
@@ -5439,7 +5885,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-wind-drake",
@@ -5487,7 +5937,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-borgrath-o-guardiao-das-correntes",
@@ -5535,7 +5989,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-leao-de-escoria",
@@ -5585,7 +6043,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-maelwen-a-matriarca-dos-espinhos",
@@ -5633,7 +6095,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-nhalor-o-sacerdote-da-coroa-afogada",
@@ -5681,7 +6147,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-orun-veyr-o-profeta-do-trovao",
@@ -5729,7 +6199,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-skara-a-cacadora-palida",
@@ -5780,7 +6254,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-varkhaz-o-carrasco-das-cinzas",
@@ -5828,7 +6306,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-borin-stonemantle-explorador-das-profundezas",
@@ -5876,7 +6358,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-cassian-emberpath-arqueologo-das-cinzas",
@@ -5924,7 +6410,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-garrick-frostwalker-batedor-das-geleiras",
@@ -5972,7 +6462,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-marek-tidebinder-navegador-do-abismo",
@@ -6020,7 +6514,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-nysa-windtrail-mensageira-dos-ceus",
@@ -6068,7 +6566,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-seris-vale-mestra-cartografa",
@@ -6116,7 +6618,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-toren-mossstride-naturalista-ancestral",
@@ -6164,7 +6670,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-bromar-steelvein-mestre-ferreiro",
@@ -6212,7 +6722,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-caedric-runeforge-gravador-de-runas",
@@ -6260,7 +6774,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-helena-gearwright-engenheira-mecanica",
@@ -6308,7 +6826,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-liora-ashglass-mestra-vidreira",
@@ -6356,7 +6878,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-neria-loom-tecela-da-ultima-bandeira",
@@ -6404,7 +6930,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-orik-stonehand-escultor-real",
@@ -6452,7 +6982,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-aldren-voss-mercador-das-seis-estradas",
@@ -6500,7 +7034,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-brom-ironpurse-mestre-dos-comboios",
@@ -6548,7 +7086,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-kael-embertrade-negociante-das-cinzas",
@@ -6596,7 +7138,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-liora-greenbarter-mercadora-da-floresta",
@@ -6644,7 +7190,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-selene-tidemarket-mercadora-abissal",
@@ -6692,7 +7242,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ysara-coinveil-colecionadora-de-reliquias",
@@ -6740,7 +7294,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-borin-stonebrew",
@@ -6789,7 +7347,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-brakk-stonehide",
@@ -6838,7 +7400,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-elias-crow",
@@ -6887,7 +7453,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-finn-coppercoin",
@@ -6936,7 +7506,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-gerhard-blackwolf",
@@ -6985,7 +7559,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-grukk-iron-mug",
@@ -7034,7 +7612,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-iron-tankard-waitress",
@@ -7083,7 +7665,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-lyra",
@@ -7132,7 +7718,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-morwen",
@@ -7181,7 +7771,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-rat-king",
@@ -7236,7 +7830,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sir-aldren",
@@ -7285,7 +7883,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-tavern-mimic",
@@ -7334,7 +7936,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-ancient-giant",
@@ -7392,7 +7998,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-demon-prince",
@@ -7450,7 +8060,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-fallen-king",
@@ -7502,7 +8116,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-forest-guardian",
@@ -7554,7 +8172,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-iron-colossus",
@@ -7618,14 +8240,18 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-kraken-caller-legends-of-the-realm",
       "slug": "the-kraken-caller-legends-of-the-realm",
       "title": "The Kraken Caller",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "review",
       "collectionSlug": "legends-of-the-realm",
       "collectionTitle": "Legends of the Realm",
       "entityType": "character",
@@ -7683,14 +8309,18 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-last-dragon-slayer-legends-of-the-realm",
       "slug": "the-last-dragon-slayer-legends-of-the-realm",
       "title": "The Last Dragon Slayer",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "review",
       "collectionSlug": "legends-of-the-realm",
       "collectionTitle": "Legends of the Realm",
       "entityType": "character",
@@ -7741,7 +8371,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-lich-king",
@@ -7793,7 +8427,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-white-dragon",
@@ -7851,7 +8489,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-brynn-icefang-rastreadora-do-gelo",
@@ -7944,7 +8586,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-darian-stormhook-lanceiro-das-tempestades",
@@ -8025,7 +8671,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-kael-thorn-mestre-cacador",
@@ -8106,7 +8756,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-roderic-ashbane-cacador-das-cinzas",
@@ -8169,7 +8823,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-sylva-mossarrow-arqueira-da-floresta",
@@ -8232,7 +8890,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-varek-deepharpoon-cacador-abissal",
@@ -8295,7 +8957,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-aster-vhal-o-arquivista-das-seis-coroas",
@@ -8343,7 +9009,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-durgan-emberhand-mestre-das-forjas-eternas",
@@ -8391,7 +9061,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-kaelor-grimm-o-rastreador-das-sombras",
@@ -8439,7 +9113,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-madre-elyndra-guardia-dos-altares",
@@ -8487,7 +9165,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-mira-solenne-mensageira-da-ultima-bandeira",
@@ -8535,7 +9217,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-seris-vale-a-cartografa-errante",
@@ -8583,7 +9269,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-aster-vhal-grao-arquivista",
@@ -8631,7 +9321,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-caelis-dorn-historiador-dos-guardioes",
@@ -8679,7 +9373,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-ilyon-meris-escriba-real",
@@ -8727,7 +9425,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-maeron-lys-cronista-do-bestiario",
@@ -8775,7 +9477,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-selene-oris-guardia-dos-mapas",
@@ -8823,7 +9529,11 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-vaelor-thorne-bibliotecario-das-ruinas",
@@ -8871,19 +9581,23 @@
         "dimensões",
         "número de peças",
         "base"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-black-fang-mercenary",
       "slug": "black-fang-mercenary",
       "title": "Black Fang Mercenary",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "the-black-banner-company",
       "collectionTitle": "The Black Banner Company",
       "entityType": "character",
       "entitySlug": "black-fang-mercenary-print-guide",
-      "description": null,
+      "description": "Mercenário veterano conhecido como Black Fang, retratado enquanto inspeciona sua espada ao lado de uma mesa de troféus. A miniatura combina armadura detalhada, manto pesado de pele e base cênica.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -8919,24 +9633,31 @@
       "confidence": "ALTA",
       "sourceFingerprint": "de15c0521c64bc2a74d8b1ac5fe0bc4add89dc7293ef4bf06e4934ffc9b35cab",
       "editorialPending": [
-        "aprovação editorial",
         "dimensões",
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "The Black Banner Company\\Black Fang Mercenary\\Black_Fang_Mercenary_Print_Guide.pdf",
+        "sourceLanguage": "en"
+      }
     },
     {
       "id": "miniature-durgan-blacksmith",
       "slug": "durgan-blacksmith",
       "title": "Durgan — Blacksmith",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "the-black-banner-company",
       "collectionTitle": "The Black Banner Company",
       "entityType": "character",
       "entitySlug": "durgan-blacksmith-print-guide",
-      "description": null,
+      "description": "Durgan é um lendário ferreiro minotauro que forja armas dignas de reis e caçadores de dragões. A miniatura apresenta o mestre artesão junto à bigorna, cercado pelos detalhes de sua forja.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -8972,12 +9693,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "a24caed91c12837c7e5a0e6f299b852fba94e6293f8e6bfa052cc6ffd8d66d9b",
       "editorialPending": [
-        "aprovação editorial",
         "dimensões",
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "The Black Banner Company\\Durgan — Blacksmith\\Durgan_Blacksmith_Print_Guide.pdf",
+        "sourceLanguage": "en"
+      }
     },
     {
       "id": "miniature-elias-chronicler",
@@ -9026,7 +9754,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-finn-quartermasters-accountant-gambler",
@@ -9075,19 +9807,23 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-iron-bull",
       "slug": "iron-bull",
       "title": "Iron Bull",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "published",
       "collectionSlug": "the-black-banner-company",
       "collectionTitle": "The Black Banner Company",
       "entityType": "character",
       "entitySlug": "iron-bull-print-guide",
-      "description": null,
+      "description": "Uma figura de fantasia concebida para colecionadores, pintores e mesas de RPG, com superfícies detalhadas e uma presença monumental preservada na escultura.",
       "scale": null,
       "dimensionsMm": null,
       "pieceCount": null,
@@ -9123,12 +9859,19 @@
       "confidence": "ALTA",
       "sourceFingerprint": "79dc152fb25a319f76fd41fb011404466a5d5d64e00dee310f3c809b9fbdeb67",
       "editorialPending": [
-        "aprovação editorial",
         "dimensões",
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": "2026-07-24T00:00:00.000-03:00",
+      "approvalSource": "explicit-user-approval:sprint-22.1",
+      "publicationBatch": "sprint-22-1-batch-01",
+      "editorialSource": {
+        "type": "user-provided-final-source",
+        "reference": "The Black Banner Company\\Iron Bull\\Iron_Bull_Print_Guide.pdf",
+        "sourceLanguage": "en"
+      }
     },
     {
       "id": "miniature-morwen-herbalist",
@@ -9177,7 +9920,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-old-garrick-commander",
@@ -9226,7 +9973,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-rat-king-mascote",
@@ -9275,7 +10026,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-red-viper-assassin",
@@ -9324,7 +10079,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-silent-ash-scout",
@@ -9373,7 +10132,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-boris-tavern-keeper",
@@ -9422,7 +10185,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-hugo-tavern-cook",
@@ -9471,7 +10238,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-lily-tavern-maid",
@@ -9520,7 +10291,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-milo-stable-boy",
@@ -9569,7 +10344,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-olaf-the-drunken-giant",
@@ -9618,7 +10397,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-old-bran",
@@ -9667,7 +10450,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-rowan-bard",
@@ -9716,7 +10503,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-king-aldric-keeper-of-the-iron-crown",
@@ -9765,14 +10556,18 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-kraken-caller-the-six-crowns-of-asterheim",
       "slug": "the-kraken-caller-the-six-crowns-of-asterheim",
       "title": "The Kraken Caller",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "review",
       "collectionSlug": "the-six-crowns-of-asterheim",
       "collectionTitle": "The Six Crowns of Asterheim",
       "entityType": "character",
@@ -9830,14 +10625,18 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-the-last-dragon-slayer-the-six-crowns-of-asterheim",
       "slug": "the-last-dragon-slayer-the-six-crowns-of-asterheim",
       "title": "The Last Dragon Slayer",
       "locale": "pt-br",
-      "status": "draft",
+      "status": "review",
       "collectionSlug": "the-six-crowns-of-asterheim",
       "collectionTitle": "The Six Crowns of Asterheim",
       "entityType": "character",
@@ -9888,7 +10687,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-vaelor-storm-warden",
@@ -9937,7 +10740,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-vhaldris-o-dragao-branco",
@@ -9986,7 +10793,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     },
     {
       "id": "miniature-yggor-guardian-of-the-oak-crown",
@@ -10035,7 +10846,11 @@
         "número de peças",
         "base",
         "GLB"
-      ]
+      ],
+      "approvedAt": null,
+      "approvalSource": null,
+      "publicationBatch": null,
+      "editorialSource": null
     }
   ]
 }

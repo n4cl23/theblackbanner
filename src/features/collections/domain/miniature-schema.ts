@@ -24,11 +24,22 @@ export const miniatureSchema = z.object({
   title: z.string().trim().min(1),
   locale: z.literal('pt-br'),
   status: z.enum(['draft', 'review', 'published', 'archived']),
+  featured: z.boolean().default(false),
   collectionSlug: z.string().min(1),
   collectionTitle: z.string().min(1),
   entityType: z.enum(['character', 'creature']),
   entitySlug: z.string().min(1),
   description: z.string().min(1).nullable(),
+  approvedAt: z.string().datetime({ offset: true }).nullable(),
+  approvalSource: z.string().min(1).nullable(),
+  publicationBatch: z.string().min(1).nullable(),
+  editorialSource: z
+    .object({
+      type: z.string().min(1),
+      reference: z.string().min(1),
+      sourceLanguage: z.enum(['pt-br', 'en', 'es']),
+    })
+    .nullable(),
   scale: z.string().min(1).nullable(),
   dimensionsMm: z
     .object({

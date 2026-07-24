@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-test('renders the cinematic Home and canonical collections', async ({ page }) => {
+test('renders the cinematic Home and canonical collections', async ({
+  page,
+}) => {
   await page.goto('/');
   await expect(
     page.getByRole('heading', { name: 'The Black Banner', exact: true }),
@@ -28,7 +30,9 @@ test('keeps demo characters out of the public archive', async ({ page }) => {
   expect(response?.status()).toBe(404);
 });
 
-test('keeps demo creatures and atlas kingdoms unpublished', async ({ page }) => {
+test('keeps demo creatures and atlas kingdoms unpublished', async ({
+  page,
+}) => {
   await page.goto('/bestiario');
   await expect(page.getByText(/aguardam revisão humana/i)).toBeVisible();
   const creature = await page.goto('/bestiario/creature-fog-stalker');
@@ -37,7 +41,9 @@ test('keeps demo creatures and atlas kingdoms unpublished', async ({ page }) => 
   expect(atlas?.status()).toBe(404);
 });
 
-test('renders canonical collections with editorial status', async ({ page }) => {
+test('renders canonical collections with editorial status', async ({
+  page,
+}) => {
   await page.goto('/colecoes');
   await expect(page.getByText('Vanguard Studies')).toHaveCount(0);
   await expect(page.getByText(/Nenhuma coleção publicada/i)).toBeVisible();
@@ -47,11 +53,63 @@ test('renders canonical collections with editorial status', async ({ page }) => 
 test('server-renders localized miniature content without suspense placeholder', async ({
   page,
 }) => {
-  await page.goto('/pt-br/miniaturas');
+  const response = await page.goto('/pt-br/miniaturas');
+  const html = await response?.text();
   await expect(
     page.getByRole('heading', { name: 'Miniaturas de Asterheim' }),
   ).toBeVisible();
   await expect(page.getByText('Organizando miniaturas…')).toHaveCount(0);
+  await expect(page.getByRole('status')).toContainText(
+    '14 miniaturas encontradas',
+  );
+  expect(html).toContain('Black Fang Mercenary');
+  expect(html).toContain('Obsidian Colossus');
+  await expect(page.locator('main a[href*="/miniaturas/"]')).toHaveCount(14);
+  await expect(page.getByText('Demon Fire')).toHaveCount(0);
+  await expect(page.getByText('The Kraken Caller')).toHaveCount(0);
+  await expect(page.getByText('The Last Dragon Slayer')).toHaveCount(0);
+});
+
+test('filters and searches the curated miniature batch on mobile', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/pt-br/miniaturas');
+  await page.getByLabel('Buscar miniaturas').fill('Iron Wyrm');
+  await expect(page.getByRole('status')).toContainText('1 miniaturas');
+  await expect(page.getByRole('link', { name: /Iron Wyrm/i })).toBeVisible();
+  await page.getByLabel('Coleção').selectOption('the-black-banner-company');
+  await expect(page.getByRole('status')).toContainText('0 miniaturas');
+});
+
+test('renders all approved miniature detail pages without private assets', async ({
+  page,
+}) => {
+  const slugs = [
+    'black-fang-mercenary',
+    'durgan-blacksmith',
+    'iron-bull',
+    'iron-wyrm',
+    'forge-sentinel',
+    'molten-guardian',
+    'crystal-ram',
+    'iron-boar',
+    'ash-wolf',
+    'rock-burrower',
+    'tunnel-reaper',
+    'ore-leech',
+    'ember-tick',
+    'obsidian-colossus',
+  ];
+  for (const slug of slugs) {
+    const response = await page.goto(`/pt-br/miniaturas/${slug}`);
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.locator('a[href$=".stl"], a[href$=".glb"]')).toHaveCount(
+      0,
+    );
+    await expect(page.getByText(/não documentado/i)).toHaveCount(0);
+  }
 });
 
 test('does not silently fall back for untranslated miniatures', async ({
@@ -65,7 +123,9 @@ test('does not silently fall back for untranslated miniatures', async ({
   ).toBeVisible();
 });
 
-test('keeps demo miniature and its STL surface unpublished', async ({ page }) => {
+test('keeps demo miniature and its STL surface unpublished', async ({
+  page,
+}) => {
   await page.goto('/miniaturas/far-watcher-32mm');
   await expect(page.getByText(/Erro 404 · caminho perdido/i)).toBeVisible();
   await expect(page.locator('a[href$=".stl"]')).toHaveCount(0);
@@ -112,7 +172,9 @@ test('renders the localized crown archive and explicit translation state', async
   ).toBeVisible();
 });
 
-test('keeps character validation controls usable on mobile', async ({ page }) => {
+test('keeps character validation controls usable on mobile', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/personagens');
   await expect(page.getByLabel('Buscar personagens')).toBeVisible();

@@ -23,13 +23,17 @@ vi.mock('next/navigation', () => ({
 describe('Sprint 22 real miniature catalog', () => {
   beforeEach(() => replace.mockClear());
 
-  it('loads 192 real draft records and removes every demo miniature', async () => {
+  it('loads 192 real records and publishes only the approved batch', async () => {
     const records = await getAllMiniatures();
     expect(records).toHaveLength(192);
-    expect(records.every((item) => miniatureSchema.safeParse(item).success)).toBe(
-      true,
+    expect(
+      records.every((item) => miniatureSchema.safeParse(item).success),
+    ).toBe(true);
+    expect(records.filter((item) => item.status === 'published')).toHaveLength(
+      14,
     );
-    expect(records.every((item) => item.status === 'draft')).toBe(true);
+    expect(records.filter((item) => item.status === 'review')).toHaveLength(4);
+    expect(records.filter((item) => item.status === 'draft')).toHaveLength(174);
     expect(records.map((item) => item.slug)).not.toEqual(
       expect.arrayContaining([
         'far-watcher-32mm',
@@ -40,16 +44,30 @@ describe('Sprint 22 real miniature catalog', () => {
     );
   });
 
-  it('does not publish drafts without editorial approval', async () => {
-    await expect(getMiniatures()).resolves.toHaveLength(0);
+  it('exposes exactly the approved Portuguese batch', async () => {
+    await expect(getMiniatures()).resolves.toHaveLength(14);
     await expect(getMiniatures('en')).resolves.toHaveLength(0);
     await expect(getMiniatureFilters()).resolves.toEqual({
-      collections: [],
-      entityTypes: [],
+      collections: ['beasts-of-asterheim', 'the-black-banner-company'],
+      entityTypes: ['character', 'creature'],
       scales: [],
       difficulties: [],
-      statuses: [],
+      statuses: ['published'],
     });
+  });
+
+  it('keeps conflicts, incomplete media and unapproved records hidden', async () => {
+    const published = await getMiniatures();
+    const hidden = [
+      'demon-fogo',
+      'the-kraken-caller-legends-of-the-realm',
+      'the-kraken-caller-the-six-crowns-of-asterheim',
+      'the-last-dragon-slayer-legends-of-the-realm',
+      'the-last-dragon-slayer-the-six-crowns-of-asterheim',
+    ];
+    expect(published.map((item) => item.slug)).not.toEqual(
+      expect.arrayContaining(hidden),
+    );
   });
 
   it('maps thirteen real collections without promoting them', async () => {
@@ -88,7 +106,7 @@ describe('Sprint 22 real miniature catalog', () => {
   });
 
   it('renders the real grid into initial markup and synchronizes filters', async () => {
-    const records = (await getAllMiniatures()).slice(0, 4);
+    const records = (await getMiniatures()).slice(0, 4);
     const firstRecord = records[0];
     expect(firstRecord).toBeDefined();
     if (!firstRecord) throw new Error('Expected at least one real miniature');
@@ -97,14 +115,10 @@ describe('Sprint 22 real miniature catalog', () => {
       entityTypes: [...new Set(records.map((item) => item.entityType))],
       scales: [],
       difficulties: [],
-      statuses: ['draft'] as const,
+      statuses: ['published'] as const,
     };
     render(
-      <MiniatureExplorer
-        filters={filters}
-        locale="pt-br"
-        records={records}
-      />,
+      <MiniatureExplorer filters={filters} locale="pt-br" records={records} />,
     );
     expect(screen.getByRole('status')).toHaveTextContent('4 miniaturas');
     expect(screen.getAllByRole('link')).toHaveLength(4);
@@ -121,6 +135,8 @@ describe('Sprint 22 real miniature catalog', () => {
     const publicFiles = fs.readdirSync(path.join(process.cwd(), 'public'), {
       recursive: true,
     });
-    expect(publicFiles.some((file) => /\.stl$/i.test(String(file)))).toBe(false);
+    expect(publicFiles.some((file) => /\.stl$/i.test(String(file)))).toBe(
+      false,
+    );
   });
 });

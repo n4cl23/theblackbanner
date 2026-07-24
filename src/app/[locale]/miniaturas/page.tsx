@@ -62,8 +62,8 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
               Miniaturas de Asterheim
             </h1>
             <p className="text-parchment-200/65 mt-7 max-w-2xl text-lg">
-              O acervo real foi inventariado e permanece sujeito a aprovação
-              editorial. Nenhum STL privado é exposto nesta superfície.
+              Primeiro lote editorial aprovado do acervo real de Asterheim.
+              Modelos privados permanecem protegidos fora desta superfície.
             </p>
           </div>
         </section>

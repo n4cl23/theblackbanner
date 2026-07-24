@@ -8,9 +8,9 @@ import {
 } from '@/features/collections/domain/miniature-schema';
 
 const allMiniatures = miniatureCollectionSchema.parse(catalogSource.miniatures);
-const allCollections = realCollectionSchema.array().parse(
-  catalogSource.collections,
-);
+const allCollections = realCollectionSchema
+  .array()
+  .parse(catalogSource.collections);
 
 export interface MiniatureFilters {
   collections: readonly string[];
@@ -51,7 +51,7 @@ export const getDraftMiniatureBySlug = cache(
 );
 
 export const getFeaturedMiniatures = cache(async (locale = 'pt-br') =>
-  (await getMiniatures(locale)).slice(0, 4),
+  (await getMiniatures(locale)).filter((item) => item.featured),
 );
 
 export const getMiniaturesByCollection = cache(
@@ -76,7 +76,9 @@ export const getMiniatureFilters = cache(
     return {
       collections: unique(records.map((item) => item.collectionSlug)),
       entityTypes: unique(records.map((item) => item.entityType)),
-      scales: unique(records.flatMap((item) => (item.scale ? [item.scale] : []))),
+      scales: unique(
+        records.flatMap((item) => (item.scale ? [item.scale] : [])),
+      ),
       difficulties: unique(
         records.flatMap((item) => (item.difficulty ? [item.difficulty] : [])),
       ),

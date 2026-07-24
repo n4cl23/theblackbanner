@@ -7,7 +7,6 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 import { JsonLd } from '@/components/shared/json-ld';
 import { absoluteUrl } from '@/config/site';
-import { LockedDownload } from '@/features/collections/components/locked-download';
 import { getMiniaturePageData } from '@/features/collections/data/collection-repository';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -43,6 +42,32 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
   if (!data) notFound();
   const { miniature, collection } = data;
   if (!miniature.cover || !miniature.description) notFound();
+  const dimensions = miniature.dimensionsMm
+    ? [
+        miniature.dimensionsMm.height,
+        miniature.dimensionsMm.width,
+        miniature.dimensionsMm.depth,
+      ].every((value) => value !== null)
+      ? `${miniature.dimensionsMm.height} × ${miniature.dimensionsMm.width} × ${miniature.dimensionsMm.depth} mm`
+      : null
+    : null;
+  const specifications = [
+    dimensions ? { label: 'Dimensões', value: dimensions } : null,
+    miniature.scale ? { label: 'Escala', value: miniature.scale } : null,
+    miniature.pieceCount
+      ? { label: 'Peças', value: String(miniature.pieceCount) }
+      : null,
+    miniature.base ? { label: 'Base', value: miniature.base } : null,
+    miniature.support ? { label: 'Suporte', value: miniature.support } : null,
+    miniature.difficulty
+      ? { label: 'Dificuldade', value: miniature.difficulty }
+      : null,
+    miniature.material
+      ? { label: 'Material', value: miniature.material }
+      : null,
+  ].filter((entry): entry is { label: string; value: string } =>
+    Boolean(entry),
+  );
 
   return (
     <>
@@ -74,8 +99,8 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
               {miniature.title}
             </nav>
             <p className="text-aged-gold-500 mt-16 text-xs uppercase">
-              {miniature.entityType} ·{' '}
-              {miniature.scale ?? 'escala não documentada'}
+              {miniature.entityType}
+              {miniature.scale ? ` · ${miniature.scale}` : ''}
             </p>
             <h1 className="font-display mt-5 max-w-5xl text-[clamp(3.5rem,9vw,7rem)] leading-[.85] uppercase">
               {miniature.title}
@@ -85,56 +110,72 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
             </p>
           </div>
         </section>
-        <section className="mx-auto grid max-w-[90rem] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.2fr_.8fr]">
+        <section className="mx-auto max-w-[90rem] px-5 py-20 sm:px-8">
           <div>
-            <h2 className="font-display text-4xl uppercase">
-              Identidade e fabricação
-            </h2>
+            <h2 className="font-display text-4xl uppercase">Identidade</h2>
             <p className="text-parchment-200/65 mt-6 text-lg leading-relaxed">
               {miniature.description}
             </p>
-            <dl className="mt-10 grid gap-px bg-stone-600/25 sm:grid-cols-2">
-              <Spec
-                label="Dimensões"
-                value={
-                  miniature.dimensionsMm
-                    ? `${miniature.dimensionsMm.height ?? '—'} × ${miniature.dimensionsMm.width ?? '—'} × ${miniature.dimensionsMm.depth ?? '—'} mm`
-                    : 'Não documentado'
-                }
-              />
-              <Spec
-                label="Peças"
-                value={
-                  miniature.pieceCount
-                    ? String(miniature.pieceCount)
-                    : 'Não documentado'
-                }
-              />
-              <Spec label="Base" value={miniature.base ?? 'Não documentado'} />
-              <Spec
-                label="Suporte"
-                value={miniature.support ?? 'Não documentado'}
-              />
-              <Spec
-                label="Dificuldade"
-                value={miniature.difficulty ?? 'Não documentado'}
-              />
-              <Spec
-                label="Material"
-                value={miniature.material ?? 'Não documentado'}
-              />
-              <Spec
-                label="Modelo 3D"
-                value={
-                  miniature.model3d
-                    ? 'Disponível'
-                    : 'Nenhum GLB público aprovado'
-                }
-              />
-            </dl>
+            {specifications.length ? (
+              <dl className="mt-10 grid gap-px bg-stone-600/25 sm:grid-cols-2">
+                {specifications.map((specification) => (
+                  <Spec key={specification.label} {...specification} />
+                ))}
+              </dl>
+            ) : null}
           </div>
-          <LockedDownload descriptors={[]} version="não publicada" />
         </section>
+        {miniature.gallery.length > 1 ? (
+          <section
+            aria-labelledby="miniature-gallery"
+            className="mx-auto max-w-[90rem] px-5 pb-20 sm:px-8"
+          >
+            <h2
+              className="font-display text-4xl uppercase"
+              id="miniature-gallery"
+            >
+              Galeria
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {miniature.gallery.map((asset) => (
+                <figure
+                  className="relative aspect-[4/3] overflow-hidden"
+                  key={asset.src}
+                >
+                  <Image
+                    alt={asset.alt}
+                    className="object-cover"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                    src={asset.src}
+                  />
+                </figure>
+              ))}
+            </div>
+          </section>
+        ) : null}
+        {miniature.video ? (
+          <section
+            aria-labelledby="miniature-video"
+            className="mx-auto max-w-[90rem] px-5 pb-20 sm:px-8"
+          >
+            <h2
+              className="font-display text-4xl uppercase"
+              id="miniature-video"
+            >
+              Registro em movimento
+            </h2>
+            <video
+              className="mt-8 aspect-video w-full bg-black object-cover"
+              controls
+              playsInline
+              poster={miniature.video.poster ?? undefined}
+              preload="metadata"
+            >
+              <source src={miniature.video.src} />
+            </video>
+          </section>
+        ) : null}
       </main>
       <SiteFooter />
     </>

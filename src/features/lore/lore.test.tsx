@@ -76,6 +76,7 @@ describe('connected lore', () => {
         'Artigo',
         'Crônica',
         'Coleção',
+        'Miniatura',
       ]),
     );
     expect(
@@ -139,6 +140,7 @@ describe('connected lore', () => {
         'Coleção',
         'Região',
         'Crônica',
+        'Miniatura',
       ]),
     );
     render(<UnifiedSearch records={searchRecords} />);

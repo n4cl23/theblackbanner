@@ -234,3 +234,14 @@
   coleção principal foi escolhida silenciosamente.
 - Nenhum status foi alterado, nenhum arquivo privado foi copiado e Production
   permaneceu intocada.
+# Sprint 22.1 — publicação controlada do primeiro lote
+
+- Branch: `sprint-22-1-editorial-curation`.
+- Aprovação recebida em 2026-07-24 para exatamente 14 miniaturas.
+- Lote `sprint-22-1-batch-01` registrado com fonte editorial e trilha de aprovação.
+- Catálogo público promovido para 14 published, 174 draft e 4 review.
+- Páginas individuais passaram a omitir dados técnicos ausentes e superfícies
+  privadas; nenhum STL ou GLB foi exposto.
+- Busca e índice de lore passaram a reconhecer as miniaturas publicadas.
+- Preview, CI e validação remota permanecem como gates antes de qualquer merge.
+- Production não foi alterada.

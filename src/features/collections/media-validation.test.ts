@@ -26,10 +26,7 @@ function resolvePublicPath(src: string) {
 }
 
 function assertExactCase(filePath: string) {
-  const relative = path.relative(
-    path.join(process.cwd(), 'public'),
-    filePath,
-  );
+  const relative = path.relative(path.join(process.cwd(), 'public'), filePath);
   let current = path.join(process.cwd(), 'public');
   for (const segment of relative.split(path.sep)) {
     expect(fs.readdirSync(current)).toContain(segment);
@@ -61,8 +58,17 @@ describe('Sprint 22.1 media publication gate', () => {
     }
   });
 
-  it('keeps the publication set empty until explicit approval', async () => {
-    await expect(getMiniatures()).resolves.toHaveLength(0);
+  it('publishes exactly the explicitly approved batch', async () => {
+    const records = await getMiniatures();
+    expect(records).toHaveLength(14);
+    expect(
+      records.every(
+        (record) =>
+          record.publicationBatch === 'sprint-22-1-batch-01' &&
+          record.approvedAt === '2026-07-24T00:00:00.000-03:00' &&
+          record.approvalSource === 'explicit-user-approval:sprint-22.1',
+      ),
+    ).toBe(true);
   });
 
   it('contains no public STL or GLB', () => {

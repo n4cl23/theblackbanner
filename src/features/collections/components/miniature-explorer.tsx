@@ -131,14 +131,14 @@ export function MiniatureExplorer({
               </div>
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="text-aged-gold-500 text-xs uppercase">
-                  {item.entityType} ·{' '}
-                  {item.scale ?? 'escala não documentada'}
+                  {item.entityType}
+                  {item.scale ? ` · ${item.scale}` : ''}
                 </p>
                 <h3 className="font-display mt-3 text-3xl uppercase">
                   {item.title}
                 </h3>
                 <p className="text-parchment-200/60 mt-2 text-sm">
-                  {item.difficulty ?? 'dificuldade não documentada'} ·{' '}
+                  {item.difficulty ? `${item.difficulty} · ` : ''}
                   {item.collectionTitle}
                 </p>
               </div>
