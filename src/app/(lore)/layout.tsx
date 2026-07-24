@@ -1,7 +1,14 @@
 import type { ReactNode } from 'react';
 
-import { PublicShell } from '@/components/layout/public-shell';
+import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
 
 export default function LoreLayout({ children }: { children: ReactNode }) {
-  return <PublicShell area="lore">{children}</PublicShell>;
+  return (
+    <>
+      <SiteHeader position="sticky" />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

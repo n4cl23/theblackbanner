@@ -42,9 +42,4 @@ describe('public navigation contract', () => {
       }),
     );
   });
-  it('publishes the localized Atlas in global navigation', () => {
-    expect(publicNavigationLinks).toContainEqual(
-      expect.objectContaining({ label: 'Atlas', href: '/pt-br/atlas' }),
-    );
-  });
 });

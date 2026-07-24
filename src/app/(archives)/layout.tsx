@@ -1,7 +1,14 @@
 import type { ReactNode } from 'react';
 
-import { PublicShell } from '@/components/layout/public-shell';
+import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
 
 export default function ArchivesLayout({ children }: { children: ReactNode }) {
-  return <PublicShell area="archives">{children}</PublicShell>;
+  return (
+    <>
+      <SiteHeader position="sticky" />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

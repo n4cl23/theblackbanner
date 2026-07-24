@@ -21,11 +21,8 @@ export default async function CharactersPage() {
     return presentation ? [{ ...character, ...presentation }] : [];
   });
   return (
-    <main
-      className="entity-archive mx-auto max-w-[90rem] px-5 py-16 sm:px-8"
-      id="main-content"
-    >
-      <header className="cinematic-page-header max-w-5xl py-12">
+    <main className="mx-auto max-w-[90rem] px-5 py-16 sm:px-8">
+      <header className="max-w-5xl py-12">
         <p className="text-aged-gold-500 text-xs tracking-[.3em] uppercase">
           Arquivo de identidades · conteúdo mock
         </p>

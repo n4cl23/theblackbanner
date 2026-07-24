@@ -213,12 +213,6 @@ export default async function CreaturePage({ params }: Props) {
         ) : null}
       </CodexSection>
       <CodexSection label="Distribuição" title="Criaturas relacionadas">
-        <Link
-          className="mb-7 inline-flex min-h-12 items-center border border-stone-600/30 px-5"
-          href={`/pt-br/atlas/criaturas?criatura=${creature.slug}`}
-        >
-          Localizar esta espécie no Atlas →
-        </Link>
         <div className="grid gap-4 md:grid-cols-2">
           {related.length ? (
             related.map((item) => (

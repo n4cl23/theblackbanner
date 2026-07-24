@@ -107,7 +107,3 @@ Editorial contracts live under `src/features/content/domain`. Zod schemas are th
 # Asset import boundary
 
 Final Asterheim media is consumed through `src/content/asterheim-media-manifest.ts`. Generated records are validated with Zod and remain independent of UI components. Editorial PDF extraction is stored separately in `review`; it does not bypass repositories or publication workflow. Private geometry and print artifacts are metadata-only and must use authenticated storage in a future delivery phase. See ADR 0007.
-
-# Atlas de Asterheim
-
-O Atlas é uma projeção editorial derivada do `ContentRepository`. `features/atlas` valida a visão geográfica com Zod e mantém relações por IDs/slugs estáveis; não persiste nem duplica reinos, regiões, criaturas, locais ou eventos. As páginas são Server Components e o SVG interativo é a única fronteira client específica.

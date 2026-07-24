@@ -100,7 +100,6 @@ describe.skipIf(!runIntegration)('Prisma CMS integration', () => {
       locale: ContentLocale.EN,
       slug: `integration-${Date.now()}`,
       title: 'Integration record',
-      excerpt: 'Integration summary ready for publication.',
       content: 'Draft body',
       featured: false,
       sortOrder: 0,

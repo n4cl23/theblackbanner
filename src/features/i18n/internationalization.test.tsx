@@ -96,10 +96,7 @@ describe('real internationalization', () => {
     });
   });
   it('generates locale sitemap entries and static routes', () => {
-    expect(sitemap()).toHaveLength(40);
-    expect(sitemap().some((entry) => entry.url.endsWith('/pt-br/atlas'))).toBe(
-      true,
-    );
+    expect(sitemap()).toHaveLength(30);
     expect(
       sitemap().find((entry) => entry.url.endsWith('/es/cronologia'))
         ?.alternates?.languages,

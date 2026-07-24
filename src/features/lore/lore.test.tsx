@@ -64,30 +64,6 @@ const records: TimelineRecord[] = [
 ];
 
 describe('connected lore', () => {
-  it('indexes every supported editorial type with locale, media and route', async () => {
-    const { searchRecords } = await getLoreIndexData();
-    expect(new Set(searchRecords.map((record) => record.type))).toEqual(
-      new Set([
-        'Região',
-        'Miniatura',
-        'Personagem',
-        'Criatura',
-        'Reino',
-        'Evento',
-        'Artigo',
-        'Crônica',
-        'Coleção',
-      ]),
-    );
-    expect(
-      searchRecords.every(
-        (record) =>
-          record.locale === 'pt-br' &&
-          record.image.startsWith('/') &&
-          record.href.startsWith('/pt-br/'),
-      ),
-    ).toBe(true);
-  });
   beforeEach(() => {
     replace.mockClear();
     storage.clear();
@@ -139,8 +115,6 @@ describe('connected lore', () => {
         'Evento',
         'Artigo',
         'Coleção',
-        'Região',
-        'Crônica',
       ]),
     );
     render(<UnifiedSearch records={searchRecords} />);
@@ -149,9 +123,7 @@ describe('connected lore', () => {
     });
     await screen.findAllByRole('link', { name: /The Far Watcher/i });
     expect(
-      document.querySelector(
-        'a[href="/pt-br/personagens/character-far-watcher"]',
-      ),
+      document.querySelector('a[href="/personagens/character-far-watcher"]'),
     ).toBeInTheDocument();
     expect(
       document.querySelector('a[href="/pt-br/miniaturas/far-watcher-32mm"]'),

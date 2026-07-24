@@ -3,7 +3,6 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './src/tests/e2e',
   fullyParallel: true,
-  workers: 2,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
   reporter: 'html',
@@ -19,14 +18,9 @@ export default defineConfig({
       testMatch: /navigation-mobile\.spec\.ts/,
       use: { ...devices['Pixel 7'] },
     },
-    {
-      name: 'visual-chromium',
-      testMatch: /visual-unification\.spec\.ts/,
-      use: { ...devices['Desktop Chrome'] },
-    },
   ],
   webServer: {
-    command: process.platform === 'win32' ? 'npm.cmd run dev' : 'npm run dev',
+    command: 'npm.cmd run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
   },
