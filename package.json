@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.20",
-    "@prisma/adapter-pg": "^7.8.0",
-    "@prisma/client": "^7.8.0",
-    "next": "16.2.10",
+    "@prisma/adapter-pg": "^7.9.0",
+    "@prisma/client": "^7.9.0",
+    "next": "16.2.11",
     "pg": "^8.16.3",
     "react": "19.2.7",
     "react-dom": "19.2.7",
@@ -44,18 +44,21 @@
     "@types/react-dom": "19.2.2",
     "dotenv": "^17.2.3",
     "eslint": "9.37.0",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.2.11",
     "eslint-config-prettier": "10.1.8",
     "jsdom": "27.0.0",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "0.6.14",
-    "prisma": "^7.8.0",
+    "prisma": "^7.9.0",
     "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
     "vitest": "3.2.7"
   },
   "overrides": {
-    "postcss": "8.5.10",
-    "@hono/node-server": "1.19.13"
+    "postcss": "8.5.12",
+    "@hono/node-server": "2.0.10",
+    "fast-uri": "3.1.4",
+    "find-my-way": "9.7.0",
+    "sharp": "0.35.0"
   }
 }
