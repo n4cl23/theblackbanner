@@ -223,3 +223,14 @@
 - Nenhum STL, GLB não autorizado ou caminho absoluto local foi incorporado ao
   bundle.
 - Nenhum registro foi promovido automaticamente e Production não foi alterada.
+# Sprint 22.1 — Curadoria editorial e publicação controlada
+
+- Branch criada a partir do commit `695e708484e832f1bb4f2dee564e62ab5432c9c9`.
+- 192 registros reconciliados: 188 em draft, 4 em review e 0 publicados.
+- 191 capas, 25 vídeos e 25 posters foram validados no filesystem e no Git.
+- Um lote inicial de 14 miniaturas foi proposto com base em fontes editoriais
+  fornecidas pelo usuário.
+- Kraken Caller e Last Dragon Slayer continuam em revisão humana; nenhuma
+  coleção principal foi escolhida silenciosamente.
+- Nenhum status foi alterado, nenhum arquivo privado foi copiado e Production
+  permaneceu intocada.
