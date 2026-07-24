@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "groups": 1,
+    "files": 2
+  },
+  "groups": [
+    {
+      "sha256": "20e4e8e49e353d9377922055237b2b86249017815f438d50ddd5cc8444890bce",
+      "classification": "duplicado exato",
+      "files": [
+        {
+          "path": "Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian (1).pdf",
+          "name": "The_Black_Banner_Ironhold_09_Molten_Guardian (1).pdf",
+          "extension": ".pdf",
+          "sizeBytes": 24116
+        },
+        {
+          "path": "Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian.pdf",
+          "name": "The_Black_Banner_Ironhold_09_Molten_Guardian.pdf",
+          "extension": ".pdf",
+          "sizeBytes": 24116
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+# Sprint 22 — cruzamento pasta local × repositório
+
+| Status | Quantidade |
+| --- | ---: |
+| PARCIALMENTE_INTEGRADA | 187 |
+| NÃO_INTEGRADA | 1 |
+| CONFLITO_COM_REGISTRO_EXISTENTE | 4 |
+
+## Grupos
+
+- **Abyss Jelly** — PARCIALMENTE_INTEGRADA; correspondências: abyss-jelly.
+- **Abyssal Shark** — PARCIALMENTE_INTEGRADA; correspondências: abyssal-shark.
+- **Aegis — The First Sky King** — PARCIALMENTE_INTEGRADA; correspondências: aegis-the-first-sky-king.
+- **Ancient Wolf** — PARCIALMENTE_INTEGRADA; correspondências: ancient-wolf, ent.
+- **Ash Demon** — PARCIALMENTE_INTEGRADA; correspondências: ash-demon.
+- **Ash Moth** — PARCIALMENTE_INTEGRADA; correspondências: ash-moth.
+- **Ash Ram** — PARCIALMENTE_INTEGRADA; correspondências: ash-ram.
+- **Ash Wolf** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-12-ash-wolf, ash-wolf.
+- **Aster — The World Heart** — PARCIALMENTE_INTEGRADA; correspondências: aster, aster-the-world-heart.
+- **Bark Rhino** — PARCIALMENTE_INTEGRADA; correspondências: bark-rhino.
+- **Bloom Fox** — PARCIALMENTE_INTEGRADA; correspondências: bloom-fox.
+- **Bloom Fungus Beast** — PARCIALMENTE_INTEGRADA; correspondências: bloom-fungus-beast.
+- **Bloom Moth** — PARCIALMENTE_INTEGRADA; correspondências: bloom-moth.
+- **Blossom Spirit** — PARCIALMENTE_INTEGRADA; correspondências: blossom-spirit.
+- **Canopy Owl** — PARCIALMENTE_INTEGRADA; correspondências: canopy-owl.
+- **Cave Troll** — PARCIALMENTE_INTEGRADA; correspondências: cave-troll.
+- **Chainmaw** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-bestiary-chainmaw-vol1, chainmaw.
+- **Cinder Bison** — PARCIALMENTE_INTEGRADA; correspondências: cinder-bison.
+- **Cinder Leech** — PARCIALMENTE_INTEGRADA; correspondências: cinder-leech.
+- **Cinder Wolf** — PARCIALMENTE_INTEGRADA; correspondências: cinder-wolf.
+- **Cloud Manta** — PARCIALMENTE_INTEGRADA; correspondências: cloud-manta.
+- **Cloud Stalker** — PARCIALMENTE_INTEGRADA; correspondências: cloud-stalker.
+- **Coral Crab** — PARCIALMENTE_INTEGRADA; correspondências: coral-crab.
+- **Coral Guardian** — PARCIALMENTE_INTEGRADA; correspondências: coral-guardian.
+- **Coral Titan** — PARCIALMENTE_INTEGRADA; correspondências: coral-titan.
+- **Crystal Bear** — PARCIALMENTE_INTEGRADA; correspondências: crystal-bear.
+- **Crystal Ram** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-10-crystal-ram, crystal-ram.
+- **Deep Horror** — PARCIALMENTE_INTEGRADA; correspondências: deep-horror.
+- **demon fogo** — NÃO_INTEGRADA; correspondências: nenhuma.
+- **Dryad** — PARCIALMENTE_INTEGRADA; correspondências: dryad.
+- **Ember Raptor** — PARCIALMENTE_INTEGRADA; correspondências: ember-raptor.
+- **Ember Scarab** — PARCIALMENTE_INTEGRADA; correspondências: ember-scarab.
+- **Ember Tick** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-16-ember-tick, ember-tick.
+- **Emerald Beetle** — PARCIALMENTE_INTEGRADA; correspondências: emerald-beetle.
+- **Ent** — PARCIALMENTE_INTEGRADA; correspondências: campo-das-correntes, acampamento-da-ultima-brasa, the-black-banner-ironhold-08-forge-sentinel, sea-serpent, ancient-wolf, ent, forge-sentinel, lightning-serpent, sky-serpent, borgrath-o-guardiao-das-correntes, the-ancient-giant, silent-ash-scout.
+- **Fenrir — The Moon Devourer** — PARCIALMENTE_INTEGRADA; correspondências: fenrir-the-moon-devourer.
+- **Fire Drake** — PARCIALMENTE_INTEGRADA; correspondências: fire-drake.
+- **Flame Wraith** — PARCIALMENTE_INTEGRADA; correspondências: flame-wraith.
+- **Forest Spirit** — PARCIALMENTE_INTEGRADA; correspondências: forest-spirit.
+- **Forge Beast** — PARCIALMENTE_INTEGRADA; correspondências: forge-beast.
+- **Forge Sentinel** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-08-forge-sentinel, ent, forge-sentinel.
+- **Frost Drake** — PARCIALMENTE_INTEGRADA; correspondências: frost-drake.
+- **Frost Elk** — PARCIALMENTE_INTEGRADA; correspondências: frost-elk.
+- **Frost Lynx** — PARCIALMENTE_INTEGRADA; correspondências: frost-lynx.
+- **Frost Troll** — PARCIALMENTE_INTEGRADA; correspondências: frost-troll.
+- **Gale Ram** — PARCIALMENTE_INTEGRADA; correspondências: gale-ram.
+- **Glacier Panther** — PARCIALMENTE_INTEGRADA; correspondências: glacier-panther.
+- **Glacier Stag** — PARCIALMENTE_INTEGRADA; correspondências: glacier-stag.
+- **Great Stag** — PARCIALMENTE_INTEGRADA; correspondências: great-stag.
+- **Ice Basilisk** — PARCIALMENTE_INTEGRADA; correspondências: ice-basilisk.
+- **Ice Bison** — PARCIALMENTE_INTEGRADA; correspondências: ice-bison.
+- **Ice Giant** — PARCIALMENTE_INTEGRADA; correspondências: ice-giant.
+- **Ice Wolves** — PARCIALMENTE_INTEGRADA; correspondências: ice-wolves.
+- **Iron Boar** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-11-iron-boar, iron-boar.
+- **Iron Golem** — PARCIALMENTE_INTEGRADA; correspondências: iron-golem.
+- **Iron Wyrm** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-07-iron-wyrm, iron-wyrm.
+- **Kraken** — PARCIALMENTE_INTEGRADA; correspondências: kraken-sonhador, kraken, the-kraken-caller.
+- **Lantern Eel** — PARCIALMENTE_INTEGRADA; correspondências: lantern-eel.
+- **Lava Drake** — PARCIALMENTE_INTEGRADA; correspondências: lava-drake.
+- **Leviathan** — PARCIALMENTE_INTEGRADA; correspondências: leviathan.
+- **Lightning Serpent** — PARCIALMENTE_INTEGRADA; correspondências: ent, lightning-serpent.
+- **Magma Titan** — PARCIALMENTE_INTEGRADA; correspondências: magma-titan.
+- **Mammoth** — PARCIALMENTE_INTEGRADA; correspondências: mammoth.
+- **Molten Guardian** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-09-molten-guardian-1, molten-guardian.
+- **Moss Colossus** — PARCIALMENTE_INTEGRADA; correspondências: moss-colossus.
+- **Mycelium Walker** — PARCIALMENTE_INTEGRADA; correspondências: mycelium-walker.
+- **Nimbus Spirit** — PARCIALMENTE_INTEGRADA; correspondências: nimbus-spirit.
+- **Obsidian Basilisk** — PARCIALMENTE_INTEGRADA; correspondências: obsidian-basilisk.
+- **Obsidian Colossus** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-17-obsidian-colossus, obsidian-colossus.
+- **Ore Leech** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-15-ore-leech, ore-leech.
+- **Phoenix** — PARCIALMENTE_INTEGRADA; correspondências: phoenix.
+- **Reef Stalker** — PARCIALMENTE_INTEGRADA; correspondências: reef-stalker.
+- **Rock Burrower** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-13-rock-burrower, rock-burrower.
+- **Root Boar** — PARCIALMENTE_INTEGRADA; correspondências: root-boar.
+- **Root Warden** — PARCIALMENTE_INTEGRADA; correspondências: root-warden.
+- **Sand Worm** — PARCIALMENTE_INTEGRADA; correspondências: sand-worm.
+- **Sea Serpent** — PARCIALMENTE_INTEGRADA; correspondências: sea-serpent, ent.
+- **Shellback Turtle** — PARCIALMENTE_INTEGRADA; correspondências: shellback-turtle.
+- **Sky Elk** — PARCIALMENTE_INTEGRADA; correspondências: sky-elk.
+- **Sky Serpent** — PARCIALMENTE_INTEGRADA; correspondências: ent, sky-serpent.
+- **Sky Whale** — PARCIALMENTE_INTEGRADA; correspondências: sky-whale.
+- **Skywind — The Storm Sovereign** — PARCIALMENTE_INTEGRADA; correspondências: skywind, skywind-the-storm-sovereign.
+- **Snow Wraith** — PARCIALMENTE_INTEGRADA; correspondências: snow-wraith.
+- **Snow Yak** — PARCIALMENTE_INTEGRADA; correspondências: snow-yak.
+- **Spore Guardian** — PARCIALMENTE_INTEGRADA; correspondências: spore-guardian.
+- **Stone Giant** — PARCIALMENTE_INTEGRADA; correspondências: stone-giant.
+- **Storm Dragon** — PARCIALMENTE_INTEGRADA; correspondências: storm-dragon.
+- **Storm Goat** — PARCIALMENTE_INTEGRADA; correspondências: storm-goat.
+- **Storm Griffin** — PARCIALMENTE_INTEGRADA; correspondências: storm-griffin.
+- **Storm Hare** — PARCIALMENTE_INTEGRADA; correspondências: storm-hare.
+- **Storm Roc** — PARCIALMENTE_INTEGRADA; correspondências: storm-roc.
+- **Tempest Hawk** — PARCIALMENTE_INTEGRADA; correspondências: tempest-hawk.
+- **Tempest Owl** — PARCIALMENTE_INTEGRADA; correspondências: tempest-owl.
+- **Thalassor** — PARCIALMENTE_INTEGRADA; correspondências: thalassor.
+- **Thorn Panther** — PARCIALMENTE_INTEGRADA; correspondências: thorn-panther.
+- **Thorn Wasp** — PARCIALMENTE_INTEGRADA; correspondências: thorn-wasp.
+- **Thunder Beetle** — PARCIALMENTE_INTEGRADA; correspondências: thunder-beetle.
+- **Thunder Golem** — PARCIALMENTE_INTEGRADA; correspondências: thunder-golem.
+- **Tide Ray** — PARCIALMENTE_INTEGRADA; correspondências: tide-ray.
+- **Treant Elder** — PARCIALMENTE_INTEGRADA; correspondências: treant-elder.
+- **Tunnel Reaper** — PARCIALMENTE_INTEGRADA; correspondências: the-black-banner-ironhold-14-tunnel-reaper, tunnel-reaper.
+- **Varkhul** — PARCIALMENTE_INTEGRADA; correspondências: varkhul.
+- **Whisper Sprite** — PARCIALMENTE_INTEGRADA; correspondências: whisper-sprite.
+- **Wind Drake** — PARCIALMENTE_INTEGRADA; correspondências: wind-drake.
+- **Borgrath — O Guardião das Correntes** — PARCIALMENTE_INTEGRADA; correspondências: ent, borgrath-o-guardiao-das-correntes.
+- **Leão de Escória** — PARCIALMENTE_INTEGRADA; correspondências: leao-de-escoria, leao-de-escoria-boss-secundario-ironhold-v2.
+- **Maelwen — A Matriarca dos Espinhos** — PARCIALMENTE_INTEGRADA; correspondências: maelwen-a-matriarca-dos-espinhos.
+- **Nhalor — O Sacerdote da Coroa Afogada** — PARCIALMENTE_INTEGRADA; correspondências: nhalor-o-sacerdote-da-coroa-afogada.
+- **Orun Veyr — O Profeta do Trovão** — PARCIALMENTE_INTEGRADA; correspondências: orun-veyr-o-profeta-do-trovao.
+- **Skara — A Caçadora Pálida** — PARCIALMENTE_INTEGRADA; correspondências: skara-a-cacadora-palida.
+- **Varkhaz — O Carrasco das Cinzas** — PARCIALMENTE_INTEGRADA; correspondências: varkhaz-o-carrasco-das-cinzas.
+- **Borin Stonemantle — Explorador das Profundezas** — PARCIALMENTE_INTEGRADA; correspondências: borin-stonemantle-explorador-das-profundezas.
+- **Cassian Emberpath — Arqueólogo das Cinzas** — PARCIALMENTE_INTEGRADA; correspondências: cassian-emberpath-arqueologo-das-cinzas.
+- **Garrick Frostwalker — Batedor das Geleiras** — PARCIALMENTE_INTEGRADA; correspondências: garrick-frostwalker-batedor-das-geleiras.
+- **Marek Tidebinder — Navegador do Abismo** — PARCIALMENTE_INTEGRADA; correspondências: marek-tidebinder-navegador-do-abismo.
+- **Nysa Windtrail — Mensageira dos Céus** — PARCIALMENTE_INTEGRADA; correspondências: nysa-windtrail-mensageira-dos-ceus.
+- **Seris Vale — Mestra Cartógrafa** — PARCIALMENTE_INTEGRADA; correspondências: seris-vale-mestra-cartografa.
+- **Toren Mossstride — Naturalista Ancestral** — PARCIALMENTE_INTEGRADA; correspondências: toren-mossstride-naturalista-ancestral.
+- **Bromar Steelvein — Mestre Ferreiro** — PARCIALMENTE_INTEGRADA; correspondências: bromar-steelvein-mestre-ferreiro.
+- **Caedric Runeforge — Gravador de Runas** — PARCIALMENTE_INTEGRADA; correspondências: caedric-runeforge-gravador-de-runas.
+- **Helena Gearwright — Engenheira Mecânica** — PARCIALMENTE_INTEGRADA; correspondências: helena-gearwright-engenheira-mecanica.
+- **Liora Ashglass — Mestra Vidreira** — PARCIALMENTE_INTEGRADA; correspondências: liora-ashglass-mestra-vidreira.
+- **Neria Loom — Tecelã da Última Bandeira** — PARCIALMENTE_INTEGRADA; correspondências: neria-loom-tecela-da-ultima-bandeira.
+- **Orik Stonehand — Escultor Real** — PARCIALMENTE_INTEGRADA; correspondências: orik-stonehand-escultor-real.
+- **Aldren Voss — Mercador das Seis Estradas** — PARCIALMENTE_INTEGRADA; correspondências: aldren-voss-mercador-das-seis-estradas.
+- **Brom Ironpurse — Mestre dos Comboios** — PARCIALMENTE_INTEGRADA; correspondências: brom-ironpurse-mestre-dos-comboios.
+- **Kael Embertrade — Negociante das Cinzas** — PARCIALMENTE_INTEGRADA; correspondências: kael-embertrade-negociante-das-cinzas.
+- **Liora Greenbarter — Mercadora da Floresta** — PARCIALMENTE_INTEGRADA; correspondências: liora-greenbarter-mercadora-da-floresta.
+- **Selene Tidemarket — Mercadora Abissal** — PARCIALMENTE_INTEGRADA; correspondências: selene-tidemarket-mercadora-abissal.
+- **Ysara Coinveil — Colecionadora de Relíquias** — PARCIALMENTE_INTEGRADA; correspondências: ysara-coinveil-colecionadora-de-reliquias.
+- **Borin Stonebrew** — PARCIALMENTE_INTEGRADA; correspondências: borin-stonebrew.
+- **Brakk Stonehide** — PARCIALMENTE_INTEGRADA; correspondências: brakk-stonehide.
+- **Elias Crow** — PARCIALMENTE_INTEGRADA; correspondências: elias-crow.
+- **Finn Coppercoin** — PARCIALMENTE_INTEGRADA; correspondências: finn-coppercoin.
+- **Gerhard Blackwolf** — PARCIALMENTE_INTEGRADA; correspondências: gerhard-blackwolf.
+- **Grukk Iron Mug** — PARCIALMENTE_INTEGRADA; correspondências: grukk-iron-mug.
+- **Iron Tankard Waitress** — PARCIALMENTE_INTEGRADA; correspondências: iron-tankard-waitress.
+- **Lyra** — PARCIALMENTE_INTEGRADA; correspondências: lyra.
+- **Morwen** — PARCIALMENTE_INTEGRADA; correspondências: morwen, morwen-herbalist.
+- **Rat King** — PARCIALMENTE_INTEGRADA; correspondências: rat-king, rat-king-mascote.
+- **Sir Aldren** — PARCIALMENTE_INTEGRADA; correspondências: sir-aldren.
+- **Tavern Mimic** — PARCIALMENTE_INTEGRADA; correspondências: tavern-mimic.
+- **The Ancient Giant** — PARCIALMENTE_INTEGRADA; correspondências: ent, the-ancient-giant.
+- **The Demon Prince** — PARCIALMENTE_INTEGRADA; correspondências: the-demon-prince.
+- **The Fallen King** — PARCIALMENTE_INTEGRADA; correspondências: the-fallen-king.
+- **The Forest Guardian** — PARCIALMENTE_INTEGRADA; correspondências: the-forest-guardian.
+- **The Iron Colossus** — PARCIALMENTE_INTEGRADA; correspondências: the-iron-colossus.
+- **The Kraken Caller** — CONFLITO_COM_REGISTRO_EXISTENTE; correspondências: kraken, the-kraken-caller.
+- **The Last Dragon Slayer** — CONFLITO_COM_REGISTRO_EXISTENTE; correspondências: the-last-dragon-slayer.
+- **The Lich King** — PARCIALMENTE_INTEGRADA; correspondências: the-lich-king.
+- **The White Dragon** — PARCIALMENTE_INTEGRADA; correspondências: the-white-dragon.
+- **Brynn Icefang — Rastreadora do Gelo** — PARCIALMENTE_INTEGRADA; correspondências: brynn-icefang-rastreadora-do-gelo.
+- **Darian Stormhook — Lanceiro das Tempestades** — PARCIALMENTE_INTEGRADA; correspondências: darian-stormhook-lanceiro-das-tempestades.
+- **Kael Thorn — Mestre Caçador** — PARCIALMENTE_INTEGRADA; correspondências: kael-thorn-mestre-cacador.
+- **Roderic Ashbane — Caçador das Cinzas** — PARCIALMENTE_INTEGRADA; correspondências: roderic-ashbane-cacador-das-cinzas.
+- **Sylva Mossarrow — Arqueira da Floresta** — PARCIALMENTE_INTEGRADA; correspondências: sylva-mossarrow-arqueira-da-floresta.
+- **Varek Deepharpoon — Caçador Abissal** — PARCIALMENTE_INTEGRADA; correspondências: varek-deepharpoon-cacador-abissal.
+- **Aster Vhal — O Arquivista das Seis Coroas** — PARCIALMENTE_INTEGRADA; correspondências: coroas, aster, aster-vhal-o-arquivista-das-seis-coroas.
+- **Durgan Emberhand — Mestre das Forjas Eternas** — PARCIALMENTE_INTEGRADA; correspondências: durgan-emberhand-mestre-das-forjas-eternas.
+- **Kaelor Grimm — O Rastreador das Sombras** — PARCIALMENTE_INTEGRADA; correspondências: kaelor-grimm-o-rastreador-das-sombras.
+- **Madre Elyndra — Guardiã dos Altares** — PARCIALMENTE_INTEGRADA; correspondências: madre-elyndra-guardia-dos-altares.
+- **Mira Solenne — Mensageira da Última Bandeira** — PARCIALMENTE_INTEGRADA; correspondências: mira-solenne-mensageira-da-ultima-bandeira.
+- **Seris Vale — A Cartógrafa Errante** — PARCIALMENTE_INTEGRADA; correspondências: seris-vale-a-cartografa-errante.
+- **Aster Vhal — Grão-Arquivista** — PARCIALMENTE_INTEGRADA; correspondências: aster, aster-vhal-grao-arquivista.
+- **Caelis Dorn — Historiador dos Guardiões** — PARCIALMENTE_INTEGRADA; correspondências: guardioes, caelis-dorn-historiador-dos-guardioes.
+- **Ilyon Meris — Escriba Real** — PARCIALMENTE_INTEGRADA; correspondências: ilyon-meris-escriba-real.
+- **Maeron Lys — Cronista do Bestiário** — PARCIALMENTE_INTEGRADA; correspondências: maeron-lys-cronista-do-bestiario.
+- **Selene Oris — Guardiã dos Mapas** — PARCIALMENTE_INTEGRADA; correspondências: selene-oris-guardia-dos-mapas.
+- **Vaelor Thorne — Bibliotecário das Ruínas** — PARCIALMENTE_INTEGRADA; correspondências: vaelor-thorne-bibliotecario-das-ruinas.
+- **Black Fang Mercenary** — PARCIALMENTE_INTEGRADA; correspondências: black-fang-mercenary-print-guide, black-fang-mercenary.
+- **Durgan — Blacksmith** — PARCIALMENTE_INTEGRADA; correspondências: durgan-blacksmith-print-guide, durgan-blacksmith.
+- **Elias — Chronicler** — PARCIALMENTE_INTEGRADA; correspondências: elias-chronicler.
+- **Finn — Quartermasters Accountant  Gambler** — PARCIALMENTE_INTEGRADA; correspondências: aster, finn-quartermasters-accountant-gambler.
+- **Iron Bull** — PARCIALMENTE_INTEGRADA; correspondências: iron-bull-print-guide, iron-bull.
+- **Morwen — Herbalist** — PARCIALMENTE_INTEGRADA; correspondências: morwen, morwen-herbalist.
+- **Old Garrick — Commander** — PARCIALMENTE_INTEGRADA; correspondências: old-garrick-commander.
+- **Rat King — Mascote** — PARCIALMENTE_INTEGRADA; correspondências: rat-king, rat-king-mascote.
+- **Red Viper — Assassin** — PARCIALMENTE_INTEGRADA; correspondências: red-viper-assassin.
+- **Silent Ash — Scout** — PARCIALMENTE_INTEGRADA; correspondências: ent, silent-ash-scout.
+- **Boris — Tavern Keeper** — PARCIALMENTE_INTEGRADA; correspondências: boris-tavern-keeper.
+- **Hugo — Tavern Cook** — PARCIALMENTE_INTEGRADA; correspondências: hugo-tavern-cook.
+- **Lily — Tavern Maid** — PARCIALMENTE_INTEGRADA; correspondências: lily-tavern-maid.
+- **Milo – Stable Boy** — PARCIALMENTE_INTEGRADA; correspondências: milo-stable-boy.
+- **Olaf – The Drunken Giant** — PARCIALMENTE_INTEGRADA; correspondências: olaf-the-drunken-giant.
+- **Old Bran** — PARCIALMENTE_INTEGRADA; correspondências: old-bran.
+- **Rowan — Bard** — PARCIALMENTE_INTEGRADA; correspondências: rowan-bard.
+- **King Aldric — Keeper of the Iron Crown** — PARCIALMENTE_INTEGRADA; correspondências: king-aldric-keeper-of-the-iron-crown.
+- **The Kraken Caller** — CONFLITO_COM_REGISTRO_EXISTENTE; correspondências: kraken, the-kraken-caller.
+- **The Last Dragon Slayer** — CONFLITO_COM_REGISTRO_EXISTENTE; correspondências: the-last-dragon-slayer.
+- **Vaelor - Storm Warden** — PARCIALMENTE_INTEGRADA; correspondências: vaelor-storm-warden.
+- **Vhaldris, o Dragão Branco** — PARCIALMENTE_INTEGRADA; correspondências: vhaldris, vhaldris-o-dragao-branco.
+- **Yggor - Guardian Of The Oak Crown** — PARCIALMENTE_INTEGRADA; correspondências: yggor-guardian-of-the-oak-crown.

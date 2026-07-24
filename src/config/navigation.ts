@@ -63,6 +63,16 @@ export const publicNavigation = [
     href: '/#gallery',
     description: 'Galeria editorial disponível na Home.',
   },
+  {
+    label: 'Projeto',
+    href: '/#editorial',
+    children: [
+      { label: 'Art Bible', href: '/design-system' },
+      { label: 'Impressão 3D', href: '/guia-de-impressao' },
+      { label: 'Sobre', href: '/#asterheim' },
+      { label: 'Contato', href: '/#newsletter' },
+    ],
+  },
 ] as const satisfies readonly NavigationGroup[];
 
 export const publicNavigationLinks = publicNavigation.flatMap((group) => [

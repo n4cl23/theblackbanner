@@ -1,0 +1,245 @@
+{
+  "generatedAt": "2026-07-24T18:31:57.280Z",
+  "status": "PROPOSED_NOT_APPROVED",
+  "count": 14,
+  "records": [
+    {
+      "slug": "black-fang-mercenary",
+      "title": "Black Fang Mercenary",
+      "collection": "The Black Banner Company",
+      "type": "character",
+      "media": {
+        "cover": "/media/asterheim/entities/black-fang-mercenary/3909ca54-bbde-4289-9825-3d8d25c4a1a5-4608829f.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "The Black Banner Company\\Black Fang Mercenary\\Black_Fang_Mercenary_Print_Guide.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "durgan-blacksmith",
+      "title": "Durgan — Blacksmith",
+      "collection": "The Black Banner Company",
+      "type": "character",
+      "media": {
+        "cover": "/media/asterheim/entities/durgan-blacksmith/a60a0cd7-2603-423a-852f-930168cf22be-bd23c660.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "The Black Banner Company\\Durgan — Blacksmith\\Durgan_Blacksmith_Print_Guide.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "iron-bull",
+      "title": "Iron Bull",
+      "collection": "The Black Banner Company",
+      "type": "character",
+      "media": {
+        "cover": "/media/asterheim/entities/iron-bull/iron-bull-f3f43b45.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "The Black Banner Company\\Iron Bull\\Iron_Bull_Print_Guide.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "iron-wyrm",
+      "title": "Iron Wyrm",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/iron-wyrm/iron-wyrm-fd72974b.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_07_Iron_Wyrm.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "forge-sentinel",
+      "title": "Forge Sentinel",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/forge-sentinel/forge-sentinel-c124f656.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_08_Forge_Sentinel.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "molten-guardian",
+      "title": "Molten Guardian",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/molten-guardian/molten-guardian-9d6c5702.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_09_Molten_Guardian (1).pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "crystal-ram",
+      "title": "Crystal Ram",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/crystal-ram/crystal-ram-38802506.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_10_Crystal_Ram.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "iron-boar",
+      "title": "Iron Boar",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/iron-boar/iron-boar-2e7f2745.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_11_Iron_Boar.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "ash-wolf",
+      "title": "Ash Wolf",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/ash-wolf/ash-wolf-84ea45fa.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_12_Ash_Wolf.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "rock-burrower",
+      "title": "Rock Burrower",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/rock-burrower/rock-burrower-bf9e65f3.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_13_Rock_Burrower.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "tunnel-reaper",
+      "title": "Tunnel Reaper",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/tunnel-reaper/tunnel-reaper-3c57f67f.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_14_Tunnel_Reaper.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "ore-leech",
+      "title": "Ore Leech",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/ore-leech/ore-leech-7c4f6fc0.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_15_Ore_Leech.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "ember-tick",
+      "title": "Ember Tick",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/ember-tick/ember-tick-c97f00ff.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_16_Ember_Tick.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    },
+    {
+      "slug": "obsidian-colossus",
+      "title": "Obsidian Colossus",
+      "collection": "Beasts of Asterheim",
+      "type": "creature",
+      "media": {
+        "cover": "/media/asterheim/entities/obsidian-colossus/obsidian-colossus-a04d56bd.webp",
+        "coverValidation": "VALID",
+        "video": null
+      },
+      "description": "Artbook\\The_Black_Banner_Ironhold_17_Obsidian_Colossus.pdf",
+      "reason": "Confiança alta, imagem válida e descrição disponível em fonte fornecida pelo usuário.",
+      "pending": [
+        "aprovação editorial explícita"
+      ],
+      "recommendedStatus": "published-after-approval"
+    }
+  ]
+}

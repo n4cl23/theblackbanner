@@ -56,16 +56,33 @@ export function SiteHeader({
           : 'border-transparent bg-gradient-to-b from-black/80 to-transparent',
       )}
     >
-      <div className="mx-auto flex min-h-20 w-full max-w-[90rem] items-center justify-between gap-5 px-5 sm:px-8 lg:px-12">
+      <div className="relative mx-auto flex min-h-24 w-full max-w-[100rem] items-center justify-between gap-5 px-5 sm:px-8 lg:px-12">
+        <span
+          aria-hidden="true"
+          className="from-aged-gold-500/0 via-aged-gold-500/60 to-aged-gold-500/0 absolute inset-x-8 bottom-0 h-px bg-gradient-to-r"
+        />
         <Link
           aria-label="The Black Banner V2 — Início"
-          className="font-display text-ivory-100 text-sm tracking-[0.2em] uppercase sm:text-base"
+          className="group flex min-w-max items-center gap-3"
           href="/"
         >
-          The Black Banner
+          <span
+            aria-hidden="true"
+            className="border-aged-gold-500/60 text-aged-gold-500 grid size-10 rotate-45 place-items-center border text-sm"
+          >
+            <span className="-rotate-45">ᚨ</span>
+          </span>
+          <span>
+            <strong className="font-display text-ivory-100 block text-sm tracking-[0.2em] uppercase sm:text-base">
+              The Black Banner
+            </strong>
+            <span className="text-aged-gold-500/70 hidden text-[0.55rem] tracking-[0.28em] uppercase sm:block">
+              Chronicles of Asterheim
+            </span>
+          </span>
         </Link>
         <nav aria-label="Main navigation" className="hidden xl:block">
-          <ul className="flex items-center gap-5">
+          <ul className="flex items-center gap-4">
             {publicNavigation.map((item) => (
               <li className="group relative" key={item.href}>
                 <Link
@@ -124,7 +141,7 @@ export function SiteHeader({
           aria-controls="mobile-navigation"
           aria-expanded={menuOpen}
           aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
-          className="grid size-11 place-items-center border border-stone-600/40 text-xl xl:hidden"
+          className="border-aged-gold-500/35 grid size-11 place-items-center border text-xl xl:hidden"
           onClick={() => setMenuOpen((current) => !current)}
           type="button"
         >

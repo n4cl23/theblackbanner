@@ -43,12 +43,12 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
       <main>
         <section className="relative isolate min-h-[72vh] overflow-hidden">
           <Image
-            alt={lead?.banner.alt ?? 'Arquivo de miniaturas de Asterheim'}
+            alt={lead?.cover?.alt ?? 'Arquivo de miniaturas de Asterheim'}
             className="-z-20 object-cover opacity-45"
             fill
             priority
             sizes="100vw"
-            src={lead?.banner.src ?? '/images/home/asterheim-hero.webp'}
+            src={lead?.cover?.src ?? '/images/home/asterheim-hero.webp'}
           />
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/70 to-transparent" />
           <div className="mx-auto flex min-h-[72vh] max-w-[90rem] flex-col justify-end px-5 py-16 sm:px-8">
@@ -56,14 +56,14 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
               <Link href={`/${locale}`}>Início</Link> / Miniaturas
             </nav>
             <p className="text-aged-gold-500 mt-16 text-xs tracking-[.3em] uppercase">
-              Arquivo de formas · dados mock publicados
+              Arquivo de formas · catálogo real auditado
             </p>
             <h1 className="font-display mt-5 max-w-5xl text-[clamp(4rem,10vw,8rem)] leading-[.84] uppercase">
               Miniaturas de Asterheim
             </h1>
             <p className="text-parchment-200/65 mt-7 max-w-2xl text-lg">
-              Estudos técnicos conectados aos arquivos narrativos. Nenhum STL
-              privado é exposto nesta superfície.
+              Primeiro lote editorial aprovado do acervo real de Asterheim.
+              Modelos privados permanecem protegidos fora desta superfície.
             </p>
           </div>
         </section>

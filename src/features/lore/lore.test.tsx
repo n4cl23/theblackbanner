@@ -69,7 +69,6 @@ describe('connected lore', () => {
     expect(new Set(searchRecords.map((record) => record.type))).toEqual(
       new Set([
         'Região',
-        'Miniatura',
         'Personagem',
         'Criatura',
         'Reino',
@@ -77,6 +76,7 @@ describe('connected lore', () => {
         'Artigo',
         'Crônica',
         'Coleção',
+        'Miniatura',
       ]),
     );
     expect(
@@ -132,7 +132,6 @@ describe('connected lore', () => {
     const { searchRecords } = await getLoreIndexData();
     expect(new Set(searchRecords.map((item) => item.type))).toEqual(
       new Set([
-        'Miniatura',
         'Personagem',
         'Criatura',
         'Reino',
@@ -141,6 +140,7 @@ describe('connected lore', () => {
         'Coleção',
         'Região',
         'Crônica',
+        'Miniatura',
       ]),
     );
     render(<UnifiedSearch records={searchRecords} />);
@@ -152,9 +152,6 @@ describe('connected lore', () => {
       document.querySelector(
         'a[href="/pt-br/personagens/character-far-watcher"]',
       ),
-    ).toBeInTheDocument();
-    expect(
-      document.querySelector('a[href="/pt-br/miniaturas/far-watcher-32mm"]'),
     ).toBeInTheDocument();
   });
   it('navigates chronicle chapters by controls and keyboard and stores progress', () => {

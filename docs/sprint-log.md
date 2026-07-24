@@ -212,3 +212,50 @@
 - Rotas localizadas de Coroas, navegação, sitemap, metadata e JSON-LD incluídos.
 - Campos editoriais ausentes são exibidos como não documentados, sem lore novo.
 - Production não foi alterada.
+# Sprint 22 — Coleções e catálogo real de miniaturas
+
+- Branch: `sprint-22-real-collections-miniatures`.
+- A pasta local `Chronicles of Asterheim` foi auditada recursivamente antes da
+  integração.
+- 639 arquivos, 215 subpastas e 192 grupos de miniaturas foram inventariados.
+- O catálogo sanitizado contém 192 miniaturas e 13 coleções reais em `draft`.
+- Os quatro registros demonstrativos foram removidos da camada pública.
+- Nenhum STL, GLB não autorizado ou caminho absoluto local foi incorporado ao
+  bundle.
+- Nenhum registro foi promovido automaticamente e Production não foi alterada.
+# Sprint 22.1 — Curadoria editorial e publicação controlada
+
+- Branch criada a partir do commit `695e708484e832f1bb4f2dee564e62ab5432c9c9`.
+- 192 registros reconciliados: 188 em draft, 4 em review e 0 publicados.
+- 191 capas, 25 vídeos e 25 posters foram validados no filesystem e no Git.
+- Um lote inicial de 14 miniaturas foi proposto com base em fontes editoriais
+  fornecidas pelo usuário.
+- Kraken Caller e Last Dragon Slayer continuam em revisão humana; nenhuma
+  coleção principal foi escolhida silenciosamente.
+- Nenhum status foi alterado, nenhum arquivo privado foi copiado e Production
+  permaneceu intocada.
+# Sprint 22.1 — publicação controlada do primeiro lote
+
+- Branch: `sprint-22-1-editorial-curation`.
+- Aprovação recebida em 2026-07-24 para exatamente 14 miniaturas.
+- Lote `sprint-22-1-batch-01` registrado com fonte editorial e trilha de aprovação.
+- Catálogo público promovido para 14 published, 174 draft e 4 review.
+- Páginas individuais passaram a omitir dados técnicos ausentes e superfícies
+  privadas; nenhum STL ou GLB foi exposto.
+- Busca e índice de lore passaram a reconhecer as miniaturas publicadas.
+- Preview, CI e validação remota permanecem como gates antes de qualquer merge.
+- Production não foi alterada.
+# Sprint 22.2 — Restauração da identidade visual
+
+- Branch: `sprint-22-2-visual-identity-restoration`.
+- A auditoria comparativa V1/V2 foi registrada em
+  `reports/v1-v2-visual-gap.md`.
+- A experiência cinematográfica completa da Home passou a atender também a
+  rota localizada `/pt-br`.
+- Estados vazios de reinos, personagens, bestiário e timeline foram
+  substituídos por portais editoriais sem criação de lore.
+- Menu, marca, footer, coleções e catálogo de miniaturas receberam tratamento
+  de códice, metal envelhecido e navegação editorial ampliada.
+- Famílias visuais distintas foram preparadas para miniaturas, criaturas,
+  Guardiões e reinos.
+- Production não foi alterada.
