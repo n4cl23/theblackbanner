@@ -206,7 +206,8 @@ export default async function CreaturePage({ params }: Props) {
                 key={item.id}
               >
                 <span className="text-aged-gold-500 text-xs uppercase">
-                  {item.scale} · {item.printDifficulty}
+                  {item.scale ?? 'Escala não documentada'} ·{' '}
+                  {item.difficulty ?? 'Dificuldade não documentada'}
                 </span>
                 <h3 className="font-display mt-2 text-2xl">{item.title}</h3>
               </Link>

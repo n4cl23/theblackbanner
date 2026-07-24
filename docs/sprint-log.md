@@ -212,3 +212,14 @@
 - Rotas localizadas de Coroas, navegação, sitemap, metadata e JSON-LD incluídos.
 - Campos editoriais ausentes são exibidos como não documentados, sem lore novo.
 - Production não foi alterada.
+# Sprint 22 — Coleções e catálogo real de miniaturas
+
+- Branch: `sprint-22-real-collections-miniatures`.
+- A pasta local `Chronicles of Asterheim` foi auditada recursivamente antes da
+  integração.
+- 639 arquivos, 215 subpastas e 192 grupos de miniaturas foram inventariados.
+- O catálogo sanitizado contém 192 miniaturas e 13 coleções reais em `draft`.
+- Os quatro registros demonstrativos foram removidos da camada pública.
+- Nenhum STL, GLB não autorizado ou caminho absoluto local foi incorporado ao
+  bundle.
+- Nenhum registro foi promovido automaticamente e Production não foi alterada.

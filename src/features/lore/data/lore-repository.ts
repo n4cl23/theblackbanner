@@ -5,7 +5,7 @@ import {
   narrativeRelations,
   timelinePresentations,
 } from './lore.mock';
-import { mockMiniatures } from '@/features/collections/data/collections.mock';
+import { getMiniatures } from '@/features/collections/data/miniature-repository';
 import { getAtlasRegions } from '@/features/atlas/data/atlas-repository';
 
 export interface SearchRecord {
@@ -54,6 +54,7 @@ export const getLoreIndexData = cache(async () => {
     events,
     collections,
     atlasRegions,
+    miniatures,
   ] = await Promise.all([
     repository.getLoreArticles(),
     repository.getCharacters(),
@@ -62,6 +63,7 @@ export const getLoreIndexData = cache(async () => {
     repository.getTimelineEvents(),
     repository.getCollections(),
     getAtlasRegions(),
+    getMiniatures(),
   ]);
   const searchRecords: SearchRecord[] = [
     ...atlasRegions.map((item) => ({
@@ -73,13 +75,13 @@ export const getLoreIndexData = cache(async () => {
       image: '/images/home/asterheim-hero.webp',
       locale: 'pt-br' as const,
     })),
-    ...mockMiniatures.map((item) => ({
+    ...miniatures.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Miniatura',
       href: `/pt-br/miniaturas/${item.slug}`,
-      excerpt: item.excerpt,
-      image: item.cover.src,
+      excerpt: item.description ?? item.title,
+      image: item.cover?.src ?? '/images/home/asterheim-hero.webp',
       locale: 'pt-br' as const,
     })),
     ...characters.map((item) => ({

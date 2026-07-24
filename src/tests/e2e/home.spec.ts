@@ -40,7 +40,8 @@ test('keeps demo creatures and atlas kingdoms unpublished', async ({ page }) => 
 test('renders canonical collections with editorial status', async ({ page }) => {
   await page.goto('/colecoes');
   await expect(page.getByText('Vanguard Studies')).toHaveCount(0);
-  await expect(page.getByText(/Em revisão|Rascunho/).first()).toBeVisible();
+  await expect(page.getByText(/Nenhuma coleção publicada/i)).toBeVisible();
+  await expect(page.getByText(/Treze coleções reais/i)).toBeVisible();
 });
 
 test('server-renders localized miniature content without suspense placeholder', async ({
@@ -65,8 +66,9 @@ test('does not silently fall back for untranslated miniatures', async ({
 });
 
 test('keeps demo miniature and its STL surface unpublished', async ({ page }) => {
-  const response = await page.goto('/miniaturas/far-watcher-32mm');
-  expect(response?.status()).toBe(404);
+  await page.goto('/miniaturas/far-watcher-32mm');
+  await expect(page.getByText(/Erro 404 · caminho perdido/i)).toBeVisible();
+  await expect(page.locator('a[href$=".stl"]')).toHaveCount(0);
 });
 
 test('keeps the internal design system available', async ({ page }) => {

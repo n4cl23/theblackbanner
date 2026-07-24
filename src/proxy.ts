@@ -15,14 +15,15 @@ const protectedAdminProxy = clerkMiddleware(async (auth, request) => {
 });
 
 export default function proxy(request: NextRequest, event: NextFetchEvent) {
+  if (!isProtectedAdminRoute(request)) {
+    return NextResponse.next();
+  }
+
   if (
     !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
     !process.env.CLERK_SECRET_KEY
   ) {
-    if (isProtectedAdminRoute(request)) {
-      return NextResponse.redirect(new URL('/admin/sign-in', request.url));
-    }
-    return NextResponse.next();
+    return NextResponse.redirect(new URL('/admin/sign-in', request.url));
   }
 
   return protectedAdminProxy(request, event);
