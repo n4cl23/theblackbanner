@@ -9,6 +9,7 @@ import { JsonLd } from '@/components/shared/json-ld';
 import { absoluteUrl } from '@/config/site';
 import { getMiniaturePageData } from '@/features/collections/data/collection-repository';
 import { getMiniatures } from '@/features/collections/data/miniature-repository';
+import { publishedMiniatureSlugs } from '@/features/collections/data/published-miniature-slugs';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -16,6 +17,13 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const miniatures = await getMiniatures('pt-br');
+  const resolvedSlugs = new Set(miniatures.map(({ slug }) => slug));
+  if (
+    publishedMiniatureSlugs.some((slug) => !resolvedSlugs.has(slug)) ||
+    resolvedSlugs.size !== publishedMiniatureSlugs.length
+  ) {
+    throw new Error('Published miniature routes differ from the approved batch');
+  }
   return miniatures.map(({ slug }) => ({ locale: 'pt-br', slug }));
 }
 
