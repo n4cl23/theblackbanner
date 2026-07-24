@@ -98,7 +98,7 @@ const heroImageJsonLd = {
 function MockLabel() {
   return (
     <span className="text-[0.62rem] font-bold tracking-[0.16em] text-stone-600 uppercase">
-      Arquivo demonstrativo
+      Registro editorial
     </span>
   );
 }
@@ -218,10 +218,11 @@ function KingdomsSection() {
           eyebrow="Fronteiras demonstrativas"
           title="Reinos separados pela mesma guerra"
         />
-        <div className="mt-14 grid gap-px bg-stone-600/25 lg:grid-cols-3">
-          {featuredKingdoms.map((kingdom, index) => (
+        {featuredKingdoms.length ? (
+          <div className="mt-14 grid gap-px bg-stone-600/25 lg:grid-cols-3">
+            {featuredKingdoms.map((kingdom, index) => (
             <article
-              className="group bg-coal-950/90 hover:bg-iron-800/90 relative min-h-80 p-7 transition-colors sm:p-9"
+              className="codex-card kingdom-card group bg-coal-950/90 hover:bg-iron-800/90 relative min-h-80 p-7 transition-colors sm:p-9"
               key={kingdom.id}
             >
               <span
@@ -243,8 +244,32 @@ function KingdomsSection() {
                 <MockLabel />
               </div>
             </article>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <Link
+            className="codex-card kingdom-card group relative mt-14 block min-h-[28rem] overflow-hidden p-8 sm:p-12"
+            href="/pt-br/atlas"
+          >
+            <Image
+              alt="Territórios distantes de Asterheim"
+              className="-z-10 object-cover opacity-45 transition duration-700 group-hover:scale-[1.02]"
+              fill
+              sizes="100vw"
+              src="/images/home/kingdoms-expanse.webp"
+            />
+            <div className="relative flex min-h-[22rem] max-w-xl flex-col justify-end">
+              <Eyebrow>Cartografia viva</Eyebrow>
+              <h3 className="font-display mt-4 text-4xl sm:text-6xl">
+                Atravesse as fronteiras de Asterheim
+              </h3>
+              <p className="text-parchment-200/70 mt-5">
+                Reinos, regiões e caminhos reunidos em uma experiência de
+                exploração.
+              </p>
+            </div>
+          </Link>
+        )}
       </Container>
     </section>
   );
@@ -260,8 +285,9 @@ function CharactersSection() {
             eyebrow="Vozes ainda sem registro"
             title="Personagens em destaque"
           />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {featuredCharacters.map((character, index) => (
+          {featuredCharacters.length ? (
+            <div className="grid gap-6 sm:grid-cols-2">
+              {featuredCharacters.map((character, index) => (
               <article
                 className="from-iron-800 relative min-h-[28rem] overflow-hidden border border-stone-600/25 bg-gradient-to-b to-black p-7"
                 key={character.id}
@@ -295,8 +321,29 @@ function CharactersSection() {
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <Link
+              className="codex-card guardian-card group relative min-h-[34rem] overflow-hidden"
+              href="/personagens"
+            >
+              <Image
+                alt="Figura solitária diante das ruínas de Asterheim"
+                className="object-cover object-center opacity-60 transition duration-700 group-hover:scale-[1.02]"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                src="/media/asterheim/entities/king-aldric-keeper-of-the-iron-crown/fb83d5a7-ad19-491e-8c2b-f3b17576c597-f3e32acb.webp"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-8 sm:p-12">
+                <Eyebrow>Arquivo de juramentos</Eyebrow>
+                <h3 className="font-display mt-4 text-4xl sm:text-6xl">
+                  Conheça quem ainda sustenta a bandeira
+                </h3>
+              </div>
+            </Link>
+          )}
         </div>
       </Container>
     </section>
@@ -325,8 +372,9 @@ function BestiarySection() {
             eyebrow="Sinais na escuridão"
             title="Há coisas antigas sob as ruínas"
           />
-          <div className="mt-10 divide-y divide-stone-600/30 border-y border-stone-600/30">
-            {featuredCreatures.map((creature) => (
+          {featuredCreatures.length ? (
+            <div className="mt-10 divide-y divide-stone-600/30 border-y border-stone-600/30">
+              {featuredCreatures.map((creature) => (
               <article className="py-6" key={creature.id}>
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <h3 className="font-display text-xl">{creature.name}</h3>
@@ -341,8 +389,13 @@ function BestiarySection() {
                   {creature.summary}
                 </p>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <LinkButton href="/bestiario" size="lg">
+              Abrir códice do bestiário
+            </LinkButton>
+          )}
         </div>
       </Container>
     </section>
@@ -374,7 +427,11 @@ function CollectionsSection() {
                   <span className="font-display text-aged-gold-500/30 text-6xl">
                     0{index + 1}
                   </span>
-                  <Badge>{collection.itemCount} estudos</Badge>
+                  {collection.itemCount ? (
+                    <Badge>{collection.itemCount} registros</Badge>
+                  ) : (
+                    <Badge>Arquivo canônico</Badge>
+                  )}
                 </div>
                 <div>
                   <MockLabel />
@@ -417,8 +474,9 @@ function TimelineSection() {
           eyebrow="Cronologia provisória"
           title="Ecos através das eras"
         />
-        <ol className="relative mt-16 grid gap-10 before:absolute before:top-0 before:bottom-0 before:left-3 before:w-px before:bg-stone-600/35 md:grid-cols-3 md:before:top-3 md:before:right-0 md:before:bottom-auto md:before:left-0 md:before:h-px md:before:w-auto">
-          {featuredStories.map((story, index) => (
+        {featuredStories.length ? (
+          <ol className="relative mt-16 grid gap-10 before:absolute before:top-0 before:bottom-0 before:left-3 before:w-px before:bg-stone-600/35 md:grid-cols-3 md:before:top-3 md:before:right-0 md:before:bottom-auto md:before:left-0 md:before:h-px md:before:w-auto">
+            {featuredStories.map((story, index) => (
             <li
               className="relative pl-12 md:pt-10 md:pr-8 md:pl-0"
               key={story.id}
@@ -435,8 +493,25 @@ function TimelineSection() {
                 {story.summary}
               </p>
             </li>
-          ))}
-        </ol>
+            ))}
+          </ol>
+        ) : (
+          <div className="codex-card mt-14 grid gap-8 p-8 sm:p-12 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <Eyebrow>Crônicas conectadas</Eyebrow>
+              <h3 className="font-display mt-4 text-4xl">
+                As eras aguardam no arquivo histórico
+              </h3>
+              <p className="text-parchment-200/65 mt-4 max-w-2xl">
+                Consulte os eventos já documentados sem preencher as lacunas do
+                cânone com registros provisórios.
+              </p>
+            </div>
+            <LinkButton href="/timeline" size="lg">
+              Abrir timeline
+            </LinkButton>
+          </div>
+        )}
       </Container>
     </section>
   );

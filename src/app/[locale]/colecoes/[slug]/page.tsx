@@ -61,7 +61,7 @@ export default async function CollectionPage({ params }: Props) {
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {miniatures.map((miniature) => (
               <Link
-                className="border border-stone-600/30 p-7"
+                className="codex-card miniature-card min-h-40 p-7"
                 href={`/${locale}/miniaturas/${miniature.slug}`}
                 key={miniature.id}
               >

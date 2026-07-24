@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import HomePage from '@/app/page';
 import { i18nConfig } from '@/config/i18n';
 import { LocalizedShell } from '@/features/i18n/components/localized-shell';
 import { getLocalizedVariant } from '@/features/i18n/data/localized-content.mock';
@@ -93,6 +94,7 @@ export default async function LocalizedPage({ params }: Props) {
 
 function renderRoute(locale: Locale, routeKey: RouteKey) {
   const t = getDictionary(locale);
+  if (routeKey === 'home' && locale === 'pt-br') return <HomePage />;
   if (routeKey === 'home')
     return (
       <main>

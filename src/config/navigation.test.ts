@@ -10,6 +10,7 @@ describe('public navigation contract', () => {
       'Coleções',
       'Crônicas',
       'Galeria',
+      'Projeto',
     ]);
     expect(publicNavigationLinks.map(({ label }) => label)).toEqual(
       expect.arrayContaining([
@@ -23,6 +24,9 @@ describe('public navigation contract', () => {
         'Guia',
         'Lore',
         'Histórias',
+        'Art Bible',
+        'Impressão 3D',
+        'Contato',
       ]),
     );
   });

@@ -1,5 +1,22 @@
 import { expect, test } from '@playwright/test';
 
+test('restores the complete cinematic experience on the localized Home', async ({
+  page,
+}) => {
+  await page.goto('/pt-br');
+  await expect(
+    page.getByRole('heading', { level: 1, name: /The Black Banner/i }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: /ambiente guarda a primeira memória/i }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: /Coleções moldadas pela narrativa/i }),
+  ).toBeVisible();
+  await expect(page.locator('footer').getByText('Art Bible')).toBeVisible();
+  await expect(page.getByText('Mensagens além da muralha')).toBeVisible();
+});
+
 test('renders the cinematic Home and canonical collections', async ({
   page,
 }) => {

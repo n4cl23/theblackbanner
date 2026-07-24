@@ -42,7 +42,7 @@ export default async function CollectionsPage({ params }: Props) {
           <div className="grid gap-6 lg:grid-cols-2">
             {collections.map((collection) => (
               <Link
-                className="border border-stone-600/30 p-8"
+                className="codex-card min-h-72 p-8 sm:p-10"
                 href={`/${locale}/colecoes/${collection.slug}`}
                 key={collection.id}
               >

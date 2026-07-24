@@ -245,3 +245,17 @@
 - Busca e índice de lore passaram a reconhecer as miniaturas publicadas.
 - Preview, CI e validação remota permanecem como gates antes de qualquer merge.
 - Production não foi alterada.
+# Sprint 22.2 — Restauração da identidade visual
+
+- Branch: `sprint-22-2-visual-identity-restoration`.
+- A auditoria comparativa V1/V2 foi registrada em
+  `reports/v1-v2-visual-gap.md`.
+- A experiência cinematográfica completa da Home passou a atender também a
+  rota localizada `/pt-br`.
+- Estados vazios de reinos, personagens, bestiário e timeline foram
+  substituídos por portais editoriais sem criação de lore.
+- Menu, marca, footer, coleções e catálogo de miniaturas receberam tratamento
+  de códice, metal envelhecido e navegação editorial ampliada.
+- Famílias visuais distintas foram preparadas para miniaturas, criaturas,
+  Guardiões e reinos.
+- Production não foi alterada.

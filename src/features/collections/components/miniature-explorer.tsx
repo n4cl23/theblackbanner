@@ -114,7 +114,7 @@ export function MiniatureExplorer({
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {visible.map((item, index) => (
             <Link
-              className={`group relative overflow-hidden border border-stone-600/30 ${index === 0 ? 'sm:col-span-2' : ''}`}
+              className={`codex-card miniature-card group relative overflow-hidden ${index === 0 ? 'sm:col-span-2' : ''}`}
               href={`/${locale}/miniaturas/${item.slug}`}
               key={item.id}
             >
