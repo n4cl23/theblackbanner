@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 import { publicNavigation } from '@/config/navigation';
@@ -14,6 +15,13 @@ export function SiteHeader({
   const [solid, setSolid] = useState(position === 'sticky');
   const [menuOpen, setMenuOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname() ?? '/';
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    const path = href.split('#')[0];
+    return pathname === path || pathname.startsWith(`${path}/`);
+  };
 
   useEffect(() => {
     if (position === 'sticky') return;
@@ -61,7 +69,12 @@ export function SiteHeader({
             {publicNavigation.map((item) => (
               <li className="group relative" key={item.href}>
                 <Link
-                  className="text-parchment-200/70 hover:text-aged-gold-500 focus-visible:text-aged-gold-500 flex min-h-11 items-center text-xs font-semibold tracking-[0.12em] uppercase"
+                  aria-current={isActive(item.href) ? 'page' : undefined}
+                  className={cn(
+                    'text-parchment-200/70 hover:text-aged-gold-500 focus-visible:text-aged-gold-500 relative flex min-h-11 items-center text-xs font-semibold tracking-[0.12em] uppercase',
+                    isActive(item.href) &&
+                      'text-ivory-100 after:bg-aged-gold-500 after:absolute after:inset-x-0 after:bottom-1 after:h-px',
+                  )}
                   href={item.href}
                 >
                   {item.label}
@@ -70,7 +83,12 @@ export function SiteHeader({
                   <div className="bg-coal-950 invisible absolute top-full left-1/2 min-w-52 -translate-x-1/2 border border-stone-600/35 p-2 opacity-0 shadow-2xl transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
                     {item.children.map((child) => (
                       <Link
-                        className="text-parchment-200/65 hover:bg-iron-800 hover:text-aged-gold-500 focus-visible:bg-iron-800 block min-h-11 px-4 py-3 text-xs tracking-wider uppercase"
+                        aria-current={isActive(child.href) ? 'page' : undefined}
+                        className={cn(
+                          'text-parchment-200/65 hover:bg-iron-800 hover:text-aged-gold-500 focus-visible:bg-iron-800 block min-h-11 border-l-2 border-transparent px-4 py-3 text-xs tracking-wider uppercase',
+                          isActive(child.href) &&
+                            'border-aged-gold-500 bg-iron-800 text-ivory-100',
+                        )}
                         href={child.href}
                         key={`${child.href}-${child.label}`}
                         title={
@@ -132,7 +150,12 @@ export function SiteHeader({
                     key={item.href}
                   >
                     <Link
-                      className="text-ivory-100 flex min-h-12 items-center text-sm font-semibold tracking-wider uppercase"
+                      aria-current={isActive(item.href) ? 'page' : undefined}
+                      className={cn(
+                        'text-ivory-100 flex min-h-12 items-center border-l-2 border-transparent px-3 text-sm font-semibold tracking-wider uppercase',
+                        isActive(item.href) &&
+                          'border-aged-gold-500 bg-iron-800/70',
+                      )}
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
                     >
@@ -143,7 +166,14 @@ export function SiteHeader({
                         {item.children.map((child) => (
                           <li key={`${child.href}-${child.label}`}>
                             <Link
-                              className="text-parchment-200/60 flex min-h-11 items-center px-2 text-xs uppercase"
+                              aria-current={
+                                isActive(child.href) ? 'page' : undefined
+                              }
+                              className={cn(
+                                'text-parchment-200/60 flex min-h-11 items-center border-l border-transparent px-3 text-xs uppercase',
+                                isActive(child.href) &&
+                                  'border-aged-gold-500 text-ivory-100',
+                              )}
                               href={child.href}
                               onClick={() => setMenuOpen(false)}
                             >

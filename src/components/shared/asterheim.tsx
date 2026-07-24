@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { HTMLAttributes, ReactNode } from 'react';
 
 import {
@@ -188,5 +189,50 @@ export function BannerTitleTreatment({
         {subtitle}
       </p>
     </header>
+  );
+}
+
+export function CinematicHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  imageAlt,
+  tone = 'ash',
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  tone?: 'ash' | 'forest' | 'iron' | 'storm' | 'void';
+}) {
+  return (
+    <section
+      className={`cinematic-hero cinematic-hero-${tone} relative isolate min-h-[clamp(32rem,72vh,52rem)] overflow-hidden`}
+    >
+      {image ? (
+        <Image
+          alt={imageAlt ?? ''}
+          className="cinematic-hero-media object-cover"
+          fill
+          priority
+          sizes="100vw"
+          src={image}
+        />
+      ) : null}
+      <div aria-hidden="true" className="cinematic-hero-atmosphere" />
+      <Container className="relative flex min-h-[clamp(32rem,72vh,52rem)] items-end py-16 sm:py-24">
+        <header className="max-w-5xl">
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h1 className="cinematic-title font-display text-ivory-100 mt-5 max-w-[13ch] text-[clamp(3.25rem,9vw,8rem)] leading-[0.86] uppercase">
+            {title}
+          </h1>
+          <p className="text-parchment-200/75 mt-7 max-w-[64ch] text-lg sm:text-xl">
+            {description}
+          </p>
+        </header>
+      </Container>
+    </section>
   );
 }

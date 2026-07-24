@@ -1,5 +1,18 @@
 # Sprint log
 
+## Sprint 16 — Reestruturação visual do site público
+
+- Branch: `sprint-16-visual-unification`.
+- Auditoria: 18 áreas públicas, incluindo estados de erro, loading e vazio.
+- Layout: seis composições públicas duplicadas consolidadas em `PublicShell`.
+- Identidade: atmosferas contextuais para arquivos, Bestiário, Atlas/mundo,
+  coleções e leitura; contrato reutilizável de hero cinematográfico.
+- Navegação: estado ativo acessível no desktop, dropdowns e menu mobile.
+- Responsividade: proteção de overflow, mídia fluida, títulos balanceados e
+  regras específicas para 320 px e ultrawide.
+- Performance: nenhuma dependência, mídia, fonte ou fronteira client adicionada.
+- Production não alterada e Sprint 17 não iniciada.
+
 ## Sprint 11 — Experience quality
 
 - Branch: `sprint-11-quality`
@@ -157,3 +170,13 @@
 - Nenhum banco, migration, GLB, canvas ou conteúdo oficial novo foi criado.
 - Production não alterada e Sprint 16 não iniciada.
 - Gates locais: instalação limpa e audit sem vulnerabilidades; formatação, lint, typecheck, 82/82 Vitest, 27/27 Playwright e build aprovados.
+
+# Sprint 17 — Completude editorial e relações
+
+- Branch: `sprint-17-editorial-completeness`, empilhada sobre a Sprint 16 ainda não mesclada.
+- Auditoria de 43 entidades, 4 miniaturas, 2 crônicas e 6 variantes localizadas.
+- Integridade confirmada sem slugs duplicados ou referências quebradas.
+- Busca ampliada para crônicas e normalizada com imagem, rota e locale.
+- Gate do CMS impede publicação de registros sem resumo ou corpo.
+- Nenhum lore oficial, tradução automática ou fallback silencioso foi criado.
+- Production não foi alterada.
