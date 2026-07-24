@@ -392,6 +392,11 @@ function CollectionsSection() {
             </article>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <LinkButton href="/pt-br/miniaturas" size="lg">
+            Abrir arquivo de miniaturas
+          </LinkButton>
+        </div>
       </Container>
     </section>
   );

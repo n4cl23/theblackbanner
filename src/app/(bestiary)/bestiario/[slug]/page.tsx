@@ -6,6 +6,7 @@ import { getContentRepository } from '@/features/content/repository/repository';
 import { FieldGallery } from '@/features/bestiary/components/field-gallery';
 import { ModelInspectorContract } from '@/features/bestiary/components/model-inspector-contract';
 import { getCreaturePageData } from '@/features/bestiary/data/bestiary-repository';
+import { getMiniaturesByEntity } from '@/features/collections/data/miniature-repository';
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
   return (await (await getContentRepository()).getCreatures()).map(
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CreaturePage({ params }: Props) {
   const { slug } = await params;
   const data = await getCreaturePageData(slug);
+  const miniatures = await getMiniaturesByEntity(slug);
   if (!data || !data.presentation) notFound();
   const {
     creature,
@@ -193,6 +195,22 @@ export default async function CreaturePage({ params }: Props) {
             }
           />
         </div>
+        {miniatures.length ? (
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {miniatures.map((item) => (
+              <Link
+                className="border border-stone-600/30 p-6"
+                href={`/pt-br/miniaturas/${item.slug}`}
+                key={item.id}
+              >
+                <span className="text-aged-gold-500 text-xs uppercase">
+                  {item.scale} · {item.printDifficulty}
+                </span>
+                <h3 className="font-display mt-2 text-2xl">{item.title}</h3>
+              </Link>
+            ))}
+          </div>
+        ) : null}
       </CodexSection>
       <CodexSection label="Distribuição" title="Criaturas relacionadas">
         <div className="grid gap-4 md:grid-cols-2">

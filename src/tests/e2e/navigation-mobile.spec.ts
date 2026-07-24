@@ -16,7 +16,7 @@ test('opens the complete mobile navigation and closes it with Escape', async ({
   );
   await expect(
     navigation.getByRole('link', { name: 'Miniaturas' }),
-  ).toHaveAttribute('href', '/colecoes#miniaturas');
+  ).toHaveAttribute('href', '/pt-br/miniaturas');
   await expect(
     navigation.getByRole('link', { name: 'Guardiões' }),
   ).toHaveAttribute('href', '/guardioes');

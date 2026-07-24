@@ -43,8 +43,8 @@ export const publicNavigation = [
       { label: 'Todas', href: '/colecoes' },
       {
         label: 'Miniaturas',
-        href: '/colecoes#miniaturas',
-        description: 'Miniaturas disponíveis pelas coleções nesta etapa.',
+        href: '/pt-br/miniaturas',
+        description: 'Arquivo público de miniaturas e fichas técnicas.',
       },
       { label: 'Guia', href: '/guia-de-impressao' },
     ],

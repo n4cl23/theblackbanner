@@ -2,8 +2,9 @@ import {
   collectionCategorySchema,
   miniatureSchema,
   type CollectionCategory,
-  type Miniature,
+  type TechnicalMiniature,
 } from '@/features/collections/domain/miniature-schema';
+import { miniatureMediaManifest } from '@/features/collections/data/miniature-media-manifest';
 
 export interface CollectionPresentation {
   slug: string;
@@ -48,7 +49,7 @@ export const collectionPresentations: readonly CollectionPresentation[] = [
   },
 ] as const;
 
-const rawMiniatures: Miniature[] = [
+const rawMiniatures: TechnicalMiniature[] = [
   {
     id: 'miniature-far-watcher',
     slug: 'far-watcher-32mm',
@@ -152,9 +153,84 @@ const rawMiniatures: Miniature[] = [
     provenance: 'mock',
   },
 ];
-export const mockMiniatures = rawMiniatures.map((item) =>
-  miniatureSchema.parse(item),
-);
+const editorialById: Record<
+  string,
+  {
+    collectionSlug: string;
+    entitySlug: string;
+    kingdomSlug: string;
+  }
+> = {
+  'miniature-far-watcher': {
+    collectionSlug: 'collection-vanguard',
+    entitySlug: 'character-far-watcher',
+    kingdomSlug: 'kingdom-ashen-reach',
+  },
+  'miniature-banner-bearer': {
+    collectionSlug: 'collection-vanguard',
+    entitySlug: 'character-banner-bearer',
+    kingdomSlug: 'kingdom-iron-march',
+  },
+  'miniature-fog-stalker': {
+    collectionSlug: 'collection-beasts',
+    entitySlug: 'creature-fog-stalker',
+    kingdomSlug: 'kingdom-iron-march',
+  },
+  'miniature-ash-hound': {
+    collectionSlug: 'collection-beasts',
+    entitySlug: 'creature-ash-hound',
+    kingdomSlug: 'kingdom-ashen-reach',
+  },
+};
+const editorialTimestamp = '2026-07-18T00:00:00.000Z';
+export const mockMiniatures = rawMiniatures.map((item, index) => {
+  const editorial = editorialById[item.id];
+  if (!editorial)
+    throw new Error(`Missing miniature editorial data: ${item.id}`);
+  const manifest = miniatureMediaManifest[item.id];
+  if (!manifest)
+    throw new Error(`Missing miniature media manifest: ${item.id}`);
+  const media = {
+    src: manifest.cover,
+    alt: `Estudo visual provisório de ${item.title}`,
+    width: 1920,
+    height: 1080,
+  };
+  return miniatureSchema.parse({
+    ...item,
+    subtitle:
+      item.relatedEntity.type === 'creature'
+        ? 'Estudo de criatura para impressão'
+        : 'Estudo de personagem para impressão',
+    excerpt: `Ficha técnica provisória de ${item.title}.`,
+    description: `Registro demonstrativo consolidado a partir dos dados técnicos existentes de ${item.title}.`,
+    status: 'published',
+    locale: 'pt-br',
+    featured: index === 0,
+    collectionSlug: editorial.collectionSlug,
+    entityType: item.relatedEntity.type,
+    entitySlug: editorial.entitySlug,
+    kingdomSlug: editorial.kingdomSlug,
+    baseIncluded: true,
+    presupported: item.support !== 'unsupported',
+    supportDifficulty: item.difficulty,
+    printDifficulty: item.difficulty,
+    recommendedMaterial: item.suggestedMaterial,
+    cover: media,
+    banner: media,
+    gallery: manifest.gallery.map((src) => ({ ...media, src })),
+    video: manifest.video,
+    model3d: manifest.model3d,
+    printGuide: '/guia-de-impressao',
+    availability: 'preview',
+    seo: {
+      title: `${item.title} — Miniatura`,
+      description: `Ficha técnica provisória de ${item.title}.`,
+    },
+    createdAt: editorialTimestamp,
+    updatedAt: editorialTimestamp,
+  });
+});
 export const collectionCategories = collectionCategorySchema.options;
 export function getCollectionPresentation(slug: string) {
   return collectionPresentations.find((item) => item.slug === slug) ?? null;

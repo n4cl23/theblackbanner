@@ -126,7 +126,7 @@ export default async function CollectionPage({ params }: Props) {
           {miniatures.map((item) => (
             <Link
               className="bg-coal-900 border border-stone-600/30 p-7"
-              href={`/miniaturas/${item.slug}`}
+              href={`/pt-br/miniaturas/${item.slug}`}
               key={item.id}
             >
               <p className="text-aged-gold-500 text-xs uppercase">

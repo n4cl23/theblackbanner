@@ -136,3 +136,14 @@
 - Auditorias específicas de miniaturas e Atlas registradas sem antecipar as Sprints 14 e 15.
 - Validação local: lint aprovado; typecheck aprovado; 75/75 testes unitários; build com 46 páginas estáticas; Playwright 21/21 cenários desktop e 2/2 mobile aprovados em execuções combinadas.
 - Production não alterada.
+
+# Sprint 14 — Integração completa das miniaturas
+
+- Branch: `sprint-14-miniatures-integration`.
+- Quatro registros locais consolidados em schema editorial/técnico e repository desacoplado.
+- Índice localizado PT-BR, filtros por URL, busca, ordenação, estados e detalhes localizados.
+- EN/ES mantêm indisponibilidade explícita; nenhum conteúdo oficial foi traduzido automaticamente.
+- Nenhum STL privado, GLB inexistente ou mídia fictícia foi publicado.
+- Validação: instalação limpa sem vulnerabilidades; lint, typecheck, 79/79 Vitest, build, 4/4 Playwright do escopo e 2/2 smoke tests mobile aprovados.
+- Risco: a regressão Playwright ampla terminou 22/25 em sua última execução paralela por oscilações preexistentes de i18n/handshake Clerk; os fluxos da Sprint 14 foram reexecutados isoladamente e aprovados.
+- Sprint 15 e Production não foram alteradas.

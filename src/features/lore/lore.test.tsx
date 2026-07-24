@@ -108,6 +108,7 @@ describe('connected lore', () => {
     const { searchRecords } = await getLoreIndexData();
     expect(new Set(searchRecords.map((item) => item.type))).toEqual(
       new Set([
+        'Miniatura',
         'Personagem',
         'Criatura',
         'Reino',
@@ -120,9 +121,13 @@ describe('connected lore', () => {
     fireEvent.change(screen.getByLabelText('Buscar em Asterheim'), {
       target: { value: 'Watcher' },
     });
+    await screen.findAllByRole('link', { name: /The Far Watcher/i });
     expect(
-      await screen.findByRole('link', { name: /The Far Watcher/i }),
-    ).toHaveAttribute('href', '/personagens/character-far-watcher');
+      document.querySelector('a[href="/personagens/character-far-watcher"]'),
+    ).toBeInTheDocument();
+    expect(
+      document.querySelector('a[href="/pt-br/miniaturas/far-watcher-32mm"]'),
+    ).toBeInTheDocument();
   });
   it('navigates chronicle chapters by controls and keyboard and stores progress', () => {
     const chronicle = chronicleSchema.parse(chronicles[0]);

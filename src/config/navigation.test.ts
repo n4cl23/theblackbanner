@@ -33,4 +33,13 @@ describe('public navigation contract', () => {
       expect(item.href).not.toBe('#');
     }
   });
+
+  it('publishes the localized miniature index in global navigation', () => {
+    expect(publicNavigationLinks).toContainEqual(
+      expect.objectContaining({
+        label: 'Miniaturas',
+        href: '/pt-br/miniaturas',
+      }),
+    );
+  });
 });

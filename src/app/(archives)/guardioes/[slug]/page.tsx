@@ -113,6 +113,24 @@ export default async function GuardianPage({ params }: Props) {
           )}
         </div>
       </section>
+      <section className="mx-auto max-w-[80rem] px-5 py-20 sm:px-8">
+        <p className="text-aged-gold-500 text-xs tracking-widest uppercase">
+          Miniaturas
+        </p>
+        <h2 className="font-display mt-4 text-4xl uppercase">
+          Arquivo de formas monumentais
+        </h2>
+        <p className="text-parchment-200/60 mt-5 max-w-2xl">
+          Nenhuma miniatura deste Guardião foi publicada neste arquivo
+          provisório.
+        </p>
+        <Link
+          className="mt-7 inline-flex min-h-12 items-center border border-stone-600/40 px-5 uppercase"
+          href="/pt-br/miniaturas?tipo=guardian"
+        >
+          Consultar arquivo de miniaturas
+        </Link>
+      </section>
     </main>
   );
 }

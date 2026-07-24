@@ -16,6 +16,36 @@ test('renders the cinematic Home on desktop', async ({ page }) => {
   ).toBeAttached();
 });
 
+test('explores the localized miniature archive and technical sheet', async ({
+  page,
+}) => {
+  await page.goto('/pt-br/miniaturas');
+  await expect(
+    page.getByRole('heading', { name: 'Miniaturas de Asterheim' }),
+  ).toBeVisible();
+  await expect(page.getByRole('status')).toContainText('4 miniaturas');
+  await page.getByLabel('Buscar miniaturas').fill('Watcher');
+  await expect(page).toHaveURL(/q=Watcher/);
+  await page.getByRole('link', { name: /The Far Watcher/i }).click();
+  await expect(page).toHaveURL(/\/pt-br\/miniaturas\/far-watcher-32mm$/);
+  await expect(
+    page.getByRole('heading', { name: 'The Far Watcher — Study' }),
+  ).toBeVisible();
+  await expect(page.getByRole('link', { name: /download/i })).toHaveCount(0);
+});
+
+test('does not silently fall back for untranslated miniatures', async ({
+  page,
+}) => {
+  await page.goto('/en/miniaturas');
+  await expect(
+    page.getByRole('heading', {
+      name: 'Miniatures unavailable in this language',
+    }),
+  ).toBeVisible();
+  await expect(page.getByText('The Far Watcher — Study')).toHaveCount(0);
+});
+
 test('supports mobile navigation and all Home sections', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
@@ -169,9 +199,9 @@ test('filters collections and opens a miniature technical sheet', async ({
   await expect(page.getByRole('heading', { name: 'Miniaturas' })).toBeVisible();
   await page.getByRole('link', { name: /Far Watcher/i }).click();
   await expect(
-    page.getByRole('heading', { name: 'Especificações' }),
+    page.getByRole('heading', { name: 'Identidade e fabricação' }),
   ).toBeVisible();
-  await expect(page.getByText('Impressora alvo')).toBeVisible();
+  await expect(page.getByText('Impressora', { exact: true })).toBeVisible();
 });
 
 test('keeps STL delivery locked without exposing a direct link', async ({
@@ -213,9 +243,12 @@ test('changes timeline views and follows related events', async ({ page }) => {
 test('searches connected lore and opens an article', async ({ page }) => {
   await page.goto('/lore');
   await page.getByLabel('Buscar em Asterheim').fill('Watcher');
-  await expect(page.getByText('1 resultados')).toBeVisible();
+  await expect(page.getByText('2 resultados')).toBeVisible();
   await expect(
-    page.getByRole('link', { name: /The Far Watcher/i }),
+    page.getByRole('link', { name: /Miniatura The Far Watcher/i }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: /Personagem The Far Watcher/i }),
   ).toBeVisible();
   await page.getByRole('link', { name: /Roads and Ruins/i }).click();
   await expect(page.getByRole('navigation', { name: 'Sumário' })).toBeVisible();

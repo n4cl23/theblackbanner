@@ -5,6 +5,7 @@ import {
   narrativeRelations,
   timelinePresentations,
 } from './lore.mock';
+import { mockMiniatures } from '@/features/collections/data/collections.mock';
 
 export interface SearchRecord {
   id: string;
@@ -52,6 +53,13 @@ export const getLoreIndexData = cache(async () => {
       repository.getCollections(),
     ]);
   const searchRecords: SearchRecord[] = [
+    ...mockMiniatures.map((item) => ({
+      id: item.id,
+      title: item.title,
+      type: 'Miniatura',
+      href: `/pt-br/miniaturas/${item.slug}`,
+      excerpt: item.excerpt,
+    })),
     ...characters.map((item) => ({
       id: item.id,
       title: item.title,

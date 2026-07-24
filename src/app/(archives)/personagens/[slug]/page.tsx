@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { EditorialMedia } from '@/features/characters/components/editorial-media';
 import { getCharacterPageData } from '@/features/characters/data/character-repository';
+import { getMiniaturesByEntity } from '@/features/collections/data/miniature-repository';
 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CharacterPage({ params }: Props) {
   const { slug } = await params;
   const data = await getCharacterPageData(slug);
+  const miniatures = await getMiniaturesByEntity(slug);
   if (!data || !data.presentation) notFound();
   const {
     character,
@@ -43,7 +45,6 @@ export default async function CharacterPage({ params }: Props) {
     events,
     relationships,
     collections,
-    printProfiles,
     related,
   } = data;
   const p = presentation.personality;
@@ -201,15 +202,12 @@ export default async function CharacterPage({ params }: Props) {
             empty="Fora das coleções atuais."
           />
           <EntityStrip
-            items={
-              collections.length
-                ? printProfiles.map((item) => ({
-                    title: item.scale,
-                    detail: `${item.fileFormat.toUpperCase()} · suportes ${item.supportStrategy}`,
-                  }))
-                : []
-            }
-            empty="Perfil de impressão não associado."
+            items={miniatures.map((item) => ({
+              title: item.title,
+              detail: `${item.scale} · ${item.printDifficulty}`,
+              href: `/pt-br/miniaturas/${item.slug}`,
+            }))}
+            empty="Miniatura não associada."
           />
         </div>
       </CharacterSection>
