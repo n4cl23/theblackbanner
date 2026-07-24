@@ -1,7 +1,9 @@
 # Sprint 22.1 — primeiro lote publicado
 
-Data da aprovação: **2026-07-24**  
-Lote: **sprint-22-1-batch-01**  
+Data da aprovação: **2026-07-24**
+
+Lote: **sprint-22-1-batch-01**
+
 Fonte da decisão: aprovação editorial explícita do usuário.
 
 ## Resultado
