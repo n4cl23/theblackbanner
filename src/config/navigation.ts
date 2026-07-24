@@ -16,6 +16,7 @@ export const publicNavigation = [
     href: '/world',
     children: [
       { label: 'Reinos', href: '/world/kingdoms' },
+      { label: 'Coroas', href: '/pt-br/coroas' },
       { label: 'Mapa', href: '/world/map' },
       { label: 'Timeline', href: '/timeline' },
     ],

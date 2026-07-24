@@ -6,6 +6,7 @@ import {
   localizedHref,
   type RouteKey,
 } from '@/features/i18n/data/route-registry';
+import { crowns } from '@/content/heroic-entities';
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getPublicEnvironment().appUrl ?? siteConfig.url;
   const localized = (Object.keys(localizedRoutes) as RouteKey[]).flatMap(
@@ -31,9 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pt-br/atlas/mapa',
     '/pt-br/atlas/reinos',
     '/pt-br/atlas/criaturas',
-    '/pt-br/atlas/reinos/kingdom-ashen-reach',
-    '/pt-br/atlas/reinos/kingdom-iron-march',
-    '/pt-br/atlas/reinos/kingdom-veiled-crown',
     '/pt-br/atlas/regioes/region-ashen-reach',
     '/pt-br/atlas/regioes/region-iron-march',
     '/pt-br/atlas/regioes/region-veiled-crown',
@@ -45,6 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-07-23'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+    {
+      url: new URL('/pt-br/coroas', base).toString(),
+      lastModified: new Date('2026-07-24'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    ...crowns.map((crown) => ({
+      url: new URL(`/pt-br/coroas/${crown.slug}`, base).toString(),
+      lastModified: new Date('2026-07-24'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
   ];
 }

@@ -103,18 +103,22 @@ describe('character archive', () => {
     expect(screen.getByText('Mídia indisponível')).toBeVisible();
     expect(screen.getByText('Crédito: Mock credit')).toBeVisible();
   });
-  it('builds dynamic metadata for characters and guardians', async () => {
+  it('blocks demo character metadata and builds canonical guardian metadata', async () => {
     await expect(
       characterMetadata({
         params: Promise.resolve({ slug: 'character-far-watcher' }),
       }),
-    ).resolves.toMatchObject({ openGraph: { type: 'profile' } });
+    ).resolves.toMatchObject({
+      title: 'Personagem não encontrado',
+      robots: { index: false },
+    });
     await expect(
       guardianMetadata({
-        params: Promise.resolve({ slug: 'guardian-black-gate' }),
+        params: Promise.resolve({ slug: 'king-aldric' }),
       }),
     ).resolves.toMatchObject({
-      alternates: { canonical: '/guardioes/guardian-black-gate' },
+      alternates: { canonical: '/guardioes/king-aldric' },
+      openGraph: { type: 'profile' },
     });
   });
 });

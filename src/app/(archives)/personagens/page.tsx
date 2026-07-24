@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
-import { CanonicalArchive } from '@/components/shared/canonical-archive';
-import { getCanonicalContentByType } from '@/content/canonical-content';
+import { Suspense } from 'react';
+import { approvedCharacters } from '@/content/heroic-entities';
+import { HeroicEntityExplorer } from '@/features/characters/components/heroic-entity-explorer';
 
 export const metadata: Metadata = {
   title: 'Personagens de Asterheim',
-  description: 'Arquivo editorial de personagens de Asterheim.',
+  description:
+    'Arquivo editorial de personagens validados individualmente em Asterheim.',
   alternates: { canonical: '/personagens' },
 };
 
 export default function CharactersPage() {
-  const characters = getCanonicalContentByType('character');
   return (
     <main
       className="entity-archive mx-auto max-w-[90rem] px-5 py-16 sm:px-8"
@@ -20,16 +21,16 @@ export default function CharactersPage() {
           Arquivo de identidades
         </p>
         <h1 className="font-display mt-4 text-[clamp(3.5rem,9vw,8rem)] leading-[.88] uppercase">
-          Aqueles que caminham sob o estandarte
+          Personagens de Asterheim
         </h1>
         <p className="text-parchment-200/60 mt-7 max-w-2xl text-lg">
-          Registros canônicos são publicados somente após validação editorial.
+          Somente registros aprovados individualmente podem atravessar este
+          arquivo.
         </p>
       </header>
-      <CanonicalArchive
-        records={characters}
-        emptyMessage="Os personagens da V1 aguardam revisão humana e não foram publicados como cânone."
-      />
+      <Suspense fallback={<div className="min-h-40 border-y border-stone-700" />}>
+        <HeroicEntityExplorer records={approvedCharacters} />
+      </Suspense>
     </main>
   );
 }

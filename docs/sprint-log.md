@@ -202,3 +202,13 @@
 - Schema Zod, teste de UTF-8, integridade de referências e SSR das listagens
   editoriais foram adicionados.
 - Nenhum banco, migration ou ambiente de Production foi alterado.
+
+# Sprint 21 — Personagens, Guardiões e Coroas
+
+- Branch: `sprint-21-characters-guardians-crowns`.
+- Seis Guardiões e seis Coroas reconstruídos a partir das entradas aprovadas do
+  Atlas, com relações bidirecionais.
+- Os 42 personagens da V1 continuam em revisão humana e não foram promovidos.
+- Rotas localizadas de Coroas, navegação, sitemap, metadata e JSON-LD incluídos.
+- Campos editoriais ausentes são exibidos como não documentados, sem lore novo.
+- Production não foi alterada.

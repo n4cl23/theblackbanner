@@ -23,7 +23,7 @@ test('keeps demo kingdoms out of the public archive', async ({ page }) => {
 
 test('keeps demo characters out of the public archive', async ({ page }) => {
   await page.goto('/personagens');
-  await expect(page.getByText(/aguardam revisão humana/i)).toBeVisible();
+  await expect(page.getByText(/42 registros identificados/i)).toBeVisible();
   const response = await page.goto('/personagens/character-far-watcher');
   expect(response?.status()).toBe(404);
 });
@@ -74,6 +74,51 @@ test('keeps the internal design system available', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: 'Asterheim', exact: true }),
   ).toBeVisible();
+});
+
+test('renders six canonical guardians with bidirectional crown links', async ({
+  page,
+}) => {
+  await page.goto('/guardioes');
+  await expect(page.locator('main ol > li')).toHaveCount(6);
+  await page.getByRole('link', { name: /King Aldric/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'King Aldric', level: 1 }),
+  ).toBeVisible();
+  await page.getByRole('link', { name: /Coroa vinculada/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Iron Crown', level: 1 }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: /Guardião vinculado/i }),
+  ).toHaveAttribute('href', '/guardioes/king-aldric');
+});
+
+test('renders the localized crown archive and explicit translation state', async ({
+  page,
+}) => {
+  await page.goto('/pt-br/coroas');
+  await expect(page.locator('main ol > li')).toHaveCount(6);
+  await expect(
+    page.getByRole('heading', { name: 'Coroas de Asterheim' }),
+  ).toBeVisible();
+  await page.goto('/en/coroas');
+  await expect(
+    page.getByRole('heading', {
+      name: 'Crowns unavailable in this language',
+    }),
+  ).toBeVisible();
+});
+
+test('keeps character validation controls usable on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/personagens');
+  await expect(page.getByLabel('Buscar personagens')).toBeVisible();
+  await expect(page.getByLabel('Coleção')).toBeVisible();
+  await expect(page.getByLabel('Escala')).toBeVisible();
+  await expect(page.getByRole('status')).toContainText('0 registros aprovados');
+  const response = await page.goto('/personagens/black-fang-mercenary');
+  expect(response?.status()).toBe(404);
 });
 
 test('protects the administrative CMS', async ({ page }) => {
