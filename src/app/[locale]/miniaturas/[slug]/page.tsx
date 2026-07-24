@@ -8,8 +8,16 @@ import { SiteHeader } from '@/components/layout/site-header';
 import { JsonLd } from '@/components/shared/json-ld';
 import { absoluteUrl } from '@/config/site';
 import { getMiniaturePageData } from '@/features/collections/data/collection-repository';
+import { getMiniatures } from '@/features/collections/data/miniature-repository';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const miniatures = await getMiniatures('pt-br');
+  return miniatures.map(({ slug }) => ({ locale: 'pt-br', slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;

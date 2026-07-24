@@ -131,6 +131,19 @@ test('keeps demo miniature and its STL surface unpublished', async ({
   await expect(page.locator('a[href$=".stl"]')).toHaveCount(0);
 });
 
+test('returns HTTP 404 for curated miniature records that remain hidden', async ({
+  page,
+}) => {
+  for (const slug of [
+    'demon-fogo',
+    'the-kraken-caller-legends-of-the-realm',
+    'the-last-dragon-slayer-legends-of-the-realm',
+  ]) {
+    const response = await page.goto(`/pt-br/miniaturas/${slug}`);
+    expect(response?.status()).toBe(404);
+  }
+});
+
 test('keeps the internal design system available', async ({ page }) => {
   await page.goto('/design-system');
   await expect(
