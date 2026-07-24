@@ -10,7 +10,10 @@ import {
   featuredStories,
 } from '@/content/home.mock';
 import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter as UnifiedSiteFooter } from '@/components/layout/site-footer';
+import { JsonLd } from '@/components/shared/json-ld';
 import { ImageWithFallback } from '@/components/ui/interactive';
+import { siteConfig } from '@/config/site';
 import {
   Badge,
   Container,
@@ -21,8 +24,7 @@ import {
   SkipLink,
 } from '@/components/ui/primitives';
 
-const provisionalBaseUrl =
-  process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
+const provisionalBaseUrl = siteConfig.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(provisionalBaseUrl),
@@ -38,9 +40,12 @@ export const metadata: Metadata = {
     url: new URL('/', provisionalBaseUrl),
     images: [
       {
-        url: new URL('/images/home/asterheim-hero.webp', provisionalBaseUrl),
+        url: new URL(
+          '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
+          provisionalBaseUrl,
+        ),
         width: 1920,
-        height: 818,
+        height: 1080,
         alt: 'Fortaleza monumental nas montanhas de Asterheim',
       },
     ],
@@ -49,7 +54,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Black Banner V2 — Chronicles of Asterheim',
     description: 'Mistério, guerra e descoberta em um mundo antigo.',
-    images: ['/images/home/asterheim-hero.webp'],
+    images: [
+      '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
+    ],
   },
 };
 
@@ -70,6 +77,22 @@ const creativeWorkJsonLd = {
     'Digital dark-fantasy universe and editorial experience in development.',
   isAccessibleForFree: true,
   url: provisionalBaseUrl,
+} as const;
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteConfig.creator,
+  url: siteConfig.url,
+} as const;
+
+const heroImageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: `${siteConfig.url}${siteConfig.socialImage}`,
+  caption: 'Asterheim beyond a valley covered in ash',
+  width: 1920,
+  height: 818,
 } as const;
 
 function MockLabel() {
@@ -94,7 +117,7 @@ function HeroSection() {
           fill
           priority
           sizes="100vw"
-          src="/images/home/asterheim-hero.webp"
+          src="/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp"
         />
       </div>
       <div
@@ -369,6 +392,11 @@ function CollectionsSection() {
             </article>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <LinkButton href="/pt-br/miniaturas" size="lg">
+            Abrir arquivo de miniaturas
+          </LinkButton>
+        </div>
       </Container>
     </section>
   );
@@ -539,7 +567,7 @@ function NewsletterSection() {
   );
 }
 
-function SiteFooter() {
+export function LegacyHomeFooter() {
   return (
     <footer className="border-t border-stone-600/25 bg-black py-14">
       <Container>
@@ -615,14 +643,14 @@ export default function HomePage() {
         <EditorialSection />
         <NewsletterSection />
       </main>
-      <SiteFooter />
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        type="application/ld+json"
-      />
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkJsonLd) }}
-        type="application/ld+json"
+      <UnifiedSiteFooter />
+      <JsonLd
+        data={[
+          websiteJsonLd,
+          creativeWorkJsonLd,
+          organizationJsonLd,
+          heroImageJsonLd,
+        ]}
       />
     </>
   );

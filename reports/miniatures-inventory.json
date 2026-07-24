@@ -1,0 +1,60 @@
+{
+  "auditedAt": "2026-07-18",
+  "summary": {
+    "total": 4,
+    "published": 4,
+    "draft": 0,
+    "withoutMedia": 0,
+    "withoutEntity": 0,
+    "withoutCollection": 0,
+    "videos": 0,
+    "glb": 0,
+    "publicStl": 0
+  },
+  "records": [
+    {
+      "slug": "far-watcher-32mm",
+      "type": "character",
+      "entity": "character-far-watcher",
+      "collection": "collection-vanguard",
+      "scale": "32 mm",
+      "cover": "/images/home/asterheim-hero.webp",
+      "status": "published",
+      "locale": "pt-br",
+      "availability": "preview"
+    },
+    {
+      "slug": "banner-bearer-75mm",
+      "type": "character",
+      "entity": "character-banner-bearer",
+      "collection": "collection-vanguard",
+      "scale": "75 mm",
+      "cover": "/images/home/kingdoms-expanse.webp",
+      "status": "published",
+      "locale": "pt-br",
+      "availability": "preview"
+    },
+    {
+      "slug": "fog-stalker-54mm",
+      "type": "creature",
+      "entity": "creature-fog-stalker",
+      "collection": "collection-beasts",
+      "scale": "54 mm",
+      "cover": "/images/home/bestiary-ruins.webp",
+      "status": "published",
+      "locale": "pt-br",
+      "availability": "preview"
+    },
+    {
+      "slug": "ash-hound-32mm",
+      "type": "creature",
+      "entity": "creature-ash-hound",
+      "collection": "collection-beasts",
+      "scale": "32 mm",
+      "cover": "/images/home/bestiary-ruins.webp",
+      "status": "published",
+      "locale": "pt-br",
+      "availability": "preview"
+    }
+  ]
+}

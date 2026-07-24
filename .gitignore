@@ -15,3 +15,11 @@ Thumbs.db
 *.log
 .agents/
 .codex/
+src/generated/prisma/
+skills-lock.json
+
+.vercel
+.env*
+!.env.example
+
+.env*

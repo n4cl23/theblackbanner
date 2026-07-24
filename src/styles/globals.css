@@ -117,6 +117,53 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* WCAG AA floor for subdued editorial copy on dark surfaces. */
+[class*='text-parchment-200/30'],
+[class*='text-parchment-200/35'],
+[class*='text-parchment-200/40'],
+[class*='text-parchment-200/45'],
+[class*='text-parchment-200/50'],
+[class*='text-parchment-200/55'],
+[class*='text-parchment-200/60'] {
+  color: color-mix(in srgb, var(--parchment-200) 72%, transparent) !important;
+}
+
+.text-aged-gold-500.opacity-35 {
+  opacity: 0.8 !important;
+}
+
+.kingdom-ash {
+  --kingdom-accent: var(--ember-500);
+}
+.kingdom-iron {
+  --kingdom-accent: var(--aged-gold-500);
+}
+.kingdom-veil {
+  --kingdom-accent: var(--parchment-200);
+}
+
+.kingdom-ash section:nth-of-type(even) {
+  background-image: linear-gradient(
+    110deg,
+    rgb(103 37 24 / 8%),
+    transparent 45%
+  );
+}
+.kingdom-iron section:nth-of-type(even) {
+  background-image: linear-gradient(
+    90deg,
+    rgb(106 93 73 / 10%),
+    transparent 60%
+  );
+}
+.kingdom-veil section:nth-of-type(even) {
+  background-image: radial-gradient(
+    circle at 85% 50%,
+    rgb(213 204 180 / 8%),
+    transparent 36%
+  );
+}
+
 ::selection {
   background: var(--blood-700);
   color: var(--ivory-100);

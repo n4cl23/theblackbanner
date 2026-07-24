@@ -50,13 +50,15 @@ describe('cinematic Home', () => {
     ).toHaveTextContent('A paisagem de Asterheim não pôde ser carregada');
   });
 
-  it('embeds structured WebSite and CreativeWork data', () => {
+  it('embeds the complete Home structured-data graph', () => {
     const { container } = render(<HomePage />);
     const schemas = container.querySelectorAll(
       'script[type="application/ld+json"]',
     );
-    expect(schemas).toHaveLength(2);
+    expect(schemas).toHaveLength(1);
     expect(schemas[0]).toHaveTextContent('WebSite');
-    expect(schemas[1]).toHaveTextContent('CreativeWork');
+    expect(schemas[0]).toHaveTextContent('CreativeWork');
+    expect(schemas[0]).toHaveTextContent('Organization');
+    expect(schemas[0]).toHaveTextContent('ImageObject');
   });
 });

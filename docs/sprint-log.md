@@ -1,5 +1,87 @@
 # Sprint log
 
+## Sprint 11 — Experience quality
+
+- Branch: `sprint-11-quality`
+- Scope: complete metadata baseline, robots, sitemap enhancements, RSS, 404, redirects, JSON-LD, security headers, accessibility corrections, performance budget, CI browser gate, and quality reports.
+- Accessibility: axe reported no serious or critical violations on five representative primary pages after contrast corrections.
+- Validation: lint, typecheck, 69 Vitest tests, 30 Playwright tests, and the 46-route production build passed on 2026-07-18.
+- Security: final `npm audit` reported 0 known vulnerabilities.
+- Performance: build artifacts were measured; Lighthouse could not complete because of host-level Chrome/Windows connection exhaustion, so category scores remain explicitly unverified.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 9 — Administrative CMS and persistence
+
+- Branch: `sprint-09-cms-persistence`
+- Resources: new Neon `black-banner-v2-development` and Clerk `black-banner-v2-admin-auth`, connected only to Development and Preview.
+- Database: Prisma 7.8 schema, reviewed additive initial migration, pooled runtime adapter, versioned revisions, audit, media metadata, roles, and rate-limit buckets.
+- CMS: protected dashboard and archives for characters, creatures, kingdoms, collections, timeline, lore, and media; create, edit, draft, review, publish, archive, duplicate, preview, history, restore, filters, search, pagination, and concurrency feedback.
+- Security: Clerk sessions, route proxy, role capabilities, persistent action throttling, Zod validation, sanitized audit values, and no committed secrets.
+- ADR numbering: requested 0004/0005/0006 were already occupied; decisions were recorded as 0011/0012/0013 without overwriting history.
+- Validation: Prisma schema and migration status, npm audit with 0 vulnerabilities, formatting, lint, typecheck, 65 Vitest tests (including real Neon integration), 21 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Production deployment or Production integration was performed.
+
+## Sprint 10 — Internationalization
+
+- Branch: `sprint-10-internationalization`
+- Scope: real Portuguese, English, and Spanish routes, translated semantic slugs, route-preserving selector, localized interface/editorial examples, explicit missing-translation state, localized formats, SEO, sitemap, tests, and documentation.
+- CMS: multilingual Zod contracts cover locale status, original content, linked translation, incompleteness, and preview; no operational CMS or database was created because Sprint 9 was not provided.
+- Content: English and Spanish translations remain clearly marked mock, draft, review, or unavailable as appropriate.
+- SEO: localized canonical, hreflang, `x-default`, Open Graph locale, and sitemap entries are generated.
+- Validation: formatting, lint, typecheck, 60 Vitest tests, 20 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 8 — Timeline and connected lore
+
+- Branch: `sprint-08-timeline-lore`
+- Scope: five-view connected timeline experience, semantic narrative relations, unified local search, two article pages, two long-form chronicles, keyboard reading, local progress, SEO, tests, and documentation.
+- Content: eras, years, impacts, conflicts, relation notes, quotations, and chronicle prose are explicitly provisional mocks.
+- Architecture: no graph engine, vector search, database, CMS, or remote search service was added.
+- Privacy: the reading marker stores only a chapter index in a versioned local key.
+- Validation: formatting, lint, typecheck, 53 Vitest tests, 17 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 7 — Collections and miniatures
+
+- Branch: `sprint-07-collections-stl`
+- Scope: collection archive, two rich collection pages, four technical miniature sheets, URL-synchronized category filtering, locked STL delivery demonstration, printing guide, SEO, tests, and documentation.
+- Content: collection identities, technical specifications, recommendations, and changelogs are explicitly provisional mocks.
+- STL and commerce: no private file, direct URL, checkout, payment, or entitlement flow was created.
+- 3D: the existing GLB contract is rendered with no asset; no viewer dependency was installed.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 47 Vitest tests, 14 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 6 — Bestiary and Atlas of Asterheim
+
+- Branch: `sprint-06-bestiary-atlas`
+- Scope: filtered creature codex, four rich dynamic species pages, kingdom Atlas, three biome experiences, accessible field lightbox, 3D contract, SEO, tests, and documentation.
+- Content: taxonomy, anatomy, behavior, evidence, biomes, migrations, and legends are explicitly provisional mocks.
+- 3D: interface and GLB contract only; no renderer or heavy dependency was installed.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 41 Vitest tests, 11 Playwright tests, and the production build passed on 2026-07-18.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 5 — Characters and Guardians
+
+- Branch: `sprint-05-characters-guardians`
+- Scope: asymmetric character archive, URL-synchronized discovery, rich dynamic profiles, monumental Guardian archive, media framing, repository projections, SEO, tests, and documentation.
+- Content: biographies, personality dimensions, epithets, motivations, oaths, relics, and visual assignments are explicitly provisional mocks.
+- Media: optimized images include fallback, caption, and credit; video/WebM/GIF and 3D slots are prepared without inventing assets.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 36 Vitest tests, 8 Playwright tests, and the production build passed on 2026-07-17.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 4 — Kingdoms and map of Asterheim
+
+- Branch: `sprint-04-kingdoms-map`
+- Scope: world hub, kingdom index, three dynamic kingdom presentations, accessible SVG map, dynamic SEO, repository projections, tests, and documentation.
+- Content: all geographic shapes and complementary presentation copy are explicitly provisional mocks; no official canon was established.
+- Map: SVG renderer with bounded zoom, pointer pan, keyboard selection, region layer, tooltip/status, legend, future layer controls, and accessible list/mobile fallback.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 31 Vitest tests, 5 Playwright tests, and the production build passed on 2026-07-17.
+- Deployment: no Preview or Production deployment was performed.
+
 ## Sprint 0 — Foundation and architecture
 
 - Branch: `sprint-00-foundation`
@@ -7,6 +89,15 @@
 - Persistence, CMS, authentication, official content, and Production deployment are explicitly excluded.
 - Validation: clean install, formatting, lint, typecheck, 3 Vitest tests, 1 Playwright smoke test, and production build passed on 2026-07-17.
 - Security: `npm audit` reported 0 vulnerabilities after compatible patch updates.
+- Deployment: no Preview or Production deployment was performed.
+
+## Sprint 3 — Editorial content model
+
+- Branch: `sprint-03-content-model`
+- Scope: 18 typed entities, Zod validation, explicit relationships, local mock dataset, integrity validation, repository abstraction, future source adapters, tests, and documentation.
+- Dataset: 3 kingdoms, 4 characters, 4 creatures, 2 collections, 5 events, and 2 articles; all records are provisional mock content.
+- Persistence: no database, Prisma, migration, or CMS connection was created.
+- Validation: formatting, lint, typecheck, 25 Vitest tests, 3 Playwright smoke tests, and production build passed on 2026-07-17.
 - Deployment: no Preview or Production deployment was performed.
 
 ## Sprint 2 — Cinematic Home
@@ -27,3 +118,32 @@
 - Persistence and CMS remain absent.
 - Validation: formatting, lint, typecheck, unit/component tests, responsive Playwright smoke tests, and production build passed on 2026-07-17.
 - Deployment: no Preview or Production deployment was performed.
+
+# Final content and media integration — 2026-07-18
+
+- Inventoried 639 source files without changing the source directory.
+- Imported 237 optimized raster assets and 26 metadata-validated MP4 files.
+- Extracted 30 unique PDF editorial records into review; skipped one exact duplicate.
+- Structurally validated 145 GLB files and withheld all model/print binaries.
+- Connected the approved environmental artwork to the home hero and social metadata.
+- Production was not changed.
+
+# Sprint 13 — Auditoria funcional e recuperação da navegação
+
+- Branch: `sprint-13-navigation-audit`
+- Inventário recursivo de rotas públicas, localizadas, internas, administrativas e do health check.
+- Fonte tipada única para a hierarquia pública; header, mobile e footer consolidados nos grupos públicos.
+- Auditorias específicas de miniaturas e Atlas registradas sem antecipar as Sprints 14 e 15.
+- Validação local: lint aprovado; typecheck aprovado; 75/75 testes unitários; build com 46 páginas estáticas; Playwright 21/21 cenários desktop e 2/2 mobile aprovados em execuções combinadas.
+- Production não alterada.
+
+# Sprint 14 — Integração completa das miniaturas
+
+- Branch: `sprint-14-miniatures-integration`.
+- Quatro registros locais consolidados em schema editorial/técnico e repository desacoplado.
+- Índice localizado PT-BR, filtros por URL, busca, ordenação, estados e detalhes localizados.
+- EN/ES mantêm indisponibilidade explícita; nenhum conteúdo oficial foi traduzido automaticamente.
+- Nenhum STL privado, GLB inexistente ou mídia fictícia foi publicado.
+- Validação: instalação limpa sem vulnerabilidades; lint, typecheck, 79/79 Vitest, build, 4/4 Playwright do escopo e 2/2 smoke tests mobile aprovados.
+- Risco: a regressão Playwright ampla terminou 22/25 em sua última execução paralela por oscilações preexistentes de i18n/handshake Clerk; os fluxos da Sprint 14 foram reexecutados isoladamente e aprovados.
+- Sprint 15 e Production não foram alteradas.

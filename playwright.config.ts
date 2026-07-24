@@ -7,9 +7,20 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: 'html',
   use: { baseURL: 'http://localhost:3000', trace: 'on-first-retry' },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [
+    {
+      name: 'desktop-chromium',
+      testMatch: /home\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'mobile-chromium',
+      testMatch: /navigation-mobile\.spec\.ts/,
+      use: { ...devices['Pixel 7'] },
+    },
+  ],
   webServer: {
-    command: 'npm run dev',
+    command: 'npm.cmd run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
   },

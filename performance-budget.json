@@ -1,0 +1,19 @@
+{
+  "lighthouse": {
+    "performance": 0.9,
+    "accessibility": 0.95,
+    "best-practices": 0.95,
+    "seo": 0.95
+  },
+  "resources": {
+    "javascriptKb": 350,
+    "cssKb": 120,
+    "totalKb": 2500,
+    "requests": 75
+  },
+  "webVitals": {
+    "largestContentfulPaintMs": 2500,
+    "cumulativeLayoutShift": 0.1,
+    "totalBlockingTimeMs": 200
+  }
+}

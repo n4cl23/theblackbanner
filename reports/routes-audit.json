@@ -1,0 +1,342 @@
+{
+  "auditedAt": "2026-07-18",
+  "baseCommit": "6b0f7c7f40b74389a20fb98f2d7bcb12e0a1c655",
+  "summary": {
+    "pagePatterns": 30,
+    "routeHandlers": 1,
+    "publicPatterns": 24,
+    "adminPatterns": 5
+  },
+  "routes": [
+    {
+      "path": "/",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "home.mock",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/world",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "worldRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/world/kingdoms",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "contentRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/world/kingdoms/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "worldRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/world/map",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "world mock",
+      "status": "functional",
+      "menu": true,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/personagens",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "characterRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/personagens/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "characterRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/guardioes",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "characterRepository",
+      "status": "functional",
+      "menu": true,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/guardioes/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "characterRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/bestiario",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "bestiaryRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/bestiario/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "bestiaryRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/atlas",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "contentRepository+biomeMock",
+      "status": "functional",
+      "menu": true,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/atlas/[kingdom]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "bestiaryRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/colecoes",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "contentRepository+collectionMock",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "medium"
+    },
+    {
+      "path": "/colecoes/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "contentRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/miniaturas/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "miniatureMock",
+      "status": "functional-orphan-index",
+      "menu": false,
+      "home": false,
+      "risk": "high"
+    },
+    {
+      "path": "/guia-de-impressao",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "local",
+      "status": "functional",
+      "menu": true,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/timeline",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "loreRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/lore",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "loreRepository",
+      "status": "functional",
+      "menu": true,
+      "home": true,
+      "risk": "low"
+    },
+    {
+      "path": "/lore/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "loreRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/chronicles",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "loreRepository",
+      "status": "functional",
+      "menu": true,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/chronicles/[slug]",
+      "scope": "public",
+      "locale": "pt-BR",
+      "files": ["page", "not-found"],
+      "data": "loreRepository",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/[locale]/[[...path]]",
+      "scope": "public",
+      "locale": "pt-br|en|es",
+      "files": ["page"],
+      "data": "localizedMock+routeRegistry",
+      "status": "partial-explicit",
+      "menu": true,
+      "home": false,
+      "risk": "high"
+    },
+    {
+      "path": "/design-system",
+      "scope": "internal",
+      "locale": "en",
+      "files": ["page"],
+      "data": "local",
+      "status": "environment-gated",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/admin",
+      "scope": "admin",
+      "locale": "pt-BR",
+      "files": ["layout", "page"],
+      "data": "auth",
+      "status": "redirect",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    },
+    {
+      "path": "/admin/sign-in/[[...sign-in]]",
+      "scope": "admin",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "Clerk",
+      "status": "environment-dependent",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/admin/dashboard",
+      "scope": "admin",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "cmsRepository",
+      "status": "auth-dependent",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/admin/[section]",
+      "scope": "admin",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "cmsRepository",
+      "status": "auth-dependent",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/admin/preview/[id]",
+      "scope": "admin",
+      "locale": "pt-BR",
+      "files": ["page"],
+      "data": "cmsRepository",
+      "status": "auth-dependent",
+      "menu": false,
+      "home": false,
+      "risk": "medium"
+    },
+    {
+      "path": "/api/health",
+      "scope": "system",
+      "locale": "none",
+      "files": ["route"],
+      "data": "environment",
+      "status": "functional",
+      "menu": false,
+      "home": false,
+      "risk": "low"
+    }
+  ]
+}
