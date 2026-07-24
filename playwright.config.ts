@@ -19,6 +19,11 @@ export default defineConfig({
       testMatch: /navigation-mobile\.spec\.ts/,
       use: { ...devices['Pixel 7'] },
     },
+    {
+      name: 'visual-chromium',
+      testMatch: /visual-unification\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'] },
+    },
   ],
   webServer: {
     command: process.platform === 'win32' ? 'npm.cmd run dev' : 'npm run dev',

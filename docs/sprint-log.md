@@ -1,5 +1,18 @@
 # Sprint log
 
+## Sprint 16 — Reestruturação visual do site público
+
+- Branch: `sprint-16-visual-unification`.
+- Auditoria: 18 áreas públicas, incluindo estados de erro, loading e vazio.
+- Layout: seis composições públicas duplicadas consolidadas em `PublicShell`.
+- Identidade: atmosferas contextuais para arquivos, Bestiário, Atlas/mundo,
+  coleções e leitura; contrato reutilizável de hero cinematográfico.
+- Navegação: estado ativo acessível no desktop, dropdowns e menu mobile.
+- Responsividade: proteção de overflow, mídia fluida, títulos balanceados e
+  regras específicas para 320 px e ultrawide.
+- Performance: nenhuma dependência, mídia, fonte ou fronteira client adicionada.
+- Production não alterada e Sprint 17 não iniciada.
+
 ## Sprint 11 — Experience quality
 
 - Branch: `sprint-11-quality`
