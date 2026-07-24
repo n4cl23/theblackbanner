@@ -149,12 +149,8 @@ export function HeroicEntityExplorer({
         </ol>
       ) : (
         <div className="border-y border-stone-700 py-14">
-          <h2 className="font-display text-3xl uppercase">
-            Revisão editorial necessária
-          </h2>
-          <p className="text-parchment-200/65 mt-4 max-w-2xl">
-            Os 42 registros identificados na V1 ainda não possuem aprovação
-            individual suficiente para publicação.
+          <p className="text-parchment-200/65">
+            Nenhum personagem aprovado corresponde aos filtros atuais.
           </p>
         </div>
       )}

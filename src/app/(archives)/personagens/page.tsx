@@ -28,6 +28,15 @@ export default function CharactersPage() {
           arquivo.
         </p>
       </header>
+      <aside className="border-aged-gold-500/30 mb-8 border-l-2 px-6 py-5">
+        <h2 className="font-display text-2xl uppercase">
+          Revisão editorial necessária
+        </h2>
+        <p className="text-parchment-200/65 mt-3 max-w-3xl">
+          Os 42 registros identificados na V1 ainda não possuem aprovação
+          individual suficiente para publicação.
+        </p>
+      </aside>
       <Suspense fallback={<div className="min-h-40 border-y border-stone-700" />}>
         <HeroicEntityExplorer records={approvedCharacters} />
       </Suspense>
