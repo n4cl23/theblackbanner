@@ -115,6 +115,7 @@ describe('connected lore', () => {
         'Evento',
         'Artigo',
         'Coleção',
+        'Região',
       ]),
     );
     render(<UnifiedSearch records={searchRecords} />);

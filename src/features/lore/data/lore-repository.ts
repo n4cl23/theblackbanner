@@ -6,6 +6,7 @@ import {
   timelinePresentations,
 } from './lore.mock';
 import { mockMiniatures } from '@/features/collections/data/collections.mock';
+import { getAtlasRegions } from '@/features/atlas/data/atlas-repository';
 
 export interface SearchRecord {
   id: string;
@@ -43,16 +44,31 @@ export const getTimelineData = cache(async () => {
 
 export const getLoreIndexData = cache(async () => {
   const repository = await getContentRepository();
-  const [articles, characters, creatures, kingdoms, events, collections] =
-    await Promise.all([
-      repository.getLoreArticles(),
-      repository.getCharacters(),
-      repository.getCreatures(),
-      repository.getKingdoms(),
-      repository.getTimelineEvents(),
-      repository.getCollections(),
-    ]);
+  const [
+    articles,
+    characters,
+    creatures,
+    kingdoms,
+    events,
+    collections,
+    atlasRegions,
+  ] = await Promise.all([
+    repository.getLoreArticles(),
+    repository.getCharacters(),
+    repository.getCreatures(),
+    repository.getKingdoms(),
+    repository.getTimelineEvents(),
+    repository.getCollections(),
+    getAtlasRegions(),
+  ]);
   const searchRecords: SearchRecord[] = [
+    ...atlasRegions.map((item) => ({
+      id: item.id,
+      title: item.title,
+      type: 'Região',
+      href: `/pt-br/atlas/regioes/${item.slug}`,
+      excerpt: item.description,
+    })),
     ...mockMiniatures.map((item) => ({
       id: item.id,
       title: item.title,
