@@ -32,7 +32,7 @@ export const publicNavigation = [
     label: 'Bestiário',
     href: '/bestiario',
     children: [
-      { label: 'Atlas', href: '/atlas' },
+      { label: 'Atlas', href: '/pt-br/atlas' },
       { label: 'Criaturas', href: '/bestiario' },
     ],
   },

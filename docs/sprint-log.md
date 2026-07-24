@@ -147,3 +147,13 @@
 - Validação: instalação limpa sem vulnerabilidades; lint, typecheck, 79/79 Vitest, build, 4/4 Playwright do escopo e 2/2 smoke tests mobile aprovados.
 - Risco: a regressão Playwright ampla terminou 22/25 em sua última execução paralela por oscilações preexistentes de i18n/handshake Clerk; os fluxos da Sprint 14 foram reexecutados isoladamente e aprovados.
 - Sprint 15 e Production não foram alteradas.
+
+# Sprint 15 — Atlas de Asterheim
+
+- Branch: `sprint-15-asterheim-atlas`.
+- Atlas localizado consolidado sobre os dados canônicos locais: 3 reinos, 3 regiões, 3 biomas, 4 criaturas e 3 pontos de interesse.
+- Mapa SVG dedicado com camadas sustentadas por dados, URL sincronizada, zoom, pan por teclado, reset e fallback em lista.
+- Integrações com Bestiário, navegação, Home, footer, busca global, metadata e sitemap.
+- Nenhum banco, migration, GLB, canvas ou conteúdo oficial novo foi criado.
+- Production não alterada e Sprint 16 não iniciada.
+- Gates locais: instalação limpa e audit sem vulnerabilidades; formatação, lint, typecheck, 82/82 Vitest, 27/27 Playwright e build aprovados.

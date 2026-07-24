@@ -175,6 +175,46 @@ test('connects Atlas biomes to kingdoms and endemic species', async ({
   ).toBeVisible();
 });
 
+test('explores the localized Atlas, map layers, regions, and bestiary links', async ({
+  page,
+}) => {
+  await page.goto('/pt-br/atlas');
+  await expect(
+    page.getByRole('heading', { name: 'Atlas de Asterheim' }),
+  ).toBeVisible();
+  await page.getByRole('link', { name: /Abrir mapa dedicado/i }).click();
+  await expect(
+    page.getByLabel('Mapa interativo do Atlas de Asterheim'),
+  ).toBeVisible();
+  await page.getByLabel('Ruínas').uncheck();
+  await page
+    .getByRole('button', { name: 'Campos de Cinza · Terras queimadas' })
+    .click();
+  await expect(page).toHaveURL(/regiao=region-ashen-reach/);
+  await page.getByRole('link', { name: /Abrir região/i }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Campos de Cinza' }),
+  ).toBeVisible();
+  await expect(page.getByRole('link', { name: /Ash Hound/i })).toHaveAttribute(
+    'href',
+    '/bestiario/creature-ash-hound',
+  );
+});
+
+test('provides the Atlas list fallback on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/pt-br/atlas/mapa');
+  await expect(
+    page.getByLabel('Mapa interativo do Atlas de Asterheim'),
+  ).toBeHidden();
+  await expect(
+    page.getByRole('heading', { name: 'Alternativa acessível' }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: /Campos de Cinza/ }),
+  ).toBeVisible();
+});
+
 test('keeps the bestiary and Atlas usable on mobile', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/bestiario');

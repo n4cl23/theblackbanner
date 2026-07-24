@@ -12,7 +12,7 @@ test('opens the complete mobile navigation and closes it with Escape', async ({
   await expect(navigation).toBeVisible();
   await expect(navigation.getByRole('link', { name: 'Atlas' })).toHaveAttribute(
     'href',
-    '/atlas',
+    '/pt-br/atlas',
   );
   await expect(
     navigation.getByRole('link', { name: 'Miniaturas' }),
@@ -33,8 +33,8 @@ test('navigates to Atlas from the mobile menu', async ({ page }) => {
     .getByRole('navigation', { name: 'Mobile navigation' })
     .getByRole('link', { name: 'Atlas' })
     .click();
-  await expect(page).toHaveURL(/\/atlas$/);
+  await expect(page).toHaveURL(/\/pt-br\/atlas$/);
   await expect(
-    page.getByRole('heading', { name: 'Biomas que moldam aquilo que vive' }),
+    page.getByRole('heading', { name: 'Atlas de Asterheim' }),
   ).toBeVisible();
 });
