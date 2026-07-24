@@ -190,3 +190,15 @@
 - Gap funcional e ordem segura de migração documentados.
 - Encoding, locales, valores inválidos, mídia e links internos auditados.
 - Production não foi alterada e a Sprint 20 não foi iniciada.
+
+# Sprint 20 — Migração do cânone e saneamento editorial
+
+- Branch: `sprint-20-canonical-content-migration`.
+- 65 registros classificados como `MIGRAR_COM_CORREÇÃO` foram normalizados
+  com proveniência completa; 50 ficaram em revisão e 15 em rascunho.
+- 94 itens classificados como `REVISÃO_HUMANA` permaneceram bloqueados.
+- Os nove demos nomeados foram desconectados da superfície pública e registrados
+  em `reports/removed-demo-content.md`.
+- Schema Zod, teste de UTF-8, integridade de referências e SSR das listagens
+  editoriais foram adicionados.
+- Nenhum banco, migration ou ambiente de Production foi alterado.

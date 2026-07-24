@@ -6,12 +6,13 @@ import { getContentRepository } from '@/features/content/repository/repository';
 import { EditorialMedia } from '@/features/characters/components/editorial-media';
 import { getCharacterPageData } from '@/features/characters/data/character-repository';
 import { getMiniaturesByEntity } from '@/features/collections/data/miniature-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
-  return (await (await getContentRepository()).getCharacters()).map(
-    ({ slug }) => ({ slug }),
-  );
+  return (await (await getContentRepository()).getCharacters())
+    .filter(({ slug }) => !isRemovedDemoSlug(slug))
+    .map(({ slug }) => ({ slug }));
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CharacterPage({ params }: Props) {
   const { slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const data = await getCharacterPageData(slug);
   const miniatures = await getMiniaturesByEntity(slug);
   if (!data || !data.presentation) notFound();

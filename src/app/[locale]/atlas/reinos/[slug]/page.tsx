@@ -6,9 +6,11 @@ import {
   getAtlasRegions,
   getAtlasCreatures,
 } from '@/features/atlas/data/atlas-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 export async function generateStaticParams() {
   const regions = await getAtlasRegions();
   return regions
+    .filter((region) => !isRemovedDemoSlug(region.kingdomSlug))
     .map((r) => ({ locale: 'pt-br', slug: r.kingdomSlug }))
     .filter((v, i, a) => a.findIndex((x) => x.slug === v.slug) === i);
 }
@@ -33,7 +35,7 @@ export default async function Page({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (locale !== 'pt-br') notFound();
+  if (locale !== 'pt-br' || isRemovedDemoSlug(slug)) notFound();
   const [k, regions, creatures] = await Promise.all([
     getAtlasKingdomBySlug(slug),
     getAtlasRegions(),

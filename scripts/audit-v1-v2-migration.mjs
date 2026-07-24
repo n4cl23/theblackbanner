@@ -134,7 +134,10 @@ async function inspectPage(site, path) {
     if (!description.trim()) quality.push('METADATA_DESCRIPTION_AUSENTE');
     if (/\bundefined\b|\bnull\b/i.test(text))
       quality.push('VALOR_INVALIDO_VISÍVEL');
-    if (/Ã.|Â.|�/.test(text)) quality.push('ENCODING_SUSPEITO');
+    if (
+      /Ã(?:£|µ|§|¡|©|­|³|º|ª)|Â(?:·|»|«)|â(?:€|†|œ)|�/.test(text)
+    )
+      quality.push('ENCODING_SUSPEITO');
     if (
       locale === 'en' &&
       /\b(?:não|reino|personagens|coleções|guardiões|coroas|sobre|contato|saiba)\b|[ãõç]/i.test(

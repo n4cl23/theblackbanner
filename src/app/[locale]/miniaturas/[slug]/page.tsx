@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -16,6 +17,7 @@ import {
 type Props = { params: Promise<{ locale: string; slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const item = await getMiniatureBySlug(slug, locale);
   if (!item)
     return { title: 'Miniatura indisponível', robots: { index: false } };

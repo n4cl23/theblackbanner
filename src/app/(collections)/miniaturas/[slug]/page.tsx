@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 import { LockedDownload } from '@/features/collections/components/locked-download';
 import { getMiniaturePageData } from '@/features/collections/data/collection-repository';
 import { mockMiniatures } from '@/features/collections/data/collections.mock';
 import { ModelInspectorContract } from '@/features/bestiary/components/model-inspector-contract';
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() {
-  return mockMiniatures.map(({ slug }) => ({ slug }));
+  return mockMiniatures
+    .filter(({ slug }) => !isRemovedDemoSlug(slug))
+    .map(({ slug }) => ({ slug }));
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -22,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function MiniaturePage({ params }: Props) {
   const { slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const data = await getMiniaturePageData(slug);
   if (!data) notFound();
   const { miniature, related, collections } = data;

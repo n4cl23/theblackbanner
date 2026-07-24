@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { getGuardianPageData } from '@/features/characters/data/character-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 import { guardianPresentation } from '@/features/characters/data/character-presentation.mock';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function GuardianPage({ params }: Props) {
   const { slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const data = await getGuardianPageData(slug);
   if (!data) notFound();
   const { guardian, linkedCharacter, events } = data;

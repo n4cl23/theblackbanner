@@ -5,12 +5,15 @@ import { notFound } from 'next/navigation';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { KingdomSigil } from '@/components/shared/asterheim';
 import { getKingdomPageData } from '@/features/world/data/world-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   const kingdoms = await (await getContentRepository()).getKingdoms();
-  return kingdoms.map(({ slug }) => ({ slug }));
+  return kingdoms
+    .filter(({ slug }) => !isRemovedDemoSlug(slug))
+    .map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -32,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function KingdomPage({ params }: Props) {
   const { slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const data = await getKingdomPageData(slug);
   if (!data || !data.presentation) notFound();
   const {

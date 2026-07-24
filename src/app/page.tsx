@@ -8,7 +8,7 @@ import {
   featuredCreatures,
   featuredKingdoms,
   featuredStories,
-} from '@/content/home.mock';
+} from '@/content/home.canonical';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter as UnifiedSiteFooter } from '@/components/layout/site-footer';
 import { JsonLd } from '@/components/shared/json-ld';
