@@ -6,6 +6,7 @@ import {
   timelinePresentations,
 } from './lore.mock';
 import { mockMiniatures } from '@/features/collections/data/collections.mock';
+import { getAtlasRegions } from '@/features/atlas/data/atlas-repository';
 
 export interface SearchRecord {
   id: string;
@@ -13,6 +14,8 @@ export interface SearchRecord {
   type: string;
   href: string;
   excerpt: string;
+  image: string;
+  locale: 'pt-br';
 }
 
 export const getTimelineData = cache(async () => {
@@ -43,64 +46,104 @@ export const getTimelineData = cache(async () => {
 
 export const getLoreIndexData = cache(async () => {
   const repository = await getContentRepository();
-  const [articles, characters, creatures, kingdoms, events, collections] =
-    await Promise.all([
-      repository.getLoreArticles(),
-      repository.getCharacters(),
-      repository.getCreatures(),
-      repository.getKingdoms(),
-      repository.getTimelineEvents(),
-      repository.getCollections(),
-    ]);
+  const [
+    articles,
+    characters,
+    creatures,
+    kingdoms,
+    events,
+    collections,
+    atlasRegions,
+  ] = await Promise.all([
+    repository.getLoreArticles(),
+    repository.getCharacters(),
+    repository.getCreatures(),
+    repository.getKingdoms(),
+    repository.getTimelineEvents(),
+    repository.getCollections(),
+    getAtlasRegions(),
+  ]);
   const searchRecords: SearchRecord[] = [
+    ...atlasRegions.map((item) => ({
+      id: item.id,
+      title: item.title,
+      type: 'Região',
+      href: `/pt-br/atlas/regioes/${item.slug}`,
+      excerpt: item.description,
+      image: '/images/home/asterheim-hero.webp',
+      locale: 'pt-br' as const,
+    })),
     ...mockMiniatures.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Miniatura',
       href: `/pt-br/miniaturas/${item.slug}`,
       excerpt: item.excerpt,
+      image: item.cover.src,
+      locale: 'pt-br' as const,
     })),
     ...characters.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Personagem',
-      href: `/personagens/${item.slug}`,
+      href: `/pt-br/personagens/${item.slug}`,
       excerpt: item.excerpt,
+      image: '/images/home/asterheim-hero.webp',
+      locale: 'pt-br' as const,
     })),
     ...creatures.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Criatura',
-      href: `/bestiario/${item.slug}`,
+      href: `/pt-br/bestiario/${item.slug}`,
       excerpt: item.excerpt,
+      image: '/images/home/bestiary-ruins.webp',
+      locale: 'pt-br' as const,
     })),
     ...kingdoms.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Reino',
-      href: `/world/kingdoms/${item.slug}`,
+      href: `/pt-br/world/kingdoms/${item.slug}`,
       excerpt: item.excerpt,
+      image: '/images/home/kingdoms-expanse.webp',
+      locale: 'pt-br' as const,
     })),
     ...events.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Evento',
-      href: `/timeline#${item.id}`,
+      href: `/pt-br/timeline#${item.id}`,
       excerpt: item.excerpt,
+      image: '/images/home/asterheim-hero.webp',
+      locale: 'pt-br' as const,
     })),
     ...articles.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Artigo',
-      href: `/lore/${item.slug}`,
+      href: `/pt-br/lore/${item.slug}`,
       excerpt: item.excerpt,
+      image: '/images/home/bestiary-ruins.webp',
+      locale: 'pt-br' as const,
     })),
     ...collections.map((item) => ({
       id: item.id,
       title: item.title,
       type: 'Coleção',
-      href: `/colecoes/${item.slug}`,
+      href: `/pt-br/colecoes/${item.slug}`,
       excerpt: item.excerpt,
+      image: '/images/home/kingdoms-expanse.webp',
+      locale: 'pt-br' as const,
+    })),
+    ...chronicles.map((item) => ({
+      id: item.id,
+      title: item.title,
+      type: 'Crônica',
+      href: `/pt-br/chronicles/${item.slug}`,
+      excerpt: item.excerpt,
+      image: '/images/home/asterheim-hero.webp',
+      locale: 'pt-br' as const,
     })),
   ];
   return { articles, searchRecords, relations: narrativeRelations };

@@ -5,11 +5,12 @@ import { notFound } from 'next/navigation';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { getAtlasPageData } from '@/features/bestiary/data/bestiary-repository';
 import { getCreaturePresentation } from '@/features/bestiary/data/bestiary-presentation.mock';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 type Props = { params: Promise<{ kingdom: string }> };
 export async function generateStaticParams() {
-  return (await (await getContentRepository()).getKingdoms()).map(
-    ({ slug }) => ({ kingdom: slug }),
-  );
+  return (await (await getContentRepository()).getKingdoms())
+    .filter(({ slug }) => !isRemovedDemoSlug(slug))
+    .map(({ slug }) => ({ kingdom: slug }));
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { kingdom } = await params;
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function KingdomAtlasPage({ params }: Props) {
   const { kingdom } = await params;
+  if (isRemovedDemoSlug(kingdom)) notFound();
   const data = await getAtlasPageData(kingdom);
   if (!data || !data.biome) notFound();
   const { biome, regions, creatures } = data;

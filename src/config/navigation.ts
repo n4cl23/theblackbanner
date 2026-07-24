@@ -16,6 +16,7 @@ export const publicNavigation = [
     href: '/world',
     children: [
       { label: 'Reinos', href: '/world/kingdoms' },
+      { label: 'Coroas', href: '/pt-br/coroas' },
       { label: 'Mapa', href: '/world/map' },
       { label: 'Timeline', href: '/timeline' },
     ],
@@ -32,7 +33,7 @@ export const publicNavigation = [
     label: 'Bestiário',
     href: '/bestiario',
     children: [
-      { label: 'Atlas', href: '/atlas' },
+      { label: 'Atlas', href: '/pt-br/atlas' },
       { label: 'Criaturas', href: '/bestiario' },
     ],
   },

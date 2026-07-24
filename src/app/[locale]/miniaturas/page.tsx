@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
 
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -12,6 +11,7 @@ import {
   getMiniatureFilters,
   getMiniatures,
 } from '@/features/collections/data/miniature-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 
 type Props = { params: Promise<{ locale: string }> };
 export const metadata: Metadata = {
@@ -25,11 +25,17 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
   const { locale } = await params;
   if (!['pt-br', 'en', 'es'].includes(locale)) notFound();
   if (locale !== 'pt-br') return <Unavailable locale={locale} />;
-  const [records, filters, featured] = await Promise.all([
+  const [sourceRecords, filters, sourceFeatured] = await Promise.all([
     getMiniatures(locale),
     getMiniatureFilters(locale),
     getFeaturedMiniatures(locale),
   ]);
+  const records = sourceRecords.filter(
+    (record) => !isRemovedDemoSlug(record.slug),
+  );
+  const featured = sourceFeatured.filter(
+    (record) => !isRemovedDemoSlug(record.slug),
+  );
   const lead = featured[0] ?? records[0];
   return (
     <>
@@ -62,13 +68,11 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
           </div>
         </section>
         <section className="mx-auto max-w-[90rem] px-5 py-20 sm:px-8">
-          <Suspense fallback={<p role="status">Organizando miniaturas…</p>}>
-            <MiniatureExplorer
-              filters={filters}
-              locale={locale}
-              records={records}
-            />
-          </Suspense>
+          <MiniatureExplorer
+            filters={filters}
+            locale={locale}
+            records={records}
+          />
         </section>
       </main>
       <SiteFooter />

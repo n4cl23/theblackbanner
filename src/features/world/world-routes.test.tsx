@@ -6,8 +6,8 @@ import {
 import { getKingdomPageData } from '@/features/world/data/world-repository';
 
 describe('world routes', () => {
-  it('generates one route per repository kingdom', async () => {
-    await expect(generateStaticParams()).resolves.toHaveLength(3);
+  it('does not generate public routes for demo kingdoms', async () => {
+    await expect(generateStaticParams()).resolves.toHaveLength(0);
   });
 
   it('rejects an unknown kingdom slug at the data boundary', async () => {

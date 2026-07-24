@@ -10,6 +10,10 @@ import {
 import { sanitizeAuditValue } from '@/features/admin/audit/sanitize-audit';
 import type { ContentInput } from '@/features/admin/domain/content-input';
 import { getPrismaClient } from '@/features/admin/persistence/prisma';
+import {
+  PublicationBlockedError,
+  validateCmsPublication,
+} from '@/features/content/domain/publication-policy';
 
 export class ContentConflictError extends Error {
   constructor() {
@@ -180,6 +184,10 @@ export class PrismaCmsRepository {
       const before = await tx.contentEntity.findUniqueOrThrow({
         where: { id },
       });
+      if (status === EditorialStatus.PUBLISHED) {
+        const issues = validateCmsPublication(before);
+        if (issues.length) throw new PublicationBlockedError(issues);
+      }
       const version = before.version + 1;
       const changed = await tx.contentEntity.updateMany({
         where: { id, version: expectedVersion },

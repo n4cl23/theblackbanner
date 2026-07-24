@@ -96,7 +96,13 @@ describe('real internationalization', () => {
     });
   });
   it('generates locale sitemap entries and static routes', () => {
-    expect(sitemap()).toHaveLength(30);
+    expect(sitemap()).toHaveLength(44);
+    expect(
+      sitemap().some((entry) => entry.url.endsWith('/pt-br/coroas/iron-crown')),
+    ).toBe(true);
+    expect(sitemap().some((entry) => entry.url.endsWith('/pt-br/atlas'))).toBe(
+      true,
+    );
     expect(
       sitemap().find((entry) => entry.url.endsWith('/es/cronologia'))
         ?.alternates?.languages,

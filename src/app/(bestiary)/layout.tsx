@@ -1,14 +1,7 @@
 import type { ReactNode } from 'react';
 
-import { SiteFooter } from '@/components/layout/site-footer';
-import { SiteHeader } from '@/components/layout/site-header';
+import { PublicShell } from '@/components/layout/public-shell';
 
 export default function BestiaryLayout({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <SiteHeader position="sticky" />
-      {children}
-      <SiteFooter />
-    </>
-  );
+  return <PublicShell area="bestiary">{children}</PublicShell>;
 }

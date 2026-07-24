@@ -1,0 +1,2379 @@
+[
+  {
+    "id": "canonical-page-universo",
+    "slug": "universo",
+    "title": "Asterheim",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "O mundo além do estandarte Asterheim Um continente sustentado por seis forças ancestrais, onde toda vitória deixa uma cicatriz. ASTERHEIM ARCHIVE AR A crônica Um mundo contado em resina Asterheim existe no encontro entre narrativa e matéria. Cada personagem deve revelar sua história antes que seu nome seja conhecido; cada base registra o instante anterior à lenda. Seis coroas mantêm o equilíbrio. Seis guardiões pagam seu preço."
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 0,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [
+      {
+        "url": "https://theblackbanner.vercel.app/images/hero/banner-chronicles.webp",
+        "source": "V1",
+        "verified": true
+      }
+    ],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/universo",
+      "previousSlug": "universo",
+      "previousEntity": "page:universe"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-guardioes",
+    "slug": "guardioes",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 1,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/guardioes",
+      "previousSlug": "guardioes",
+      "previousEntity": "page:guardians"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-coroas",
+    "slug": "coroas",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 2,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/coroas",
+      "previousSlug": "coroas",
+      "previousEntity": "page:crowns"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-art-bible",
+    "slug": "art-bible",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 3,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/art-bible",
+      "previousSlug": "art-bible",
+      "previousEntity": "page:art-bible"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-impressao-3d",
+    "slug": "impressao-3d",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 4,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/impressao-3d",
+      "previousSlug": "impressao-3d",
+      "previousEntity": "page:3d-printing"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-galeria",
+    "slug": "galeria",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 5,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/galeria",
+      "previousSlug": "galeria",
+      "previousEntity": "page:gallery"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-novidades",
+    "slug": "novidades",
+    "title": "The Black Banner Chronicles",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 6,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/novidades",
+      "previousSlug": "novidades",
+      "previousEntity": "page:news"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-sobre",
+    "slug": "sobre",
+    "title": "Sobre o projeto",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "Propriedade intelectual original Sobre o projeto The Black Banner Chronicles une worldbuilding, escultura digital e impressão 3D em uma coleção autoral. ASTERHEIM ARCHIVE AR O projeto nasce para ser simultaneamente portfólio visual, art bible, catálogo e enciclopédia. Esta primeira versão registra o alicerce de um mundo que continuará crescendo peça por peça."
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 7,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/sobre",
+      "previousSlug": "sobre",
+      "previousEntity": "page:about"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-contato",
+    "slug": "contato",
+    "title": "Contato",
+    "epithet": null,
+    "description": "Miniaturas colecionáveis e crônicas do mundo original de Asterheim.",
+    "body": [
+      "Envie um corvo Contato Fale sobre o projeto, imprensa, colaboração ou licenciamento futuro. ASTERHEIM ARCHIVE AR Nome E-mail Mensagem Enviar mensagem"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 8,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/contato",
+      "previousSlug": "contato",
+      "previousEntity": "page:contact"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-marketplaces",
+    "slug": "marketplaces",
+    "title": "Marketplaces",
+    "epithet": null,
+    "description": "Encontre miniaturas e arquivos STL oficiais de The Black Banner Chronicles.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 9,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/marketplaces",
+      "previousSlug": "marketplaces",
+      "previousEntity": "page:marketplaces"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-black-banner-company",
+    "slug": "black-banner-company",
+    "title": "The Black Banner Company",
+    "epithet": null,
+    "description": "Veteranos, assassinos, batedores e criaturas improváveis sob um mesmo estandarte.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 10,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/black-banner-company",
+      "previousSlug": "black-banner-company",
+      "previousEntity": "collection:black-banner-company"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-broken-mug-tavern",
+    "slug": "broken-mug-tavern",
+    "title": "The Broken Mug Tavern",
+    "epithet": null,
+    "description": "Uma taverna onde viajantes, músicos e lendas dividem a mesma mesa.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 11,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/broken-mug-tavern",
+      "previousSlug": "broken-mug-tavern",
+      "previousEntity": "collection:broken-mug-tavern"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-iron-tankard-tavern",
+    "slug": "iron-tankard-tavern",
+    "title": "Iron Tankard Tavern",
+    "epithet": null,
+    "description": "Habitantes, forasteiros e criaturas reunidos sob o peso das canecas de ferro.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 12,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/iron-tankard-tavern",
+      "previousSlug": "iron-tankard-tavern",
+      "previousEntity": "collection:iron-tankard-tavern"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-legends-of-the-realm",
+    "slug": "legends-of-the-realm",
+    "title": "Legends of the Realm",
+    "epithet": null,
+    "description": "Grandes figuras e entidades que moldaram a história de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 13,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/legends-of-the-realm",
+      "previousSlug": "legends-of-the-realm",
+      "previousEntity": "collection:legends-of-the-realm"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-beasts-of-asterheim",
+    "slug": "beasts-of-asterheim",
+    "title": "Feras de Asterheim — O Bestiário Oficial",
+    "epithet": null,
+    "description": "Os registros de campo sobreviventes das criaturas que assombram os Seis Reinos de Asterheim.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 14,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/beasts-of-asterheim",
+      "previousSlug": "beasts-of-asterheim",
+      "previousEntity": "collection:beasts-of-asterheim"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-collection-six-crowns",
+    "slug": "six-crowns",
+    "title": "The Six Crowns of Asterheim",
+    "epithet": null,
+    "description": "Seis artefatos ancestrais ligados às forças fundamentais do mundo.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "collection",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 15,
+    "categories": [
+      "collection"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/colecoes/six-crowns",
+      "previousSlug": "six-crowns",
+      "previousEntity": "collection:six-crowns"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-cidadela-do-primeiro-portao",
+    "slug": "cidadela-do-primeiro-portao",
+    "title": "Cidadela do Primeiro Portão",
+    "epithet": null,
+    "description": "Capital de Ironhold. Fortaleza onde juramentos têm mais valor que sangue.",
+    "body": [
+      "Capital · Ironhold Cidadela do Primeiro Portão Capital de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Coordenadas 24.8 ° · 42.3 ° Era documentada Era Atual · Ano 742 Relacionado King Aldric · Iron Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 16,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/cidadela-do-primeiro-portao",
+      "previousSlug": "cidadela-do-primeiro-portao",
+      "previousEntity": "atlas-entry:cidadela-do-primeiro-portao"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-forjas-profundas",
+    "slug": "forjas-profundas",
+    "title": "Forjas Profundas",
+    "epithet": null,
+    "description": "Forja de Ironhold. Fortaleza onde juramentos têm mais valor que sangue.",
+    "body": [
+      "Forja · Ironhold Forjas Profundas Forja de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Forja de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Coordenadas 20.2 ° · 46.6 ° Era documentada Era Atual · Ano 742 Relacionado King Aldric · Iron Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 17,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/forjas-profundas",
+      "previousSlug": "forjas-profundas",
+      "previousEntity": "atlas-entry:forjas-profundas"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-muralha-dos-seis",
+    "slug": "muralha-dos-seis",
+    "title": "Muralha dos Seis",
+    "epithet": null,
+    "description": "Fortaleza de Ironhold. Fortaleza onde juramentos têm mais valor que sangue.",
+    "body": [
+      "Fortaleza · Ironhold Muralha dos Seis Fortaleza de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Fortaleza de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Coordenadas 29.3 ° · 39.4 ° Era documentada Era Atual · Ano 742 Relacionado King Aldric · Iron Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 18,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/muralha-dos-seis",
+      "previousSlug": "muralha-dos-seis",
+      "previousEntity": "atlas-entry:muralha-dos-seis"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-campo-das-correntes",
+    "slug": "campo-das-correntes",
+    "title": "Campo das Correntes",
+    "epithet": null,
+    "description": "Ruínas de Ironhold. Fortaleza onde juramentos têm mais valor que sangue.",
+    "body": [
+      "Ruínas · Ironhold Campo das Correntes Ruínas de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Ruínas de Ironhold. Fortaleza onde juramentos têm mais valor que sangue. Coordenadas 31.7 ° · 47.0 ° Era documentada Era Atual · Ano 742 Relacionado King Aldric · Iron Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 19,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/campo-das-correntes",
+      "previousSlug": "campo-das-correntes",
+      "previousEntity": "atlas-entry:campo-das-correntes"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-king-aldric",
+    "slug": "guardian-king-aldric",
+    "title": "King Aldric",
+    "epithet": null,
+    "description": "O último rei diante do portão destruído, recusando-se a abandonar seu juramento.",
+    "body": [
+      "Guardião · Ironhold King Aldric O último rei diante do portão destruído, recusando-se a abandonar seu juramento. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O último rei diante do portão destruído, recusando-se a abandonar seu juramento. Coordenadas 22.5 ° · 44.5 ° Era documentada Era Atual · Ano 742 Relacionado Iron Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 20,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/guardian-king-aldric",
+      "previousSlug": "guardian-king-aldric",
+      "previousEntity": "atlas-entry:guardian-king-aldric"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-iron-crown",
+    "slug": "crown-iron-crown",
+    "title": "Iron Crown",
+    "epithet": null,
+    "description": "Forjada dos primeiros seis elos que fecharam o portão de Ironhold.",
+    "body": [
+      "Coroa · Ironhold Iron Crown Forjada dos primeiros seis elos que fecharam o portão de Ironhold. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Forjada dos primeiros seis elos que fecharam o portão de Ironhold. Coordenadas 27.8 ° · 41.8 ° Era documentada Era Atual · Ano 742 Relacionado King Aldric"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 21,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/crown-iron-crown",
+      "previousSlug": "crown-iron-crown",
+      "previousEntity": "atlas-entry:crown-iron-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-leao-de-escoria",
+    "slug": "leao-de-escoria",
+    "title": "Leão de Escória",
+    "epithet": null,
+    "description": "Predador de metal vivo que desperta quando um juramento real é quebrado.",
+    "body": [
+      "Boss · Ironhold Leão de Escória Predador de metal vivo que desperta quando um juramento real é quebrado. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Predador de metal vivo que desperta quando um juramento real é quebrado. Coordenadas 20.0 ° · 49.0 ° Era documentada Era Atual · Ano 742 Relacionado Ironhold"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 22,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/leao-de-escoria",
+      "previousSlug": "leao-de-escoria",
+      "previousEntity": "atlas-entry:leao-de-escoria"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-corvos-de-forja",
+    "slug": "corvos-de-forja",
+    "title": "Corvos de Forja",
+    "epithet": null,
+    "description": "Aves negras que constroem ninhos com limalha ainda quente.",
+    "body": [
+      "Fauna · Ironhold Corvos de Forja Aves negras que constroem ninhos com limalha ainda quente. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Aves negras que constroem ninhos com limalha ainda quente. Coordenadas 30.0 ° · 51.0 ° Era documentada Era Atual · Ano 742 Relacionado Ironhold"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 23,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "ironhold"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/ironhold/corvos-de-forja",
+      "previousSlug": "corvos-de-forja",
+      "previousEntity": "atlas-entry:corvos-de-forja"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-santuario-das-seis-geadas",
+    "slug": "santuario-das-seis-geadas",
+    "title": "Santuário das Seis Geadas",
+    "epithet": null,
+    "description": "Capital de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer.",
+    "body": [
+      "Capital · Frost Kingdom Santuário das Seis Geadas Capital de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Coordenadas 50.0 ° · 17.8 ° Era documentada Era Atual · Ano 742 Relacionado Vhaldris · Frost Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 24,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/santuario-das-seis-geadas",
+      "previousSlug": "santuario-das-seis-geadas",
+      "previousEntity": "atlas-entry:santuario-das-seis-geadas"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-arquivo-glacial",
+    "slug": "arquivo-glacial",
+    "title": "Arquivo Glacial",
+    "epithet": null,
+    "description": "Templo de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer.",
+    "body": [
+      "Templo · Frost Kingdom Arquivo Glacial Templo de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Templo de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Coordenadas 45.2 ° · 22.2 ° Era documentada Era Atual · Ano 742 Relacionado Vhaldris · Frost Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 25,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/arquivo-glacial",
+      "previousSlug": "arquivo-glacial",
+      "previousEntity": "atlas-entry:arquivo-glacial"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-ponte-do-silencio",
+    "slug": "ponte-do-silencio",
+    "title": "Ponte do Silêncio",
+    "epithet": null,
+    "description": "Ponte de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer.",
+    "body": [
+      "Ponte · Frost Kingdom Ponte do Silêncio Ponte de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Ponte de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Coordenadas 54.8 ° · 21.4 ° Era documentada Era Atual · Ano 742 Relacionado Vhaldris · Frost Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 26,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/ponte-do-silencio",
+      "previousSlug": "ponte-do-silencio",
+      "previousEntity": "atlas-entry:ponte-do-silencio"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-fenda-azul",
+    "slug": "fenda-azul",
+    "title": "Fenda Azul",
+    "epithet": null,
+    "description": "Região perigosa de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer.",
+    "body": [
+      "Região perigosa · Frost Kingdom Fenda Azul Região perigosa de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Região perigosa de Frost Kingdom. O norte conserva memórias que o restante do mundo preferiu esquecer. Coordenadas 57.7 ° · 15.3 ° Era documentada Era Atual · Ano 742 Relacionado Vhaldris · Frost Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 27,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/fenda-azul",
+      "previousSlug": "fenda-azul",
+      "previousEntity": "atlas-entry:fenda-azul"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-vhaldris",
+    "slug": "guardian-vhaldris",
+    "title": "Vhaldris",
+    "epithet": null,
+    "description": "Um dragão branco ancestral fundido ao santuário que protege há milênios.",
+    "body": [
+      "Guardião · Frost Kingdom Vhaldris Um dragão branco ancestral fundido ao santuário que protege há milênios. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Um dragão branco ancestral fundido ao santuário que protege há milênios. Coordenadas 47.5 ° · 21.5 ° Era documentada Era Atual · Ano 742 Relacionado Frost Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 28,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/guardian-vhaldris",
+      "previousSlug": "guardian-vhaldris",
+      "previousEntity": "atlas-entry:guardian-vhaldris"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-frost-crown",
+    "slug": "crown-frost-crown",
+    "title": "Frost Crown",
+    "epithet": null,
+    "description": "Surgiu quando o primeiro inverno congelou uma única gota do Mar Celeste.",
+    "body": [
+      "Coroa · Frost Kingdom Frost Crown Surgiu quando o primeiro inverno congelou uma única gota do Mar Celeste. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Surgiu quando o primeiro inverno congelou uma única gota do Mar Celeste. Coordenadas 52.8 ° · 18.8 ° Era documentada Era Atual · Ano 742 Relacionado Vhaldris"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 29,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/crown-frost-crown",
+      "previousSlug": "crown-frost-crown",
+      "previousEntity": "atlas-entry:crown-frost-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-vhaldris",
+    "slug": "vhaldris",
+    "title": "Vhaldris",
+    "epithet": null,
+    "description": "Dragão branco fundido ao santuário que protege.",
+    "body": [
+      "Guardião ancestral · Frost Kingdom Vhaldris Dragão branco fundido ao santuário que protege. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Dragão branco fundido ao santuário que protege. Coordenadas 45.0 ° · 26.0 ° Era documentada Era Atual · Ano 742 Relacionado Frost Kingdom"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 30,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/vhaldris",
+      "previousSlug": "vhaldris",
+      "previousEntity": "atlas-entry:vhaldris"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-espectros-de-geada",
+    "slug": "espectros-de-geada",
+    "title": "Espectros de Geada",
+    "epithet": null,
+    "description": "Memórias sem corpo que repetem a última marcha do norte.",
+    "body": [
+      "Monstros · Frost Kingdom Espectros de Geada Memórias sem corpo que repetem a última marcha do norte. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Memórias sem corpo que repetem a última marcha do norte. Coordenadas 55.0 ° · 28.0 ° Era documentada Era Atual · Ano 742 Relacionado Frost Kingdom"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 31,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "frost-kingdom"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/frost-kingdom/espectros-de-geada",
+      "previousSlug": "espectros-de-geada",
+      "previousEntity": "atlas-entry:espectros-de-geada"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-circulo-da-raiz-mundo",
+    "slug": "circulo-da-raiz-mundo",
+    "title": "Círculo da Raiz-Mundo",
+    "epithet": null,
+    "description": "Capital de Elder Forest. Uma floresta que decide quem pode atravessá-la.",
+    "body": [
+      "Capital · Elder Forest Círculo da Raiz-Mundo Capital de Elder Forest. Uma floresta que decide quem pode atravessá-la. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Elder Forest. Uma floresta que decide quem pode atravessá-la. Coordenadas 56.5 ° · 48.5 ° Era documentada Era Atual · Ano 742 Relacionado Yggor · Oak Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 32,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/circulo-da-raiz-mundo",
+      "previousSlug": "circulo-da-raiz-mundo",
+      "previousEntity": "atlas-entry:circulo-da-raiz-mundo"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-santuario-de-yggor",
+    "slug": "santuario-de-yggor",
+    "title": "Santuário de Yggor",
+    "epithet": null,
+    "description": "Templo de Elder Forest. Uma floresta que decide quem pode atravessá-la.",
+    "body": [
+      "Templo · Elder Forest Santuário de Yggor Templo de Elder Forest. Uma floresta que decide quem pode atravessá-la. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Templo de Elder Forest. Uma floresta que decide quem pode atravessá-la. Coordenadas 52.2 ° · 45.4 ° Era documentada Era Atual · Ano 742 Relacionado Yggor · Oak Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 33,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/santuario-de-yggor",
+      "previousSlug": "santuario-de-yggor",
+      "previousEntity": "atlas-entry:santuario-de-yggor"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-ruinas-verdes",
+    "slug": "ruinas-verdes",
+    "title": "Ruínas Verdes",
+    "epithet": null,
+    "description": "Ruínas de Elder Forest. Uma floresta que decide quem pode atravessá-la.",
+    "body": [
+      "Ruínas · Elder Forest Ruínas Verdes Ruínas de Elder Forest. Uma floresta que decide quem pode atravessá-la. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Ruínas de Elder Forest. Uma floresta que decide quem pode atravessá-la. Coordenadas 62.5 ° · 46.3 ° Era documentada Era Atual · Ano 742 Relacionado Yggor · Oak Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 34,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/ruinas-verdes",
+      "previousSlug": "ruinas-verdes",
+      "previousEntity": "atlas-entry:ruinas-verdes"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-pantano-sem-lua",
+    "slug": "pantano-sem-lua",
+    "title": "Pântano sem Lua",
+    "epithet": null,
+    "description": "Região perigosa de Elder Forest. Uma floresta que decide quem pode atravessá-la.",
+    "body": [
+      "Região perigosa · Elder Forest Pântano sem Lua Região perigosa de Elder Forest. Uma floresta que decide quem pode atravessá-la. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Região perigosa de Elder Forest. Uma floresta que decide quem pode atravessá-la. Coordenadas 63.2 ° · 53.7 ° Era documentada Era Atual · Ano 742 Relacionado Yggor · Oak Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 35,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/pantano-sem-lua",
+      "previousSlug": "pantano-sem-lua",
+      "previousEntity": "atlas-entry:pantano-sem-lua"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-yggor",
+    "slug": "guardian-yggor",
+    "title": "Yggor",
+    "epithet": null,
+    "description": "O espírito primordial enraizado no santuário da Coroa do Carvalho.",
+    "body": [
+      "Guardião · Elder Forest Yggor O espírito primordial enraizado no santuário da Coroa do Carvalho. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O espírito primordial enraizado no santuário da Coroa do Carvalho. Coordenadas 54.5 ° · 50.5 ° Era documentada Era Atual · Ano 742 Relacionado Oak Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 36,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/guardian-yggor",
+      "previousSlug": "guardian-yggor",
+      "previousEntity": "atlas-entry:guardian-yggor"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-oak-crown",
+    "slug": "crown-oak-crown",
+    "title": "Oak Crown",
+    "epithet": null,
+    "description": "Cresceu em torno do primeiro juramento pronunciado sob a Árvore do Mundo.",
+    "body": [
+      "Coroa · Elder Forest Oak Crown Cresceu em torno do primeiro juramento pronunciado sob a Árvore do Mundo. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Cresceu em torno do primeiro juramento pronunciado sob a Árvore do Mundo. Coordenadas 59.8 ° · 47.8 ° Era documentada Era Atual · Ano 742 Relacionado Yggor"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 37,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/crown-oak-crown",
+      "previousSlug": "crown-oak-crown",
+      "previousEntity": "atlas-entry:crown-oak-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-aster",
+    "slug": "aster",
+    "title": "Aster",
+    "epithet": null,
+    "description": "O coração vivo que move lentamente as montanhas.",
+    "body": [
+      "Boss primordial · Elder Forest Aster O coração vivo que move lentamente as montanhas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O coração vivo que move lentamente as montanhas. Coordenadas 52.0 ° · 55.0 ° Era documentada Era Atual · Ano 742 Relacionado Elder Forest"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 38,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/aster",
+      "previousSlug": "aster",
+      "previousEntity": "atlas-entry:aster"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-cervos-de-ambar",
+    "slug": "cervos-de-ambar",
+    "title": "Cervos de Âmbar",
+    "epithet": null,
+    "description": "Guias silenciosos que aparecem diante de viajantes perdidos.",
+    "body": [
+      "Fauna · Elder Forest Cervos de Âmbar Guias silenciosos que aparecem diante de viajantes perdidos. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Guias silenciosos que aparecem diante de viajantes perdidos. Coordenadas 62.0 ° · 57.0 ° Era documentada Era Atual · Ano 742 Relacionado Elder Forest"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 39,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "elder-forest"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/elder-forest/cervos-de-ambar",
+      "previousSlug": "cervos-de-ambar",
+      "previousEntity": "atlas-entry:cervos-de-ambar"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-bastiao-do-horizonte-partido",
+    "slug": "bastiao-do-horizonte-partido",
+    "title": "Bastião do Horizonte Partido",
+    "epithet": null,
+    "description": "Capital de Stormreach. Penhascos onde vigias conversam com tempestades.",
+    "body": [
+      "Capital · Stormreach Bastião do Horizonte Partido Capital de Stormreach. Penhascos onde vigias conversam com tempestades. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Stormreach. Penhascos onde vigias conversam com tempestades. Coordenadas 77.5 ° · 29.6 ° Era documentada Era Atual · Ano 742 Relacionado Vaelor · Storm Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 40,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/bastiao-do-horizonte-partido",
+      "previousSlug": "bastiao-do-horizonte-partido",
+      "previousEntity": "atlas-entry:bastiao-do-horizonte-partido"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-templo-do-trovao",
+    "slug": "templo-do-trovao",
+    "title": "Templo do Trovão",
+    "epithet": null,
+    "description": "Templo de Stormreach. Penhascos onde vigias conversam com tempestades.",
+    "body": [
+      "Templo · Stormreach Templo do Trovão Templo de Stormreach. Penhascos onde vigias conversam com tempestades. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Templo de Stormreach. Penhascos onde vigias conversam com tempestades. Coordenadas 82.3 ° · 27.0 ° Era documentada Era Atual · Ano 742 Relacionado Vaelor · Storm Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 41,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/templo-do-trovao",
+      "previousSlug": "templo-do-trovao",
+      "previousEntity": "atlas-entry:templo-do-trovao"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-torres-condutoras",
+    "slug": "torres-condutoras",
+    "title": "Torres Condutoras",
+    "epithet": null,
+    "description": "Fortaleza de Stormreach. Penhascos onde vigias conversam com tempestades.",
+    "body": [
+      "Fortaleza · Stormreach Torres Condutoras Fortaleza de Stormreach. Penhascos onde vigias conversam com tempestades. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Fortaleza de Stormreach. Penhascos onde vigias conversam com tempestades. Coordenadas 72.5 ° · 28.5 ° Era documentada Era Atual · Ano 742 Relacionado Vaelor · Storm Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 42,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/torres-condutoras",
+      "previousSlug": "torres-condutoras",
+      "previousEntity": "atlas-entry:torres-condutoras"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-costa-dos-naufragios",
+    "slug": "costa-dos-naufragios",
+    "title": "Costa dos Naufrágios",
+    "epithet": null,
+    "description": "Região perigosa de Stormreach. Penhascos onde vigias conversam com tempestades.",
+    "body": [
+      "Região perigosa · Stormreach Costa dos Naufrágios Região perigosa de Stormreach. Penhascos onde vigias conversam com tempestades. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Região perigosa de Stormreach. Penhascos onde vigias conversam com tempestades. Coordenadas 84.2 ° · 35.5 ° Era documentada Era Atual · Ano 742 Relacionado Vaelor · Storm Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 43,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/costa-dos-naufragios",
+      "previousSlug": "costa-dos-naufragios",
+      "previousEntity": "atlas-entry:costa-dos-naufragios"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-vaelor",
+    "slug": "guardian-vaelor",
+    "title": "Vaelor",
+    "epithet": null,
+    "description": "O elo imortal entre o céu, o oceano e a Coroa da Tempestade.",
+    "body": [
+      "Guardião · Stormreach Vaelor O elo imortal entre o céu, o oceano e a Coroa da Tempestade. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O elo imortal entre o céu, o oceano e a Coroa da Tempestade. Coordenadas 75.5 ° · 32.5 ° Era documentada Era Atual · Ano 742 Relacionado Storm Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 44,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/guardian-vaelor",
+      "previousSlug": "guardian-vaelor",
+      "previousEntity": "atlas-entry:guardian-vaelor"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-storm-crown",
+    "slug": "crown-storm-crown",
+    "title": "Storm Crown",
+    "epithet": null,
+    "description": "Foi recuperada de um obelisco partido durante a tempestade que durou cem anos.",
+    "body": [
+      "Coroa · Stormreach Storm Crown Foi recuperada de um obelisco partido durante a tempestade que durou cem anos. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Foi recuperada de um obelisco partido durante a tempestade que durou cem anos. Coordenadas 80.8 ° · 29.8 ° Era documentada Era Atual · Ano 742 Relacionado Vaelor"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 45,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/crown-storm-crown",
+      "previousSlug": "crown-storm-crown",
+      "previousEntity": "atlas-entry:crown-storm-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-skywind",
+    "slug": "skywind",
+    "title": "Skywind",
+    "epithet": null,
+    "description": "Ave ancestral que atravessa a tempestade antes que ela nasça.",
+    "body": [
+      "Soberano celeste · Stormreach Skywind Ave ancestral que atravessa a tempestade antes que ela nasça. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Ave ancestral que atravessa a tempestade antes que ela nasça. Coordenadas 73.0 ° · 37.0 ° Era documentada Era Atual · Ano 742 Relacionado Stormreach"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 46,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/skywind",
+      "previousSlug": "skywind",
+      "previousEntity": "atlas-entry:skywind"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-serpes-de-nuvem",
+    "slug": "serpes-de-nuvem",
+    "title": "Serpes de Nuvem",
+    "epithet": null,
+    "description": "Predadores translúcidos vistos apenas quando um raio revela seus corpos.",
+    "body": [
+      "Monstros · Stormreach Serpes de Nuvem Predadores translúcidos vistos apenas quando um raio revela seus corpos. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Predadores translúcidos vistos apenas quando um raio revela seus corpos. Coordenadas 83.0 ° · 39.0 ° Era documentada Era Atual · Ano 742 Relacionado Stormreach"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 47,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "stormreach"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/stormreach/serpes-de-nuvem",
+      "previousSlug": "serpes-de-nuvem",
+      "previousEntity": "atlas-entry:serpes-de-nuvem"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-thalassar-submersa",
+    "slug": "thalassar-submersa",
+    "title": "Thalassar Submersa",
+    "epithet": null,
+    "description": "Capital de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas.",
+    "body": [
+      "Capital · Kingdom of the Abyss Thalassar Submersa Capital de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Coordenadas 78.0 ° · 72.9 ° Era documentada Era Atual · Ano 742 Relacionado Nereus · Abyss Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 48,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/thalassar-submersa",
+      "previousSlug": "thalassar-submersa",
+      "previousEntity": "atlas-entry:thalassar-submersa"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-farol-invertido",
+    "slug": "farol-invertido",
+    "title": "Farol Invertido",
+    "epithet": null,
+    "description": "Templo de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas.",
+    "body": [
+      "Templo · Kingdom of the Abyss Farol Invertido Templo de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Templo de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Coordenadas 72.7 ° · 68.8 ° Era documentada Era Atual · Ano 742 Relacionado Nereus · Abyss Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 49,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/farol-invertido",
+      "previousSlug": "farol-invertido",
+      "previousEntity": "atlas-entry:farol-invertido"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-jardins-de-coral",
+    "slug": "jardins-de-coral",
+    "title": "Jardins de Coral",
+    "epithet": null,
+    "description": "Floresta de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas.",
+    "body": [
+      "Floresta · Kingdom of the Abyss Jardins de Coral Floresta de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Floresta de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Coordenadas 82.8 ° · 69.8 ° Era documentada Era Atual · Ano 742 Relacionado Nereus · Abyss Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 50,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/jardins-de-coral",
+      "previousSlug": "jardins-de-coral",
+      "previousEntity": "atlas-entry:jardins-de-coral"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-fossa-sem-estrelas",
+    "slug": "fossa-sem-estrelas",
+    "title": "Fossa sem Estrelas",
+    "epithet": null,
+    "description": "Região perigosa de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas.",
+    "body": [
+      "Região perigosa · Kingdom of the Abyss Fossa sem Estrelas Região perigosa de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Região perigosa de Kingdom of the Abyss. Um reino entre marés, sonhos e cidades afogadas. Coordenadas 84.7 ° · 77.0 ° Era documentada Era Atual · Ano 742 Relacionado Nereus · Abyss Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 51,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/fossa-sem-estrelas",
+      "previousSlug": "fossa-sem-estrelas",
+      "previousEntity": "atlas-entry:fossa-sem-estrelas"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-nereus",
+    "slug": "guardian-nereus",
+    "title": "Nereus",
+    "epithet": null,
+    "description": "O último sacerdote capaz de compreender a entidade que dorme nas profundezas.",
+    "body": [
+      "Guardião · Kingdom of the Abyss Nereus O último sacerdote capaz de compreender a entidade que dorme nas profundezas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O último sacerdote capaz de compreender a entidade que dorme nas profundezas. Coordenadas 75.5 ° · 73.5 ° Era documentada Era Atual · Ano 742 Relacionado Abyss Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 52,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/guardian-nereus",
+      "previousSlug": "guardian-nereus",
+      "previousEntity": "atlas-entry:guardian-nereus"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-abyss-crown",
+    "slug": "crown-abyss-crown",
+    "title": "Abyss Crown",
+    "epithet": null,
+    "description": "Encontrada dentro de uma cidade que emergiu do mar por apenas uma noite.",
+    "body": [
+      "Coroa · Kingdom of the Abyss Abyss Crown Encontrada dentro de uma cidade que emergiu do mar por apenas uma noite. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Encontrada dentro de uma cidade que emergiu do mar por apenas uma noite. Coordenadas 80.8 ° · 70.8 ° Era documentada Era Atual · Ano 742 Relacionado Nereus"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 53,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/crown-abyss-crown",
+      "previousSlug": "crown-abyss-crown",
+      "previousEntity": "atlas-entry:crown-abyss-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-kraken-sonhador",
+    "slug": "kraken-sonhador",
+    "title": "Kraken Sonhador",
+    "epithet": null,
+    "description": "Entidade colossal cujos sonhos alteram as correntes.",
+    "body": [
+      "Boss · Kingdom of the Abyss Kraken Sonhador Entidade colossal cujos sonhos alteram as correntes. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Entidade colossal cujos sonhos alteram as correntes. Coordenadas 73.0 ° · 78.0 ° Era documentada Era Atual · Ano 742 Relacionado Kingdom of the Abyss"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 54,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/kraken-sonhador",
+      "previousSlug": "kraken-sonhador",
+      "previousEntity": "atlas-entry:kraken-sonhador"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-cavaleiros-de-coral",
+    "slug": "cavaleiros-de-coral",
+    "title": "Cavaleiros de Coral",
+    "epithet": null,
+    "description": "Armaduras vazias ocupadas por colônias marinhas.",
+    "body": [
+      "Monstros · Kingdom of the Abyss Cavaleiros de Coral Armaduras vazias ocupadas por colônias marinhas. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Armaduras vazias ocupadas por colônias marinhas. Coordenadas 83.0 ° · 80.0 ° Era documentada Era Atual · Ano 742 Relacionado Kingdom of the Abyss"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 55,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "kingdom-of-the-abyss"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/kingdom-of-the-abyss/cavaleiros-de-coral",
+      "previousSlug": "cavaleiros-de-coral",
+      "previousEntity": "atlas-entry:cavaleiros-de-coral"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-acampamento-da-ultima-brasa",
+    "slug": "acampamento-da-ultima-brasa",
+    "title": "Acampamento da Última Brasa",
+    "epithet": null,
+    "description": "Capital de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões.",
+    "body": [
+      "Capital · Scorched Wastes Acampamento da Última Brasa Capital de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Capital de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Coordenadas 33.8 ° · 76.4 ° Era documentada Era Atual · Ano 742 Relacionado The Last Dragon Slayer · Dragon Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 56,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/acampamento-da-ultima-brasa",
+      "previousSlug": "acampamento-da-ultima-brasa",
+      "previousEntity": "atlas-entry:acampamento-da-ultima-brasa"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-cemiterio-dos-dragoes",
+    "slug": "cemiterio-dos-dragoes",
+    "title": "Cemitério dos Dragões",
+    "epithet": null,
+    "description": "Ruínas de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões.",
+    "body": [
+      "Ruínas · Scorched Wastes Cemitério dos Dragões Ruínas de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Ruínas de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Coordenadas 40.3 ° · 71.8 ° Era documentada Era Atual · Ano 742 Relacionado The Last Dragon Slayer · Dragon Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 57,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/cemiterio-dos-dragoes",
+      "previousSlug": "cemiterio-dos-dragoes",
+      "previousEntity": "atlas-entry:cemiterio-dos-dragoes"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-forja-de-vidro",
+    "slug": "forja-de-vidro",
+    "title": "Forja de Vidro",
+    "epithet": null,
+    "description": "Fortaleza de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões.",
+    "body": [
+      "Fortaleza · Scorched Wastes Forja de Vidro Fortaleza de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Fortaleza de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Coordenadas 29.7 ° · 72.8 ° Era documentada Era Atual · Ano 742 Relacionado The Last Dragon Slayer · Dragon Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 58,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/forja-de-vidro",
+      "previousSlug": "forja-de-vidro",
+      "previousEntity": "atlas-entry:forja-de-vidro"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-cratera-do-ultimo-voo",
+    "slug": "cratera-do-ultimo-voo",
+    "title": "Cratera do Último Voo",
+    "epithet": null,
+    "description": "Região perigosa de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões.",
+    "body": [
+      "Região perigosa · Scorched Wastes Cratera do Último Voo Região perigosa de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Região perigosa de Scorched Wastes. A cicatriz deixada pelo fim da Era dos Dragões. Coordenadas 41.2 ° · 79.7 ° Era documentada Era Atual · Ano 742 Relacionado The Last Dragon Slayer · Dragon Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 59,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/cratera-do-ultimo-voo",
+      "previousSlug": "cratera-do-ultimo-voo",
+      "previousEntity": "atlas-entry:cratera-do-ultimo-voo"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-guardian-last-dragon-slayer",
+    "slug": "guardian-last-dragon-slayer",
+    "title": "The Last Dragon Slayer",
+    "epithet": null,
+    "description": "O guerreiro que encerrou a Era dos Dragões e carrega o peso da extinção.",
+    "body": [
+      "Guardião · Scorched Wastes The Last Dragon Slayer O guerreiro que encerrou a Era dos Dragões e carrega o peso da extinção. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões O guerreiro que encerrou a Era dos Dragões e carrega o peso da extinção. Coordenadas 32.5 ° · 76.5 ° Era documentada Era Atual · Ano 742 Relacionado Dragon Crown"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 60,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/guardian-last-dragon-slayer",
+      "previousSlug": "guardian-last-dragon-slayer",
+      "previousEntity": "atlas-entry:guardian-last-dragon-slayer"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-crown-dragon-crown",
+    "slug": "crown-dragon-crown",
+    "title": "Dragon Crown",
+    "epithet": null,
+    "description": "Montada em silêncio com fragmentos daquele que encerrou a Era dos Dragões.",
+    "body": [
+      "Coroa · Scorched Wastes Dragon Crown Montada em silêncio com fragmentos daquele que encerrou a Era dos Dragões. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Montada em silêncio com fragmentos daquele que encerrou a Era dos Dragões. Coordenadas 37.8 ° · 73.8 ° Era documentada Era Atual · Ano 742 Relacionado The Last Dragon Slayer"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 61,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/crown-dragon-crown",
+      "previousSlug": "crown-dragon-crown",
+      "previousEntity": "atlas-entry:crown-dragon-crown"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-wyrm-de-cinzas",
+    "slug": "wyrm-de-cinzas",
+    "title": "Wyrm de Cinzas",
+    "epithet": null,
+    "description": "Possível descendente dos dragões considerados extintos.",
+    "body": [
+      "Boss · Scorched Wastes Wyrm de Cinzas Possível descendente dos dragões considerados extintos. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Possível descendente dos dragões considerados extintos. Coordenadas 30.0 ° · 81.0 ° Era documentada Era Atual · Ano 742 Relacionado Scorched Wastes"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 62,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/wyrm-de-cinzas",
+      "previousSlug": "wyrm-de-cinzas",
+      "previousEntity": "atlas-entry:wyrm-de-cinzas"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-atlas-entry-escaravelhos-de-vidro",
+    "slug": "escaravelhos-de-vidro",
+    "title": "Escaravelhos de Vidro",
+    "epithet": null,
+    "description": "Insetos que atravessam areia derretida e carregam calor no casco.",
+    "body": [
+      "Fauna · Scorched Wastes Escaravelhos de Vidro Insetos que atravessam areia derretida e carregam calor no casco. Voltar ao Atlas Explorar Reino Registro cartográfico História e conexões Insetos que atravessam areia derretida e carregam calor no casco. Coordenadas 40.0 ° · 83.0 ° Era documentada Era Atual · Ano 742 Relacionado Scorched Wastes"
+    ],
+    "entityType": "atlas-entry",
+    "locale": "pt-BR",
+    "status": "review",
+    "featured": false,
+    "order": 63,
+    "categories": [
+      "atlas-entry"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [
+      "scorched-wastes"
+    ],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/scorched-wastes/escaravelhos-de-vidro",
+      "previousSlug": "escaravelhos-de-vidro",
+      "previousEntity": "atlas-entry:escaravelhos-de-vidro"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  },
+  {
+    "id": "canonical-page-creatures",
+    "slug": "creatures",
+    "title": "Criaturas de Asterheim",
+    "epithet": null,
+    "description": "Um arquivo de campo sobre predadores, espíritos, constructos e colossos dos seis Reinos.",
+    "body": [
+      "THE BLACK BANNER"
+    ],
+    "entityType": "page",
+    "locale": "pt-BR",
+    "status": "draft",
+    "featured": false,
+    "order": 64,
+    "categories": [
+      "page"
+    ],
+    "tags": [],
+    "scales": [],
+    "kingdomSlugs": [],
+    "collectionSlugs": [],
+    "relationshipIds": [],
+    "media": [],
+    "source": {
+      "system": "The Black Banner V1",
+      "url": "https://theblackbanner.vercel.app/pt-br/atlas/creatures",
+      "previousSlug": "creatures",
+      "previousEntity": "page:creatures"
+    },
+    "migration": {
+      "migratedAt": "2026-07-24T00:00:00.000Z",
+      "decision": "MIGRAR_COM_CORREÇÃO",
+      "notes": "Migrado após autorização humana; publicação depende de revisão editorial final."
+    }
+  }
+]

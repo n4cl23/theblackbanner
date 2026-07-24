@@ -1,35 +1,35 @@
-export type MockContent = Readonly<{
+export type FeaturedContent = Readonly<{
   id: string;
   name: string;
   summary: string;
-  isMock: true;
+  isMock: boolean;
 }>;
 
-export type FeaturedKingdom = MockContent &
+export type FeaturedKingdom = FeaturedContent &
   Readonly<{
     epithet: string;
     sigil: string;
   }>;
 
-export type FeaturedCharacter = MockContent &
+export type FeaturedCharacter = FeaturedContent &
   Readonly<{
     role: string;
     allegiance: string;
   }>;
 
-export type FeaturedCreature = MockContent &
+export type FeaturedCreature = FeaturedContent &
   Readonly<{
     classification: string;
     threat: 'unknown' | 'severe' | 'extreme';
   }>;
 
-export type FeaturedCollection = MockContent &
+export type FeaturedCollection = FeaturedContent &
   Readonly<{
     format: string;
     itemCount: number;
   }>;
 
-export type FeaturedStory = MockContent &
+export type FeaturedStory = FeaturedContent &
   Readonly<{
     chapter: string;
     dateLabel: string;

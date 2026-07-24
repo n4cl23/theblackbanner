@@ -77,8 +77,8 @@ describe('bestiary and atlas', () => {
     });
     await expect(getCreaturePageData('missing')).resolves.toBeNull();
   });
-  it('resolves all Atlas routes and rejects an invalid kingdom', async () => {
-    await expect(atlasParams()).resolves.toHaveLength(3);
+  it('keeps demo Atlas routes out of static generation', async () => {
+    await expect(atlasParams()).resolves.toHaveLength(0);
     await expect(getAtlasPageData('kingdom-iron-march')).resolves.toMatchObject(
       { biome: { biome: 'Tempestade e ferro' } },
     );

@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-07-24",
+  "scope": "versioned mock editorial dataset",
+  "totalEntities": 43,
+  "miniatures": 4,
+  "chronicles": 2,
+  "status": {
+    "draft": 43,
+    "review": 0,
+    "published": 0,
+    "archived": 0
+  },
+  "integrity": {
+    "duplicateSlugs": 0,
+    "brokenReferences": 0,
+    "unassignedCharacters": 0,
+    "creaturesWithoutRegions": 0,
+    "eventsWithoutMinimumParticipants": 0
+  },
+  "publication": {
+    "officialContentPublished": 0,
+    "provisionalContentIsExplicit": true,
+    "cmsMinimumPublicationPolicy": true
+  }
+}

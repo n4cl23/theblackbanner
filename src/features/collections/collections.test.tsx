@@ -77,7 +77,7 @@ describe('collections and miniatures', () => {
       getMiniaturePageData('fog-stalker-54mm'),
     ).resolves.toMatchObject({ miniature: { pieceCount: 5 } });
     await expect(getMiniaturePageData('missing')).resolves.toBeNull();
-    expect(miniatureParams()).toHaveLength(4);
+    expect(miniatureParams()).toEqual([{ slug: 'ash-hound-32mm' }]);
   });
   it('creates dynamic metadata', async () => {
     await expect(

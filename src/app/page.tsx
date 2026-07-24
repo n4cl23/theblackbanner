@@ -8,7 +8,7 @@ import {
   featuredCreatures,
   featuredKingdoms,
   featuredStories,
-} from '@/content/home.mock';
+} from '@/content/home.canonical';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter as UnifiedSiteFooter } from '@/components/layout/site-footer';
 import { JsonLd } from '@/components/shared/json-ld';
@@ -392,9 +392,12 @@ function CollectionsSection() {
             </article>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-wrap justify-center gap-3 text-center">
           <LinkButton href="/pt-br/miniaturas" size="lg">
             Abrir arquivo de miniaturas
+          </LinkButton>
+          <LinkButton href="/pt-br/atlas" size="lg" tone="iron">
+            Explorar Atlas de Asterheim
           </LinkButton>
         </div>
       </Container>

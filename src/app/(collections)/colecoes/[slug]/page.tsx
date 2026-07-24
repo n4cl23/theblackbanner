@@ -6,11 +6,12 @@ import { JsonLd } from '@/components/shared/json-ld';
 import { absoluteUrl } from '@/config/site';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { getCollectionPageData } from '@/features/collections/data/collection-repository';
+import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
-  return (await (await getContentRepository()).getCollections()).map(
-    ({ slug }) => ({ slug }),
-  );
+  return (await (await getContentRepository()).getCollections())
+    .filter(({ slug }) => !isRemovedDemoSlug(slug))
+    .map(({ slug }) => ({ slug }));
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function CollectionPage({ params }: Props) {
   const { slug } = await params;
+  if (isRemovedDemoSlug(slug)) notFound();
   const data = await getCollectionPageData(slug);
   if (!data || !data.presentation) notFound();
   const { collection, presentation, miniatures, included, related } = data;
