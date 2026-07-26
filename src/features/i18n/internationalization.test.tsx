@@ -16,6 +16,7 @@ const push = vi.fn();
 vi.mock('next/navigation', async () => ({
   ...(await vi.importActual('next/navigation')),
   useRouter: () => ({ push }),
+  usePathname: () => '/pt-br/lore/estradas-e-ruinas',
   notFound: () => {
     throw new Error('not-found');
   },
@@ -30,11 +31,9 @@ describe('real internationalization', () => {
     );
   });
   it('preserves the semantic page when switching languages', () => {
-    render(<LanguageSwitcher locale="pt-br" routeKey="roadsArticle" />);
-    fireEvent.change(screen.getByLabelText('Language'), {
-      target: { value: 'en' },
-    });
-    expect(push).toHaveBeenCalledWith('/en/lore/roads-and-ruins');
+    render(<LanguageSwitcher locale="pt-br" />);
+    fireEvent.click(screen.getByRole('link', { name: /EN — English/i }));
+    expect(push).toHaveBeenCalledWith('/en/lore/estradas-e-ruinas');
   });
   it('renders translated interface and content for each locale', async () => {
     const english = await LocalizedPage({
@@ -91,7 +90,7 @@ describe('real internationalization', () => {
       },
     });
     expect(metadata.openGraph).toMatchObject({
-      locale: 'en',
+      locale: 'en_US',
       url: '/en/timeline',
     });
   });

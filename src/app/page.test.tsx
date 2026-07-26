@@ -1,20 +1,19 @@
 import { fireEvent, render } from '@testing-library/react';
 
-import HomePage from '@/app/page';
+import { LocalizedHomePage } from '@/app/page';
 
 describe('cinematic Home', () => {
   it('renders every requested section', async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
 
     const headings = [
       'Seis domínios. Um destino.',
       'Exércitos, tavernas e lendas',
       'Latest Miniatures',
-      'Aqueles que carregam as Coroas',
-      'O que desperta sob a pedra',
-      'Atravesse Asterheim',
-      'Ecos através das eras',
-      'Do códice para a mesa',
+      'King Aldric',
+      'Construindo Asterheim',
     ];
 
     expect(container.querySelector('h1')).toHaveTextContent(
@@ -28,7 +27,9 @@ describe('cinematic Home', () => {
   });
 
   it('provides one focused primary call to action', async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
     expect(
       container.querySelector(
         'section[aria-labelledby="home-hero-title"] a[href="#asterheim"]',
@@ -42,7 +43,9 @@ describe('cinematic Home', () => {
   });
 
   it('shows an accessible fallback when critical media fails', async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
     const hero = container.querySelector(
       'img[alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"]',
     );
@@ -57,7 +60,9 @@ describe('cinematic Home', () => {
   });
 
   it('embeds the complete Home structured-data graph', async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
     const schemas = container.querySelectorAll(
       'script[type="application/ld+json"]',
     );

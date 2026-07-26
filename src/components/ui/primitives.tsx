@@ -426,13 +426,19 @@ export function Skeleton({ className }: { className?: string }) {
   );
 }
 
-export function SkipLink({ href = '#main-content' }: { href?: string }) {
+export function SkipLink({
+  href = '#main-content',
+  label = 'Skip to content',
+}: {
+  href?: string;
+  label?: string;
+}) {
   return (
     <a
       className="bg-aged-gold-500 text-coal-950 fixed top-3 left-3 z-[100] -translate-y-20 px-4 py-3 font-bold transition-transform focus:translate-y-0"
       href={href}
     >
-      Skip to content
+      {label}
     </a>
   );
 }

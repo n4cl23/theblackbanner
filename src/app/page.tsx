@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -14,6 +14,7 @@ import {
   SkipLink,
 } from '@/components/ui/primitives';
 import { siteConfig } from '@/config/site';
+import type { Locale } from '@/config/i18n';
 import { crowns, guardians } from '@/content/heroic-entities';
 import {
   homeDomainArtwork,
@@ -23,57 +24,38 @@ import {
   getMiniatures,
   getPublishedCollections,
 } from '@/features/collections/data/miniature-repository';
+import {
+  getHomeMessages,
+  type HomeMessages,
+} from '@/features/i18n/data/home-translations';
+import { localizedPath } from '@/features/i18n/data/route-registry';
 import type {
   Miniature,
   RealCollection,
 } from '@/features/collections/domain/miniature-schema';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: 'The Black Banner — Chronicles of Asterheim',
-  description:
-    'Explore os reinos, coleções, personagens e criaturas do universo dark fantasy de Asterheim.',
-  alternates: { canonical: '/' },
-  openGraph: {
-    type: 'website',
-    title: 'The Black Banner — Chronicles of Asterheim',
-    description: 'Entre em um mundo de Coroas, juramentos e criaturas antigas.',
-    url: '/',
-    images: [
-      {
-        url: '/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp',
-        width: 1920,
-        height: 1080,
-        alt: 'Aster, o coração do mundo de Asterheim',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'The Black Banner — Chronicles of Asterheim',
-    description: 'Entre em um mundo de Coroas, juramentos e criaturas antigas.',
-    images: [
-      '/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp',
-    ],
-  },
-};
-
-const structuredData = [
+function getStructuredData(locale: Locale) {
+  const inLanguage = locale === 'pt-br' ? 'pt-BR' : locale;
+  const description = {
+    'pt-br': 'Universo narrativo dark fantasy de The Black Banner.',
+    en: 'The dark fantasy narrative universe of The Black Banner.',
+    es: 'El universo narrativo dark fantasy de The Black Banner.',
+  }[locale];
+  return [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'The Black Banner',
     alternateName: 'Chronicles of Asterheim',
     url: siteConfig.url,
-    inLanguage: 'pt-BR',
+    inLanguage,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: 'Chronicles of Asterheim',
-    description:
-      'Universo narrativo dark fantasy de The Black Banner.',
-    url: siteConfig.url,
+    description,
+    url: `${siteConfig.url}/${locale}`,
     isAccessibleForFree: true,
   },
   {
@@ -89,6 +71,7 @@ const structuredData = [
     caption: 'Aster, o coração do mundo de Asterheim',
   },
 ] as const;
+}
 
 function SectionIntro({
   eyebrow,
@@ -119,7 +102,7 @@ function SectionIntro({
   );
 }
 
-function Hero() {
+function Hero({ messages }: { messages: HomeMessages }) {
   return (
     <section
       aria-labelledby="home-hero-title"
@@ -164,7 +147,7 @@ function Hero() {
             </span>
           </h1>
           <p className="hero-subtitle text-ivory-100/80 mt-9 max-w-md border-l border-aged-gold-500/50 pl-5 text-[.95rem] leading-[1.65] tracking-[.045em] sm:mt-11 sm:pl-6 sm:text-lg">
-            Seis Coroas. Um mundo à beira da ruína.
+            {messages.heroTagline}
           </p>
           <div className="mt-10 sm:mt-12">
             <LinkButton
@@ -173,7 +156,7 @@ function Hero() {
               size="lg"
               tone="gold"
             >
-              Explore Asterheim
+              {messages.heroCta}
             </LinkButton>
           </div>
         </div>
@@ -184,7 +167,7 @@ function Hero() {
         className="group absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[.56rem] font-medium tracking-[.34em] text-ivory-100/65 uppercase sm:bottom-7"
         href="#asterheim"
       >
-        <span>Explore</span>
+        <span>{messages.scrollLabel}</span>
         <span className="relative h-10 w-px overflow-hidden bg-white/20">
           <span className="hero-scroll-line absolute inset-x-0 top-0 h-1/2 bg-aged-gold-500" />
         </span>
@@ -193,7 +176,13 @@ function Hero() {
   );
 }
 
-function AsterheimSection() {
+function AsterheimSection({
+  locale,
+  messages,
+}: {
+  locale: Locale;
+  messages: HomeMessages;
+}) {
   const kingdoms = homeDomainOrder.map((slug) => {
     const crown = crowns.find((record) => record.kingdom.slug === slug);
     if (!crown) throw new Error(`Domínio canônico ausente: ${slug}`);
@@ -212,17 +201,17 @@ function AsterheimSection() {
     >
       <Container className="max-w-[97.5rem]">
         <header className="kingdom-domain__header mx-auto mb-10 max-w-[56rem] text-center sm:mb-12">
-          <Eyebrow>Explore Asterheim</Eyebrow>
+          <Eyebrow>{messages.domainsEyebrow}</Eyebrow>
           <h2 className="hero-title text-ivory-100 mt-5 text-[clamp(3rem,5vw,5.8rem)] leading-[.9] tracking-[-.025em] uppercase sm:mt-6">
-            Seis domínios. Um destino.
+            {messages.domainsTitle}
           </h2>
           <p className="text-parchment-200/75 mx-auto mt-5 max-w-3xl text-sm leading-7 sm:mt-6 sm:text-base">
-            Conheça os seis reinos ligados às Coroas e aos Guardiões de
-            Asterheim.
+            {messages.domainsBody}
           </p>
         </header>
 
         <KingdomEditorialJourney
+          locale={locale}
           kingdoms={kingdoms.map((kingdom) => ({
             artwork: kingdom.artwork.image,
             fit: kingdom.artwork.fit,
@@ -232,8 +221,8 @@ function AsterheimSection() {
           }))}
         />
         <div className="kingdom-domain__footer">
-          <Link href="/pt-br/atlas">
-            Explorar o Atlas de Asterheim <span aria-hidden="true">→</span>
+          <Link href={localizedPath(locale, 'atlas')}>
+            {messages.atlasCta} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </Container>
@@ -243,9 +232,13 @@ function AsterheimSection() {
 
 function CollectionsSection({
   collections,
+  locale,
+  messages,
   miniatures,
 }: {
   collections: readonly RealCollection[];
+  locale: Locale;
+  messages: HomeMessages;
   miniatures: readonly Miniature[];
 }) {
   const featuredOrder = [
@@ -285,10 +278,10 @@ function CollectionsSection({
       <Container className="max-w-[97.5rem]">
         <header className="featured-collections-domain__header">
           <div>
-            <Eyebrow>Featured Collections</Eyebrow>
+            <Eyebrow>{messages.collectionsEyebrow}</Eyebrow>
             <h2 className="hero-title text-ivory-100 mt-5 max-w-[59.375rem] text-[clamp(3.25rem,6vw,7.5rem)] leading-[.92] tracking-[-.025em] uppercase sm:mt-6">
-              <span className="block">Exércitos, tavernas</span>
-              <span className="block">e lendas</span>
+              <span className="block">{messages.collectionsTitleFirst}</span>
+              <span className="block">{messages.collectionsTitleSecond}</span>
             </h2>
           </div>
         </header>
@@ -296,7 +289,7 @@ function CollectionsSection({
         <div className="featured-showcase">
           <Link
             className="featured-collection featured-collection--primary"
-            href={`/pt-br/colecoes/${primary.collection.slug}`}
+            href={localizedPath(locale, `colecoes/${primary.collection.slug}`)}
           >
             <div className="featured-collection__media">
               <Image
@@ -315,14 +308,14 @@ function CollectionsSection({
             </div>
             <div className="featured-collection__content">
               <p className="featured-collection__count">
-                {primary.count} miniaturas
+                {primary.count} {messages.miniatureCount}
               </p>
               <h3>{primary.collection.title}</h3>
               <p className="featured-collection__description">
                 {primary.description}
               </p>
               <span className="featured-collection__cta">
-                Explorar coleção <span aria-hidden="true">→</span>
+                {messages.collectionCta} <span aria-hidden="true">→</span>
               </span>
             </div>
           </Link>
@@ -330,7 +323,7 @@ function CollectionsSection({
           <div className="featured-showcase__secondary">
             <Link
               className="featured-collection featured-collection--boss"
-              href={`/pt-br/colecoes/${boss.collection.slug}`}
+              href={localizedPath(locale, `colecoes/${boss.collection.slug}`)}
             >
               <div className="featured-collection__media">
                 <Image
@@ -348,14 +341,14 @@ function CollectionsSection({
               </div>
               <div className="featured-collection__content">
                 <p className="featured-collection__count">
-                  {boss.count} miniaturas
+                  {boss.count} {messages.miniatureCount}
                 </p>
                 <h3>{boss.collection.title}</h3>
                 <p className="featured-collection__description">
                   {boss.description}
                 </p>
                 <span className="featured-collection__cta">
-                  Explorar coleção <span aria-hidden="true">→</span>
+                  {messages.collectionCta} <span aria-hidden="true">→</span>
                 </span>
               </div>
             </Link>
@@ -365,7 +358,7 @@ function CollectionsSection({
                 ({ collection, count, description }) => (
                   <Link
                     className="featured-collection featured-collection--minor"
-                    href={`/pt-br/colecoes/${collection.slug}`}
+                    href={localizedPath(locale, `colecoes/${collection.slug}`)}
                     key={collection.id}
                   >
                     <div className="featured-collection__media">
@@ -384,14 +377,15 @@ function CollectionsSection({
                     </div>
                     <div className="featured-collection__content">
                       <p className="featured-collection__count">
-                        {count} miniaturas
+                        {count} {messages.miniatureCount}
                       </p>
                       <h3>{collection.title}</h3>
                       <p className="featured-collection__description">
                         {description}
                       </p>
                       <span className="featured-collection__cta">
-                        Explorar coleção <span aria-hidden="true">→</span>
+                        {messages.collectionCta}{' '}
+                        <span aria-hidden="true">→</span>
                       </span>
                     </div>
                   </Link>
@@ -402,9 +396,9 @@ function CollectionsSection({
         </div>
 
         <div className="featured-showcase__footer">
-          <p>Outros capítulos aguardam além do estandarte.</p>
-          <Link href="/pt-br/colecoes">
-            Explorar todas as coleções <span aria-hidden="true">→</span>
+          <p>{messages.collectionsOutro}</p>
+          <Link href={localizedPath(locale, 'colecoes')}>
+            {messages.allCollectionsCta} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </Container>
@@ -413,8 +407,12 @@ function CollectionsSection({
 }
 
 function MiniaturesSection({
+  locale,
+  messages,
   miniatures,
 }: {
+  locale: Locale;
+  messages: HomeMessages;
   miniatures: readonly Miniature[];
 }) {
   return (
@@ -425,11 +423,11 @@ function MiniaturesSection({
       <Container>
         <SectionIntro
           action={{
-            href: '/pt-br/miniaturas',
-            label: 'Ver todas as miniaturas',
+            href: localizedPath(locale, 'miniaturas'),
+            label: messages.allMiniaturesCta,
           }}
-          eyebrow={`${miniatures.length} miniaturas públicas`}
-          title="Latest Miniatures"
+          eyebrow={`${miniatures.length} ${messages.publicMiniatures}`}
+          title={messages.latestMiniatures}
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {miniatures.slice(0, 5).map((miniature, index) => (
@@ -437,7 +435,7 @@ function MiniaturesSection({
               className={`group relative overflow-hidden bg-black ${
                 index % 11 === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
               }`}
-              href={`/pt-br/miniaturas/${miniature.slug}`}
+              href={localizedPath(locale, `miniaturas/${miniature.slug}`)}
               key={miniature.id}
             >
               <div className="relative aspect-[3/4]">
@@ -474,7 +472,13 @@ function MiniaturesSection({
   );
 }
 
-function EditorialFeature() {
+function EditorialFeature({
+  locale,
+  messages,
+}: {
+  locale: Locale;
+  messages: HomeMessages;
+}) {
   const guardian = guardians[0];
   if (!guardian) return null;
 
@@ -493,7 +497,7 @@ function EditorialFeature() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-black/10" />
       <Container className="flex min-h-[70svh] items-center py-20">
         <div className="max-w-2xl">
-          <Eyebrow>Guardião em destaque</Eyebrow>
+          <Eyebrow>{messages.featuredGuardian}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6.5rem)] leading-[.88] uppercase">
             {guardian.title}
           </h2>
@@ -502,9 +506,9 @@ function EditorialFeature() {
           </p>
           <Link
             className="text-aged-gold-500 mt-8 inline-flex gap-3 text-xs font-semibold tracking-[.18em] uppercase transition-transform hover:translate-x-1"
-            href={`/guardioes/${guardian.slug}`}
+            href={localizedPath(locale, 'personagens')}
           >
-            Conhecer Guardião <span aria-hidden="true">→</span>
+            {messages.guardianCta} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </Container>
@@ -512,14 +516,22 @@ function EditorialFeature() {
   );
 }
 
-function ProjectClosing({ miniature }: { miniature: Miniature | undefined }) {
+function ProjectClosing({
+  locale,
+  messages,
+  miniature,
+}: {
+  locale: Locale;
+  messages: HomeMessages;
+  miniature: Miniature | undefined;
+}) {
   return (
     <section
       className="relative isolate min-h-[62svh] overflow-hidden border-y border-stone-600/20"
       id="editorial"
     >
       <Image
-        alt={miniature?.cover?.alt ?? 'Miniatura de Asterheim pronta para impressão'}
+        alt={miniature?.cover?.alt ?? messages.imageFallbackAlt}
         className="-z-20 object-cover object-[70%_center] opacity-55"
         fill
         sizes="100vw"
@@ -528,20 +540,23 @@ function ProjectClosing({ miniature }: { miniature: Miniature | undefined }) {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent" />
       <Container className="flex min-h-[62svh] items-center py-20">
         <div className="max-w-2xl">
-          <Eyebrow>O Projeto</Eyebrow>
+          <Eyebrow>{messages.projectEyebrow}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6rem)] leading-[.88] uppercase">
-            Construindo Asterheim
+            {messages.projectTitle}
           </h2>
           <p className="text-parchment-200/72 mt-6 max-w-xl text-base leading-7">
-            Da narrativa à miniatura: arte, impressão 3D e os bastidores de
-            uma IP dark fantasy em expansão.
+            {messages.projectBody}
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <LinkButton href="/design-system" size="lg" tone="gold">
-              Conhecer o projeto
+            <LinkButton
+              href={`${localizedPath(locale)}#editorial`}
+              size="lg"
+              tone="gold"
+            >
+              {messages.projectCta}
             </LinkButton>
             <LinkButton href="/guia-de-impressao" size="lg">
-              Guia de impressão
+              {messages.printingGuide}
             </LinkButton>
           </div>
         </div>
@@ -550,29 +565,65 @@ function ProjectClosing({ miniature }: { miniature: Miniature | undefined }) {
   );
 }
 
-export default async function HomePage() {
-  const [collections, miniatures] = await Promise.all([
+export async function LocalizedHomePage({ locale }: { locale: Locale }) {
+  const messages = getHomeMessages(locale);
+  const [
+    localizedCollections,
+    localizedMiniatures,
+    defaultCollections,
+    defaultMiniatures,
+  ] = await Promise.all([
+    getPublishedCollections(locale),
+    getMiniatures(locale),
     getPublishedCollections('pt-br'),
     getMiniatures('pt-br'),
   ]);
+  const collections = localizedCollections.length
+    ? localizedCollections
+    : defaultCollections;
+  const miniatures = localizedMiniatures.length
+    ? localizedMiniatures
+    : defaultMiniatures;
 
   return (
-    <>
-      <SkipLink />
-      <SiteHeader />
+    <div lang={locale === 'pt-br' ? 'pt-BR' : locale}>
+      <SkipLink
+        label={
+          locale === 'pt-br'
+            ? 'Pular para o conteúdo'
+            : locale === 'es'
+              ? 'Saltar al contenido'
+              : 'Skip to content'
+        }
+      />
+      <SiteHeader locale={locale} />
       <main id="main-content">
-        <Hero />
-        <AsterheimSection />
+        <Hero messages={messages} />
+        <AsterheimSection locale={locale} messages={messages} />
         <CollectionsSection
           collections={collections}
+          locale={locale}
+          messages={messages}
           miniatures={miniatures}
         />
-        <MiniaturesSection miniatures={miniatures} />
-        <EditorialFeature />
-        <ProjectClosing miniature={miniatures.find((item) => item.featured)} />
+        <MiniaturesSection
+          locale={locale}
+          messages={messages}
+          miniatures={miniatures}
+        />
+        <EditorialFeature locale={locale} messages={messages} />
+        <ProjectClosing
+          locale={locale}
+          messages={messages}
+          miniature={miniatures.find((item) => item.featured)}
+        />
       </main>
-      <SiteFooter />
-      <JsonLd data={structuredData} />
-    </>
+      <SiteFooter locale={locale} />
+      <JsonLd data={getStructuredData(locale)} />
+    </div>
   );
+}
+
+export default function RootPage() {
+  redirect('/pt-br');
 }

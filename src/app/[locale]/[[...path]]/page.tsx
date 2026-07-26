@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import HomePage from '@/app/page';
+import { LocalizedHomePage } from '@/app/page';
 import { i18nConfig } from '@/config/i18n';
 import { LocalizedShell } from '@/features/i18n/components/localized-shell';
 import { getLocalizedVariant } from '@/features/i18n/data/localized-content.mock';
@@ -52,6 +52,7 @@ export function generateStaticParams() {
     path ? { locale, path } : { locale },
   );
 }
+
 function context(rawLocale: string, path: readonly string[] = []) {
   const parsed = localeSchema.safeParse(rawLocale);
   if (!parsed.success) return null;
@@ -73,10 +74,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: getDictionary(locale).heroBody,
       url: href,
-      locale: locale === 'pt-br' ? 'pt_BR' : locale,
+      locale:
+        locale === 'pt-br' ? 'pt_BR' : locale === 'en' ? 'en_US' : 'es_ES',
       alternateLocale: i18nConfig.locales
         .filter((item) => item !== locale)
-        .map((item) => (item === 'pt-br' ? 'pt_BR' : item)),
+        .map((item) =>
+          item === 'pt-br' ? 'pt_BR' : item === 'en' ? 'en_US' : 'es_ES',
+        ),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: getDictionary(locale).heroBody,
     },
   };
 }
@@ -85,6 +94,7 @@ export default async function LocalizedPage({ params }: Props) {
   const value = context(rawLocale, path);
   if (!value) notFound();
   const { locale, routeKey } = value;
+  if (routeKey === 'home') return <LocalizedHomePage locale={locale} />;
   return (
     <LocalizedShell locale={locale} routeKey={routeKey}>
       {renderRoute(locale, routeKey)}
@@ -94,32 +104,6 @@ export default async function LocalizedPage({ params }: Props) {
 
 function renderRoute(locale: Locale, routeKey: RouteKey) {
   const t = getDictionary(locale);
-  if (routeKey === 'home' && locale === 'pt-br') return <HomePage />;
-  if (routeKey === 'home')
-    return (
-      <main>
-        <section className="relative flex min-h-[82vh] items-end overflow-hidden px-5 py-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(118,83,45,.22),transparent_35%),linear-gradient(120deg,#080909,#171613)]" />
-          <div className="relative mx-auto w-full max-w-[90rem]">
-            <p className="text-aged-gold-500 text-xs tracking-[.35em] uppercase">
-              {t.heroEyebrow}
-            </p>
-            <h1 className="font-display mt-6 max-w-5xl text-[clamp(4rem,11vw,9rem)] leading-[.82] uppercase">
-              {t.heroTitle}
-            </h1>
-            <p className="text-parchment-200/65 mt-8 max-w-2xl text-lg">
-              {t.heroBody}
-            </p>
-            <Link
-              className="border-aged-gold-500/50 mt-9 inline-flex min-h-12 items-center border px-6 uppercase"
-              href={localizedHref(locale, 'lore')}
-            >
-              {t.heroCta}
-            </Link>
-          </div>
-        </section>
-      </main>
-    );
   if (routeKey === 'roadsArticle')
     return (
       <LocalizedArticle locale={locale} documentId="localized-roads-article" />

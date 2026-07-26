@@ -26,6 +26,21 @@ export function localizedHref(locale: Locale, key: RouteKey) {
   const path = localizedRoutes[key][locale];
   return `/${locale}${path ? `/${path}` : ''}`;
 }
+
+export function localizedPath(locale: Locale, path = '') {
+  const normalized = path === '/' ? '' : `/${path.replace(/^\/+/, '')}`;
+  return `/${locale}${normalized}`;
+}
+
+export function localizePathname(pathname: string, nextLocale: Locale) {
+  const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`;
+  const segments = normalized.split('/');
+  if (i18nConfig.locales.includes(segments[1] as Locale)) {
+    segments[1] = nextLocale;
+    return segments.join('/') || `/${nextLocale}`;
+  }
+  return localizedPath(nextLocale, normalized);
+}
 export function resolveRoute(path: readonly string[]): RouteKey | null {
   const joined = path.join('/');
   for (const [key, routes] of Object.entries(localizedRoutes) as [

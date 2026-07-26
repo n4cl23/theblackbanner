@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Locale } from '@/config/i18n';
+import { localizedPath } from '@/features/i18n/data/route-registry';
 
 type KingdomPoster = {
   artwork: string;
@@ -11,8 +13,10 @@ type KingdomPoster = {
 
 export function KingdomEditorialJourney({
   kingdoms,
+  locale,
 }: {
   kingdoms: readonly KingdomPoster[];
+  locale: Locale;
 }) {
   return (
     <div className="kingdom-poster-grid">
@@ -20,7 +24,7 @@ export function KingdomEditorialJourney({
         <Link
           aria-label={`Explorar ${kingdom.title}`}
           className="kingdom-poster"
-          href={`/pt-br/atlas/reinos/${kingdom.slug}`}
+          href={localizedPath(locale, `atlas/reinos/${kingdom.slug}`)}
           key={kingdom.slug}
         >
           <div className="kingdom-poster__art">
