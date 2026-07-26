@@ -199,8 +199,6 @@ function AsterheimSection() {
     return {
       title: crown.kingdom.title,
       slug,
-      crown: crown.title,
-      description: crown.description,
       artwork: homeDomainArtwork[slug],
     };
   });
@@ -222,42 +220,27 @@ function AsterheimSection() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-10">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-9 lg:gap-y-16">
           {kingdoms.map((kingdom) => (
             <Link
-              className="group domain-card relative aspect-[5/8] overflow-hidden rounded-sm border border-aged-gold-500/25 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.22)] transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-aged-gold-500/55"
+              aria-label={`Explorar ${kingdom.title}`}
+              className="group block"
               href={`/pt-br/atlas/reinos/${kingdom.slug}`}
               key={kingdom.slug}
             >
-              <Image
-                alt={`Paisagem de ${kingdom.title}`}
-                className={`object-cover transition-[transform,filter] duration-300 ease-out group-hover:scale-[1.03] group-hover:contrast-110 ${kingdom.artwork.position}`}
-                fill
-                sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
-                src={kingdom.artwork.image}
-              />
-              <div
-                aria-hidden="true"
-                className={`absolute inset-0 mix-blend-color ${kingdom.artwork.overlay}`}
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.08)_25%,rgba(0,0,0,.42)_58%,rgba(0,0,0,.97)_100%)] transition-colors duration-500 group-hover:bg-[linear-gradient(180deg,rgba(0,0,0,.03)_20%,rgba(0,0,0,.34)_56%,rgba(0,0,0,.96)_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9">
-                <p className="text-aged-gold-500 text-[.62rem] font-semibold tracking-[.24em] uppercase">
-                  {kingdom.crown}
-                </p>
-                <h3 className="hero-title text-ivory-100 mt-4 text-[clamp(2.55rem,4.2vw,4.2rem)] leading-[.86] tracking-[-.025em] uppercase [text-shadow:0_2px_14px_rgba(0,0,0,.45)]">
-                  {kingdom.title}
-                </h3>
-                <span className="text-parchment-200/75 group-hover:text-aged-gold-500 mt-8 inline-flex items-center gap-3 text-[.62rem] font-semibold tracking-[.22em] uppercase transition-[color,transform] duration-300 group-hover:translate-x-1">
-                  Explorar Reino
-                  <span
-                    aria-hidden="true"
-                    className="text-aged-gold-500"
-                  >
-                    →
-                  </span>
-                </span>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] border border-aged-gold-500/25 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.16)] transition-[border-color,box-shadow,transform] duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-aged-gold-500/45 group-hover:shadow-[0_1.75rem_4.5rem_rgba(0,0,0,.24)]">
+                <Image
+                  alt={`Key art oficial de ${kingdom.title}`}
+                  className={`object-cover transition-[transform,filter] duration-300 ease-out group-hover:scale-[1.02] group-hover:contrast-[1.04] group-hover:saturate-[1.04] ${kingdom.artwork.position}`}
+                  fill
+                  sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
+                  src={kingdom.artwork.image}
+                />
               </div>
+              <span className="text-parchment-200/65 group-hover:text-aged-gold-500 mt-5 inline-flex items-center gap-3 text-[.6rem] font-semibold tracking-[.22em] uppercase transition-[color,transform] duration-300 group-hover:translate-x-1">
+                Explore Kingdom
+                <span aria-hidden="true">→</span>
+              </span>
             </Link>
           ))}
         </div>
