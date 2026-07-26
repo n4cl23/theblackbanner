@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 type KingdomPoster = {
   artwork: string;
+  fit: 'contain' | 'cover';
+  objectPosition: string;
   slug: string;
   title: string;
 };
@@ -24,10 +26,15 @@ export function KingdomEditorialJourney({
           <div className="kingdom-poster__art">
             <Image
               alt={`Key art oficial de ${kingdom.title}`}
-              className="kingdom-poster__image"
+              className={`kingdom-poster__image ${
+                kingdom.fit === 'contain'
+                  ? 'kingdom-poster__image--contain'
+                  : 'kingdom-poster__image--cover'
+              }`}
               fill
               sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
               src={kingdom.artwork}
+              style={{ objectPosition: kingdom.objectPosition }}
             />
           </div>
           <span className="kingdom-poster__cta">

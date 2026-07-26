@@ -207,16 +207,16 @@ function AsterheimSection() {
 
   return (
     <section
-      className="border-t border-aged-gold-500/10 bg-black pt-32 sm:pt-44 lg:pt-56"
+      className="kingdom-domain border-t border-aged-gold-500/10 bg-black pt-20 sm:pt-24 lg:pt-28"
       id="asterheim"
     >
-      <Container>
-        <header className="mx-auto mb-20 max-w-4xl text-center sm:mb-28">
+      <Container className="max-w-[97.5rem]">
+        <header className="kingdom-domain__header mx-auto mb-10 max-w-[56rem] text-center sm:mb-12">
           <Eyebrow>Explore Asterheim</Eyebrow>
-          <h2 className="hero-title text-ivory-100 mt-7 text-[clamp(3rem,7vw,6.5rem)] leading-[.84] tracking-[-.025em] uppercase sm:mt-9">
+          <h2 className="hero-title text-ivory-100 mt-5 text-[clamp(3rem,5vw,5.8rem)] leading-[.9] tracking-[-.025em] uppercase sm:mt-6">
             Seis domínios. Um destino.
           </h2>
-          <p className="text-parchment-200/75 mx-auto mt-9 max-w-2xl text-sm leading-7 sm:mt-11 sm:text-base">
+          <p className="text-parchment-200/75 mx-auto mt-5 max-w-3xl text-sm leading-7 sm:mt-6 sm:text-base">
             Conheça os seis reinos ligados às Coroas e aos Guardiões de
             Asterheim.
           </p>
@@ -225,6 +225,8 @@ function AsterheimSection() {
         <KingdomEditorialJourney
           kingdoms={kingdoms.map((kingdom) => ({
             artwork: kingdom.artwork.image,
+            fit: kingdom.artwork.fit,
+            objectPosition: kingdom.artwork.objectPosition,
             slug: kingdom.slug,
             title: kingdom.title,
           }))}
@@ -241,52 +243,111 @@ function CollectionsSection({
   collections: readonly RealCollection[];
   miniatures: readonly Miniature[];
 }) {
+  const featuredOrder = [
+    'beasts-of-asterheim',
+    'boss-collection',
+    'the-broken-mug-tavern',
+  ] as const;
+  const featured = featuredOrder.map((slug) => {
+    const collection = collections.find((item) => item.slug === slug);
+    if (!collection) throw new Error(`Coleção publicada ausente: ${slug}`);
+
+    return {
+      collection,
+      count: miniatures.filter(
+        (miniature) => miniature.collectionSlug === slug,
+      ).length,
+    };
+  });
+  const primary = featured[0];
+  const secondary = featured.slice(1);
+  if (!primary) return null;
+
   return (
     <section
-      className="border-y border-stone-600/20 bg-black py-24 sm:py-36"
+      className="featured-collections-domain relative isolate overflow-hidden border-y border-stone-600/20 bg-black py-20 sm:py-24 lg:py-28"
       id="chapter-collections"
     >
-      <Container>
-        <SectionIntro
-          action={{ href: '/pt-br/colecoes', label: 'Todas as coleções' }}
-          eyebrow="Featured Collections"
-          title="Exércitos, tavernas e lendas"
-        />
-        <div className="grid gap-4 lg:grid-cols-12">
-          {collections.slice(0, 5).map((collection, index) => {
-            const count = miniatures.filter(
-              (miniature) => miniature.collectionSlug === collection.slug,
-            ).length;
-            return (
+      <Container className="max-w-[97.5rem]">
+        <header className="featured-collections-domain__header">
+          <div>
+            <Eyebrow>Featured Collections</Eyebrow>
+            <h2 className="hero-title text-ivory-100 mt-5 max-w-[58rem] text-[clamp(3rem,5.5vw,6.5rem)] leading-[.88] tracking-[-.025em] uppercase sm:mt-6">
+              Exércitos, tavernas e lendas
+            </h2>
+          </div>
+          <Link
+            className="featured-collections-domain__all"
+            href="/pt-br/colecoes"
+          >
+            Todas as coleções <span aria-hidden="true">→</span>
+          </Link>
+        </header>
+
+        <div className="featured-collections-layout">
+          <Link
+            className="featured-collection featured-collection--primary"
+            href={`/pt-br/colecoes/${primary.collection.slug}`}
+          >
+            <Image
+              alt={
+                primary.collection.cover?.alt ?? primary.collection.title
+              }
+              className="featured-collection__image"
+              fill
+              sizes="(max-width: 1023px) 100vw, 66vw"
+              src={
+                primary.collection.cover?.src ??
+                '/images/home/asterheim-hero.webp'
+              }
+            />
+            <div className="featured-collection__shade" />
+            <div className="featured-collection__content">
+              <p className="featured-collection__count">
+                {primary.count} miniaturas
+              </p>
+              <h3>{primary.collection.title}</h3>
+              {primary.collection.description ? (
+                <p className="featured-collection__description">
+                  {primary.collection.description}
+                </p>
+              ) : null}
+              <span className="featured-collection__cta">
+                Explorar coleção <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </Link>
+
+          <div className="featured-collections-secondary">
+            {secondary.map(({ collection, count }) => (
               <Link
-                className={`group relative min-h-[28rem] overflow-hidden ${
-                  index < 2 ? 'lg:col-span-6' : 'lg:col-span-4'
-                }`}
+                className="featured-collection featured-collection--secondary"
                 href={`/pt-br/colecoes/${collection.slug}`}
                 key={collection.id}
               >
                 <Image
                   alt={collection.cover?.alt ?? collection.title}
-                  className="object-cover opacity-65 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-85"
+                  className="featured-collection__image"
                   fill
-                  sizes={index < 2 ? '50vw' : '33vw'}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 34vw"
                   src={
                     collection.cover?.src ??
                     '/images/home/asterheim-hero.webp'
                   }
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
-                <div className="absolute inset-x-0 bottom-0 p-8">
-                  <p className="text-aged-gold-500 text-xs tracking-[.2em] uppercase">
+                <div className="featured-collection__shade" />
+                <div className="featured-collection__content">
+                  <p className="featured-collection__count">
                     {count} miniaturas
                   </p>
-                  <h3 className="font-display mt-3 text-4xl uppercase">
-                    {collection.title}
-                  </h3>
+                  <h3>{collection.title}</h3>
+                  <span className="featured-collection__cta">
+                    Explorar coleção <span aria-hidden="true">→</span>
+                  </span>
                 </div>
               </Link>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </Container>
     </section>
