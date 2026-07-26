@@ -18,6 +18,7 @@ export function SiteHeader({
   const pathname = usePathname() ?? '/';
 
   const isActive = (href: string) => {
+    if (href.includes('#')) return false;
     if (href === '/') return pathname === '/';
     const path = href.split('#')[0];
     return pathname === path || pathname.startsWith(`${path}/`);
@@ -84,7 +85,18 @@ export function SiteHeader({
         <nav aria-label="Main navigation" className="hidden xl:block">
           <ul className="flex items-center gap-4">
             {publicNavigation.map((item) => (
-              <li className="group relative" key={item.href}>
+              <li
+                className="group relative"
+                key={item.href}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') {
+                    (event.currentTarget as HTMLElement).blur();
+                    event.currentTarget
+                      .querySelectorAll<HTMLElement>('a')
+                      .forEach((link) => link.blur());
+                  }
+                }}
+              >
                 <Link
                   aria-current={isActive(item.href) ? 'page' : undefined}
                   className={cn(
@@ -166,40 +178,74 @@ export function SiteHeader({
                     className="border-b border-stone-600/25 pb-2"
                     key={item.href}
                   >
-                    <Link
-                      aria-current={isActive(item.href) ? 'page' : undefined}
-                      className={cn(
-                        'text-ivory-100 flex min-h-12 items-center border-l-2 border-transparent px-3 text-sm font-semibold tracking-wider uppercase',
-                        isActive(item.href) &&
-                          'border-aged-gold-500 bg-iron-800/70',
-                      )}
-                      href={item.href}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
                     {'children' in item ? (
-                      <ul className="grid grid-cols-2 gap-1 pb-2">
-                        {item.children.map((child) => (
-                          <li key={`${child.href}-${child.label}`}>
+                      <details className="group/mobile">
+                        <summary
+                          className={cn(
+                            'text-ivory-100 flex min-h-12 cursor-pointer list-none items-center justify-between border-l-2 border-transparent px-3 text-sm font-semibold tracking-wider uppercase marker:content-none',
+                            isActive(item.href) &&
+                              'border-aged-gold-500 bg-iron-800/70',
+                          )}
+                        >
+                          {item.label}
+                          <span
+                            aria-hidden="true"
+                            className="text-aged-gold-500 transition-transform group-open/mobile:rotate-45"
+                          >
+                            +
+                          </span>
+                        </summary>
+                        <ul className="grid grid-cols-2 gap-1 pb-2">
+                          <li>
                             <Link
                               aria-current={
-                                isActive(child.href) ? 'page' : undefined
+                                isActive(item.href) ? 'page' : undefined
                               }
                               className={cn(
                                 'text-parchment-200/60 flex min-h-11 items-center border-l border-transparent px-3 text-xs uppercase',
-                                isActive(child.href) &&
+                                isActive(item.href) &&
                                   'border-aged-gold-500 text-ivory-100',
                               )}
-                              href={child.href}
+                              href={item.href}
                               onClick={() => setMenuOpen(false)}
                             >
-                              {child.label}
+                              Visão geral
                             </Link>
                           </li>
-                        ))}
-                      </ul>
-                    ) : null}
+                          {item.children.map((child) => (
+                            <li key={`${child.href}-${child.label}`}>
+                              <Link
+                                aria-current={
+                                  isActive(child.href) ? 'page' : undefined
+                                }
+                                className={cn(
+                                  'text-parchment-200/60 flex min-h-11 items-center border-l border-transparent px-3 text-xs uppercase',
+                                  isActive(child.href) &&
+                                    'border-aged-gold-500 text-ivory-100',
+                                )}
+                                href={child.href}
+                                onClick={() => setMenuOpen(false)}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      <Link
+                        aria-current={isActive(item.href) ? 'page' : undefined}
+                        className={cn(
+                          'text-ivory-100 flex min-h-12 items-center border-l-2 border-transparent px-3 text-sm font-semibold tracking-wider uppercase',
+                          isActive(item.href) &&
+                            'border-aged-gold-500 bg-iron-800/70',
+                        )}
+                        href={item.href}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

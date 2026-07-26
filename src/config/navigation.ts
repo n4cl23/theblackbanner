@@ -16,9 +16,10 @@ export const publicNavigation = [
     href: '/world',
     children: [
       { label: 'Reinos', href: '/world/kingdoms' },
-      { label: 'Coroas', href: '/pt-br/coroas' },
+      { label: 'Atlas', href: '/pt-br/atlas' },
       { label: 'Mapa', href: '/world/map' },
-      { label: 'Timeline', href: '/timeline' },
+      { label: 'Coroas', href: '/pt-br/coroas' },
+      { label: 'Guardiões', href: '/guardioes' },
     ],
   },
   {
@@ -41,21 +42,29 @@ export const publicNavigation = [
     label: 'Coleções',
     href: '/colecoes',
     children: [
-      { label: 'Todas', href: '/colecoes' },
+      { label: 'Todas as Coleções', href: '/colecoes' },
       {
-        label: 'Miniaturas',
+        label: 'Miniaturas Recentes',
         href: '/pt-br/miniaturas',
         description: 'Arquivo público de miniaturas e fichas técnicas.',
       },
-      { label: 'Guia', href: '/guia-de-impressao' },
+      {
+        label: 'Beasts of Asterheim',
+        href: '/pt-br/colecoes/beasts-of-asterheim',
+      },
+      {
+        label: 'Boss Collection',
+        href: '/pt-br/colecoes/boss-collection',
+      },
     ],
   },
   {
     label: 'Crônicas',
     href: '/chronicles',
     children: [
+      { label: 'Crônicas', href: '/chronicles' },
+      { label: 'Timeline', href: '/timeline' },
       { label: 'Lore', href: '/lore' },
-      { label: 'Histórias', href: '/chronicles' },
     ],
   },
   {
@@ -67,10 +76,10 @@ export const publicNavigation = [
     label: 'Projeto',
     href: '/#editorial',
     children: [
-      { label: 'Art Bible', href: '/design-system' },
+      { label: 'Sobre', href: '/#editorial' },
       { label: 'Impressão 3D', href: '/guia-de-impressao' },
-      { label: 'Sobre', href: '/#asterheim' },
-      { label: 'Contato', href: '/#newsletter' },
+      { label: 'Art Bible', href: '/design-system' },
+      { label: 'Guia de Impressão', href: '/guia-de-impressao' },
     ],
   },
 ] as const satisfies readonly NavigationGroup[];

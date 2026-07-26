@@ -231,6 +231,11 @@ function AsterheimSection() {
             title: kingdom.title,
           }))}
         />
+        <div className="kingdom-domain__footer">
+          <Link href="/pt-br/atlas">
+            Explorar o Atlas de Asterheim <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </Container>
     </section>
   );
@@ -247,7 +252,6 @@ function CollectionsSection({
     'beasts-of-asterheim',
     'boss-collection',
     'the-broken-mug-tavern',
-    'mercenarios',
   ] as const;
   const collectionDescriptions: Record<(typeof featuredOrder)[number], string> =
     {
@@ -257,8 +261,6 @@ function CollectionsSection({
         'Adversários monumentais que guardam as fronteiras de Asterheim.',
       'the-broken-mug-tavern':
         'Forasteiros, histórias e perigos reunidos sob o mesmo teto.',
-      mercenarios:
-        'Espadas errantes forjadas por contratos, guerras e antigas dívidas.',
     };
   const featured = featuredOrder.map((slug) => {
     const collection = collections.find((item) => item.slug === slug);
@@ -272,8 +274,8 @@ function CollectionsSection({
       description: collectionDescriptions[slug],
     };
   });
-  const [primary, boss, tavern, mercenaries] = featured;
-  if (!primary || !boss || !tavern || !mercenaries) return null;
+  const [primary, boss, tavern] = featured;
+  if (!primary || !boss || !tavern) return null;
 
   return (
     <section
@@ -359,12 +361,10 @@ function CollectionsSection({
             </Link>
 
             <div className="featured-showcase__minor">
-              {[tavern, mercenaries].map(
-                ({ collection, count, description }, index) => (
+              {[tavern].map(
+                ({ collection, count, description }) => (
                   <Link
-                    className={`featured-collection featured-collection--minor ${
-                      index === 1 ? 'featured-collection--compact' : ''
-                    }`}
+                    className="featured-collection featured-collection--minor"
                     href={`/pt-br/colecoes/${collection.slug}`}
                     key={collection.id}
                   >
@@ -379,13 +379,7 @@ function CollectionsSection({
                           '/images/home/asterheim-hero.webp'
                         }
                       />
-                      <div
-                        className={`featured-collection__ambient ${
-                          index === 0
-                            ? 'featured-collection__ambient--tavern'
-                            : 'featured-collection__ambient--mercenaries'
-                        }`}
-                      />
+                      <div className="featured-collection__ambient featured-collection__ambient--tavern" />
                       <div className="featured-collection__shade" />
                     </div>
                     <div className="featured-collection__content">
@@ -430,12 +424,15 @@ function MiniaturesSection({
     >
       <Container>
         <SectionIntro
-          action={{ href: '/pt-br/miniaturas', label: 'Abrir catálogo' }}
+          action={{
+            href: '/pt-br/miniaturas',
+            label: 'Ver todas as miniaturas',
+          }}
           eyebrow={`${miniatures.length} miniaturas públicas`}
           title="Latest Miniatures"
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {miniatures.map((miniature, index) => (
+          {miniatures.slice(0, 5).map((miniature, index) => (
             <Link
               className={`group relative overflow-hidden bg-black ${
                 index % 11 === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
@@ -477,161 +474,49 @@ function MiniaturesSection({
   );
 }
 
-function CharactersSection() {
-  return (
-    <section className="border-y border-stone-600/20 bg-black py-24 sm:py-36">
-      <Container>
-        <SectionIntro
-          action={{ href: '/guardioes', label: 'Conhecer Guardiões' }}
-          eyebrow="Characters"
-          title="Aqueles que carregam as Coroas"
-        />
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {guardians.map((guardian, index) => (
-            <Link
-              className={`group relative overflow-hidden ${
-                index === 0 ? 'min-h-[42rem] lg:col-span-2' : 'min-h-[30rem]'
-              }`}
-              href={`/guardioes/${guardian.slug}`}
-              key={guardian.id}
-            >
-              <Image
-                alt={`Retrato de ${guardian.title}`}
-                className="object-cover opacity-60 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-80"
-                fill
-                sizes={index === 0 ? '66vw' : '33vw'}
-                src={
-                  guardian.media[0]?.url ??
-                  '/images/home/asterheim-hero.webp'
-                }
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
-              <div className="absolute inset-x-0 bottom-0 p-8">
-                <p className="text-aged-gold-500 text-xs uppercase">
-                  {guardian.kingdom.title}
-                </p>
-                <h3 className="font-display mt-3 text-4xl uppercase sm:text-5xl">
-                  {guardian.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
+function EditorialFeature() {
+  const guardian = guardians[0];
+  if (!guardian) return null;
 
-function CreaturesSection({
-  creatures,
-}: {
-  creatures: readonly Miniature[];
-}) {
-  return (
-    <section className="bg-coal-950 py-24 sm:py-36">
-      <Container>
-        <SectionIntro
-          action={{ href: '/bestiario', label: 'Abrir Bestiário' }}
-          eyebrow="Legendary Creatures"
-          title="O que desperta sob a pedra"
-        />
-        <div className="grid gap-3 lg:grid-cols-12">
-          {creatures.slice(0, 5).map((creature, index) => (
-            <Link
-              className={`group relative min-h-[32rem] overflow-hidden ${
-                index === 0 ? 'lg:col-span-8 lg:row-span-2' : 'lg:col-span-4'
-              }`}
-              href={`/pt-br/miniaturas/${creature.slug}`}
-              key={creature.id}
-            >
-              <Image
-                alt={creature.cover?.alt ?? creature.title}
-                className="object-cover opacity-60 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-85"
-                fill
-                sizes={index === 0 ? '66vw' : '33vw'}
-                src={
-                  creature.cover?.src ?? '/images/home/bestiary-ruins.webp'
-                }
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
-              <div className="absolute inset-x-0 bottom-0 p-8">
-                <p className="text-ember-600 text-xs tracking-[.18em] uppercase">
-                  {creature.collectionTitle}
-                </p>
-                <h3 className="font-display mt-3 text-4xl uppercase">
-                  {creature.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function AtlasSection() {
-  return (
-    <section className="relative isolate min-h-[90vh] overflow-hidden border-y border-stone-600/20">
-      <Image
-        alt="Mapa de Ironhold no Atlas de Asterheim"
-        className="-z-20 object-cover opacity-65"
-        fill
-        sizes="100vw"
-        src="/media/asterheim/entities/iron-hold-map/iron-hold-map-eb8924fe.webp"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/35 to-transparent" />
-      <Container className="flex min-h-[90vh] items-end py-20 sm:items-center">
-        <div className="max-w-xl">
-          <Eyebrow>Atlas Preview</Eyebrow>
-          <h2 className="font-display mt-5 text-[clamp(4rem,9vw,8rem)] leading-[.82] uppercase">
-            Atravesse Asterheim
-          </h2>
-          <div className="mt-9">
-            <LinkButton href="/pt-br/atlas" size="lg" tone="gold">
-              Explorar o mapa
-            </LinkButton>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function TimelineSection() {
-  return (
-    <section className="bg-black py-24 sm:py-36">
-      <Container>
-        <SectionIntro
-          action={{ href: '/timeline', label: 'Abrir cronologia' }}
-          eyebrow="Timeline Preview"
-          title="Ecos através das eras"
-        />
-        <ol className="grid gap-px bg-stone-600/25 lg:grid-cols-3">
-          {crowns.slice(0, 3).map((crown, index) => (
-            <li className="bg-coal-950 min-h-72 p-8 sm:p-10" key={crown.id}>
-              <p className="text-aged-gold-500 text-xs tracking-[.18em] uppercase">
-                0{index + 1} · {crown.force}
-              </p>
-              <h3 className="font-display mt-12 text-4xl uppercase">
-                {crown.title}
-              </h3>
-              <p className="text-parchment-200/55 mt-5 line-clamp-3 text-sm leading-relaxed">
-                {crown.description}
-              </p>
-            </li>
-          ))}
-        </ol>
-      </Container>
-    </section>
-  );
-}
-
-function PrintingSection({ miniature }: { miniature: Miniature | undefined }) {
   return (
     <section
-      className="relative isolate min-h-[75vh] overflow-hidden border-y border-stone-600/20"
-      id="chapter-forge"
+      className="relative isolate min-h-[70svh] overflow-hidden border-y border-stone-600/20"
+      id="gallery"
+    >
+      <Image
+        alt={`Destaque editorial: ${guardian.title}`}
+        className="-z-20 object-cover object-[68%_center] opacity-60"
+        fill
+        sizes="100vw"
+        src={guardian.media[0]?.url ?? '/images/home/asterheim-hero.webp'}
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-black/10" />
+      <Container className="flex min-h-[70svh] items-center py-20">
+        <div className="max-w-2xl">
+          <Eyebrow>Guardião em destaque</Eyebrow>
+          <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6.5rem)] leading-[.88] uppercase">
+            {guardian.title}
+          </h2>
+          <p className="text-parchment-200/72 mt-6 max-w-xl text-base leading-7">
+            {guardian.description}
+          </p>
+          <Link
+            className="text-aged-gold-500 mt-8 inline-flex gap-3 text-xs font-semibold tracking-[.18em] uppercase transition-transform hover:translate-x-1"
+            href={`/guardioes/${guardian.slug}`}
+          >
+            Conhecer Guardião <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function ProjectClosing({ miniature }: { miniature: Miniature | undefined }) {
+  return (
+    <section
+      className="relative isolate min-h-[62svh] overflow-hidden border-y border-stone-600/20"
+      id="editorial"
     >
       <Image
         alt={miniature?.cover?.alt ?? 'Miniatura de Asterheim pronta para impressão'}
@@ -641,18 +526,22 @@ function PrintingSection({ miniature }: { miniature: Miniature | undefined }) {
         src={miniature?.cover?.src ?? '/images/home/asterheim-hero.webp'}
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent" />
-      <Container className="flex min-h-[75vh] items-center">
+      <Container className="flex min-h-[62svh] items-center py-20">
         <div className="max-w-2xl">
-          <Eyebrow>3D Printing</Eyebrow>
-          <h2 className="font-display mt-5 text-[clamp(3.5rem,8vw,7rem)] leading-[.85] uppercase">
-            Do códice para a mesa
+          <Eyebrow>O Projeto</Eyebrow>
+          <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6rem)] leading-[.88] uppercase">
+            Construindo Asterheim
           </h2>
+          <p className="text-parchment-200/72 mt-6 max-w-xl text-base leading-7">
+            Da narrativa à miniatura: arte, impressão 3D e os bastidores de
+            uma IP dark fantasy em expansão.
+          </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <LinkButton href="/guia-de-impressao" size="lg" tone="gold">
-              Guia de impressão
+            <LinkButton href="/design-system" size="lg" tone="gold">
+              Conhecer o projeto
             </LinkButton>
-            <LinkButton href="/pt-br/miniaturas" size="lg">
-              Explorar modelos
+            <LinkButton href="/guia-de-impressao" size="lg">
+              Guia de impressão
             </LinkButton>
           </div>
         </div>
@@ -666,11 +555,6 @@ export default async function HomePage() {
     getPublishedCollections('pt-br'),
     getMiniatures('pt-br'),
   ]);
-  const publishedCreatures = miniatures.filter(
-    (miniature) =>
-      miniature.entityType === 'creature' &&
-      miniature.status === 'published',
-  );
 
   return (
     <>
@@ -684,13 +568,8 @@ export default async function HomePage() {
           miniatures={miniatures}
         />
         <MiniaturesSection miniatures={miniatures} />
-        <div id="chapter-atlas-lore">
-          <CharactersSection />
-          <CreaturesSection creatures={publishedCreatures} />
-          <AtlasSection />
-          <TimelineSection />
-        </div>
-        <PrintingSection miniature={miniatures.find((item) => item.featured)} />
+        <EditorialFeature />
+        <ProjectClosing miniature={miniatures.find((item) => item.featured)} />
       </main>
       <SiteFooter />
       <JsonLd data={structuredData} />
