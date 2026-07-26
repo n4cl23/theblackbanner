@@ -583,6 +583,211 @@ svg {
   }
 }
 
+.home-chapter-progress {
+  position: fixed;
+  top: 50%;
+  right: clamp(1rem, 2.2vw, 2.75rem);
+  z-index: 40;
+  display: none;
+  width: 1.5rem;
+  transform: translateY(-50%);
+  color: rgb(235 227 208 / 62%);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
+.home-chapter-progress__number {
+  color: rgb(189 152 82 / 92%);
+}
+
+.home-chapter-progress__rule {
+  display: block;
+  width: 1px;
+  height: 3.5rem;
+  margin: 0.75rem auto;
+  background: linear-gradient(
+    to bottom,
+    rgb(189 152 82 / 75%),
+    rgb(189 152 82 / 12%)
+  );
+}
+
+.kingdom-journey-mobile {
+  display: grid;
+  gap: 5rem;
+}
+
+.kingdom-journey-mobile__item {
+  min-width: 0;
+}
+
+.kingdom-journey-mobile__art {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid rgb(189 152 82 / 25%);
+  border-radius: 2px;
+  background: #020202;
+}
+
+.kingdom-journey-mobile__art img,
+.kingdom-journey__art img {
+  object-fit: contain;
+}
+
+.kingdom-journey__count {
+  color: rgb(189 152 82 / 88%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.kingdom-journey-mobile__description {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  color: rgb(221 211 189 / 68%);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.kingdom-journey__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  color: rgb(221 211 189 / 72%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition:
+    color 500ms ease,
+    transform 500ms ease;
+}
+
+.kingdom-journey__cta:hover,
+.kingdom-journey__cta:focus-visible {
+  color: rgb(205 169 101);
+  transform: translateX(0.2rem);
+}
+
+.kingdom-journey {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .kingdom-journey-mobile {
+    display: none;
+  }
+
+  .kingdom-journey {
+    position: relative;
+    display: block;
+    min-height: 510vh;
+  }
+
+  .kingdom-journey__sticky {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: minmax(16rem, 2fr) minmax(0, 3fr);
+    gap: clamp(2.5rem, 5vw, 6rem);
+    align-items: center;
+    min-height: 100svh;
+    padding-block: 6rem;
+  }
+
+  .kingdom-journey__copy {
+    animation: kingdom-copy-enter 900ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .kingdom-journey__description {
+    max-width: 26rem;
+    margin-top: 2rem;
+    color: rgb(221 211 189 / 68%);
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    line-height: 1.8;
+  }
+
+  .kingdom-journey__art {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid rgb(189 152 82 / 26%);
+    border-radius: 2px;
+    background: #020202;
+    box-shadow: 0 2rem 7rem rgb(0 0 0 / 24%);
+    animation: kingdom-art-enter 1100ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .kingdom-journey__index {
+    position: absolute;
+    right: -2.5rem;
+    bottom: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .kingdom-journey__index-button {
+    width: 2rem;
+    min-height: 2rem;
+    color: rgb(221 211 189 / 34%);
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    transition: color 450ms ease;
+  }
+
+  .kingdom-journey__index-button:hover,
+  .kingdom-journey__index-button:focus-visible,
+  .kingdom-journey__index-button[aria-pressed='true'] {
+    color: rgb(205 169 101);
+  }
+
+  .kingdom-journey__checkpoints {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .kingdom-journey__checkpoint {
+    height: 85vh;
+  }
+}
+
+@media (min-width: 80rem) {
+  .home-chapter-progress {
+    display: block;
+  }
+}
+
+@keyframes kingdom-art-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kingdom-copy-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -603,6 +808,14 @@ svg {
   .hero-scroll-line {
     animation: none !important;
     transform: none;
+  }
+
+  .kingdom-journey {
+    display: none;
+  }
+
+  .kingdom-journey-mobile {
+    display: grid;
   }
 }
 

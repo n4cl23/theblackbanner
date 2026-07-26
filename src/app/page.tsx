@@ -5,6 +5,10 @@ import Link from 'next/link';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 import { CinematicHeroMedia } from '@/components/shared/cinematic-hero-media';
+import {
+  HomeChapterProgress,
+  KingdomEditorialJourney,
+} from '@/components/shared/home-editorial-journey';
 import { JsonLd } from '@/components/shared/json-ld';
 import {
   Container,
@@ -123,6 +127,7 @@ function Hero() {
     <section
       aria-labelledby="home-hero-title"
       className="home-cinematic-hero relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pb-24 sm:items-center sm:pb-0"
+      id="chapter-banner"
     >
       <CinematicHeroMedia />
 
@@ -199,6 +204,8 @@ function AsterheimSection() {
     return {
       title: crown.kingdom.title,
       slug,
+      description: crown.description,
+      signature: crown.force,
       artwork: homeDomainArtwork[slug],
     };
   });
@@ -220,30 +227,16 @@ function AsterheimSection() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-9 lg:gap-y-16">
-          {kingdoms.map((kingdom) => (
-            <Link
-              aria-label={`Explorar ${kingdom.title}`}
-              className="group block"
-              href={`/pt-br/atlas/reinos/${kingdom.slug}`}
-              key={kingdom.slug}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] border border-aged-gold-500/25 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.16)] transition-[border-color,box-shadow,transform] duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-aged-gold-500/45 group-hover:shadow-[0_1.75rem_4.5rem_rgba(0,0,0,.24)]">
-                <Image
-                  alt={`Key art oficial de ${kingdom.title}`}
-                  className={`object-cover transition-[transform,filter] duration-300 ease-out group-hover:scale-[1.02] group-hover:contrast-[1.04] group-hover:saturate-[1.04] ${kingdom.artwork.position}`}
-                  fill
-                  sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
-                  src={kingdom.artwork.image}
-                />
-              </div>
-              <span className="text-parchment-200/65 group-hover:text-aged-gold-500 mt-5 inline-flex items-center gap-3 text-[.6rem] font-semibold tracking-[.22em] uppercase transition-[color,transform] duration-300 group-hover:translate-x-1">
-                Explore Kingdom
-                <span aria-hidden="true">→</span>
-              </span>
-            </Link>
-          ))}
-        </div>
+        <KingdomEditorialJourney
+          kingdoms={kingdoms.map((kingdom) => ({
+            artwork: kingdom.artwork.image,
+            description: kingdom.description,
+            position: kingdom.artwork.position,
+            signature: kingdom.signature,
+            slug: kingdom.slug,
+            title: kingdom.title,
+          }))}
+        />
       </Container>
     </section>
   );
@@ -257,7 +250,10 @@ function CollectionsSection({
   miniatures: readonly Miniature[];
 }) {
   return (
-    <section className="border-y border-stone-600/20 bg-black py-24 sm:py-36">
+    <section
+      className="border-y border-stone-600/20 bg-black py-24 sm:py-36"
+      id="chapter-collections"
+    >
       <Container>
         <SectionIntro
           action={{ href: '/pt-br/colecoes', label: 'Todas as coleções' }}
@@ -311,7 +307,10 @@ function MiniaturesSection({
   miniatures: readonly Miniature[];
 }) {
   return (
-    <section className="bg-coal-950 py-24 sm:py-36">
+    <section
+      className="bg-coal-950 py-24 sm:py-36"
+      id="chapter-miniatures"
+    >
       <Container>
         <SectionIntro
           action={{ href: '/pt-br/miniaturas', label: 'Abrir catálogo' }}
@@ -513,7 +512,10 @@ function TimelineSection() {
 
 function PrintingSection({ miniature }: { miniature: Miniature | undefined }) {
   return (
-    <section className="relative isolate min-h-[75vh] overflow-hidden border-y border-stone-600/20">
+    <section
+      className="relative isolate min-h-[75vh] overflow-hidden border-y border-stone-600/20"
+      id="chapter-forge"
+    >
       <Image
         alt={miniature?.cover?.alt ?? 'Miniatura de Asterheim pronta para impressão'}
         className="-z-20 object-cover object-[70%_center] opacity-55"
@@ -557,6 +559,7 @@ export default async function HomePage() {
     <>
       <SkipLink />
       <SiteHeader />
+      <HomeChapterProgress />
       <main id="main-content">
         <Hero />
         <AsterheimSection />
@@ -565,10 +568,12 @@ export default async function HomePage() {
           miniatures={miniatures}
         />
         <MiniaturesSection miniatures={miniatures} />
-        <CharactersSection />
-        <CreaturesSection creatures={publishedCreatures} />
-        <AtlasSection />
-        <TimelineSection />
+        <div id="chapter-atlas-lore">
+          <CharactersSection />
+          <CreaturesSection creatures={publishedCreatures} />
+          <AtlasSection />
+          <TimelineSection />
+        </div>
         <PrintingSection miniature={miniatures.find((item) => item.featured)} />
       </main>
       <SiteFooter />
