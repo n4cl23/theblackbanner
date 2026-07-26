@@ -15,6 +15,10 @@ import {
 import { siteConfig } from '@/config/site';
 import { crowns, guardians } from '@/content/heroic-entities';
 import {
+  homeDomainArtwork,
+  homeDomainOrder,
+} from '@/content/home-domains';
+import {
   getMiniatures,
   getPublishedCollections,
 } from '@/features/collections/data/miniature-repository';
@@ -188,48 +192,70 @@ function Hero() {
 }
 
 function AsterheimSection() {
-  const kingdoms = guardians.map((guardian) => ({
-    title: guardian.kingdom.title,
-    slug: guardian.kingdom.slug,
-    image: guardian.media[0]?.url,
-    guardian: guardian.title,
-  }));
+  const kingdoms = homeDomainOrder.map((slug) => {
+    const crown = crowns.find((record) => record.kingdom.slug === slug);
+    if (!crown) throw new Error(`Domínio canônico ausente: ${slug}`);
+
+    return {
+      title: crown.kingdom.title,
+      slug,
+      crown: crown.title,
+      description: crown.description,
+      artwork: homeDomainArtwork[slug],
+    };
+  });
 
   return (
-    <section className="bg-coal-950 py-24 sm:py-36" id="asterheim">
+    <section
+      className="border-y border-aged-gold-500/10 bg-black py-24 sm:py-32 lg:py-40"
+      id="asterheim"
+    >
       <Container>
-        <SectionIntro
-          action={{ href: '/pt-br/atlas', label: 'Abrir Atlas' }}
-          eyebrow="Explore Asterheim"
-          title="Seis domínios. Um destino."
-        />
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {kingdoms.map((kingdom, index) => (
+        <header className="mx-auto mb-14 max-w-4xl text-center sm:mb-18">
+          <Eyebrow>Explore Asterheim</Eyebrow>
+          <h2 className="hero-title text-ivory-100 mt-5 text-[clamp(3rem,7vw,6.5rem)] leading-[.84] tracking-[-.025em] uppercase">
+            Seis domínios. Um destino.
+          </h2>
+          <p className="text-parchment-200/75 mx-auto mt-7 max-w-2xl text-sm leading-7 sm:text-base">
+            Conheça os seis reinos ligados às Coroas e aos Guardiões de
+            Asterheim.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {kingdoms.map((kingdom) => (
             <Link
-              className={`group relative overflow-hidden border border-stone-600/20 ${
-                index === 0 ? 'min-h-[34rem] xl:row-span-2' : 'min-h-[22rem]'
-              }`}
-              href="/pt-br/atlas"
+              className="group domain-card relative aspect-[4/5] overflow-hidden rounded-sm border border-aged-gold-500/30 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.28)] transition-[border-color,transform] duration-500 hover:-translate-y-1 hover:border-aged-gold-500/60"
+              href={`/pt-br/atlas/reinos/${kingdom.slug}`}
               key={kingdom.slug}
             >
               <Image
-                alt={`Paisagem associada a ${kingdom.title}`}
-                className="object-cover opacity-55 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-75"
+                alt={`Paisagem de ${kingdom.title}`}
+                className={`object-cover transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.025] group-hover:contrast-110 ${kingdom.artwork.position}`}
                 fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                src={
-                  kingdom.image ??
-                  '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp'
-                }
+                sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
+                src={kingdom.artwork.image}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/20" />
-              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9">
-                <p className="text-aged-gold-500 text-[.65rem] tracking-[.22em] uppercase">
-                  Reino do Guardião {kingdom.guardian}
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.08)_25%,rgba(0,0,0,.42)_58%,rgba(0,0,0,.97)_100%)] transition-colors duration-500 group-hover:bg-[linear-gradient(180deg,rgba(0,0,0,.03)_20%,rgba(0,0,0,.34)_56%,rgba(0,0,0,.96)_100%)]" />
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <p className="text-aged-gold-500 text-[.62rem] font-semibold tracking-[.24em] uppercase">
+                  {kingdom.crown}
                 </p>
-                <h3 className="font-display mt-3 text-4xl uppercase">
+                <h3 className="hero-title text-ivory-100 mt-3 text-[clamp(2.1rem,3.4vw,3.25rem)] leading-[.9] tracking-[-.015em] uppercase">
                   {kingdom.title}
                 </h3>
+                <p className="text-parchment-200/75 mt-4 line-clamp-2 max-w-sm text-sm leading-6">
+                  {kingdom.description}
+                </p>
+                <span className="text-ivory-100 mt-6 inline-flex items-center gap-3 text-[.64rem] font-semibold tracking-[.2em] uppercase">
+                  Explorar Reino
+                  <span
+                    aria-hidden="true"
+                    className="text-aged-gold-500 transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </span>
               </div>
             </Link>
           ))}
