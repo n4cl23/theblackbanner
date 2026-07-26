@@ -207,51 +207,52 @@ function AsterheimSection() {
 
   return (
     <section
-      className="border-y border-aged-gold-500/10 bg-black py-24 sm:py-32 lg:py-40"
+      className="border-y border-aged-gold-500/10 bg-black py-32 sm:py-44 lg:py-56"
       id="asterheim"
     >
       <Container>
-        <header className="mx-auto mb-14 max-w-4xl text-center sm:mb-18">
+        <header className="mx-auto mb-20 max-w-4xl text-center sm:mb-28">
           <Eyebrow>Explore Asterheim</Eyebrow>
-          <h2 className="hero-title text-ivory-100 mt-5 text-[clamp(3rem,7vw,6.5rem)] leading-[.84] tracking-[-.025em] uppercase">
+          <h2 className="hero-title text-ivory-100 mt-7 text-[clamp(3rem,7vw,6.5rem)] leading-[.84] tracking-[-.025em] uppercase sm:mt-9">
             Seis domínios. Um destino.
           </h2>
-          <p className="text-parchment-200/75 mx-auto mt-7 max-w-2xl text-sm leading-7 sm:text-base">
+          <p className="text-parchment-200/75 mx-auto mt-9 max-w-2xl text-sm leading-7 sm:mt-11 sm:text-base">
             Conheça os seis reinos ligados às Coroas e aos Guardiões de
             Asterheim.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-10">
           {kingdoms.map((kingdom) => (
             <Link
-              className="group domain-card relative aspect-[4/5] overflow-hidden rounded-sm border border-aged-gold-500/30 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.28)] transition-[border-color,transform] duration-500 hover:-translate-y-1 hover:border-aged-gold-500/60"
+              className="group domain-card relative aspect-[5/8] overflow-hidden rounded-sm border border-aged-gold-500/25 bg-coal-950 shadow-[0_1.5rem_4rem_rgba(0,0,0,.22)] transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-aged-gold-500/55"
               href={`/pt-br/atlas/reinos/${kingdom.slug}`}
               key={kingdom.slug}
             >
               <Image
                 alt={`Paisagem de ${kingdom.title}`}
-                className={`object-cover transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.025] group-hover:contrast-110 ${kingdom.artwork.position}`}
+                className={`object-cover transition-[transform,filter] duration-300 ease-out group-hover:scale-[1.03] group-hover:contrast-110 ${kingdom.artwork.position}`}
                 fill
                 sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
                 src={kingdom.artwork.image}
               />
+              <div
+                aria-hidden="true"
+                className={`absolute inset-0 mix-blend-color ${kingdom.artwork.overlay}`}
+              />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.08)_25%,rgba(0,0,0,.42)_58%,rgba(0,0,0,.97)_100%)] transition-colors duration-500 group-hover:bg-[linear-gradient(180deg,rgba(0,0,0,.03)_20%,rgba(0,0,0,.34)_56%,rgba(0,0,0,.96)_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9">
                 <p className="text-aged-gold-500 text-[.62rem] font-semibold tracking-[.24em] uppercase">
                   {kingdom.crown}
                 </p>
-                <h3 className="hero-title text-ivory-100 mt-3 text-[clamp(2.1rem,3.4vw,3.25rem)] leading-[.9] tracking-[-.015em] uppercase">
+                <h3 className="hero-title text-ivory-100 mt-4 text-[clamp(2.55rem,4.2vw,4.2rem)] leading-[.86] tracking-[-.025em] uppercase [text-shadow:0_2px_14px_rgba(0,0,0,.45)]">
                   {kingdom.title}
                 </h3>
-                <p className="text-parchment-200/75 mt-4 line-clamp-2 max-w-sm text-sm leading-6">
-                  {kingdom.description}
-                </p>
-                <span className="text-ivory-100 mt-6 inline-flex items-center gap-3 text-[.64rem] font-semibold tracking-[.2em] uppercase">
+                <span className="text-parchment-200/75 group-hover:text-aged-gold-500 mt-8 inline-flex items-center gap-3 text-[.62rem] font-semibold tracking-[.22em] uppercase transition-[color,transform] duration-300 group-hover:translate-x-1">
                   Explorar Reino
                   <span
                     aria-hidden="true"
-                    className="text-aged-gold-500 transition-transform duration-300 group-hover:translate-x-1"
+                    className="text-aged-gold-500"
                   >
                     →
                   </span>
