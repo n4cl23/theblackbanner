@@ -15,7 +15,7 @@ export default async function AtlasPage() {
     <main>
       <header className="mx-auto max-w-[90rem] px-5 py-24 sm:px-8">
         <p className="text-aged-gold-500 text-xs tracking-[.35em] uppercase">
-          Atlas Faunae · dados mock
+          Atlas Faunae · arquivo editorial
         </p>
         <h1 className="font-display mt-5 max-w-5xl text-[clamp(4rem,10vw,8rem)] leading-[.86] uppercase">
           Biomas que moldam aquilo que vive

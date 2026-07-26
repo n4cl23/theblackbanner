@@ -15,7 +15,7 @@ export default async function LorePage() {
     <main className="mx-auto max-w-[90rem] px-5 py-16">
       <header className="max-w-5xl py-14">
         <p className="text-aged-gold-500 text-xs uppercase">
-          Códice conectado · conteúdo mock
+          Códice conectado · arquivo de lore
         </p>
         <h1 className="font-display mt-5 text-[clamp(4rem,10vw,8rem)] leading-[.85] uppercase">
           Nenhuma história existe sozinha

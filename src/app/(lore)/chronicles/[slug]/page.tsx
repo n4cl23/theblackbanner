@@ -26,7 +26,7 @@ export default async function ChroniclePage({ params }: Props) {
     <main className="mx-auto max-w-[80rem] px-5 py-16">
       <header className="mx-auto max-w-4xl py-16 text-center">
         <p className="text-aged-gold-500 text-xs uppercase">
-          Chronicle · conteúdo mock
+          Chronicle · arquivo narrativo
         </p>
         <h1 className="font-display mt-5 text-[clamp(4rem,9vw,8rem)] leading-[.86] uppercase">
           {chronicle.title}
