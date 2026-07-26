@@ -33,7 +33,9 @@
 
   /* Typography tokens */
   --font-title: Cinzel, Georgia, 'Times New Roman', serif;
-  --font-literary: 'Cormorant Garamond', Georgia, serif;
+  --font-literary:
+    'Iowan Old Style', Baskerville, 'Palatino Linotype', Palatino, Georgia,
+    serif;
   --font-reading: Inter, ui-sans-serif, system-ui, sans-serif;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -460,6 +462,39 @@ svg {
 
 .hero-scroll-line {
   animation: hero-scroll-pulse 2.2s ease-in-out infinite;
+}
+
+.hero-title {
+  font-family: var(--font-literary);
+  font-weight: 500;
+  text-wrap: balance;
+  text-shadow: 0 2px 18px rgb(0 0 0 / 54%);
+}
+
+.hero-subtitle {
+  font-family: var(--font-literary);
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+.hero-primary-cta {
+  min-height: 3.5rem;
+  border-color: rgb(168 138 69 / 72%);
+  background: rgb(5 5 5 / 48%);
+  padding: 1rem 2.25rem;
+  color: var(--ivory-100);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  box-shadow: inset 0 0 0 1px rgb(238 233 220 / 3%);
+  backdrop-filter: blur(4px);
+}
+
+.hero-primary-cta:hover {
+  border-color: var(--aged-gold-500);
+  background: rgb(168 138 69 / 12%);
+  color: var(--ivory-100);
+  transform: translateY(-2px);
 }
 
 @keyframes section-reveal {

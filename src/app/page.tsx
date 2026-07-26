@@ -145,23 +145,28 @@ function Hero() {
 
       <Container className="relative z-20">
         <div className="max-w-[62rem]">
-          <p className="text-aged-gold-500 mb-5 text-[.66rem] font-semibold tracking-[.38em] uppercase sm:mb-7 sm:text-xs">
+          <p className="text-aged-gold-500 mb-6 text-[.62rem] font-medium tracking-[.42em] uppercase sm:mb-8 sm:text-[.7rem]">
             Chronicles of Asterheim
           </p>
           <h1
-            className="font-display text-[clamp(4.4rem,12.5vw,12rem)] leading-[.69] tracking-[-.015em] uppercase [text-shadow:0_6px_46px_rgba(0,0,0,.9)]"
+            className="hero-title text-ivory-100 text-[clamp(4.5rem,12.8vw,12.5rem)] leading-[.74] tracking-[-.035em] uppercase"
             id="home-hero-title"
           >
             <span className="block">The Black</span>
-            <span className="text-parchment-200 block tracking-[.015em]">
+            <span className="block tracking-[-.01em]">
               Banner
             </span>
           </h1>
-          <p className="text-parchment-200/75 mt-8 max-w-md border-l border-aged-gold-500/60 pl-5 text-sm leading-relaxed tracking-[.08em] uppercase sm:mt-10 sm:text-base">
+          <p className="hero-subtitle text-ivory-100/80 mt-9 max-w-md border-l border-aged-gold-500/50 pl-5 text-[.95rem] leading-[1.65] tracking-[.045em] sm:mt-11 sm:pl-6 sm:text-lg">
             Seis Coroas. Um mundo à beira da ruína.
           </p>
-          <div className="mt-9 sm:mt-11">
-            <LinkButton href="#asterheim" size="lg" tone="gold">
+          <div className="mt-10 sm:mt-12">
+            <LinkButton
+              className="hero-primary-cta"
+              href="#asterheim"
+              size="lg"
+              tone="gold"
+            >
               Explore Asterheim
             </LinkButton>
           </div>
@@ -170,7 +175,7 @@ function Hero() {
 
       <a
         aria-label="Rolar para explorar Asterheim"
-        className="group absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[.58rem] tracking-[.3em] text-parchment-200/70 uppercase sm:bottom-7"
+        className="group absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[.56rem] font-medium tracking-[.34em] text-ivory-100/65 uppercase sm:bottom-7"
         href="#asterheim"
       >
         <span>Explore</span>
