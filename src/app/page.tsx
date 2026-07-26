@@ -247,7 +247,19 @@ function CollectionsSection({
     'beasts-of-asterheim',
     'boss-collection',
     'the-broken-mug-tavern',
+    'mercenarios',
   ] as const;
+  const collectionDescriptions: Record<(typeof featuredOrder)[number], string> =
+    {
+      'beasts-of-asterheim':
+        'Criaturas ancestrais, predadores e lendas nascidas nos seis reinos.',
+      'boss-collection':
+        'Adversários monumentais que guardam as fronteiras de Asterheim.',
+      'the-broken-mug-tavern':
+        'Forasteiros, histórias e perigos reunidos sob o mesmo teto.',
+      mercenarios:
+        'Espadas errantes forjadas por contratos, guerras e antigas dívidas.',
+    };
   const featured = featuredOrder.map((slug) => {
     const collection = collections.find((item) => item.slug === slug);
     if (!collection) throw new Error(`Coleção publicada ausente: ${slug}`);
@@ -257,11 +269,11 @@ function CollectionsSection({
       count: miniatures.filter(
         (miniature) => miniature.collectionSlug === slug,
       ).length,
+      description: collectionDescriptions[slug],
     };
   });
-  const primary = featured[0];
-  const secondary = featured.slice(1);
-  if (!primary) return null;
+  const [primary, boss, tavern, mercenaries] = featured;
+  if (!primary || !boss || !tavern || !mercenaries) return null;
 
   return (
     <section
@@ -276,15 +288,9 @@ function CollectionsSection({
               Exércitos, tavernas e lendas
             </h2>
           </div>
-          <Link
-            className="featured-collections-domain__all"
-            href="/pt-br/colecoes"
-          >
-            Todas as coleções <span aria-hidden="true">→</span>
-          </Link>
         </header>
 
-        <div className="featured-collections-layout">
+        <div className="featured-showcase">
           <Link
             className="featured-collection featured-collection--primary"
             href={`/pt-br/colecoes/${primary.collection.slug}`}
@@ -307,47 +313,96 @@ function CollectionsSection({
                 {primary.count} miniaturas
               </p>
               <h3>{primary.collection.title}</h3>
-              {primary.collection.description ? (
-                <p className="featured-collection__description">
-                  {primary.collection.description}
-                </p>
-              ) : null}
+              <p className="featured-collection__description">
+                {primary.description}
+              </p>
               <span className="featured-collection__cta">
                 Explorar coleção <span aria-hidden="true">→</span>
               </span>
             </div>
           </Link>
 
-          <div className="featured-collections-secondary">
-            {secondary.map(({ collection, count }) => (
-              <Link
-                className="featured-collection featured-collection--secondary"
-                href={`/pt-br/colecoes/${collection.slug}`}
-                key={collection.id}
-              >
-                <Image
-                  alt={collection.cover?.alt ?? collection.title}
-                  className="featured-collection__image"
-                  fill
-                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 34vw"
-                  src={
-                    collection.cover?.src ??
-                    '/images/home/asterheim-hero.webp'
-                  }
-                />
-                <div className="featured-collection__shade" />
-                <div className="featured-collection__content">
-                  <p className="featured-collection__count">
-                    {count} miniaturas
-                  </p>
-                  <h3>{collection.title}</h3>
-                  <span className="featured-collection__cta">
-                    Explorar coleção <span aria-hidden="true">→</span>
-                  </span>
-                </div>
-              </Link>
-            ))}
+          <div className="featured-showcase__secondary">
+            <Link
+              className="featured-collection featured-collection--boss"
+              href={`/pt-br/colecoes/${boss.collection.slug}`}
+            >
+              <Image
+                alt={boss.collection.cover?.alt ?? boss.collection.title}
+                className="featured-collection__image"
+                fill
+                sizes="(max-width: 1023px) 100vw, 35vw"
+                src={
+                  boss.collection.cover?.src ??
+                  '/images/home/asterheim-hero.webp'
+                }
+              />
+              <div className="featured-collection__ambient featured-collection__ambient--boss" />
+              <div className="featured-collection__shade" />
+              <div className="featured-collection__content">
+                <p className="featured-collection__count">
+                  {boss.count} miniaturas
+                </p>
+                <h3>{boss.collection.title}</h3>
+                <p className="featured-collection__description">
+                  {boss.description}
+                </p>
+                <span className="featured-collection__cta">
+                  Explorar coleção <span aria-hidden="true">→</span>
+                </span>
+              </div>
+            </Link>
+
+            <div className="featured-showcase__minor">
+              {[tavern, mercenaries].map(
+                ({ collection, count, description }, index) => (
+                  <Link
+                    className="featured-collection featured-collection--minor"
+                    href={`/pt-br/colecoes/${collection.slug}`}
+                    key={collection.id}
+                  >
+                    <Image
+                      alt={collection.cover?.alt ?? collection.title}
+                      className="featured-collection__image"
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 18vw"
+                      src={
+                        collection.cover?.src ??
+                        '/images/home/asterheim-hero.webp'
+                      }
+                    />
+                    <div
+                      className={`featured-collection__ambient ${
+                        index === 0
+                          ? 'featured-collection__ambient--tavern'
+                          : 'featured-collection__ambient--mercenaries'
+                      }`}
+                    />
+                    <div className="featured-collection__shade" />
+                    <div className="featured-collection__content">
+                      <p className="featured-collection__count">
+                        {count} miniaturas
+                      </p>
+                      <h3>{collection.title}</h3>
+                      <p className="featured-collection__description">
+                        {description}
+                      </p>
+                      <span className="featured-collection__cta">
+                        Explorar coleção <span aria-hidden="true">→</span>
+                      </span>
+                    </div>
+                  </Link>
+                ),
+              )}
+            </div>
           </div>
+        </div>
+
+        <div className="featured-showcase__footer">
+          <p>Outros capítulos aguardam além do estandarte.</p>
+          <Link href="/pt-br/colecoes">
+            Explorar todas as coleções <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </Container>
     </section>
