@@ -201,8 +201,6 @@ function AsterheimSection() {
     return {
       title: crown.kingdom.title,
       slug,
-      description: crown.description,
-      signature: crown.force,
       artwork: homeDomainArtwork[slug],
     };
   });
@@ -227,11 +225,6 @@ function AsterheimSection() {
         <KingdomEditorialJourney
           kingdoms={kingdoms.map((kingdom) => ({
             artwork: kingdom.artwork.image,
-            atmosphere: kingdom.artwork.atmosphere,
-            description: kingdom.description,
-            mobilePosition: kingdom.artwork.mobilePosition,
-            position: kingdom.artwork.position,
-            signature: kingdom.signature,
             slug: kingdom.slug,
             title: kingdom.title,
           }))}

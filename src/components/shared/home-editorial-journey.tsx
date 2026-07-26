@@ -1,13 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-type KingdomJourneyItem = {
+type KingdomPoster = {
   artwork: string;
-  atmosphere: string;
-  description: string;
-  mobilePosition: string;
-  position: string;
-  signature: string;
   slug: string;
   title: string;
 };
@@ -15,56 +10,30 @@ type KingdomJourneyItem = {
 export function KingdomEditorialJourney({
   kingdoms,
 }: {
-  kingdoms: readonly KingdomJourneyItem[];
+  kingdoms: readonly KingdomPoster[];
 }) {
   return (
-    <div className="kingdom-chapters">
-      {kingdoms.map((kingdom, index) => (
-        <article
-          className={`kingdom-chapter kingdom-chapter--${kingdom.atmosphere}`}
+    <div className="kingdom-poster-grid">
+      {kingdoms.map((kingdom) => (
+        <Link
+          aria-label={`Explorar ${kingdom.title}`}
+          className="kingdom-poster"
+          href={`/pt-br/atlas/reinos/${kingdom.slug}`}
           key={kingdom.slug}
         >
-          <Image
-            alt={`Key art oficial de ${kingdom.title}: ${kingdom.signature}`}
-            className={`kingdom-chapter__image ${kingdom.position} ${kingdom.mobilePosition}`}
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            src={kingdom.artwork}
-          />
-          <div aria-hidden="true" className="kingdom-chapter__atmosphere" />
-          <div aria-hidden="true" className="kingdom-chapter__shade" />
-
-          <div className="kingdom-chapter__content">
-            <p className="kingdom-chapter__count">
-              {String(index + 1).padStart(2, '0')} / 06
-            </p>
-            <h3 className="sr-only">{kingdom.title}</h3>
-            <p className="sr-only">{kingdom.signature}</p>
-            <p className="kingdom-chapter__description">
-              {kingdom.description}
-            </p>
-            <Link
-              className="kingdom-chapter__cta"
-              href={`/pt-br/atlas/reinos/${kingdom.slug}`}
-            >
-              Explorar Reino <span aria-hidden="true">→</span>
-            </Link>
+          <div className="kingdom-poster__art">
+            <Image
+              alt={`Key art oficial de ${kingdom.title}`}
+              className="kingdom-poster__image"
+              fill
+              sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
+              src={kingdom.artwork}
+            />
           </div>
-
-          <div aria-hidden="true" className="kingdom-chapter__progress">
-            {kingdoms.map((item, progressIndex) => (
-              <span
-                className={
-                  progressIndex === index
-                    ? 'kingdom-chapter__progress-mark kingdom-chapter__progress-mark--active'
-                    : 'kingdom-chapter__progress-mark'
-                }
-                key={item.slug}
-              />
-            ))}
-          </div>
-        </article>
+          <span className="kingdom-poster__cta">
+            Explorar Reino <span aria-hidden="true">→</span>
+          </span>
+        </Link>
       ))}
     </div>
   );

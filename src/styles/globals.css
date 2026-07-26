@@ -583,194 +583,80 @@ svg {
   }
 }
 
-.kingdom-chapters {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  background: #020202;
-  scroll-snap-type: y proximity;
+.kingdom-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 2.4vw, 2rem);
+  padding-bottom: clamp(6rem, 10vw, 10rem);
 }
 
-.kingdom-chapter {
+.kingdom-poster {
+  display: block;
+  min-width: 0;
+}
+
+.kingdom-poster__art {
   position: relative;
-  isolation: isolate;
-  min-height: clamp(42rem, 100svh, 72rem);
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  scroll-snap-align: start;
+  border: 1px solid rgb(189 152 82 / 24%);
+  border-radius: 2px;
   background: #020202;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%);
+  transition:
+    border-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.kingdom-chapter__image {
-  z-index: -30;
-  object-fit: cover;
-  transform: scale(1.002);
+.kingdom-poster__image {
+  object-fit: contain;
+  transition:
+    filter 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.kingdom-chapter__shade {
-  position: absolute;
-  inset: 0;
-  z-index: -10;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(0 0 0 / 84%) 0%,
-      rgb(0 0 0 / 58%) 24%,
-      rgb(0 0 0 / 12%) 52%,
-      transparent 72%
-    ),
-    linear-gradient(
-      0deg,
-      rgb(0 0 0 / 78%) 0%,
-      transparent 34%,
-      rgb(0 0 0 / 12%) 100%
-    );
-}
-
-.kingdom-chapter__atmosphere {
-  position: absolute;
-  inset: 0;
-  z-index: -20;
-  opacity: 0.22;
-  mix-blend-mode: color;
-}
-
-.kingdom-chapter--frost .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #163854, transparent 58%);
-}
-
-.kingdom-chapter--storm .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #182c4a, transparent 64%);
-}
-
-.kingdom-chapter--iron .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #522719, transparent 58%);
-}
-
-.kingdom-chapter--forest .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #173a26, transparent 62%);
-}
-
-.kingdom-chapter--abyss .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #061d3d, transparent 64%);
-}
-
-.kingdom-chapter--scorched .kingdom-chapter__atmosphere {
-  background: linear-gradient(120deg, #673019, transparent 60%);
-}
-
-.kingdom-chapter__content {
-  position: absolute;
-  left: max(1.25rem, calc((100vw - 80rem) / 2));
-  bottom: clamp(4.5rem, 10vh, 8rem);
-  z-index: 10;
-  width: min(30rem, calc(100% - 2.5rem));
-  animation: kingdom-chapter-enter linear both;
-  animation-range: entry 12% cover 38%;
-  animation-timeline: view();
-}
-
-.kingdom-chapter__count {
-  color: rgb(205 169 101 / 88%);
-  font-size: 0.625rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-}
-
-.kingdom-chapter__description {
-  display: -webkit-box;
-  overflow: hidden;
-  max-width: 29rem;
-  margin-top: 1.4rem;
-  color: rgb(244 237 220 / 86%);
-  font-family: var(--font-body), serif;
-  font-size: clamp(0.95rem, 1.25vw, 1.125rem);
-  line-height: 1.72;
-  text-wrap: balance;
-  text-shadow: 0 2px 14px rgb(0 0 0 / 70%);
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-.kingdom-chapter__cta {
+.kingdom-poster__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  margin-top: 1.75rem;
-  color: rgb(229 218 195 / 78%);
-  font-size: 0.625rem;
+  margin-top: 1rem;
+  color: rgb(205 169 101 / 76%);
+  font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition:
-    color 450ms ease,
-    transform 450ms ease;
+    color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.kingdom-chapter__cta:hover,
-.kingdom-chapter__cta:focus-visible {
-  color: rgb(205 169 101);
+.kingdom-poster:hover .kingdom-poster__art,
+.kingdom-poster:focus-visible .kingdom-poster__art {
+  border-color: rgb(189 152 82 / 46%);
+  box-shadow: 0 1.75rem 4.5rem rgb(0 0 0 / 28%);
+}
+
+.kingdom-poster:hover .kingdom-poster__image,
+.kingdom-poster:focus-visible .kingdom-poster__image {
+  filter: contrast(1.035);
+  transform: scale(1.015);
+}
+
+.kingdom-poster:hover .kingdom-poster__cta,
+.kingdom-poster:focus-visible .kingdom-poster__cta {
+  color: rgb(215 180 113);
   transform: translateX(0.2rem);
 }
 
-.kingdom-chapter__progress {
-  position: absolute;
-  right: max(1.25rem, calc((100vw - 80rem) / 2));
-  bottom: clamp(2.5rem, 5vh, 4rem);
-  z-index: 10;
-  display: flex;
-  gap: 0.45rem;
-}
-
-.kingdom-chapter__progress-mark {
-  display: block;
-  width: 1.2rem;
-  height: 1px;
-  background: rgb(229 218 195 / 25%);
-}
-
-.kingdom-chapter__progress-mark--active {
-  width: 2.25rem;
-  background: rgb(205 169 101 / 88%);
-}
-
-@keyframes kingdom-chapter-enter {
-  from {
-    opacity: 0;
-    transform: translateY(0.7rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 40rem) {
+  .kingdom-poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 63.99rem) {
-  .kingdom-chapter {
-    min-height: 88svh;
-  }
-
-  .kingdom-chapter__shade {
-    background: linear-gradient(
-      0deg,
-      rgb(0 0 0 / 90%) 0%,
-      rgb(0 0 0 / 46%) 30%,
-      transparent 62%
-    );
-  }
-
-  .kingdom-chapter__content {
-    right: 1.25rem;
-    bottom: 3.5rem;
-    left: 1.25rem;
-    width: auto;
-  }
-
-  .kingdom-chapter__description {
-    max-width: 31rem;
-    font-size: 0.9rem;
-  }
-
-  .kingdom-chapter__progress {
-    display: none;
+@media (min-width: 64rem) {
+  .kingdom-poster-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -796,9 +682,6 @@ svg {
     transform: none;
   }
 
-  .kingdom-chapter__content {
-    animation: none;
-  }
 }
 
 @media (max-width: 30rem) {
