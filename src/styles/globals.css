@@ -608,8 +608,8 @@ svg {
 .kingdom-poster-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: clamp(1.75rem, 3vw, 3rem) clamp(1.25rem, 2vw, 2.25rem);
-  padding-bottom: clamp(2rem, 3vw, 3rem);
+  gap: clamp(1.25rem, 2vw, 2.25rem);
+  padding-bottom: clamp(2.75rem, 4vw, 4rem);
 }
 
 .kingdom-domain__footer {
@@ -640,6 +640,7 @@ svg {
 .kingdom-poster {
   display: block;
   min-width: 0;
+  outline: none;
   animation: editorial-card-rise linear both;
   animation-range: entry 8% cover 34%;
   animation-timeline: view();
@@ -665,7 +666,8 @@ svg {
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%);
   transition:
     border-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .kingdom-poster__image {
@@ -682,37 +684,17 @@ svg {
   object-fit: cover;
 }
 
-.kingdom-poster__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-top: 0.75rem;
-  color: rgb(205 169 101 / 76%);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  transition:
-    color 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 .kingdom-poster:hover .kingdom-poster__art,
 .kingdom-poster:focus-visible .kingdom-poster__art {
   border-color: rgb(189 152 82 / 46%);
   box-shadow: 0 1.75rem 4.5rem rgb(0 0 0 / 28%);
+  transform: translateY(-0.2rem);
 }
 
 .kingdom-poster:hover .kingdom-poster__image,
 .kingdom-poster:focus-visible .kingdom-poster__image {
   filter: contrast(1.035);
   transform: scale(1.015);
-}
-
-.kingdom-poster:hover .kingdom-poster__cta,
-.kingdom-poster:focus-visible .kingdom-poster__cta {
-  color: rgb(215 180 113);
-  transform: translateX(0.2rem);
 }
 
 @media (min-width: 40rem) {

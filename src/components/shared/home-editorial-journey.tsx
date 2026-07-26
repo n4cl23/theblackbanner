@@ -37,9 +37,6 @@ export function KingdomEditorialJourney({
               style={{ objectPosition: kingdom.objectPosition }}
             />
           </div>
-          <span className="kingdom-poster__cta">
-            Explorar Reino <span aria-hidden="true">→</span>
-          </span>
         </Link>
       ))}
     </div>
