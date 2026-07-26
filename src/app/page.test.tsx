@@ -3,8 +3,8 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 
 describe('cinematic Home', () => {
-  it('renders every requested section', () => {
-    render(<HomePage />);
+  it('renders every requested section', async () => {
+    render(await HomePage());
 
     const headings = [
       'The Black Banner',
@@ -27,8 +27,8 @@ describe('cinematic Home', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
-  it('provides functional primary and secondary calls to action', () => {
-    render(<HomePage />);
+  it('provides functional primary and secondary calls to action', async () => {
+    render(await HomePage());
     expect(
       screen.getByRole('link', { name: 'Entrar em Asterheim' }),
     ).toHaveAttribute('href', '#asterheim');
@@ -37,8 +37,8 @@ describe('cinematic Home', () => {
     ).toHaveAttribute('href', '#collections');
   });
 
-  it('shows an accessible fallback when critical media fails', () => {
-    render(<HomePage />);
+  it('shows an accessible fallback when critical media fails', async () => {
+    render(await HomePage());
     const hero = screen.getByRole('img', {
       name: 'Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas',
     });
@@ -50,8 +50,8 @@ describe('cinematic Home', () => {
     ).toHaveTextContent('A paisagem de Asterheim não pôde ser carregada');
   });
 
-  it('embeds the complete Home structured-data graph', () => {
-    const { container } = render(<HomePage />);
+  it('embeds the complete Home structured-data graph', async () => {
+    const { container } = render(await HomePage());
     const schemas = container.querySelectorAll(
       'script[type="application/ld+json"]',
     );

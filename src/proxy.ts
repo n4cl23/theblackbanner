@@ -4,7 +4,7 @@ import {
   type NextRequest,
   NextResponse,
 } from 'next/server';
-import { publishedMiniatureSlugSet } from '@/features/collections/data/published-miniature-slugs';
+import { publicMiniatureSlugSet } from '@/features/collections/data/public-miniature-slugs';
 
 function isProtectedAdminRoute(request: NextRequest) {
   const path = request.nextUrl.pathname;
@@ -18,7 +18,7 @@ function isHiddenMiniatureRoute(request: NextRequest) {
   if (!match) return false;
   const [, locale, slug] = match;
   if (!locale || !slug) return false;
-  return locale !== 'pt-br' || !publishedMiniatureSlugSet.has(slug);
+  return locale !== 'pt-br' || !publicMiniatureSlugSet.has(slug);
 }
 
 const protectedAdminProxy = clerkMiddleware(async (auth, request) => {

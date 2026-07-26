@@ -32,6 +32,11 @@ export const getMiniaturePageData = cache(
         collections.find(
           (record) => record.slug === miniature.collectionSlug,
         ) ?? null,
+      related: (
+        await getMiniaturesByCollection(miniature.collectionSlug, locale)
+      )
+        .filter((record) => record.slug !== miniature.slug)
+        .slice(0, 4),
     };
   },
 );

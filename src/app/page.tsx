@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import {
   featuredCharacters,
-  featuredCollections,
   featuredCreatures,
   featuredKingdoms,
   featuredStories,
@@ -23,6 +22,14 @@ import {
   SectionHeading,
   SkipLink,
 } from '@/components/ui/primitives';
+import {
+  getMiniatures,
+  getPublishedCollections,
+} from '@/features/collections/data/miniature-repository';
+import type {
+  Miniature,
+  RealCollection,
+} from '@/features/collections/domain/miniature-schema';
 
 const provisionalBaseUrl = siteConfig.url;
 
@@ -221,29 +228,29 @@ function KingdomsSection() {
         {featuredKingdoms.length ? (
           <div className="mt-14 grid gap-px bg-stone-600/25 lg:grid-cols-3">
             {featuredKingdoms.map((kingdom, index) => (
-            <article
-              className="codex-card kingdom-card group bg-coal-950/90 hover:bg-iron-800/90 relative min-h-80 p-7 transition-colors sm:p-9"
-              key={kingdom.id}
-            >
-              <span
-                className="font-display text-aged-gold-500/55 text-5xl"
-                aria-hidden="true"
+              <article
+                className="codex-card kingdom-card group bg-coal-950/90 hover:bg-iron-800/90 relative min-h-80 p-7 transition-colors sm:p-9"
+                key={kingdom.id}
               >
-                {kingdom.sigil}
-              </span>
-              <p className="text-parchment-200/45 mt-12 text-xs tracking-wider uppercase">
-                0{index + 1} · {kingdom.epithet}
-              </p>
-              <h3 className="font-display text-ivory-100 mt-3 text-2xl">
-                {kingdom.name}
-              </h3>
-              <p className="text-parchment-200/60 mt-4 text-sm">
-                {kingdom.summary}
-              </p>
-              <div className="mt-7">
-                <MockLabel />
-              </div>
-            </article>
+                <span
+                  className="font-display text-aged-gold-500/55 text-5xl"
+                  aria-hidden="true"
+                >
+                  {kingdom.sigil}
+                </span>
+                <p className="text-parchment-200/45 mt-12 text-xs tracking-wider uppercase">
+                  0{index + 1} · {kingdom.epithet}
+                </p>
+                <h3 className="font-display text-ivory-100 mt-3 text-2xl">
+                  {kingdom.name}
+                </h3>
+                <p className="text-parchment-200/60 mt-4 text-sm">
+                  {kingdom.summary}
+                </p>
+                <div className="mt-7">
+                  <MockLabel />
+                </div>
+              </article>
             ))}
           </div>
         ) : (
@@ -288,39 +295,39 @@ function CharactersSection() {
           {featuredCharacters.length ? (
             <div className="grid gap-6 sm:grid-cols-2">
               {featuredCharacters.map((character, index) => (
-              <article
-                className="from-iron-800 relative min-h-[28rem] overflow-hidden border border-stone-600/25 bg-gradient-to-b to-black p-7"
-                key={character.id}
-              >
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_bottom,rgba(168,61,31,0.18),transparent_58%)]"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute right-[18%] bottom-0 h-[60%] w-[23%] bg-black/90 [clip-path:polygon(40%_0,65%_8%,70%_28%,100%_100%,0_100%,28%_28%)]"
-                />
-                <div className="relative flex h-full flex-col justify-between">
-                  <div className="flex items-start justify-between">
-                    <Badge>{character.role}</Badge>
-                    <span className="text-parchment-200/35 text-xs">
-                      0{index + 1}
-                    </span>
+                <article
+                  className="from-iron-800 relative min-h-[28rem] overflow-hidden border border-stone-600/25 bg-gradient-to-b to-black p-7"
+                  key={character.id}
+                >
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_bottom,rgba(168,61,31,0.18),transparent_58%)]"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute right-[18%] bottom-0 h-[60%] w-[23%] bg-black/90 [clip-path:polygon(40%_0,65%_8%,70%_28%,100%_100%,0_100%,28%_28%)]"
+                  />
+                  <div className="relative flex h-full flex-col justify-between">
+                    <div className="flex items-start justify-between">
+                      <Badge>{character.role}</Badge>
+                      <span className="text-parchment-200/35 text-xs">
+                        0{index + 1}
+                      </span>
+                    </div>
+                    <div>
+                      <MockLabel />
+                      <h3 className="font-display mt-3 text-3xl">
+                        {character.name}
+                      </h3>
+                      <p className="text-aged-gold-500 mt-2 text-xs tracking-wider uppercase">
+                        {character.allegiance}
+                      </p>
+                      <p className="text-parchment-200/60 mt-4 max-w-xs text-sm">
+                        {character.summary}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <MockLabel />
-                    <h3 className="font-display mt-3 text-3xl">
-                      {character.name}
-                    </h3>
-                    <p className="text-aged-gold-500 mt-2 text-xs tracking-wider uppercase">
-                      {character.allegiance}
-                    </p>
-                    <p className="text-parchment-200/60 mt-4 max-w-xs text-sm">
-                      {character.summary}
-                    </p>
-                  </div>
-                </div>
-              </article>
+                </article>
               ))}
             </div>
           ) : (
@@ -375,20 +382,20 @@ function BestiarySection() {
           {featuredCreatures.length ? (
             <div className="mt-10 divide-y divide-stone-600/30 border-y border-stone-600/30">
               {featuredCreatures.map((creature) => (
-              <article className="py-6" key={creature.id}>
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="font-display text-xl">{creature.name}</h3>
-                  <span className="text-ember-600 text-xs tracking-wider uppercase">
-                    Ameaça: {creature.threat}
-                  </span>
-                </div>
-                <p className="text-parchment-200/45 mt-2 text-xs tracking-wider uppercase">
-                  {creature.classification}
-                </p>
-                <p className="text-parchment-200/60 mt-3 text-sm">
-                  {creature.summary}
-                </p>
-              </article>
+                <article className="py-6" key={creature.id}>
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <h3 className="font-display text-xl">{creature.name}</h3>
+                    <span className="text-ember-600 text-xs tracking-wider uppercase">
+                      Ameaça: {creature.threat}
+                    </span>
+                  </div>
+                  <p className="text-parchment-200/45 mt-2 text-xs tracking-wider uppercase">
+                    {creature.classification}
+                  </p>
+                  <p className="text-parchment-200/60 mt-3 text-sm">
+                    {creature.summary}
+                  </p>
+                </article>
               ))}
             </div>
           ) : (
@@ -402,51 +409,102 @@ function BestiarySection() {
   );
 }
 
-function CollectionsSection() {
+function CollectionsSection({
+  collections,
+  miniatures,
+}: {
+  collections: readonly RealCollection[];
+  miniatures: readonly Miniature[];
+}) {
+  const featuredCatalog = collections.slice(0, 4);
+  const featuredMiniatures = miniatures.slice(0, 8);
   return (
     <section className="py-24 sm:py-36" id="collections">
       <Container>
         <SectionHeading
           align="center"
-          description="Uma antevisão visual para futuras miniaturas e arquivos, sem downloads, venda ou integração comercial."
+          description="Companhias, tavernas, criaturas e figuras lendárias conectadas por um acervo visual em expansão."
           eyebrow="Objetos do mundo"
           title="Coleções moldadas pela narrativa"
         />
         <div className="mt-14 grid gap-7 lg:grid-cols-2">
-          {featuredCollections.map((collection, index) => (
-            <article
-              className="group bg-coal-900 relative min-h-96 overflow-hidden border border-stone-600/25 p-8"
+          {featuredCatalog.map((collection, index) => (
+            <Link
+              className="group bg-coal-900 relative min-h-[30rem] overflow-hidden border border-stone-600/25"
+              href={`/pt-br/colecoes/${collection.slug}`}
               key={collection.id}
             >
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(168,138,69,0.14),transparent_22%),linear-gradient(135deg,transparent,rgba(0,0,0,0.75))] transition-transform duration-500 group-hover:scale-[1.02] motion-reduce:transform-none"
-              />
-              <div className="relative flex h-full flex-col justify-between">
+              {collection.cover ? (
+                <Image
+                  alt={collection.cover.alt}
+                  className="object-cover opacity-55 transition duration-700 group-hover:scale-[1.02] group-hover:opacity-70"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  src={collection.cover.src}
+                />
+              ) : null}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/30" />
+              <div className="relative flex min-h-[30rem] flex-col justify-between p-8">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-aged-gold-500/30 text-6xl">
                     0{index + 1}
                   </span>
-                  {collection.itemCount ? (
-                    <Badge>{collection.itemCount} registros</Badge>
-                  ) : (
-                    <Badge>Arquivo canônico</Badge>
-                  )}
+                  <Badge>
+                    {
+                      miniatures.filter(
+                        (item) => item.collectionSlug === collection.slug,
+                      ).length
+                    }{' '}
+                    miniaturas
+                  </Badge>
                 </div>
                 <div>
-                  <MockLabel />
                   <h3 className="font-display mt-3 text-3xl">
-                    {collection.name}
+                    {collection.title}
                   </h3>
-                  <p className="text-aged-gold-500 mt-2 text-xs tracking-wider uppercase">
-                    {collection.format}
-                  </p>
-                  <p className="text-parchment-200/60 mt-4 max-w-md text-sm">
-                    {collection.summary}
-                  </p>
+                  {collection.description ? (
+                    <p className="text-parchment-200/70 mt-4 line-clamp-3 max-w-md text-sm">
+                      {collection.description}
+                    </p>
+                  ) : null}
                 </div>
               </div>
-            </article>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-20 flex items-end justify-between gap-8">
+          <div>
+            <Eyebrow>Catálogo real</Eyebrow>
+            <h3 className="font-display mt-4 text-4xl sm:text-6xl">
+              Figuras de Asterheim
+            </h3>
+          </div>
+          <Link
+            className="hidden text-xs uppercase sm:block"
+            href="/pt-br/miniaturas"
+          >
+            Ver todas
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredMiniatures.map((miniature) => (
+            <Link
+              className="group relative aspect-[3/4] overflow-hidden"
+              href={`/pt-br/miniaturas/${miniature.slug}`}
+              key={miniature.id}
+            >
+              <Image
+                alt={miniature.cover?.alt ?? miniature.title}
+                className="object-cover opacity-70 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-90"
+                fill
+                sizes="(max-width: 640px) 100vw, 25vw"
+                src={miniature.cover?.src ?? '/images/home/asterheim-hero.webp'}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+              <h4 className="font-display absolute inset-x-0 bottom-0 p-5 text-2xl uppercase">
+                {miniature.title}
+              </h4>
+            </Link>
           ))}
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3 text-center">
@@ -477,22 +535,22 @@ function TimelineSection() {
         {featuredStories.length ? (
           <ol className="relative mt-16 grid gap-10 before:absolute before:top-0 before:bottom-0 before:left-3 before:w-px before:bg-stone-600/35 md:grid-cols-3 md:before:top-3 md:before:right-0 md:before:bottom-auto md:before:left-0 md:before:h-px md:before:w-auto">
             {featuredStories.map((story, index) => (
-            <li
-              className="relative pl-12 md:pt-10 md:pr-8 md:pl-0"
-              key={story.id}
-            >
-              <span className="border-aged-gold-500 bg-coal-900 absolute top-2 left-1.5 size-3 rotate-45 border md:top-1.5 md:left-0" />
-              <p className="text-aged-gold-500 text-xs tracking-wider uppercase">
-                {story.dateLabel}
-              </p>
-              <h3 className="font-display mt-3 text-2xl">{story.name}</h3>
-              <p className="text-parchment-200/40 mt-1 text-xs">
-                {story.chapter} · 0{index + 1}
-              </p>
-              <p className="text-parchment-200/60 mt-4 text-sm">
-                {story.summary}
-              </p>
-            </li>
+              <li
+                className="relative pl-12 md:pt-10 md:pr-8 md:pl-0"
+                key={story.id}
+              >
+                <span className="border-aged-gold-500 bg-coal-900 absolute top-2 left-1.5 size-3 rotate-45 border md:top-1.5 md:left-0" />
+                <p className="text-aged-gold-500 text-xs tracking-wider uppercase">
+                  {story.dateLabel}
+                </p>
+                <h3 className="font-display mt-3 text-2xl">{story.name}</h3>
+                <p className="text-parchment-200/40 mt-1 text-xs">
+                  {story.chapter} · 0{index + 1}
+                </p>
+                <p className="text-parchment-200/60 mt-4 text-sm">
+                  {story.summary}
+                </p>
+              </li>
             ))}
           </ol>
         ) : (
@@ -704,7 +762,11 @@ export function LegacyHomeFooter() {
   );
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [collections, miniatures] = await Promise.all([
+    getPublishedCollections('pt-br'),
+    getMiniatures('pt-br'),
+  ]);
   return (
     <>
       <SkipLink />
@@ -715,7 +777,7 @@ export default function HomePage() {
         <KingdomsSection />
         <CharactersSection />
         <BestiarySection />
-        <CollectionsSection />
+        <CollectionsSection collections={collections} miniatures={miniatures} />
         <TimelineSection />
         <GallerySection />
         <EditorialSection />
