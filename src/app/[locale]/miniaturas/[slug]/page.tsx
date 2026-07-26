@@ -9,7 +9,6 @@ import { JsonLd } from '@/components/shared/json-ld';
 import { absoluteUrl } from '@/config/site';
 import { getMiniaturePageData } from '@/features/collections/data/collection-repository';
 import { getMiniatures } from '@/features/collections/data/miniature-repository';
-import { publishedMiniatureSlugs } from '@/features/collections/data/published-miniature-slugs';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -17,13 +16,6 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const miniatures = await getMiniatures('pt-br');
-  const resolvedSlugs = new Set(miniatures.map(({ slug }) => slug));
-  if (
-    publishedMiniatureSlugs.some((slug) => !resolvedSlugs.has(slug)) ||
-    resolvedSlugs.size !== publishedMiniatureSlugs.length
-  ) {
-    throw new Error('Published miniature routes differ from the approved batch');
-  }
   return miniatures.map(({ slug }) => ({ locale: 'pt-br', slug }));
 }
 
@@ -56,8 +48,9 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
   const { locale, slug } = await params;
   const data = await getMiniaturePageData(slug, locale);
   if (!data) notFound();
-  const { miniature, collection } = data;
-  if (!miniature.cover || !miniature.description) notFound();
+  const { miniature, collection, related } = data;
+  if (!miniature.cover) notFound();
+  const miniatureCover = miniature.cover;
   const dimensions = miniature.dimensionsMm
     ? [
         miniature.dimensionsMm.height,
@@ -94,19 +87,21 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
             '@context': 'https://schema.org',
             '@type': 'CreativeWork',
             name: miniature.title,
-            description: miniature.description,
-            image: absoluteUrl(miniature.cover.src),
+            description:
+              miniature.description ??
+              `${miniature.title}, miniatura do acervo de Asterheim.`,
+            image: absoluteUrl(miniatureCover.src),
             inLanguage: 'pt-BR',
           }}
         />
         <section className="relative min-h-[78vh] overflow-hidden">
           <Image
-            alt={miniature.cover.alt}
+            alt={miniatureCover.alt}
             className="object-cover opacity-55"
             fill
             priority
             sizes="100vw"
-            src={miniature.cover.src}
+            src={miniatureCover.src}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30" />
           <div className="relative mx-auto flex min-h-[78vh] max-w-[90rem] flex-col justify-end px-5 py-16 sm:px-8">
@@ -124,14 +119,21 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
             <p className="mt-6 max-w-2xl text-xl">
               {collection?.title ?? miniature.collectionTitle}
             </p>
+            {miniature.status === 'catalogued' ? (
+              <p className="text-aged-gold-500 mt-5 text-xs tracking-[.22em] uppercase">
+                Em desenvolvimento
+              </p>
+            ) : null}
           </div>
         </section>
         <section className="mx-auto max-w-[90rem] px-5 py-20 sm:px-8">
           <div>
             <h2 className="font-display text-4xl uppercase">Identidade</h2>
-            <p className="text-parchment-200/65 mt-6 text-lg leading-relaxed">
-              {miniature.description}
-            </p>
+            {miniature.description ? (
+              <p className="text-parchment-200/65 mt-6 text-lg leading-relaxed">
+                {miniature.description}
+              </p>
+            ) : null}
             {specifications.length ? (
               <dl className="mt-10 grid gap-px bg-stone-600/25 sm:grid-cols-2">
                 {specifications.map((specification) => (
@@ -190,6 +192,35 @@ export default async function LocalizedMiniaturePage({ params }: Props) {
             >
               <source src={miniature.video.src} />
             </video>
+          </section>
+        ) : null}
+        {related.length ? (
+          <section className="mx-auto max-w-[90rem] px-5 pb-24 sm:px-8">
+            <h2 className="font-display text-4xl uppercase">
+              Da mesma coleção
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {related.map((item) => (
+                <Link
+                  className="codex-card group overflow-hidden"
+                  href={`/${locale}/miniaturas/${item.slug}`}
+                  key={item.id}
+                >
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      alt={item.cover?.alt ?? item.title}
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      src={item.cover?.src ?? miniatureCover.src}
+                    />
+                  </div>
+                  <h3 className="font-display p-5 text-2xl uppercase">
+                    {item.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
           </section>
         ) : null}
       </main>

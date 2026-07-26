@@ -58,13 +58,13 @@ test('keeps demo creatures and atlas kingdoms unpublished', async ({
   expect(atlas?.status()).toBe(404);
 });
 
-test('renders canonical collections with editorial status', async ({
+test('renders real collections with imagery and catalog counts', async ({
   page,
 }) => {
   await page.goto('/colecoes');
   await expect(page.getByText('Vanguard Studies')).toHaveCount(0);
-  await expect(page.getByText(/Nenhuma coleção publicada/i)).toBeVisible();
-  await expect(page.getByText(/Treze coleções reais/i)).toBeVisible();
+  await expect(page.locator('main a[href*="/colecoes/"]')).toHaveCount(13);
+  await expect(page.getByText('The Black Banner Company')).toBeVisible();
 });
 
 test('server-renders localized miniature content without suspense placeholder', async ({
@@ -77,11 +77,11 @@ test('server-renders localized miniature content without suspense placeholder', 
   ).toBeVisible();
   await expect(page.getByText('Organizando miniaturas…')).toHaveCount(0);
   await expect(page.getByRole('status')).toContainText(
-    '14 miniaturas encontradas',
+    '187 miniaturas encontradas',
   );
   expect(html).toContain('Black Fang Mercenary');
   expect(html).toContain('Obsidian Colossus');
-  await expect(page.locator('main a[href*="/miniaturas/"]')).toHaveCount(14);
+  await expect(page.locator('main a[href*="/miniaturas/"]')).toHaveCount(187);
   await expect(page.getByText('Demon Fire')).toHaveCount(0);
   await expect(page.getByText('The Kraken Caller')).toHaveCount(0);
   await expect(page.getByText('The Last Dragon Slayer')).toHaveCount(0);

@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
-import { getPublishedCollections } from '@/features/collections/data/miniature-repository';
+import {
+  getMiniatures,
+  getPublishedCollections,
+} from '@/features/collections/data/miniature-repository';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -18,7 +22,10 @@ export default async function CollectionsPage({ params }: Props) {
   const { locale } = await params;
   if (!['pt-br', 'en', 'es'].includes(locale)) notFound();
   if (locale !== 'pt-br') return <Unavailable locale={locale} />;
-  const collections = await getPublishedCollections(locale);
+  const [collections, miniatures] = await Promise.all([
+    getPublishedCollections(locale),
+    getMiniatures(locale),
+  ]);
   return (
     <>
       <SiteHeader position="sticky" />
@@ -34,31 +41,53 @@ export default async function CollectionsPage({ params }: Props) {
             Coleções de Asterheim
           </h1>
           <p className="text-parchment-200/60 mt-8 max-w-2xl text-lg">
-            O acervo real foi inventariado. Coleções incompletas permanecem em
-            revisão e não são promovidas automaticamente.
+            Companhias, tavernas, lendas e criaturas reunidas em arquivos
+            visuais conectados ao universo de Asterheim.
           </p>
         </header>
         {collections.length ? (
           <div className="grid gap-6 lg:grid-cols-2">
             {collections.map((collection) => (
               <Link
-                className="codex-card min-h-72 p-8 sm:p-10"
+                className="codex-card group relative min-h-[30rem] overflow-hidden"
                 href={`/${locale}/colecoes/${collection.slug}`}
                 key={collection.id}
               >
-                <h2 className="font-display text-4xl uppercase">
-                  {collection.title}
-                </h2>
-                <p className="text-parchment-200/60 mt-4">
-                  {collection.description}
-                </p>
+                {collection.cover ? (
+                  <Image
+                    alt={collection.cover.alt}
+                    className="object-cover opacity-60 transition duration-700 group-hover:scale-[1.02] group-hover:opacity-75"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    src={collection.cover.src}
+                  />
+                ) : null}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/20" />
+                <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10">
+                  <p className="text-aged-gold-500 text-xs tracking-[.2em] uppercase">
+                    {
+                      miniatures.filter(
+                        (item) => item.collectionSlug === collection.slug,
+                      ).length
+                    }{' '}
+                    miniaturas
+                  </p>
+                  <h2 className="font-display mt-3 text-4xl uppercase">
+                    {collection.title}
+                  </h2>
+                  {collection.description ? (
+                    <p className="text-parchment-200/70 mt-4 line-clamp-3">
+                      {collection.description}
+                    </p>
+                  ) : null}
+                </div>
               </Link>
             ))}
           </div>
         ) : (
           <section
             aria-live="polite"
-            className="border-stone-700 border-y py-12"
+            className="border-y border-stone-700 py-12"
           >
             <h2 className="font-display text-3xl uppercase">
               Nenhuma coleção publicada

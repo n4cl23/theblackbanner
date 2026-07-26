@@ -60,9 +60,11 @@ describe('Sprint 22.1 media publication gate', () => {
 
   it('publishes exactly the explicitly approved batch', async () => {
     const records = await getMiniatures();
-    expect(records).toHaveLength(14);
+    const approved = records.filter((record) => record.status === 'published');
+    expect(records).toHaveLength(187);
+    expect(approved).toHaveLength(14);
     expect(
-      records.every(
+      approved.every(
         (record) =>
           record.publicationBatch === 'sprint-22-1-batch-01' &&
           record.approvedAt === '2026-07-24T00:00:00.000-03:00' &&

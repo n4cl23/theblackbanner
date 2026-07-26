@@ -24,7 +24,7 @@ export default async function WorldPage() {
           </h1>
           <p className="text-parchment-200/70 mx-auto mt-7 max-w-2xl text-lg">
             Três territórios emergem da cinza. Este arquivo visual utiliza
-            conteúdo mockado e não estabelece cânone oficial.
+            registros editoriais em revisão e não estabelece cânone oficial.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link

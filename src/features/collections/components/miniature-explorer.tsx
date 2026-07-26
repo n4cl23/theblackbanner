@@ -141,16 +141,25 @@ export function MiniatureExplorer({
                   {item.difficulty ? `${item.difficulty} · ` : ''}
                   {item.collectionTitle}
                 </p>
+                {item.description ? (
+                  <p className="text-parchment-200/55 mt-3 line-clamp-2 text-sm">
+                    {item.description}
+                  </p>
+                ) : null}
+                {item.status === 'catalogued' ? (
+                  <p className="text-aged-gold-500 mt-4 text-[.65rem] tracking-[.18em] uppercase">
+                    Em desenvolvimento
+                  </p>
+                ) : null}
               </div>
             </Link>
           ))}
         </div>
       ) : (
         <div className="border border-dashed border-stone-600/40 py-20 text-center">
-          <h3 className="font-display text-3xl">Nenhum registro publicado</h3>
+          <h3 className="font-display text-3xl">Nenhum registro encontrado</h3>
           <p className="text-parchment-200/50 mt-3">
-            O acervo real permanece em revisão editorial e não foi promovido
-            automaticamente.
+            Ajuste os filtros para explorar outra parte do acervo.
           </p>
         </div>
       )}

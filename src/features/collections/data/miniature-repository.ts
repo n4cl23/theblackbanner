@@ -11,6 +11,10 @@ const allMiniatures = miniatureCollectionSchema.parse(catalogSource.miniatures);
 const allCollections = realCollectionSchema
   .array()
   .parse(catalogSource.collections);
+const publicStatuses: readonly Miniature['status'][] = [
+  'published',
+  'catalogued',
+];
 
 export interface MiniatureFilters {
   collections: readonly string[];
@@ -26,7 +30,9 @@ export const getAllMiniatures = cache(async (locale = 'pt-br') =>
 
 export const getMiniatures = cache(async (locale = 'pt-br') =>
   (await getAllMiniatures(locale)).filter(
-    (item) => item.status === 'published' && item.cover && item.description,
+    (item) =>
+      publicStatuses.includes(item.status) &&
+      Boolean(item.title && item.slug && item.cover && item.collectionSlug),
   ),
 );
 
@@ -36,7 +42,9 @@ export const getAllRealCollections = cache(async (locale = 'pt-br') =>
 
 export const getPublishedCollections = cache(async (locale = 'pt-br') =>
   (await getAllRealCollections(locale)).filter(
-    (item) => item.status === 'published' && item.cover && item.description,
+    (item) =>
+      (item.status === 'published' || item.status === 'catalogued') &&
+      Boolean(item.title && item.slug && item.cover),
   ),
 );
 

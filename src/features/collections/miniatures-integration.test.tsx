@@ -23,7 +23,7 @@ vi.mock('next/navigation', () => ({
 describe('Sprint 22 real miniature catalog', () => {
   beforeEach(() => replace.mockClear());
 
-  it('loads 192 real records and publishes only the approved batch', async () => {
+  it('loads 192 real records and separates approved, catalogued and review states', async () => {
     const records = await getAllMiniatures();
     expect(records).toHaveLength(192);
     expect(
@@ -33,7 +33,10 @@ describe('Sprint 22 real miniature catalog', () => {
       14,
     );
     expect(records.filter((item) => item.status === 'review')).toHaveLength(4);
-    expect(records.filter((item) => item.status === 'draft')).toHaveLength(174);
+    expect(records.filter((item) => item.status === 'catalogued')).toHaveLength(
+      173,
+    );
+    expect(records.filter((item) => item.status === 'draft')).toHaveLength(1);
     expect(records.map((item) => item.slug)).not.toEqual(
       expect.arrayContaining([
         'far-watcher-32mm',
@@ -44,15 +47,18 @@ describe('Sprint 22 real miniature catalog', () => {
     );
   });
 
-  it('exposes exactly the approved Portuguese batch', async () => {
-    await expect(getMiniatures()).resolves.toHaveLength(14);
+  it('exposes the approved and technically valid Portuguese catalog', async () => {
+    await expect(getMiniatures()).resolves.toHaveLength(187);
     await expect(getMiniatures('en')).resolves.toHaveLength(0);
     await expect(getMiniatureFilters()).resolves.toEqual({
-      collections: ['beasts-of-asterheim', 'the-black-banner-company'],
+      collections: expect.arrayContaining([
+        'beasts-of-asterheim',
+        'the-black-banner-company',
+      ]),
       entityTypes: ['character', 'creature'],
       scales: [],
       difficulties: [],
-      statuses: ['published'],
+      statuses: ['catalogued', 'published'],
     });
   });
 
@@ -70,10 +76,12 @@ describe('Sprint 22 real miniature catalog', () => {
     );
   });
 
-  it('maps thirteen real collections without promoting them', async () => {
+  it('catalogues thirteen real collections for the public archive', async () => {
     const collections = await getAllRealCollections();
     expect(collections).toHaveLength(13);
-    expect(collections.every((item) => item.status === 'draft')).toBe(true);
+    expect(collections.every((item) => item.status === 'catalogued')).toBe(
+      true,
+    );
     expect(collections.map((item) => item.title)).toEqual(
       expect.arrayContaining([
         'The Black Banner Company',
@@ -115,7 +123,7 @@ describe('Sprint 22 real miniature catalog', () => {
       entityTypes: [...new Set(records.map((item) => item.entityType))],
       scales: [],
       difficulties: [],
-      statuses: ['published'] as const,
+      statuses: ['catalogued', 'published'] as const,
     };
     render(
       <MiniatureExplorer filters={filters} locale="pt-br" records={records} />,

@@ -17,7 +17,7 @@ type Props = { params: Promise<{ locale: string }> };
 export const metadata: Metadata = {
   title: 'Miniaturas de Asterheim',
   description:
-    'Arquivo público de estudos técnicos de miniaturas de Asterheim.',
+    'Catálogo público de miniaturas e coleções do universo de Asterheim.',
   alternates: { canonical: '/pt-br/miniaturas' },
 };
 
@@ -56,14 +56,14 @@ export default async function LocalizedMiniaturesPage({ params }: Props) {
               <Link href={`/${locale}`}>Início</Link> / Miniaturas
             </nav>
             <p className="text-aged-gold-500 mt-16 text-xs tracking-[.3em] uppercase">
-              Arquivo de formas · catálogo real auditado
+              Arquivo de formas · catálogo de Asterheim
             </p>
             <h1 className="font-display mt-5 max-w-5xl text-[clamp(4rem,10vw,8rem)] leading-[.84] uppercase">
               Miniaturas de Asterheim
             </h1>
             <p className="text-parchment-200/65 mt-7 max-w-2xl text-lg">
-              Primeiro lote editorial aprovado do acervo real de Asterheim.
-              Modelos privados permanecem protegidos fora desta superfície.
+              Personagens, criaturas e figuras lendárias reunidos por coleção.
+              Arquivos privados permanecem protegidos fora desta superfície.
             </p>
           </div>
         </section>
