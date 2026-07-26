@@ -583,208 +583,194 @@ svg {
   }
 }
 
-.home-chapter-progress {
-  position: fixed;
-  top: 50%;
-  right: clamp(1rem, 2.2vw, 2.75rem);
-  z-index: 40;
-  display: none;
-  width: 1.5rem;
-  transform: translateY(-50%);
-  color: rgb(235 227 208 / 62%);
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-align: center;
+.kingdom-chapters {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #020202;
+  scroll-snap-type: y proximity;
 }
 
-.home-chapter-progress__number {
-  color: rgb(189 152 82 / 92%);
-}
-
-.home-chapter-progress__rule {
-  display: block;
-  width: 1px;
-  height: 3.5rem;
-  margin: 0.75rem auto;
-  background: linear-gradient(
-    to bottom,
-    rgb(189 152 82 / 75%),
-    rgb(189 152 82 / 12%)
-  );
-}
-
-.kingdom-journey-mobile {
-  display: grid;
-  gap: 5rem;
-}
-
-.kingdom-journey-mobile__item {
-  min-width: 0;
-}
-
-.kingdom-journey-mobile__art {
+.kingdom-chapter {
   position: relative;
-  aspect-ratio: 4 / 3;
-  margin-top: 1rem;
+  isolation: isolate;
+  min-height: clamp(42rem, 100svh, 72rem);
   overflow: hidden;
-  border: 1px solid rgb(189 152 82 / 25%);
-  border-radius: 2px;
+  scroll-snap-align: start;
   background: #020202;
 }
 
-.kingdom-journey-mobile__art img,
-.kingdom-journey__art img {
-  object-fit: contain;
+.kingdom-chapter__image {
+  z-index: -30;
+  object-fit: cover;
+  transform: scale(1.002);
 }
 
-.kingdom-journey__count {
-  color: rgb(189 152 82 / 88%);
+.kingdom-chapter__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(0 0 0 / 84%) 0%,
+      rgb(0 0 0 / 58%) 24%,
+      rgb(0 0 0 / 12%) 52%,
+      transparent 72%
+    ),
+    linear-gradient(
+      0deg,
+      rgb(0 0 0 / 78%) 0%,
+      transparent 34%,
+      rgb(0 0 0 / 12%) 100%
+    );
+}
+
+.kingdom-chapter__atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -20;
+  opacity: 0.22;
+  mix-blend-mode: color;
+}
+
+.kingdom-chapter--frost .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #163854, transparent 58%);
+}
+
+.kingdom-chapter--storm .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #182c4a, transparent 64%);
+}
+
+.kingdom-chapter--iron .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #522719, transparent 58%);
+}
+
+.kingdom-chapter--forest .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #173a26, transparent 62%);
+}
+
+.kingdom-chapter--abyss .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #061d3d, transparent 64%);
+}
+
+.kingdom-chapter--scorched .kingdom-chapter__atmosphere {
+  background: linear-gradient(120deg, #673019, transparent 60%);
+}
+
+.kingdom-chapter__content {
+  position: absolute;
+  left: max(1.25rem, calc((100vw - 80rem) / 2));
+  bottom: clamp(4.5rem, 10vh, 8rem);
+  z-index: 10;
+  width: min(30rem, calc(100% - 2.5rem));
+  animation: kingdom-chapter-enter linear both;
+  animation-range: entry 12% cover 38%;
+  animation-timeline: view();
+}
+
+.kingdom-chapter__count {
+  color: rgb(205 169 101 / 88%);
   font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.24em;
 }
 
-.kingdom-journey-mobile__description {
-  max-width: 34rem;
-  margin-top: 1.5rem;
-  color: rgb(221 211 189 / 68%);
-  font-size: 0.875rem;
-  line-height: 1.75;
+.kingdom-chapter__description {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 29rem;
+  margin-top: 1.4rem;
+  color: rgb(244 237 220 / 86%);
+  font-family: var(--font-body), serif;
+  font-size: clamp(0.95rem, 1.25vw, 1.125rem);
+  line-height: 1.72;
+  text-wrap: balance;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 70%);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
-.kingdom-journey__cta {
+.kingdom-chapter__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  margin-top: 1.5rem;
-  color: rgb(221 211 189 / 72%);
+  margin-top: 1.75rem;
+  color: rgb(229 218 195 / 78%);
   font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition:
-    color 500ms ease,
-    transform 500ms ease;
+    color 450ms ease,
+    transform 450ms ease;
 }
 
-.kingdom-journey__cta:hover,
-.kingdom-journey__cta:focus-visible {
+.kingdom-chapter__cta:hover,
+.kingdom-chapter__cta:focus-visible {
   color: rgb(205 169 101);
   transform: translateX(0.2rem);
 }
 
-.kingdom-journey {
-  display: none;
+.kingdom-chapter__progress {
+  position: absolute;
+  right: max(1.25rem, calc((100vw - 80rem) / 2));
+  bottom: clamp(2.5rem, 5vh, 4rem);
+  z-index: 10;
+  display: flex;
+  gap: 0.45rem;
 }
 
-@media (min-width: 64rem) {
-  .kingdom-journey-mobile {
+.kingdom-chapter__progress-mark {
+  display: block;
+  width: 1.2rem;
+  height: 1px;
+  background: rgb(229 218 195 / 25%);
+}
+
+.kingdom-chapter__progress-mark--active {
+  width: 2.25rem;
+  background: rgb(205 169 101 / 88%);
+}
+
+@keyframes kingdom-chapter-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .kingdom-chapter {
+    min-height: 88svh;
+  }
+
+  .kingdom-chapter__shade {
+    background: linear-gradient(
+      0deg,
+      rgb(0 0 0 / 90%) 0%,
+      rgb(0 0 0 / 46%) 30%,
+      transparent 62%
+    );
+  }
+
+  .kingdom-chapter__content {
+    right: 1.25rem;
+    bottom: 3.5rem;
+    left: 1.25rem;
+    width: auto;
+  }
+
+  .kingdom-chapter__description {
+    max-width: 31rem;
+    font-size: 0.9rem;
+  }
+
+  .kingdom-chapter__progress {
     display: none;
-  }
-
-  .kingdom-journey {
-    position: relative;
-    display: block;
-    min-height: 510vh;
-  }
-
-  .kingdom-journey__sticky {
-    position: sticky;
-    top: 0;
-    display: grid;
-    grid-template-columns: minmax(16rem, 2fr) minmax(0, 3fr);
-    gap: clamp(2.5rem, 5vw, 6rem);
-    align-items: center;
-    min-height: 100svh;
-    padding-block: 6rem;
-  }
-
-  .kingdom-journey__copy {
-    animation: kingdom-copy-enter 900ms cubic-bezier(0.22, 1, 0.36, 1)
-      both;
-  }
-
-  .kingdom-journey__description {
-    max-width: 26rem;
-    margin-top: 2rem;
-    color: rgb(221 211 189 / 68%);
-    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
-    line-height: 1.8;
-  }
-
-  .kingdom-journey__art {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border: 1px solid rgb(189 152 82 / 26%);
-    border-radius: 2px;
-    background: #020202;
-    box-shadow: 0 2rem 7rem rgb(0 0 0 / 24%);
-    animation: kingdom-art-enter 1100ms cubic-bezier(0.22, 1, 0.36, 1)
-      both;
-  }
-
-  .kingdom-journey__index {
-    position: absolute;
-    right: -2.5rem;
-    bottom: 4.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-  }
-
-  .kingdom-journey__index-button {
-    width: 2rem;
-    min-height: 2rem;
-    color: rgb(221 211 189 / 34%);
-    font-size: 0.55rem;
-    letter-spacing: 0.12em;
-    transition: color 450ms ease;
-  }
-
-  .kingdom-journey__index-button:hover,
-  .kingdom-journey__index-button:focus-visible,
-  .kingdom-journey__index-button[aria-pressed='true'] {
-    color: rgb(205 169 101);
-  }
-
-  .kingdom-journey__checkpoints {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .kingdom-journey__checkpoint {
-    height: 85vh;
-  }
-}
-
-@media (min-width: 80rem) {
-  .home-chapter-progress {
-    display: block;
-  }
-}
-
-@keyframes kingdom-art-enter {
-  from {
-    opacity: 0;
-    transform: translateY(0.6rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes kingdom-copy-enter {
-  from {
-    opacity: 0;
-    transform: translateY(0.4rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -810,12 +796,8 @@ svg {
     transform: none;
   }
 
-  .kingdom-journey {
-    display: none;
-  }
-
-  .kingdom-journey-mobile {
-    display: grid;
+  .kingdom-chapter__content {
+    animation: none;
   }
 }
 

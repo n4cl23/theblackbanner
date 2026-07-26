@@ -5,10 +5,7 @@ import Link from 'next/link';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 import { CinematicHeroMedia } from '@/components/shared/cinematic-hero-media';
-import {
-  HomeChapterProgress,
-  KingdomEditorialJourney,
-} from '@/components/shared/home-editorial-journey';
+import { KingdomEditorialJourney } from '@/components/shared/home-editorial-journey';
 import { JsonLd } from '@/components/shared/json-ld';
 import {
   Container,
@@ -212,7 +209,7 @@ function AsterheimSection() {
 
   return (
     <section
-      className="border-y border-aged-gold-500/10 bg-black py-32 sm:py-44 lg:py-56"
+      className="border-t border-aged-gold-500/10 bg-black pt-32 sm:pt-44 lg:pt-56"
       id="asterheim"
     >
       <Container>
@@ -230,7 +227,9 @@ function AsterheimSection() {
         <KingdomEditorialJourney
           kingdoms={kingdoms.map((kingdom) => ({
             artwork: kingdom.artwork.image,
+            atmosphere: kingdom.artwork.atmosphere,
             description: kingdom.description,
+            mobilePosition: kingdom.artwork.mobilePosition,
             position: kingdom.artwork.position,
             signature: kingdom.signature,
             slug: kingdom.slug,
@@ -559,7 +558,6 @@ export default async function HomePage() {
     <>
       <SkipLink />
       <SiteHeader />
-      <HomeChapterProgress />
       <main id="main-content">
         <Hero />
         <AsterheimSection />
