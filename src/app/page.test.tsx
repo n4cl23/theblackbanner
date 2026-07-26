@@ -27,14 +27,18 @@ describe('cinematic Home', () => {
     expect(container.querySelector('footer')).toBeInTheDocument();
   });
 
-  it('provides functional primary and secondary calls to action', async () => {
+  it('provides one focused primary call to action', async () => {
     const { container } = render(await HomePage());
     expect(
-      container.querySelector('a[href="#asterheim"]'),
+      container.querySelector(
+        'section[aria-labelledby="home-hero-title"] a[href="#asterheim"]',
+      ),
     ).toHaveTextContent('Explore Asterheim');
     expect(
-      container.querySelector('main a[href="/pt-br/miniaturas"]'),
-    ).toHaveTextContent('Ver miniaturas');
+      container.querySelector(
+        'section[aria-labelledby="home-hero-title"] a[href="/pt-br/miniaturas"]',
+      ),
+    ).not.toBeInTheDocument();
   });
 
   it('shows an accessible fallback when critical media fails', async () => {

@@ -118,56 +118,91 @@ function Hero() {
   return (
     <section
       aria-labelledby="home-hero-title"
-      className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pb-16 sm:items-center sm:pb-0"
+      className="home-cinematic-hero relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pb-24 sm:items-center sm:pb-0"
     >
-      <ImageWithFallback
-        alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"
-        className="-z-30 object-cover object-[64%_center]"
-        fallback="A paisagem de Asterheim não pôde ser carregada"
-        fill
-        priority
-        sizes="100vw"
-        src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
-      />
-      <video
-        aria-hidden="true"
-        autoPlay
-        className="absolute inset-0 -z-20 hidden size-full object-cover opacity-60 motion-safe:lg:block"
-        loop
-        muted
-        playsInline
-        poster="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
-        preload="metadata"
-      >
-        <source
-          src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-35aad744.mp4"
-          type="video/mp4"
+      <div className="hero-parallax-back absolute inset-[-3%] -z-30">
+        <ImageWithFallback
+          alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"
+          className="object-cover object-[68%_center]"
+          fallback="A paisagem de Asterheim não pôde ser carregada"
+          fill
+          priority
+          sizes="100vw"
+          src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
         />
-      </video>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,3,3,.98)_0%,rgba(3,3,3,.72)_38%,rgba(3,3,3,.08)_75%),linear-gradient(0deg,#050505_0%,transparent_48%),linear-gradient(180deg,rgba(0,0,0,.6),transparent_30%)]" />
-      <Container className="relative">
-        <div className="max-w-4xl">
-          <Eyebrow>Chronicles of Asterheim</Eyebrow>
+        <video
+          aria-hidden="true"
+          autoPlay
+          className="absolute inset-0 hidden size-full object-cover object-[68%_center] opacity-50 motion-safe:lg:block"
+          loop
+          muted
+          playsInline
+          poster="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
+          preload="metadata"
+        >
+          <source
+            src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-35aad744.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_72%_18%,rgba(223,190,115,.18)_0%,rgba(124,74,35,.06)_22%,transparent_48%),linear-gradient(105deg,rgba(2,2,2,.98)_0%,rgba(2,2,2,.84)_28%,rgba(2,2,2,.28)_58%,rgba(2,2,2,.08)_76%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="hero-light-shaft absolute -top-[18%] right-[10%] -z-10 h-[95%] w-[18%] rotate-[13deg] bg-gradient-to-b from-amber-100/15 via-amber-200/5 to-transparent blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="hero-fog hero-fog-back absolute inset-x-[-15%] bottom-[7%] -z-10 h-[28%] bg-[radial-gradient(ellipse_at_center,rgba(202,199,187,.14),transparent_66%)] blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="hero-fog hero-fog-front absolute inset-x-[-10%] bottom-[-12%] z-10 h-[38%] bg-[radial-gradient(ellipse_at_center,rgba(132,130,122,.18),transparent_64%)] blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,.28)_70%,rgba(0,0,0,.82)_100%),linear-gradient(0deg,#030303_0%,transparent_38%),linear-gradient(180deg,rgba(0,0,0,.72)_0%,transparent_24%)]"
+      />
+
+      <Container className="relative z-20">
+        <div className="max-w-[62rem]">
+          <p className="text-aged-gold-500 mb-5 text-[.66rem] font-semibold tracking-[.38em] uppercase sm:mb-7 sm:text-xs">
+            Chronicles of Asterheim
+          </p>
           <h1
-            className="font-display mt-5 text-[clamp(4rem,11vw,10rem)] leading-[.75] tracking-[.025em] uppercase [text-shadow:0_4px_40px_#000]"
+            className="font-display text-[clamp(4.4rem,12.5vw,12rem)] leading-[.69] tracking-[-.015em] uppercase [text-shadow:0_6px_46px_rgba(0,0,0,.9)]"
             id="home-hero-title"
           >
-            The Black
-            <span className="text-parchment-200 block">Banner</span>
+            <span className="block">The Black</span>
+            <span className="text-parchment-200 block tracking-[.015em]">
+              Banner
+            </span>
           </h1>
-          <p className="text-parchment-200/75 mt-8 max-w-lg text-base leading-relaxed sm:text-xl">
-            Seis Coroas. Antigos juramentos. Um mundo à beira da ruína.
+          <p className="text-parchment-200/75 mt-8 max-w-md border-l border-aged-gold-500/60 pl-5 text-sm leading-relaxed tracking-[.08em] uppercase sm:mt-10 sm:text-base">
+            Seis Coroas. Um mundo à beira da ruína.
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="mt-9 sm:mt-11">
             <LinkButton href="#asterheim" size="lg" tone="gold">
               Explore Asterheim
-            </LinkButton>
-            <LinkButton href="/pt-br/miniaturas" size="lg">
-              Ver miniaturas
             </LinkButton>
           </div>
         </div>
       </Container>
+
+      <a
+        aria-label="Rolar para explorar Asterheim"
+        className="group absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[.58rem] tracking-[.3em] text-parchment-200/70 uppercase sm:bottom-7"
+        href="#asterheim"
+      >
+        <span>Explore</span>
+        <span className="relative h-10 w-px overflow-hidden bg-white/20">
+          <span className="hero-scroll-line absolute inset-x-0 top-0 h-1/2 bg-aged-gold-500" />
+        </span>
+      </a>
     </section>
   );
 }

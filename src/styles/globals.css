@@ -445,6 +445,23 @@ svg {
   transition: transform var(--duration-slow) var(--ease-standard);
 }
 
+.hero-fog-back {
+  animation: hero-fog-drift 18s ease-in-out infinite alternate;
+}
+
+.hero-fog-front {
+  animation: hero-fog-drift 24s ease-in-out infinite alternate-reverse;
+}
+
+.hero-light-shaft {
+  animation: hero-light-breathe 9s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.hero-scroll-line {
+  animation: hero-scroll-pulse 2.2s ease-in-out infinite;
+}
+
 @keyframes section-reveal {
   from {
     opacity: 0;
@@ -478,6 +495,59 @@ svg {
   }
 }
 
+@keyframes hero-fog-drift {
+  from {
+    opacity: 0.45;
+    transform: translate3d(-2.5%, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0.75;
+    transform: translate3d(2.5%, -4%, 0) scale(1.08);
+  }
+}
+
+@keyframes hero-light-breathe {
+  from {
+    opacity: 0.45;
+    transform: rotate(13deg) scaleX(0.82);
+  }
+  to {
+    opacity: 0.8;
+    transform: rotate(13deg) scaleX(1.08);
+  }
+}
+
+@keyframes hero-scroll-pulse {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .hero-parallax-back {
+    animation: hero-parallax linear both;
+    animation-range: 0 100svh;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes hero-parallax {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(7svh) scale(1.035);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -489,6 +559,14 @@ svg {
   }
 
   .light-parallax {
+    transform: none;
+  }
+
+  .hero-parallax-back,
+  .hero-fog,
+  .hero-light-shaft,
+  .hero-scroll-line {
+    animation: none !important;
     transform: none;
   }
 }
