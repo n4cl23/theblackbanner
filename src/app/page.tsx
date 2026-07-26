@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
+import { CinematicHeroMedia } from '@/components/shared/cinematic-hero-media';
 import { JsonLd } from '@/components/shared/json-ld';
-import { ImageWithFallback } from '@/components/ui/interactive';
 import {
   Container,
   Eyebrow,
@@ -120,32 +120,7 @@ function Hero() {
       aria-labelledby="home-hero-title"
       className="home-cinematic-hero relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pb-24 sm:items-center sm:pb-0"
     >
-      <div className="hero-parallax-back absolute inset-[-3%] -z-30">
-        <ImageWithFallback
-          alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"
-          className="object-cover object-[68%_center]"
-          fallback="A paisagem de Asterheim não pôde ser carregada"
-          fill
-          priority
-          sizes="100vw"
-          src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
-        />
-        <video
-          aria-hidden="true"
-          autoPlay
-          className="absolute inset-0 hidden size-full object-cover object-[68%_center] opacity-50 motion-safe:lg:block"
-          loop
-          muted
-          playsInline
-          poster="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
-          preload="metadata"
-        >
-          <source
-            src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-35aad744.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <CinematicHeroMedia />
 
       <div
         aria-hidden="true"
