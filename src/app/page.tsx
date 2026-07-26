@@ -284,8 +284,9 @@ function CollectionsSection({
         <header className="featured-collections-domain__header">
           <div>
             <Eyebrow>Featured Collections</Eyebrow>
-            <h2 className="hero-title text-ivory-100 mt-5 max-w-[58rem] text-[clamp(3rem,5.5vw,6.5rem)] leading-[.88] tracking-[-.025em] uppercase sm:mt-6">
-              Exércitos, tavernas e lendas
+            <h2 className="hero-title text-ivory-100 mt-5 max-w-[59.375rem] text-[clamp(3.25rem,6vw,7.5rem)] leading-[.92] tracking-[-.025em] uppercase sm:mt-6">
+              <span className="block">Exércitos, tavernas</span>
+              <span className="block">e lendas</span>
             </h2>
           </div>
         </header>
@@ -295,19 +296,21 @@ function CollectionsSection({
             className="featured-collection featured-collection--primary"
             href={`/pt-br/colecoes/${primary.collection.slug}`}
           >
-            <Image
-              alt={
-                primary.collection.cover?.alt ?? primary.collection.title
-              }
-              className="featured-collection__image"
-              fill
-              sizes="(max-width: 1023px) 100vw, 66vw"
-              src={
-                primary.collection.cover?.src ??
-                '/images/home/asterheim-hero.webp'
-              }
-            />
-            <div className="featured-collection__shade" />
+            <div className="featured-collection__media">
+              <Image
+                alt={
+                  primary.collection.cover?.alt ?? primary.collection.title
+                }
+                className="featured-collection__image"
+                fill
+                sizes="(max-width: 1023px) 100vw, 66vw"
+                src={
+                  primary.collection.cover?.src ??
+                  '/images/home/asterheim-hero.webp'
+                }
+              />
+              <div className="featured-collection__shade" />
+            </div>
             <div className="featured-collection__content">
               <p className="featured-collection__count">
                 {primary.count} miniaturas
@@ -327,18 +330,20 @@ function CollectionsSection({
               className="featured-collection featured-collection--boss"
               href={`/pt-br/colecoes/${boss.collection.slug}`}
             >
-              <Image
-                alt={boss.collection.cover?.alt ?? boss.collection.title}
-                className="featured-collection__image"
-                fill
-                sizes="(max-width: 1023px) 100vw, 35vw"
-                src={
-                  boss.collection.cover?.src ??
-                  '/images/home/asterheim-hero.webp'
-                }
-              />
-              <div className="featured-collection__ambient featured-collection__ambient--boss" />
-              <div className="featured-collection__shade" />
+              <div className="featured-collection__media">
+                <Image
+                  alt={boss.collection.cover?.alt ?? boss.collection.title}
+                  className="featured-collection__image"
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 35vw"
+                  src={
+                    boss.collection.cover?.src ??
+                    '/images/home/asterheim-hero.webp'
+                  }
+                />
+                <div className="featured-collection__ambient featured-collection__ambient--boss" />
+                <div className="featured-collection__shade" />
+              </div>
               <div className="featured-collection__content">
                 <p className="featured-collection__count">
                   {boss.count} miniaturas
@@ -357,28 +362,32 @@ function CollectionsSection({
               {[tavern, mercenaries].map(
                 ({ collection, count, description }, index) => (
                   <Link
-                    className="featured-collection featured-collection--minor"
+                    className={`featured-collection featured-collection--minor ${
+                      index === 1 ? 'featured-collection--compact' : ''
+                    }`}
                     href={`/pt-br/colecoes/${collection.slug}`}
                     key={collection.id}
                   >
-                    <Image
-                      alt={collection.cover?.alt ?? collection.title}
-                      className="featured-collection__image"
-                      fill
-                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 18vw"
-                      src={
-                        collection.cover?.src ??
-                        '/images/home/asterheim-hero.webp'
-                      }
-                    />
-                    <div
-                      className={`featured-collection__ambient ${
-                        index === 0
-                          ? 'featured-collection__ambient--tavern'
-                          : 'featured-collection__ambient--mercenaries'
-                      }`}
-                    />
-                    <div className="featured-collection__shade" />
+                    <div className="featured-collection__media">
+                      <Image
+                        alt={collection.cover?.alt ?? collection.title}
+                        className="featured-collection__image"
+                        fill
+                        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 18vw"
+                        src={
+                          collection.cover?.src ??
+                          '/images/home/asterheim-hero.webp'
+                        }
+                      />
+                      <div
+                        className={`featured-collection__ambient ${
+                          index === 0
+                            ? 'featured-collection__ambient--tavern'
+                            : 'featured-collection__ambient--mercenaries'
+                        }`}
+                      />
+                      <div className="featured-collection__shade" />
+                    </div>
                     <div className="featured-collection__content">
                       <p className="featured-collection__count">
                         {count} miniaturas
