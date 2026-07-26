@@ -8,15 +8,14 @@ describe('cinematic Home', () => {
 
     const headings = [
       'The Black Banner',
-      'O ambiente guarda a primeira memória',
-      'Reinos separados pela mesma guerra',
-      'Personagens em destaque',
-      'Há coisas antigas sob as ruínas',
-      'Coleções moldadas pela narrativa',
+      'Seis domínios. Um destino.',
+      'Exércitos, tavernas e lendas',
+      'Latest Miniatures',
+      'Aqueles que carregam as Coroas',
+      'O que desperta sob a pedra',
+      'Atravesse Asterheim',
       'Ecos através das eras',
-      'Galeria de atmosferas',
-      'Toda guerra deixa um registro. Nem todo registro diz a verdade.',
-      'Receba sinais além da muralha',
+      'Do códice para a mesa',
     ];
 
     for (const heading of headings) {
@@ -30,22 +29,22 @@ describe('cinematic Home', () => {
   it('provides functional primary and secondary calls to action', async () => {
     render(await HomePage());
     expect(
-      screen.getByRole('link', { name: 'Entrar em Asterheim' }),
+      screen.getByRole('link', { name: 'Explore Asterheim' }),
     ).toHaveAttribute('href', '#asterheim');
     expect(
-      screen.getByRole('link', { name: 'Explorar coleções' }),
-    ).toHaveAttribute('href', '#collections');
+      screen.getByRole('link', { name: 'Ver miniaturas' }),
+    ).toHaveAttribute('href', '/pt-br/miniaturas');
   });
 
   it('shows an accessible fallback when critical media fails', async () => {
     render(await HomePage());
     const hero = screen.getByRole('img', {
-      name: 'Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas',
+      name: 'Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental',
     });
     fireEvent.error(hero);
     expect(
       screen.getByRole('img', {
-        name: 'Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas',
+        name: 'Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental',
       }),
     ).toHaveTextContent('A paisagem de Asterheim não pôde ser carregada');
   });

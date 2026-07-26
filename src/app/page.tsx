@@ -2,26 +2,18 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import {
-  featuredCharacters,
-  featuredCreatures,
-  featuredKingdoms,
-  featuredStories,
-} from '@/content/home.canonical';
+import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
-import { SiteFooter as UnifiedSiteFooter } from '@/components/layout/site-footer';
 import { JsonLd } from '@/components/shared/json-ld';
 import { ImageWithFallback } from '@/components/ui/interactive';
-import { siteConfig } from '@/config/site';
 import {
-  Badge,
   Container,
   Eyebrow,
   LinkButton,
-  OrnamentalDivider,
-  SectionHeading,
   SkipLink,
 } from '@/components/ui/primitives';
+import { siteConfig } from '@/config/site';
+import { crowns, guardians } from '@/content/heroic-entities';
 import {
   getMiniatures,
   getPublishedCollections,
@@ -31,172 +23,148 @@ import type {
   RealCollection,
 } from '@/features/collections/domain/miniature-schema';
 
-const provisionalBaseUrl = siteConfig.url;
-
 export const metadata: Metadata = {
-  metadataBase: new URL(provisionalBaseUrl),
-  title: 'The Black Banner V2 — Chronicles of Asterheim',
+  metadataBase: new URL(siteConfig.url),
+  title: 'The Black Banner — Chronicles of Asterheim',
   description:
-    'Entre em Asterheim: um universo de fantasia sombria moldado por reinos antigos, criaturas, guerra e exploração.',
-  alternates: { canonical: new URL('/', provisionalBaseUrl) },
+    'Explore os reinos, coleções, personagens e criaturas do universo dark fantasy de Asterheim.',
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    title: 'The Black Banner V2 — Chronicles of Asterheim',
-    description:
-      'Uma introdução cinematográfica ao universo sombrio de Asterheim.',
-    url: new URL('/', provisionalBaseUrl),
+    title: 'The Black Banner — Chronicles of Asterheim',
+    description: 'Entre em um mundo de Coroas, juramentos e criaturas antigas.',
+    url: '/',
     images: [
       {
-        url: new URL(
-          '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
-          provisionalBaseUrl,
-        ),
+        url: '/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp',
         width: 1920,
         height: 1080,
-        alt: 'Fortaleza monumental nas montanhas de Asterheim',
+        alt: 'Aster, o coração do mundo de Asterheim',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Black Banner V2 — Chronicles of Asterheim',
-    description: 'Mistério, guerra e descoberta em um mundo antigo.',
+    title: 'The Black Banner — Chronicles of Asterheim',
+    description: 'Entre em um mundo de Coroas, juramentos e criaturas antigas.',
     images: [
-      '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp',
+      '/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp',
     ],
   },
 };
 
-const websiteJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'The Black Banner V2',
-  alternateName: 'Chronicles of Asterheim',
-  url: provisionalBaseUrl,
-  inLanguage: ['pt-BR', 'en'],
-} as const;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The Black Banner',
+    alternateName: 'Chronicles of Asterheim',
+    url: siteConfig.url,
+    inLanguage: 'pt-BR',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: 'Chronicles of Asterheim',
+    description:
+      'Universo narrativo dark fantasy de The Black Banner.',
+    url: siteConfig.url,
+    isAccessibleForFree: true,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteConfig.creator,
+    url: siteConfig.url,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: `${siteConfig.url}/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp`,
+    caption: 'Aster, o coração do mundo de Asterheim',
+  },
+] as const;
 
-const creativeWorkJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'CreativeWork',
-  name: 'The Black Banner V2 — Chronicles of Asterheim',
-  description:
-    'Digital dark-fantasy universe and editorial experience in development.',
-  isAccessibleForFree: true,
-  url: provisionalBaseUrl,
-} as const;
-
-const organizationJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: siteConfig.creator,
-  url: siteConfig.url,
-} as const;
-
-const heroImageJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ImageObject',
-  contentUrl: `${siteConfig.url}${siteConfig.socialImage}`,
-  caption: 'Asterheim beyond a valley covered in ash',
-  width: 1920,
-  height: 818,
-} as const;
-
-function MockLabel() {
+function SectionIntro({
+  eyebrow,
+  title,
+  action,
+}: {
+  eyebrow: string;
+  title: string;
+  action?: { href: string; label: string };
+}) {
   return (
-    <span className="text-[0.62rem] font-bold tracking-[0.16em] text-stone-600 uppercase">
-      Registro editorial
-    </span>
+    <div className="mb-12 flex items-end justify-between gap-8 sm:mb-16">
+      <div>
+        <Eyebrow>{eyebrow}</Eyebrow>
+        <h2 className="font-display mt-4 max-w-5xl text-[clamp(2.8rem,7vw,6.5rem)] leading-[.86] uppercase">
+          {title}
+        </h2>
+      </div>
+      {action ? (
+        <Link
+          className="text-aged-gold-500 hidden shrink-0 border-b border-current pb-2 text-xs tracking-[.18em] uppercase transition hover:text-white sm:block"
+          href={action.href}
+        >
+          {action.label}
+        </Link>
+      ) : null}
+    </div>
   );
 }
 
-function HeroSection() {
+function Hero() {
   return (
     <section
-      aria-labelledby="hero-title"
-      className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pt-32 pb-20 sm:items-center sm:pb-0"
+      aria-labelledby="home-hero-title"
+      className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black pb-16 sm:items-center sm:pb-0"
     >
-      <div className="absolute inset-0 -z-30">
-        <ImageWithFallback
-          alt="Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas"
-          className="object-cover object-[62%_center] sm:object-center"
-          fallback="A paisagem de Asterheim não pôde ser carregada"
-          fill
-          priority
-          sizes="100vw"
-          src="/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(5,5,5,0.96)_0%,rgba(5,5,5,0.72)_35%,rgba(5,5,5,0.08)_70%),linear-gradient(0deg,rgba(5,5,5,0.95)_0%,transparent_45%),linear-gradient(180deg,rgba(5,5,5,0.5),transparent_30%)]"
+      <ImageWithFallback
+        alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"
+        className="-z-30 object-cover object-[64%_center]"
+        fallback="A paisagem de Asterheim não pôde ser carregada"
+        fill
+        priority
+        sizes="100vw"
+        src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
       />
-      <Container>
-        <div className="section-reveal max-w-3xl">
+      <video
+        aria-hidden="true"
+        autoPlay
+        className="absolute inset-0 -z-20 hidden size-full object-cover opacity-60 motion-safe:lg:block"
+        loop
+        muted
+        playsInline
+        poster="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-c4760bb6.webp"
+        preload="metadata"
+      >
+        <source
+          src="/media/asterheim/entities/aster-the-world-heart/aster-the-world-heart-35aad744.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,3,3,.98)_0%,rgba(3,3,3,.72)_38%,rgba(3,3,3,.08)_75%),linear-gradient(0deg,#050505_0%,transparent_48%),linear-gradient(180deg,rgba(0,0,0,.6),transparent_30%)]" />
+      <Container className="relative">
+        <div className="max-w-4xl">
           <Eyebrow>Chronicles of Asterheim</Eyebrow>
           <h1
-            className="font-display text-ivory-100 mt-5 text-[clamp(3rem,8vw,7.8rem)] leading-[0.86] tracking-[0.035em] uppercase [text-shadow:0_3px_30px_rgba(0,0,0,0.85)]"
-            id="hero-title"
+            className="font-display mt-5 text-[clamp(4rem,11vw,10rem)] leading-[.75] tracking-[.025em] uppercase [text-shadow:0_4px_40px_#000]"
+            id="home-hero-title"
           >
-            The Black <span className="text-parchment-200 block">Banner</span>
+            The Black
+            <span className="text-parchment-200 block">Banner</span>
           </h1>
-          <p className="text-parchment-200/75 mt-7 max-w-xl text-base leading-relaxed sm:text-lg">
-            Além da estrada afogada, velhos reinos aguardam sob a cinza. Cada
-            ruína guarda uma guerra. Cada silêncio, uma ameaça.
+          <p className="text-parchment-200/75 mt-8 max-w-lg text-base leading-relaxed sm:text-xl">
+            Seis Coroas. Antigos juramentos. Um mundo à beira da ruína.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <LinkButton href="#asterheim" size="lg" tone="gold">
-              Entrar em Asterheim
+              Explore Asterheim
             </LinkButton>
-            <LinkButton href="#collections" size="lg">
-              Explorar coleções
+            <LinkButton href="/pt-br/miniaturas" size="lg">
+              Ver miniaturas
             </LinkButton>
-          </div>
-        </div>
-      </Container>
-      <Link
-        aria-label="Rolar para a introdução a Asterheim"
-        className="text-parchment-200/50 absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.62rem] tracking-[0.25em] uppercase sm:flex"
-        href="#asterheim"
-      >
-        Descer
-        <span
-          aria-hidden="true"
-          className="from-aged-gold-500 h-9 w-px bg-gradient-to-b to-transparent motion-safe:animate-pulse"
-        />
-      </Link>
-    </section>
-  );
-}
-
-function IntroductionSection() {
-  return (
-    <section className="relative overflow-hidden py-24 sm:py-36" id="asterheim">
-      <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <span className="font-display text-aged-gold-500/15 text-8xl leading-none sm:text-9xl">
-              ᚨ
-            </span>
-            <SectionHeading
-              description="Asterheim será apresentado como um território vivo: camadas de história, fronteiras hostis e caminhos que existem antes dos heróis que os atravessam."
-              eyebrow="Um mundo sob a cinza"
-              title="O ambiente guarda a primeira memória"
-            />
-          </div>
-          <div className="relative min-h-[28rem] overflow-hidden border border-stone-600/25 shadow-[var(--shadow-deep)]">
-            <Image
-              alt="Estrada de pedra atravessando uma planície antiga entre cidadelas"
-              className="object-cover"
-              fill
-              loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 58vw"
-              src="/images/home/kingdoms-expanse.webp"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <p className="text-parchment-200/70 absolute right-6 bottom-6 left-6 max-w-md text-sm">
-              Arte conceitual original · conteúdo narrativo ainda não canônico
-            </p>
           </div>
         </div>
       </Container>
@@ -204,205 +172,52 @@ function IntroductionSection() {
   );
 }
 
-function KingdomsSection() {
-  return (
-    <section
-      className="relative isolate overflow-hidden border-y border-stone-600/20 py-24 sm:py-36"
-      id="kingdoms"
-    >
-      <Image
-        alt="Três cidadelas distantes sobre uma planície alagada"
-        className="-z-30 object-cover opacity-45"
-        fill
-        loading="lazy"
-        sizes="100vw"
-        src="/images/home/kingdoms-expanse.webp"
-      />
-      <div className="from-coal-950 via-coal-950/80 to-coal-950/30 absolute inset-0 -z-20 bg-gradient-to-r" />
-      <Container>
-        <SectionHeading
-          description="Três exemplos tipados demonstram como territórios futuros poderão ser apresentados sem antecipar o lore oficial."
-          eyebrow="Fronteiras demonstrativas"
-          title="Reinos separados pela mesma guerra"
-        />
-        {featuredKingdoms.length ? (
-          <div className="mt-14 grid gap-px bg-stone-600/25 lg:grid-cols-3">
-            {featuredKingdoms.map((kingdom, index) => (
-              <article
-                className="codex-card kingdom-card group bg-coal-950/90 hover:bg-iron-800/90 relative min-h-80 p-7 transition-colors sm:p-9"
-                key={kingdom.id}
-              >
-                <span
-                  className="font-display text-aged-gold-500/55 text-5xl"
-                  aria-hidden="true"
-                >
-                  {kingdom.sigil}
-                </span>
-                <p className="text-parchment-200/45 mt-12 text-xs tracking-wider uppercase">
-                  0{index + 1} · {kingdom.epithet}
-                </p>
-                <h3 className="font-display text-ivory-100 mt-3 text-2xl">
-                  {kingdom.name}
-                </h3>
-                <p className="text-parchment-200/60 mt-4 text-sm">
-                  {kingdom.summary}
-                </p>
-                <div className="mt-7">
-                  <MockLabel />
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <Link
-            className="codex-card kingdom-card group relative mt-14 block min-h-[28rem] overflow-hidden p-8 sm:p-12"
-            href="/pt-br/atlas"
-          >
-            <Image
-              alt="Territórios distantes de Asterheim"
-              className="-z-10 object-cover opacity-45 transition duration-700 group-hover:scale-[1.02]"
-              fill
-              sizes="100vw"
-              src="/images/home/kingdoms-expanse.webp"
-            />
-            <div className="relative flex min-h-[22rem] max-w-xl flex-col justify-end">
-              <Eyebrow>Cartografia viva</Eyebrow>
-              <h3 className="font-display mt-4 text-4xl sm:text-6xl">
-                Atravesse as fronteiras de Asterheim
-              </h3>
-              <p className="text-parchment-200/70 mt-5">
-                Reinos, regiões e caminhos reunidos em uma experiência de
-                exploração.
-              </p>
-            </div>
-          </Link>
-        )}
-      </Container>
-    </section>
-  );
-}
+function AsterheimSection() {
+  const kingdoms = guardians.map((guardian) => ({
+    title: guardian.kingdom.title,
+    slug: guardian.kingdom.slug,
+    image: guardian.media[0]?.url,
+    guardian: guardian.title,
+  }));
 
-function CharactersSection() {
   return (
-    <section className="py-24 sm:py-36" id="characters">
+    <section className="bg-coal-950 py-24 sm:py-36" id="asterheim">
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
-          <SectionHeading
-            description="Figuras pequenas diante de um mundo imenso. Nunca retratos isolados, sempre presenças inseridas no caminho."
-            eyebrow="Vozes ainda sem registro"
-            title="Personagens em destaque"
-          />
-          {featuredCharacters.length ? (
-            <div className="grid gap-6 sm:grid-cols-2">
-              {featuredCharacters.map((character, index) => (
-                <article
-                  className="from-iron-800 relative min-h-[28rem] overflow-hidden border border-stone-600/25 bg-gradient-to-b to-black p-7"
-                  key={character.id}
-                >
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_bottom,rgba(168,61,31,0.18),transparent_58%)]"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute right-[18%] bottom-0 h-[60%] w-[23%] bg-black/90 [clip-path:polygon(40%_0,65%_8%,70%_28%,100%_100%,0_100%,28%_28%)]"
-                  />
-                  <div className="relative flex h-full flex-col justify-between">
-                    <div className="flex items-start justify-between">
-                      <Badge>{character.role}</Badge>
-                      <span className="text-parchment-200/35 text-xs">
-                        0{index + 1}
-                      </span>
-                    </div>
-                    <div>
-                      <MockLabel />
-                      <h3 className="font-display mt-3 text-3xl">
-                        {character.name}
-                      </h3>
-                      <p className="text-aged-gold-500 mt-2 text-xs tracking-wider uppercase">
-                        {character.allegiance}
-                      </p>
-                      <p className="text-parchment-200/60 mt-4 max-w-xs text-sm">
-                        {character.summary}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : (
+        <SectionIntro
+          action={{ href: '/pt-br/atlas', label: 'Abrir Atlas' }}
+          eyebrow="Explore Asterheim"
+          title="Seis domínios. Um destino."
+        />
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {kingdoms.map((kingdom, index) => (
             <Link
-              className="codex-card guardian-card group relative min-h-[34rem] overflow-hidden"
-              href="/personagens"
+              className={`group relative overflow-hidden border border-stone-600/20 ${
+                index === 0 ? 'min-h-[34rem] xl:row-span-2' : 'min-h-[22rem]'
+              }`}
+              href="/pt-br/atlas"
+              key={kingdom.slug}
             >
               <Image
-                alt="Figura solitária diante das ruínas de Asterheim"
-                className="object-cover object-center opacity-60 transition duration-700 group-hover:scale-[1.02]"
+                alt={`Paisagem associada a ${kingdom.title}`}
+                className="object-cover opacity-55 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-75"
                 fill
-                sizes="(max-width: 1024px) 100vw, 60vw"
-                src="/media/asterheim/entities/king-aldric-keeper-of-the-iron-crown/fb83d5a7-ad19-491e-8c2b-f3b17576c597-f3e32acb.webp"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src={
+                  kingdom.image ??
+                  '/media/asterheim/entities/legends-of-the-realm/beasts-hero-d376cfd6.webp'
+                }
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-8 sm:p-12">
-                <Eyebrow>Arquivo de juramentos</Eyebrow>
-                <h3 className="font-display mt-4 text-4xl sm:text-6xl">
-                  Conheça quem ainda sustenta a bandeira
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/20" />
+              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9">
+                <p className="text-aged-gold-500 text-[.65rem] tracking-[.22em] uppercase">
+                  Reino do Guardião {kingdom.guardian}
+                </p>
+                <h3 className="font-display mt-3 text-4xl uppercase">
+                  {kingdom.title}
                 </h3>
               </div>
             </Link>
-          )}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function BestiarySection() {
-  return (
-    <section
-      className="relative isolate min-h-[48rem] overflow-hidden border-y border-stone-600/20 py-24 sm:py-36"
-      id="bestiary"
-    >
-      <Image
-        alt="Ossos colossais entre árvores petrificadas e torres em ruínas"
-        className="-z-30 object-cover object-[62%_center]"
-        fill
-        loading="lazy"
-        sizes="100vw"
-        src="/images/home/bestiary-ruins.webp"
-      />
-      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-black/95 via-black/65 to-transparent" />
-      <Container>
-        <div className="max-w-xl">
-          <SectionHeading
-            description="O bestiário começa pelos vestígios. Pegadas, ossos e silêncio revelam mais do que uma criatura posando para o observador."
-            eyebrow="Sinais na escuridão"
-            title="Há coisas antigas sob as ruínas"
-          />
-          {featuredCreatures.length ? (
-            <div className="mt-10 divide-y divide-stone-600/30 border-y border-stone-600/30">
-              {featuredCreatures.map((creature) => (
-                <article className="py-6" key={creature.id}>
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <h3 className="font-display text-xl">{creature.name}</h3>
-                    <span className="text-ember-600 text-xs tracking-wider uppercase">
-                      Ameaça: {creature.threat}
-                    </span>
-                  </div>
-                  <p className="text-parchment-200/45 mt-2 text-xs tracking-wider uppercase">
-                    {creature.classification}
-                  </p>
-                  <p className="text-parchment-200/60 mt-3 text-sm">
-                    {creature.summary}
-                  </p>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <LinkButton href="/bestiario" size="lg">
-              Abrir códice do bestiário
-            </LinkButton>
-          )}
+          ))}
         </div>
       </Container>
     </section>
@@ -416,104 +231,226 @@ function CollectionsSection({
   collections: readonly RealCollection[];
   miniatures: readonly Miniature[];
 }) {
-  const featuredCatalog = collections.slice(0, 4);
-  const featuredMiniatures = miniatures.slice(0, 8);
   return (
-    <section className="py-24 sm:py-36" id="collections">
+    <section className="border-y border-stone-600/20 bg-black py-24 sm:py-36">
       <Container>
-        <SectionHeading
-          align="center"
-          description="Companhias, tavernas, criaturas e figuras lendárias conectadas por um acervo visual em expansão."
-          eyebrow="Objetos do mundo"
-          title="Coleções moldadas pela narrativa"
+        <SectionIntro
+          action={{ href: '/pt-br/colecoes', label: 'Todas as coleções' }}
+          eyebrow="Featured Collections"
+          title="Exércitos, tavernas e lendas"
         />
-        <div className="mt-14 grid gap-7 lg:grid-cols-2">
-          {featuredCatalog.map((collection, index) => (
-            <Link
-              className="group bg-coal-900 relative min-h-[30rem] overflow-hidden border border-stone-600/25"
-              href={`/pt-br/colecoes/${collection.slug}`}
-              key={collection.id}
-            >
-              {collection.cover ? (
+        <div className="grid gap-4 lg:grid-cols-12">
+          {collections.slice(0, 5).map((collection, index) => {
+            const count = miniatures.filter(
+              (miniature) => miniature.collectionSlug === collection.slug,
+            ).length;
+            return (
+              <Link
+                className={`group relative min-h-[28rem] overflow-hidden ${
+                  index < 2 ? 'lg:col-span-6' : 'lg:col-span-4'
+                }`}
+                href={`/pt-br/colecoes/${collection.slug}`}
+                key={collection.id}
+              >
                 <Image
-                  alt={collection.cover.alt}
-                  className="object-cover opacity-55 transition duration-700 group-hover:scale-[1.02] group-hover:opacity-70"
+                  alt={collection.cover?.alt ?? collection.title}
+                  className="object-cover opacity-65 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-85"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  src={collection.cover.src}
+                  sizes={index < 2 ? '50vw' : '33vw'}
+                  src={
+                    collection.cover?.src ??
+                    '/images/home/asterheim-hero.webp'
+                  }
                 />
-              ) : null}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/30" />
-              <div className="relative flex min-h-[30rem] flex-col justify-between p-8">
-                <div className="flex items-center justify-between">
-                  <span className="font-display text-aged-gold-500/30 text-6xl">
-                    0{index + 1}
-                  </span>
-                  <Badge>
-                    {
-                      miniatures.filter(
-                        (item) => item.collectionSlug === collection.slug,
-                      ).length
-                    }{' '}
-                    miniaturas
-                  </Badge>
-                </div>
-                <div>
-                  <h3 className="font-display mt-3 text-3xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
+                <div className="absolute inset-x-0 bottom-0 p-8">
+                  <p className="text-aged-gold-500 text-xs tracking-[.2em] uppercase">
+                    {count} miniaturas
+                  </p>
+                  <h3 className="font-display mt-3 text-4xl uppercase">
                     {collection.title}
                   </h3>
-                  {collection.description ? (
-                    <p className="text-parchment-200/70 mt-4 line-clamp-3 max-w-md text-sm">
-                      {collection.description}
-                    </p>
-                  ) : null}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function MiniaturesSection({
+  miniatures,
+}: {
+  miniatures: readonly Miniature[];
+}) {
+  return (
+    <section className="bg-coal-950 py-24 sm:py-36">
+      <Container>
+        <SectionIntro
+          action={{ href: '/pt-br/miniaturas', label: 'Abrir catálogo' }}
+          eyebrow={`${miniatures.length} miniaturas públicas`}
+          title="Latest Miniatures"
+        />
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {miniatures.map((miniature, index) => (
+            <Link
+              className={`group relative overflow-hidden bg-black ${
+                index % 11 === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
+              }`}
+              href={`/pt-br/miniaturas/${miniature.slug}`}
+              key={miniature.id}
+            >
+              <div className="relative aspect-[3/4]">
+                <Image
+                  alt={miniature.cover?.alt ?? miniature.title}
+                  className="object-cover opacity-70 transition duration-500 group-hover:scale-[1.035] group-hover:opacity-90"
+                  fill
+                  loading="lazy"
+                  sizes={
+                    index % 11 === 0
+                      ? '(max-width: 1024px) 100vw, 50vw'
+                      : '(max-width: 640px) 100vw, 25vw'
+                  }
+                  src={
+                    miniature.cover?.src ??
+                    '/images/home/asterheim-hero.webp'
+                  }
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                  <p className="text-aged-gold-500 text-[.62rem] tracking-[.18em] uppercase">
+                    {miniature.collectionTitle}
+                  </p>
+                  <h3 className="font-display mt-2 text-2xl uppercase sm:text-3xl">
+                    {miniature.title}
+                  </h3>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        <div className="mt-20 flex items-end justify-between gap-8">
-          <div>
-            <Eyebrow>Catálogo real</Eyebrow>
-            <h3 className="font-display mt-4 text-4xl sm:text-6xl">
-              Figuras de Asterheim
-            </h3>
-          </div>
-          <Link
-            className="hidden text-xs uppercase sm:block"
-            href="/pt-br/miniaturas"
-          >
-            Ver todas
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredMiniatures.map((miniature) => (
+      </Container>
+    </section>
+  );
+}
+
+function CharactersSection() {
+  return (
+    <section className="border-y border-stone-600/20 bg-black py-24 sm:py-36">
+      <Container>
+        <SectionIntro
+          action={{ href: '/guardioes', label: 'Conhecer Guardiões' }}
+          eyebrow="Characters"
+          title="Aqueles que carregam as Coroas"
+        />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {guardians.map((guardian, index) => (
             <Link
-              className="group relative aspect-[3/4] overflow-hidden"
-              href={`/pt-br/miniaturas/${miniature.slug}`}
-              key={miniature.id}
+              className={`group relative overflow-hidden ${
+                index === 0 ? 'min-h-[42rem] lg:col-span-2' : 'min-h-[30rem]'
+              }`}
+              href={`/guardioes/${guardian.slug}`}
+              key={guardian.id}
             >
               <Image
-                alt={miniature.cover?.alt ?? miniature.title}
-                className="object-cover opacity-70 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-90"
+                alt={`Retrato de ${guardian.title}`}
+                className="object-cover opacity-60 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-80"
                 fill
-                sizes="(max-width: 640px) 100vw, 25vw"
-                src={miniature.cover?.src ?? '/images/home/asterheim-hero.webp'}
+                sizes={index === 0 ? '66vw' : '33vw'}
+                src={
+                  guardian.media[0]?.url ??
+                  '/images/home/asterheim-hero.webp'
+                }
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-              <h4 className="font-display absolute inset-x-0 bottom-0 p-5 text-2xl uppercase">
-                {miniature.title}
-              </h4>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+              <div className="absolute inset-x-0 bottom-0 p-8">
+                <p className="text-aged-gold-500 text-xs uppercase">
+                  {guardian.kingdom.title}
+                </p>
+                <h3 className="font-display mt-3 text-4xl uppercase sm:text-5xl">
+                  {guardian.title}
+                </h3>
+              </div>
             </Link>
           ))}
         </div>
-        <div className="mt-10 flex flex-wrap justify-center gap-3 text-center">
-          <LinkButton href="/pt-br/miniaturas" size="lg">
-            Abrir arquivo de miniaturas
-          </LinkButton>
-          <LinkButton href="/pt-br/atlas" size="lg" tone="iron">
-            Explorar Atlas de Asterheim
-          </LinkButton>
+      </Container>
+    </section>
+  );
+}
+
+function CreaturesSection({
+  creatures,
+}: {
+  creatures: readonly Miniature[];
+}) {
+  return (
+    <section className="bg-coal-950 py-24 sm:py-36">
+      <Container>
+        <SectionIntro
+          action={{ href: '/bestiario', label: 'Abrir Bestiário' }}
+          eyebrow="Legendary Creatures"
+          title="O que desperta sob a pedra"
+        />
+        <div className="grid gap-3 lg:grid-cols-12">
+          {creatures.slice(0, 5).map((creature, index) => (
+            <Link
+              className={`group relative min-h-[32rem] overflow-hidden ${
+                index === 0 ? 'lg:col-span-8 lg:row-span-2' : 'lg:col-span-4'
+              }`}
+              href={`/pt-br/miniaturas/${creature.slug}`}
+              key={creature.id}
+            >
+              <Image
+                alt={creature.cover?.alt ?? creature.title}
+                className="object-cover opacity-60 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-85"
+                fill
+                sizes={index === 0 ? '66vw' : '33vw'}
+                src={
+                  creature.cover?.src ?? '/images/home/bestiary-ruins.webp'
+                }
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+              <div className="absolute inset-x-0 bottom-0 p-8">
+                <p className="text-ember-600 text-xs tracking-[.18em] uppercase">
+                  {creature.collectionTitle}
+                </p>
+                <h3 className="font-display mt-3 text-4xl uppercase">
+                  {creature.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function AtlasSection() {
+  return (
+    <section className="relative isolate min-h-[90vh] overflow-hidden border-y border-stone-600/20">
+      <Image
+        alt="Mapa de Ironhold no Atlas de Asterheim"
+        className="-z-20 object-cover opacity-65"
+        fill
+        sizes="100vw"
+        src="/media/asterheim/entities/iron-hold-map/iron-hold-map-eb8924fe.webp"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/35 to-transparent" />
+      <Container className="flex min-h-[90vh] items-end py-20 sm:items-center">
+        <div className="max-w-xl">
+          <Eyebrow>Atlas Preview</Eyebrow>
+          <h2 className="font-display mt-5 text-[clamp(4rem,9vw,8rem)] leading-[.82] uppercase">
+            Atravesse Asterheim
+          </h2>
+          <div className="mt-9">
+            <LinkButton href="/pt-br/atlas" size="lg" tone="gold">
+              Explorar o mapa
+            </LinkButton>
+          </div>
         </div>
       </Container>
     </section>
@@ -522,243 +459,61 @@ function CollectionsSection({
 
 function TimelineSection() {
   return (
-    <section
-      className="bg-coal-900/70 border-y border-stone-600/20 py-24 sm:py-36"
-      id="timeline"
-    >
+    <section className="bg-black py-24 sm:py-36">
       <Container>
-        <SectionHeading
-          description="Uma estrutura editorial demonstrativa preparada para receber datas e eventos aprovados em sprint futura."
-          eyebrow="Cronologia provisória"
+        <SectionIntro
+          action={{ href: '/timeline', label: 'Abrir cronologia' }}
+          eyebrow="Timeline Preview"
           title="Ecos através das eras"
         />
-        {featuredStories.length ? (
-          <ol className="relative mt-16 grid gap-10 before:absolute before:top-0 before:bottom-0 before:left-3 before:w-px before:bg-stone-600/35 md:grid-cols-3 md:before:top-3 md:before:right-0 md:before:bottom-auto md:before:left-0 md:before:h-px md:before:w-auto">
-            {featuredStories.map((story, index) => (
-              <li
-                className="relative pl-12 md:pt-10 md:pr-8 md:pl-0"
-                key={story.id}
-              >
-                <span className="border-aged-gold-500 bg-coal-900 absolute top-2 left-1.5 size-3 rotate-45 border md:top-1.5 md:left-0" />
-                <p className="text-aged-gold-500 text-xs tracking-wider uppercase">
-                  {story.dateLabel}
-                </p>
-                <h3 className="font-display mt-3 text-2xl">{story.name}</h3>
-                <p className="text-parchment-200/40 mt-1 text-xs">
-                  {story.chapter} · 0{index + 1}
-                </p>
-                <p className="text-parchment-200/60 mt-4 text-sm">
-                  {story.summary}
-                </p>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <div className="codex-card mt-14 grid gap-8 p-8 sm:p-12 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div>
-              <Eyebrow>Crônicas conectadas</Eyebrow>
-              <h3 className="font-display mt-4 text-4xl">
-                As eras aguardam no arquivo histórico
-              </h3>
-              <p className="text-parchment-200/65 mt-4 max-w-2xl">
-                Consulte os eventos já documentados sem preencher as lacunas do
-                cânone com registros provisórios.
+        <ol className="grid gap-px bg-stone-600/25 lg:grid-cols-3">
+          {crowns.slice(0, 3).map((crown, index) => (
+            <li className="bg-coal-950 min-h-72 p-8 sm:p-10" key={crown.id}>
+              <p className="text-aged-gold-500 text-xs tracking-[.18em] uppercase">
+                0{index + 1} · {crown.force}
               </p>
-            </div>
-            <LinkButton href="/timeline" size="lg">
-              Abrir timeline
+              <h3 className="font-display mt-12 text-4xl uppercase">
+                {crown.title}
+              </h3>
+              <p className="text-parchment-200/55 mt-5 line-clamp-3 text-sm leading-relaxed">
+                {crown.description}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </Container>
+    </section>
+  );
+}
+
+function PrintingSection({ miniature }: { miniature: Miniature | undefined }) {
+  return (
+    <section className="relative isolate min-h-[75vh] overflow-hidden border-y border-stone-600/20">
+      <Image
+        alt={miniature?.cover?.alt ?? 'Miniatura de Asterheim pronta para impressão'}
+        className="-z-20 object-cover object-[70%_center] opacity-55"
+        fill
+        sizes="100vw"
+        src={miniature?.cover?.src ?? '/images/home/asterheim-hero.webp'}
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent" />
+      <Container className="flex min-h-[75vh] items-center">
+        <div className="max-w-2xl">
+          <Eyebrow>3D Printing</Eyebrow>
+          <h2 className="font-display mt-5 text-[clamp(3.5rem,8vw,7rem)] leading-[.85] uppercase">
+            Do códice para a mesa
+          </h2>
+          <div className="mt-9 flex flex-wrap gap-4">
+            <LinkButton href="/guia-de-impressao" size="lg" tone="gold">
+              Guia de impressão
+            </LinkButton>
+            <LinkButton href="/pt-br/miniaturas" size="lg">
+              Explorar modelos
             </LinkButton>
           </div>
-        )}
-      </Container>
-    </section>
-  );
-}
-
-function GallerySection() {
-  const images = [
-    {
-      src: '/images/home/asterheim-hero.webp',
-      alt: 'Fortaleza antiga entre montanhas',
-      label: 'A cidadela distante',
-    },
-    {
-      src: '/images/home/kingdoms-expanse.webp',
-      alt: 'Planície alagada e cidadelas',
-      label: 'A estrada afogada',
-    },
-    {
-      src: '/images/home/bestiary-ruins.webp',
-      alt: 'Ossos colossais em floresta petrificada',
-      label: 'Vestígios na mata',
-    },
-  ] as const;
-
-  return (
-    <section className="py-24 sm:py-36" id="gallery">
-      <Container>
-        <SectionHeading
-          description="Estudos de ambiente originais criados para esta Home. Nenhuma imagem foi reutilizada da versão anterior."
-          eyebrow="Visões de Asterheim"
-          title="Galeria de atmosferas"
-        />
-        <div className="mt-14 grid auto-rows-[16rem] gap-3 md:grid-cols-2 lg:grid-cols-3">
-          {images.map((image, index) => (
-            <figure
-              className={
-                index === 0
-                  ? 'group relative overflow-hidden border border-stone-600/25 md:row-span-2 lg:col-span-2'
-                  : 'group relative overflow-hidden border border-stone-600/25'
-              }
-              key={image.src}
-            >
-              <Image
-                alt={image.alt}
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:transform-none"
-                fill
-                loading="lazy"
-                sizes={
-                  index === 0
-                    ? '(max-width: 1024px) 100vw, 66vw'
-                    : '(max-width: 1024px) 100vw, 33vw'
-                }
-                src={image.src}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
-              <figcaption className="text-parchment-200/70 absolute right-5 bottom-5 left-5 text-xs tracking-[0.16em] uppercase">
-                {image.label}
-              </figcaption>
-            </figure>
-          ))}
         </div>
       </Container>
     </section>
-  );
-}
-
-function EditorialSection() {
-  return (
-    <section
-      className="bg-iron-800 relative overflow-hidden border-y border-stone-600/20 py-24 sm:py-32"
-      id="editorial"
-    >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[var(--texture-metal)] opacity-60"
-      />
-      <Container className="relative">
-        <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
-          <div className="max-w-3xl">
-            <Eyebrow>Arquivos editoriais</Eyebrow>
-            <h2 className="font-display mt-5 text-4xl leading-tight sm:text-6xl">
-              Toda guerra deixa um registro. Nem todo registro diz a verdade.
-            </h2>
-            <p className="text-parchment-200/65 mt-6 max-w-2xl">
-              Esta chamada prepara o espaço para ensaios, crônicas e bastidores
-              futuros. O texto atual é demonstrativo.
-            </p>
-          </div>
-          <LinkButton href="#timeline" size="lg">
-            Consultar cronologia
-          </LinkButton>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function NewsletterSection() {
-  return (
-    <section className="py-24 sm:py-32" id="newsletter">
-      <Container>
-        <div className="border-aged-gold-500/30 mx-auto max-w-4xl border-y py-16 text-center">
-          <Eyebrow>Transmissões futuras</Eyebrow>
-          <h2 className="font-display mt-5 text-3xl sm:text-5xl">
-            Receba sinais além da muralha
-          </h2>
-          <p className="text-parchment-200/60 mx-auto mt-5 max-w-xl text-sm">
-            Campo visual sem integração ou armazenamento de dados nesta sprint.
-          </p>
-          <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
-            <label className="sr-only" htmlFor="newsletter-email">
-              E-mail
-            </label>
-            <input
-              className="text-ivory-100 placeholder:text-parchment-200/35 min-h-12 flex-1 border border-stone-600/40 bg-black px-4 text-sm"
-              id="newsletter-email"
-              name="email"
-              placeholder="seu@email.com"
-              type="email"
-            />
-            <button
-              className="border-aged-gold-500 bg-aged-gold-500 text-coal-950 min-h-12 border px-6 text-xs font-bold tracking-wider uppercase"
-              type="button"
-            >
-              Em breve
-            </button>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function LegacyHomeFooter() {
-  return (
-    <footer className="border-t border-stone-600/25 bg-black py-14">
-      <Container>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto]">
-          <div>
-            <p className="font-display text-xl tracking-wider uppercase">
-              The Black Banner V2
-            </p>
-            <p className="text-aged-gold-500 mt-2 text-xs tracking-[0.2em] uppercase">
-              Chronicles of Asterheim
-            </p>
-            <p className="text-parchment-200/40 mt-5 max-w-md text-xs">
-              Home cinematográfica em desenvolvimento. Entradas narrativas
-              marcadas como demonstrativas não constituem conteúdo oficial.
-            </p>
-          </div>
-          <nav aria-label="Footer universe navigation">
-            <p className="text-parchment-200/70 text-xs font-bold tracking-wider uppercase">
-              Universo
-            </p>
-            <ul className="text-parchment-200/45 mt-4 space-y-2 text-sm">
-              <li>
-                <Link href="#kingdoms">Reinos</Link>
-              </li>
-              <li>
-                <Link href="#characters">Personagens</Link>
-              </li>
-              <li>
-                <Link href="#bestiary">Bestiário</Link>
-              </li>
-            </ul>
-          </nav>
-          <nav aria-label="Footer project navigation">
-            <p className="text-parchment-200/70 text-xs font-bold tracking-wider uppercase">
-              Projeto
-            </p>
-            <ul className="text-parchment-200/45 mt-4 space-y-2 text-sm">
-              <li>
-                <Link href="#gallery">Galeria</Link>
-              </li>
-              <li>
-                <Link href="#collections">Coleções</Link>
-              </li>
-              <li>
-                <Link href="/design-system">Design system</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <OrnamentalDivider className="my-10" />
-        <p className="text-parchment-200/30 text-center text-[0.65rem] tracking-wider uppercase">
-          © 2026 The Black Banner V2 · Ambiente de desenvolvimento
-        </p>
-      </Container>
-    </footer>
   );
 }
 
@@ -767,31 +522,32 @@ export default async function HomePage() {
     getPublishedCollections('pt-br'),
     getMiniatures('pt-br'),
   ]);
+  const publishedCreatures = miniatures.filter(
+    (miniature) =>
+      miniature.entityType === 'creature' &&
+      miniature.status === 'published',
+  );
+
   return (
     <>
       <SkipLink />
       <SiteHeader />
       <main id="main-content">
-        <HeroSection />
-        <IntroductionSection />
-        <KingdomsSection />
+        <Hero />
+        <AsterheimSection />
+        <CollectionsSection
+          collections={collections}
+          miniatures={miniatures}
+        />
+        <MiniaturesSection miniatures={miniatures} />
         <CharactersSection />
-        <BestiarySection />
-        <CollectionsSection collections={collections} miniatures={miniatures} />
+        <CreaturesSection creatures={publishedCreatures} />
+        <AtlasSection />
         <TimelineSection />
-        <GallerySection />
-        <EditorialSection />
-        <NewsletterSection />
+        <PrintingSection miniature={miniatures.find((item) => item.featured)} />
       </main>
-      <UnifiedSiteFooter />
-      <JsonLd
-        data={[
-          websiteJsonLd,
-          creativeWorkJsonLd,
-          organizationJsonLd,
-          heroImageJsonLd,
-        ]}
-      />
+      <SiteFooter />
+      <JsonLd data={structuredData} />
     </>
   );
 }
