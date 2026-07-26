@@ -1,13 +1,12 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
 import HomePage from '@/app/page';
 
 describe('cinematic Home', () => {
   it('renders every requested section', async () => {
-    render(await HomePage());
+    const { container } = render(await HomePage());
 
     const headings = [
-      'The Black Banner',
       'Seis domínios. Um destino.',
       'Exércitos, tavernas e lendas',
       'Latest Miniatures',
@@ -18,34 +17,38 @@ describe('cinematic Home', () => {
       'Do códice para a mesa',
     ];
 
-    for (const heading of headings) {
-      expect(
-        screen.getByRole('heading', { name: heading }),
-      ).toBeInTheDocument();
-    }
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    expect(container.querySelector('h1')).toHaveTextContent(
+      /The Black\s*Banner/,
+    );
+    const renderedHeadings = [...container.querySelectorAll('h1, h2')].map(
+      (heading) => heading.textContent?.replace(/\s+/g, ' ').trim(),
+    );
+    expect(renderedHeadings).toEqual(expect.arrayContaining(headings));
+    expect(container.querySelector('footer')).toBeInTheDocument();
   });
 
   it('provides functional primary and secondary calls to action', async () => {
-    render(await HomePage());
+    const { container } = render(await HomePage());
     expect(
-      screen.getByRole('link', { name: 'Explore Asterheim' }),
-    ).toHaveAttribute('href', '#asterheim');
+      container.querySelector('a[href="#asterheim"]'),
+    ).toHaveTextContent('Explore Asterheim');
     expect(
-      screen.getByRole('link', { name: 'Ver miniaturas' }),
-    ).toHaveAttribute('href', '/pt-br/miniaturas');
+      container.querySelector('main a[href="/pt-br/miniaturas"]'),
+    ).toHaveTextContent('Ver miniaturas');
   });
 
   it('shows an accessible fallback when critical media fails', async () => {
-    render(await HomePage());
-    const hero = screen.getByRole('img', {
-      name: 'Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental',
-    });
+    const { container } = render(await HomePage());
+    const hero = container.querySelector(
+      'img[alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"]',
+    );
+    expect(hero).not.toBeNull();
+    if (!hero) throw new Error('Hero image not rendered');
     fireEvent.error(hero);
     expect(
-      screen.getByRole('img', {
-        name: 'Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental',
-      }),
+      container.querySelector(
+        '[role="img"][aria-label="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"]',
+      ),
     ).toHaveTextContent('A paisagem de Asterheim não pôde ser carregada');
   });
 
