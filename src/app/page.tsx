@@ -357,7 +357,7 @@ function CollectionsSection({
               {[tavern].map(
                 ({ collection, count, description }) => (
                   <Link
-                    className="featured-collection featured-collection--minor"
+                    className="featured-collection featured-collection--minor featured-collection--compact"
                     href={localizedPath(locale, `colecoes/${collection.slug}`)}
                     key={collection.id}
                   >

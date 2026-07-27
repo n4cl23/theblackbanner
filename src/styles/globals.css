@@ -715,9 +715,9 @@ svg {
     var(--header-height) + clamp(3rem, 6vw, 6rem)
   ) !important;
   background:
-    radial-gradient(circle at 72% 28%, rgb(101 65 33 / 14%), transparent 35%),
-    radial-gradient(circle at 14% 88%, rgb(54 64 66 / 10%), transparent 30%),
-    #030303;
+    radial-gradient(ellipse at 68% 24%, rgb(126 82 43 / 14%), transparent 38%),
+    radial-gradient(ellipse at 18% 74%, rgb(74 61 43 / 9%), transparent 34%),
+    linear-gradient(180deg, #090704 0%, #060503 48%, #030303 100%);
 }
 
 .featured-collections-domain::before {
@@ -752,7 +752,7 @@ svg {
 .featured-showcase {
   display: grid;
   min-width: 0;
-  gap: clamp(1rem, 1.5vw, 1.5rem);
+  gap: clamp(1rem, 1.35vw, 1.4rem);
 }
 
 .featured-showcase__secondary {
@@ -774,7 +774,7 @@ svg {
   display: block;
   min-width: 0;
   min-height: 25rem;
-  overflow: visible;
+  overflow: hidden;
   border: 1px solid rgb(189 152 82 / 18%);
   background:
     radial-gradient(circle at 55% 35%, rgb(113 78 45 / 22%), transparent 46%),
@@ -858,7 +858,7 @@ svg {
   min-width: 0;
   max-width: 100%;
   padding: clamp(1.25rem, 2.5vw, 2.5rem);
-  overflow: visible;
+  overflow: hidden;
 }
 
 .featured-collection__count {
@@ -895,6 +895,12 @@ svg {
 
 .featured-collection--minor h3 {
   font-size: clamp(1.55rem, 2.1vw, 2.8rem);
+}
+
+.featured-collection--compact h3 {
+  max-width: 24rem;
+  font-size: clamp(1.4rem, 1.75vw, 2.2rem);
+  line-height: 0.96;
 }
 
 .featured-collection__description {
@@ -974,7 +980,7 @@ svg {
 
 @media (min-width: 64rem) {
   .featured-showcase {
-    grid-template-columns: minmax(0, 1.85fr) minmax(22rem, 1fr);
+    grid-template-columns: minmax(0, 1.92fr) minmax(22rem, 1fr);
   }
 
   .featured-collection--primary {
@@ -998,6 +1004,10 @@ svg {
     font-size: clamp(1.45rem, 1.75vw, 2.3rem);
   }
 
+  .featured-collection--compact h3 {
+    font-size: clamp(1.3rem, 1.55vw, 2rem);
+  }
+
   .featured-collection--minor .featured-collection__description {
     font-size: 0.72rem;
   }
@@ -1010,7 +1020,7 @@ svg {
 
 @media (min-width: 64rem) and (max-width: 93.75rem) {
   .featured-showcase {
-    grid-template-columns: minmax(0, 1.65fr) minmax(24rem, 1fr);
+    grid-template-columns: minmax(0, 1.82fr) minmax(23rem, 1fr);
   }
 
   .featured-collection--primary {
@@ -1019,6 +1029,18 @@ svg {
 
   .featured-showcase__secondary {
     grid-template-rows: minmax(25rem, 1.15fr) minmax(20rem, 0.85fr);
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .featured-showcase__secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-showcase__minor,
+  .featured-collection--minor {
+    min-height: 31rem;
+    height: 100%;
   }
 }
 
