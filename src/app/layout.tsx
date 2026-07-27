@@ -64,7 +64,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html data-scroll-behavior="smooth" lang="pt-BR">
+    <html data-scroll-behavior="smooth" lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(()=>{const locale=location.pathname.split('/')[1];document.documentElement.lang=locale==='en'?'en':locale==='es'?'es':'pt-BR'})()",
+          }}
+        />
+      </head>
       <body>
         <AuthProviderBoundary>{children}</AuthProviderBoundary>
       </body>
