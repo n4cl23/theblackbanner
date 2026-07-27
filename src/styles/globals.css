@@ -1470,6 +1470,531 @@ svg {
   }
 }
 
+/* Atlas / Kingdoms — an editorial cartographic experience */
+.atlas-kingdoms-page {
+  --atlas-ivory: #eee7d8;
+  --atlas-gold: #a98a54;
+  --atlas-ink: #080807;
+  overflow: hidden;
+  color: var(--atlas-ivory);
+  background:
+    radial-gradient(circle at 50% 42%, rgb(121 97 58 / 8%), transparent 32rem),
+    #080807;
+}
+
+.atlas-kingdoms-hero {
+  position: relative;
+  display: grid;
+  min-height: min(78svh, 55rem);
+  place-items: end start;
+  isolation: isolate;
+}
+
+.atlas-kingdoms-hero__image {
+  z-index: -3;
+  object-fit: cover;
+  object-position: center 46%;
+  filter: saturate(0.72) contrast(1.08);
+  scale: 1.015;
+}
+
+.atlas-kingdoms-hero__veil {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(2 2 2 / 90%) 0%, rgb(3 3 3 / 58%) 46%, rgb(3 3 3 / 16%) 75%),
+    linear-gradient(0deg, #080807 0%, transparent 32%, rgb(0 0 0 / 18%) 100%),
+    radial-gradient(circle at 72% 38%, transparent 0 12%, rgb(0 0 0 / 35%) 67%);
+}
+
+.atlas-kingdoms-hero__content {
+  width: min(48rem, calc(100% - 2rem));
+  margin: 0 max(1rem, calc((100vw - 95rem) / 2));
+  padding-bottom: clamp(5.5rem, 11vw, 9rem);
+  animation: editorial-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.atlas-kingdoms-eyebrow {
+  margin: 0 0 clamp(1.15rem, 2vw, 1.8rem);
+  color: #b4955d;
+  font-family: var(--font-body), serif;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.atlas-kingdoms-hero h1 {
+  max-width: 10ch;
+  margin: 0;
+  color: #f3ecde;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(4rem, 9vw, 8.6rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.82;
+  text-wrap: balance;
+  text-shadow: 0 0.2rem 1.75rem rgb(0 0 0 / 55%);
+  text-transform: uppercase;
+}
+
+.atlas-kingdoms-hero__content > p:last-child {
+  max-width: 36rem;
+  margin: clamp(1.8rem, 3vw, 2.6rem) 0 0;
+  color: rgb(238 231 216 / 76%);
+  font-family: var(--font-body), serif;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.75;
+}
+
+.atlas-kingdoms-hero__line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: clamp(3rem, 7vw, 5.5rem);
+  background: linear-gradient(transparent, rgb(169 138 84 / 72%));
+}
+
+.atlas-map-section,
+.atlas-domains-section {
+  width: min(95rem, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: clamp(7rem, 12vw, 12rem);
+}
+
+.atlas-map-section {
+  position: relative;
+}
+
+.atlas-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(16rem, 0.75fr);
+  align-items: end;
+  gap: 1.5rem clamp(2rem, 8vw, 8rem);
+  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.atlas-section-heading .atlas-kingdoms-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.atlas-section-heading h2 {
+  max-width: 13ch;
+  margin: 0;
+  color: var(--atlas-ivory);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.8rem, 5.5vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.atlas-section-heading > p:last-child {
+  max-width: 36rem;
+  margin: 0 0 0.4rem;
+  color: rgb(238 231 216 / 58%);
+  line-height: 1.75;
+}
+
+.atlas-relic-map {
+  position: relative;
+  min-height: clamp(34rem, 62vw, 49rem);
+  overflow: hidden;
+  border: 1px solid rgb(169 138 84 / 30%);
+  border-radius: 0.2rem;
+  background: #17140f;
+  box-shadow:
+    0 3rem 8rem rgb(0 0 0 / 58%),
+    inset 0 0 0 1px rgb(239 222 184 / 5%);
+  isolation: isolate;
+}
+
+.atlas-relic-map::before,
+.atlas-relic-map::after {
+  position: absolute;
+  z-index: 3;
+  width: 4rem;
+  height: 4rem;
+  border-color: rgb(188 152 88 / 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.atlas-relic-map::before {
+  top: 1rem;
+  left: 1rem;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.atlas-relic-map::after {
+  right: 1rem;
+  bottom: 1rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.atlas-relic-map__image {
+  z-index: -3;
+  object-fit: cover;
+  filter: sepia(0.46) saturate(0.52) contrast(1.16) brightness(0.47);
+  scale: 1.04;
+}
+
+.atlas-relic-map__patina {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    repeating-linear-gradient(91deg, transparent 0 5rem, rgb(221 189 126 / 2%) 5rem 5.08rem),
+    radial-gradient(circle at 50% 42%, transparent 8%, rgb(5 4 3 / 46%) 72%),
+    linear-gradient(0deg, rgb(5 4 3 / 92%), transparent 43%);
+}
+
+.atlas-relic-map__routes {
+  position: absolute;
+  z-index: -1;
+  inset: 10% 8% 18%;
+  width: 84%;
+  height: 72%;
+  opacity: 0.25;
+}
+
+.atlas-relic-map__routes path,
+.atlas-relic-map__routes circle {
+  fill: none;
+  stroke: #c4a66b;
+  stroke-dasharray: 4 8;
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.atlas-relic-map__compass {
+  position: absolute;
+  top: clamp(2rem, 5vw, 5rem);
+  right: clamp(2rem, 5vw, 5rem);
+  display: grid;
+  width: clamp(5.5rem, 10vw, 8.5rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgb(194 160 96 / 32%);
+  border-radius: 50%;
+  color: rgb(224 199 149 / 52%);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.24em;
+}
+
+.atlas-relic-map__compass::before,
+.atlas-relic-map__compass::after {
+  position: absolute;
+  background: rgb(194 160 96 / 28%);
+  content: "";
+}
+
+.atlas-relic-map__compass::before {
+  width: 150%;
+  height: 1px;
+}
+
+.atlas-relic-map__compass::after {
+  width: 1px;
+  height: 150%;
+}
+
+.atlas-relic-map__compass span {
+  position: absolute;
+  top: 0.55rem;
+}
+
+.atlas-relic-map__status {
+  position: absolute;
+  top: clamp(2rem, 5vw, 4.5rem);
+  left: clamp(2rem, 5vw, 4.5rem);
+  max-width: 14rem;
+  margin: 0;
+  color: rgb(229 211 173 / 66%);
+  font-size: 0.65rem;
+  letter-spacing: 0.24em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.atlas-relic-map__legend {
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 4rem);
+  bottom: clamp(2rem, 5vw, 4rem);
+  left: clamp(1.5rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgb(185 150 88 / 24%);
+}
+
+.atlas-relic-map__legend a {
+  display: flex;
+  align-items: center;
+  min-height: 3.5rem;
+  padding: 0.75rem;
+  color: rgb(238 231 216 / 72%);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(0.72rem, 1vw, 0.9rem);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition:
+    color 250ms ease,
+    background 250ms ease;
+}
+
+.atlas-relic-map__legend a span {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.75rem;
+  border: 1px solid var(--atlas-gold);
+  rotate: 45deg;
+}
+
+.atlas-relic-map__legend a:hover,
+.atlas-relic-map__legend a:focus-visible {
+  color: #e8c988;
+  background: rgb(169 138 84 / 7%);
+}
+
+.atlas-domains-section {
+  padding-top: clamp(5rem, 9vw, 9rem);
+  padding-bottom: clamp(9rem, 14vw, 15rem);
+}
+
+.atlas-section-heading--domains {
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.atlas-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.atlas-domain-cover {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgb(169 138 84 / 18%);
+  border-radius: 0.15rem;
+  background: #0f0e0c;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 22%);
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.atlas-domain-cover:hover {
+  border-color: rgb(169 138 84 / 47%);
+  box-shadow: 0 2.4rem 5rem rgb(0 0 0 / 42%);
+  transform: translateY(-0.35rem);
+}
+
+.atlas-domain-cover__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.atlas-domain-cover__art {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0b0a09;
+}
+
+.atlas-domain-cover__image {
+  transition:
+    scale 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 500ms ease;
+}
+
+.atlas-domain-cover__image--cover {
+  object-fit: cover;
+}
+
+.atlas-domain-cover__image--contain {
+  object-fit: contain;
+}
+
+.atlas-domain-cover:hover .atlas-domain-cover__image {
+  filter: contrast(1.04) saturate(1.04);
+  scale: 1.02;
+}
+
+.atlas-domain-cover__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgb(6 5 4 / 58%), transparent 32%),
+    var(--atlas-domain-tint, transparent);
+  pointer-events: none;
+}
+
+.atlas-domain-cover[data-visual="frost"] {
+  --atlas-domain-tint: rgb(93 142 173 / 8%);
+}
+
+.atlas-domain-cover[data-visual="storm"] {
+  --atlas-domain-tint: rgb(45 79 117 / 9%);
+}
+
+.atlas-domain-cover[data-visual="iron"] {
+  --atlas-domain-tint: rgb(147 74 31 / 8%);
+}
+
+.atlas-domain-cover[data-visual="forest"] {
+  --atlas-domain-tint: rgb(58 87 48 / 9%);
+}
+
+.atlas-domain-cover[data-visual="abyss"] {
+  --atlas-domain-tint: rgb(26 48 84 / 11%);
+}
+
+.atlas-domain-cover[data-visual="scorched"] {
+  --atlas-domain-tint: rgb(156 82 24 / 9%);
+}
+
+.atlas-domain-cover__content {
+  display: flex;
+  min-height: 22rem;
+  flex-direction: column;
+  padding: clamp(1.5rem, 2.5vw, 2.35rem);
+}
+
+.atlas-domain-cover__index {
+  margin: 0 0 1rem;
+  color: rgb(169 138 84 / 68%);
+  font-size: 0.64rem;
+  letter-spacing: 0.26em;
+}
+
+.atlas-domain-cover h3 {
+  margin: 0;
+  color: var(--atlas-ivory);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.55rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.atlas-domain-cover__signature {
+  margin: 0.85rem 0 0;
+  color: rgb(238 231 216 / 52%);
+  font-family: var(--font-body), serif;
+  font-size: 0.83rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.atlas-domain-cover__metadata {
+  display: grid;
+  gap: 0;
+  margin: auto 0 1.8rem;
+  padding-top: 2rem;
+}
+
+.atlas-domain-cover__metadata div {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgb(238 231 216 / 7%);
+}
+
+.atlas-domain-cover__metadata dt {
+  color: rgb(238 231 216 / 35%);
+  font-size: 0.59rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.atlas-domain-cover__metadata dd {
+  margin: 0;
+  color: rgb(238 231 216 / 68%);
+  font-size: 0.72rem;
+  text-align: right;
+}
+
+.atlas-domain-cover__cta {
+  align-self: flex-start;
+  color: #b99a62;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.atlas-domain-cover__cta span {
+  display: inline-block;
+  margin-left: 0.35rem;
+  transition: translate 250ms ease;
+}
+
+.atlas-domain-cover:hover .atlas-domain-cover__cta span {
+  translate: 0.25rem 0;
+}
+
+@media (max-width: 64rem) {
+  .atlas-section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-domain-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 42rem) {
+  .atlas-kingdoms-hero {
+    min-height: 72svh;
+  }
+
+  .atlas-kingdoms-hero__veil {
+    background:
+      linear-gradient(0deg, #080807 0%, rgb(3 3 3 / 34%) 55%, rgb(0 0 0 / 52%) 100%),
+      linear-gradient(90deg, rgb(0 0 0 / 65%), transparent);
+  }
+
+  .atlas-map-section,
+  .atlas-domains-section {
+    width: min(100% - 1.25rem, 95rem);
+  }
+
+  .atlas-relic-map {
+    min-height: 42rem;
+  }
+
+  .atlas-relic-map__legend {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-relic-map__legend a {
+    min-height: 2.75rem;
+  }
+
+  .atlas-relic-map__compass {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .atlas-domain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-domain-cover__content {
+    min-height: 19rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1509,6 +2034,18 @@ svg {
     animation: none !important;
     opacity: 1;
     transform: none;
+  }
+
+  .atlas-kingdoms-hero__content {
+    animation: none !important;
+  }
+
+  .atlas-domain-cover,
+  .atlas-domain-cover__image,
+  .atlas-domain-cover__cta span {
+    transition: none !important;
+    transform: none !important;
+    translate: none !important;
   }
 
 }
