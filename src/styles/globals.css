@@ -1920,11 +1920,14 @@ svg {
 }
 
 .atlas-domain-cover {
+  position: relative;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgb(169 138 84 / 18%);
+  border: 1px solid rgb(169 138 84 / 22%);
   border-radius: 0.15rem;
-  background: #0f0e0c;
+  background:
+    linear-gradient(106deg, rgb(183 149 91 / 3%), transparent 32%),
+    #0f0e0c;
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 22%);
   transition:
     border-color 300ms ease,
@@ -1933,9 +1936,9 @@ svg {
 }
 
 .atlas-domain-cover:hover {
-  border-color: rgb(169 138 84 / 47%);
+  border-color: rgb(181 148 88 / 58%);
   box-shadow: 0 2.4rem 5rem rgb(0 0 0 / 42%);
-  transform: translateY(-0.35rem);
+  transform: translateY(-0.25rem);
 }
 
 .atlas-domain-cover__link {
@@ -1951,6 +1954,23 @@ svg {
   background: #0b0a09;
 }
 
+.atlas-domain-cover__art::after {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 28%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(15 14 12 / 42%) 42%,
+    #0f0e0c 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
 .atlas-domain-cover__image {
   object-fit: cover;
   object-position: var(--atlas-focus-desktop);
@@ -1960,8 +1980,8 @@ svg {
 }
 
 .atlas-domain-cover:hover .atlas-domain-cover__image {
-  filter: contrast(1.04) saturate(1.04);
-  scale: 1.02;
+  filter: brightness(1.045) contrast(1.035) saturate(1.035);
+  scale: 1.018;
 }
 
 .atlas-domain-cover__overlay {
@@ -1998,74 +2018,117 @@ svg {
 }
 
 .atlas-domain-cover__content {
+  position: relative;
+  z-index: 3;
   display: flex;
-  min-height: 22rem;
+  min-height: 21rem;
   flex-direction: column;
+  margin-top: -2.5rem;
   padding: clamp(1.5rem, 2.5vw, 2.35rem);
+  background:
+    linear-gradient(180deg, transparent, #0f0e0c 2.5rem),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 1.9rem,
+      rgb(224 203 159 / 1.5%) 1.9rem 1.95rem
+    );
 }
 
-.atlas-domain-cover__index {
-  margin: 0 0 1rem;
-  color: rgb(169 138 84 / 68%);
-  font-size: 0.64rem;
-  letter-spacing: 0.26em;
+.atlas-domain-cover__dossier-heading {
+  padding-top: 1.4rem;
 }
 
-.atlas-domain-cover h3 {
+.atlas-domain-cover__register {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.72rem;
+  border-bottom: 1px solid rgb(191 158 98 / 16%);
+}
+
+.atlas-domain-cover__register p {
+  margin: 0;
+  color: rgb(183 151 93 / 62%);
+  font-size: 0.56rem;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.atlas-domain-cover__register p:last-child {
+  color: rgb(238 231 216 / 28%);
+  text-align: right;
+}
+
+.atlas-domain-cover__register span {
+  margin-right: 0.25rem;
+  font-size: 0.7rem;
+}
+
+.atlas-domain-cover__dossier-heading h3 {
+  max-width: 18ch;
   margin: 0;
   color: var(--atlas-ivory);
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(1.75rem, 2.5vw, 2.55rem);
+  font-size: clamp(1.45rem, 2vw, 2rem);
   font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1;
+  letter-spacing: 0.035em;
+  line-height: 1.08;
   text-wrap: balance;
+  text-transform: uppercase;
 }
 
-.atlas-domain-cover__signature {
-  margin: 0.85rem 0 0;
-  color: rgb(238 231 216 / 52%);
-  font-family: var(--font-body), serif;
-  font-size: 0.83rem;
-  font-style: italic;
-  letter-spacing: 0.03em;
+.atlas-domain-cover__record-state {
+  margin: 0.75rem 0 0;
+  color: rgb(238 231 216 / 34%);
+  font-size: 0.54rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .atlas-domain-cover__metadata {
   display: grid;
   gap: 0;
-  margin: auto 0 1.8rem;
-  padding-top: 2rem;
+  margin: auto 0 1.7rem;
+  padding-top: 1.8rem;
 }
 
 .atlas-domain-cover__metadata div {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 1rem;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgb(238 231 216 / 7%);
+  padding: 0.72rem 0;
+  border-bottom: 1px solid rgb(188 156 98 / 12%);
 }
 
 .atlas-domain-cover__metadata dt {
-  color: rgb(238 231 216 / 35%);
-  font-size: 0.59rem;
-  letter-spacing: 0.16em;
+  color: rgb(183 151 93 / 54%);
+  font-size: 0.55rem;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
 }
 
 .atlas-domain-cover__metadata dd {
   margin: 0;
-  color: rgb(238 231 216 / 68%);
-  font-size: 0.72rem;
+  color: rgb(238 231 216 / 64%);
+  font-family: var(--font-body), serif;
+  font-size: 0.74rem;
   text-align: right;
 }
 
 .atlas-domain-cover__cta {
   align-self: flex-start;
-  color: #b99a62;
+  color: rgb(185 154 98 / 72%);
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  transition: color 250ms ease;
+}
+
+.atlas-domain-cover:hover .atlas-domain-cover__cta {
+  color: #d4b473;
 }
 
 .atlas-domain-cover__cta span {

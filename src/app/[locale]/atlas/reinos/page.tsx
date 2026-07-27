@@ -39,6 +39,9 @@ const copy = {
     record: "Registro",
     recorded: "Catalogado",
     exploreShort: "Explorar",
+    dossier: "Dossiê do Reino",
+    archive: "Arquivo",
+    recovered: "Registro recuperado",
   },
   en: {
     eyebrow: "Recovered Cartographic Archive",
@@ -59,6 +62,9 @@ const copy = {
     record: "Record",
     recorded: "Catalogued",
     exploreShort: "Explore",
+    dossier: "Kingdom dossier",
+    archive: "Archive",
+    recovered: "Recovered record",
   },
   es: {
     eyebrow: "Archivo Cartográfico Recuperado",
@@ -80,6 +86,9 @@ const copy = {
     record: "Registro",
     recorded: "Catalogado",
     exploreShort: "Explorar",
+    dossier: "Dossier del Reino",
+    archive: "Archivo",
+    recovered: "Registro recuperado",
   },
 } satisfies Record<SupportedLocale, Record<string, string>>;
 
@@ -359,13 +368,27 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
                   </div>
 
                   <div className="atlas-domain-cover__content">
-                    <div>
-                      <p className="atlas-domain-cover__index">
-                        {String(homeDomainOrder.indexOf(slug) + 1).padStart(2, "0")}
+                    <header className="atlas-domain-cover__dossier-heading">
+                      <div className="atlas-domain-cover__register">
+                        <p>
+                          <span aria-hidden="true">◇</span> {messages.dossier}
+                        </p>
+                        <p>
+                          {messages.archive}{" "}
+                          {String(homeDomainOrder.indexOf(slug) + 1).padStart(
+                            2,
+                            "0",
+                          )}
+                        </p>
+                      </div>
+                      <h3>
+                        <span className="sr-only">{name}: </span>
+                        {signature}
+                      </h3>
+                      <p className="atlas-domain-cover__record-state">
+                        {messages.recovered}
                       </p>
-                      <h3>{name}</h3>
-                      <p className="atlas-domain-cover__signature">{signature}</p>
-                    </div>
+                    </header>
 
                     <dl className="atlas-domain-cover__metadata">
                       <div>
