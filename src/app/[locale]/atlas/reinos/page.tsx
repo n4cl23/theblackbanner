@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,10 +20,10 @@ type PageProps = {
 
 const copy = {
   "pt-br": {
-    eyebrow: "Cartografia dos Seis Domínios",
+    eyebrow: "Arquivo Cartográfico Recuperado",
     title: "Atlas de Asterheim",
     intro:
-      "Um mundo marcado por Coroas, fronteiras partidas e caminhos que ainda aguardam registro.",
+      "Compilado a partir de fragmentos preservados pelos cartógrafos de Asterheim.",
     mapEyebrow: "O mundo conhecido",
     mapTitle: "Um continente. Seis domínios.",
     mapBody:
@@ -37,12 +38,13 @@ const copy = {
     force: "Força da Coroa",
     record: "Registro",
     recorded: "Catalogado",
+    exploreShort: "Explorar",
   },
   en: {
-    eyebrow: "Cartography of the Six Domains",
+    eyebrow: "Recovered Cartographic Archive",
     title: "Atlas of Asterheim",
     intro:
-      "A world marked by Crowns, fractured borders, and paths still waiting to be recorded.",
+      "Compiled from fragments preserved by the cartographers of Asterheim.",
     mapEyebrow: "The known world",
     mapTitle: "One continent. Six domains.",
     mapBody:
@@ -56,12 +58,13 @@ const copy = {
     force: "Crown force",
     record: "Record",
     recorded: "Catalogued",
+    exploreShort: "Explore",
   },
   es: {
-    eyebrow: "Cartografía de los Seis Dominios",
+    eyebrow: "Archivo Cartográfico Recuperado",
     title: "Atlas de Asterheim",
     intro:
-      "Un mundo marcado por Coronas, fronteras fracturadas y caminos que aún esperan ser registrados.",
+      "Compilado a partir de fragmentos preservados por los cartógrafos de Asterheim.",
     mapEyebrow: "El mundo conocido",
     mapTitle: "Un continente. Seis dominios.",
     mapBody:
@@ -76,6 +79,7 @@ const copy = {
     force: "Fuerza de la Corona",
     record: "Registro",
     recorded: "Catalogado",
+    exploreShort: "Explorar",
   },
 } satisfies Record<SupportedLocale, Record<string, string>>;
 
@@ -114,6 +118,48 @@ const presentation = {
   HomeDomainSlug,
   { signature: string; environment: string; visual: string }
 >;
+
+const atlasFraming = {
+  "frost-kingdom": {
+    desktop: "center 30%",
+    tablet: "center 28%",
+    mobile: "center 24%",
+  },
+  stormreach: {
+    desktop: "center 45%",
+    tablet: "center 43%",
+    mobile: "center 40%",
+  },
+  ironhold: {
+    desktop: "center 48%",
+    tablet: "center 46%",
+    mobile: "center 44%",
+  },
+  "elder-forest": {
+    desktop: "center 50%",
+    tablet: "center 48%",
+    mobile: "center 45%",
+  },
+  "kingdom-of-the-abyss": {
+    desktop: "center 45%",
+    tablet: "center 43%",
+    mobile: "center 40%",
+  },
+  "scorched-wastes": {
+    desktop: "center 48%",
+    tablet: "center 46%",
+    mobile: "center 43%",
+  },
+} satisfies Record<
+  HomeDomainSlug,
+  { desktop: string; tablet: string; mobile: string }
+>;
+
+type AtlasArtworkStyle = CSSProperties & {
+  "--atlas-focus-desktop": string;
+  "--atlas-focus-tablet": string;
+  "--atlas-focus-mobile": string;
+};
 
 function resolveLocale(locale: string): SupportedLocale {
   if (!supportedLocales.includes(locale as SupportedLocale)) {
@@ -169,6 +215,7 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
       artwork,
       crown,
       name: crown?.kingdom.title ?? slug,
+      framing: atlasFraming[slug],
       ...presentation[slug],
     };
   });
@@ -176,14 +223,30 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
   return (
     <main className="atlas-kingdoms-page">
       <section className="atlas-kingdoms-hero" aria-labelledby="atlas-title">
-        <Image
-          src="/images/home/kingdoms-expanse.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="atlas-kingdoms-hero__image"
-        />
+        <div className="atlas-kingdoms-hero__mosaic" aria-hidden="true">
+          {kingdoms.map(({ slug, artwork, framing }) => (
+            <div className="atlas-kingdoms-hero__panel" key={slug}>
+              <Image
+                src={artwork.image}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 768px) 50vw, 34vw"
+                style={
+                  {
+                    "--atlas-focus-desktop": framing.desktop,
+                    "--atlas-focus-tablet": framing.tablet,
+                    "--atlas-focus-mobile": framing.mobile,
+                  } as AtlasArtworkStyle
+                }
+              />
+            </div>
+          ))}
+        </div>
+        <div className="atlas-kingdoms-hero__grid" aria-hidden="true" />
+        <div className="atlas-kingdoms-hero__compass" aria-hidden="true">
+          <span>N</span>
+        </div>
         <div className="atlas-kingdoms-hero__veil" />
         <div className="atlas-kingdoms-hero__content">
           <p className="atlas-kingdoms-eyebrow">{messages.eyebrow}</p>
@@ -229,10 +292,16 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
             className="atlas-relic-map__legend"
             aria-label={messages.domainsEyebrow}
           >
-            {kingdoms.map(({ slug, name }) => (
+            {kingdoms.map(({ slug, name, signature }) => (
               <Link key={slug} href={`/${locale}/atlas/reinos/${slug}`}>
-                <span aria-hidden="true" />
-                {name}
+                <span className="atlas-relic-map__marker" aria-hidden="true" />
+                <span className="atlas-relic-map__destination">
+                  <strong>{name}</strong>
+                  <small>{signature}</small>
+                </span>
+                <span className="atlas-relic-map__explore" aria-hidden="true">
+                  {messages.exploreShort} →
+                </span>
               </Link>
             ))}
           </nav>
@@ -251,7 +320,16 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
 
         <div className="atlas-domain-grid">
           {kingdoms.map(
-            ({ slug, artwork, crown, name, signature, environment, visual }) => (
+            ({
+              slug,
+              artwork,
+              crown,
+              name,
+              signature,
+              environment,
+              visual,
+              framing,
+            }) => (
               <article
                 className="atlas-domain-cover"
                 data-visual={visual}
@@ -268,8 +346,14 @@ export default async function AtlasKingdomsPage({ params }: PageProps) {
                       alt=""
                       fill
                       sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
-                      className={`atlas-domain-cover__image atlas-domain-cover__image--${artwork.fit}`}
-                      style={{ objectPosition: artwork.objectPosition }}
+                      className="atlas-domain-cover__image"
+                      style={
+                        {
+                          "--atlas-focus-desktop": framing.desktop,
+                          "--atlas-focus-tablet": framing.tablet,
+                          "--atlas-focus-mobile": framing.mobile,
+                        } as AtlasArtworkStyle
+                      }
                     />
                     <div className="atlas-domain-cover__overlay" />
                   </div>

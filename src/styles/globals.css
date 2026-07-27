@@ -1490,12 +1490,94 @@ svg {
   isolation: isolate;
 }
 
-.atlas-kingdoms-hero__image {
-  z-index: -3;
+.atlas-kingdoms-hero__mosaic {
+  position: absolute;
+  z-index: -4;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  background: #050505;
+}
+
+.atlas-kingdoms-hero__panel {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.atlas-kingdoms-hero__panel:nth-child(n + 4) {
+  display: none;
+}
+
+.atlas-kingdoms-hero__panel img {
   object-fit: cover;
-  object-position: center 46%;
-  filter: saturate(0.72) contrast(1.08);
-  scale: 1.015;
+  object-position: var(--atlas-focus-desktop);
+  filter: saturate(0.64) contrast(1.1) brightness(0.72);
+  scale: 1.02;
+}
+
+.atlas-kingdoms-hero__panel + .atlas-kingdoms-hero__panel::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12%;
+  background: linear-gradient(90deg, rgb(0 0 0 / 72%), transparent);
+  content: "";
+}
+
+.atlas-kingdoms-hero__grid {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgb(204 178 124 / 13%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(204 178 124 / 13%) 1px, transparent 1px);
+  background-size: 5rem 5rem;
+  mask-image: linear-gradient(to bottom, #000, transparent 82%);
+}
+
+.atlas-kingdoms-hero__compass {
+  position: absolute;
+  z-index: -1;
+  top: 17%;
+  right: 7%;
+  display: grid;
+  width: clamp(6rem, 10vw, 9rem);
+  aspect-ratio: 1;
+  place-items: start center;
+  border: 1px solid rgb(215 188 132 / 18%);
+  border-radius: 50%;
+  color: rgb(225 204 162 / 34%);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+}
+
+.atlas-kingdoms-hero__compass::before,
+.atlas-kingdoms-hero__compass::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgb(215 188 132 / 18%);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.atlas-kingdoms-hero__compass::before {
+  width: 145%;
+  height: 1px;
+}
+
+.atlas-kingdoms-hero__compass::after {
+  width: 1px;
+  height: 145%;
+}
+
+.atlas-kingdoms-hero__compass span {
+  margin-top: 0.55rem;
 }
 
 .atlas-kingdoms-hero__veil {
@@ -1566,6 +1648,23 @@ svg {
 
 .atlas-map-section {
   position: relative;
+}
+
+.atlas-map-section::after {
+  position: absolute;
+  z-index: -1;
+  right: -8vw;
+  bottom: -8rem;
+  left: -8vw;
+  height: 22rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(90 70 40 / 5%),
+    rgb(8 8 7 / 72%) 42%,
+    #080807
+  );
+  content: "";
+  pointer-events: none;
 }
 
 .atlas-section-heading {
@@ -1735,10 +1834,11 @@ svg {
 }
 
 .atlas-relic-map__legend a {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  min-height: 3.5rem;
-  padding: 0.75rem;
+  min-height: 4.7rem;
+  padding: 0.7rem clamp(0.65rem, 1.4vw, 1.2rem);
   color: rgb(238 231 216 / 72%);
   font-family: var(--font-display), Georgia, serif;
   font-size: clamp(0.72rem, 1vw, 0.9rem);
@@ -1749,7 +1849,7 @@ svg {
     background 250ms ease;
 }
 
-.atlas-relic-map__legend a span {
+.atlas-relic-map__marker {
   width: 0.3rem;
   height: 0.3rem;
   margin-right: 0.75rem;
@@ -1757,10 +1857,51 @@ svg {
   rotate: 45deg;
 }
 
+.atlas-relic-map__destination {
+  display: grid;
+  min-width: 0;
+  gap: 0.28rem;
+}
+
+.atlas-relic-map__destination strong {
+  overflow: hidden;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-relic-map__destination small {
+  overflow: hidden;
+  color: rgb(238 231 216 / 38%);
+  font-family: var(--font-body), serif;
+  font-size: 0.58rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-relic-map__explore {
+  color: rgb(185 154 98 / 58%);
+  font-family: var(--font-body), serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    color 250ms ease,
+    translate 250ms ease;
+}
+
 .atlas-relic-map__legend a:hover,
 .atlas-relic-map__legend a:focus-visible {
   color: #e8c988;
   background: rgb(169 138 84 / 7%);
+}
+
+.atlas-relic-map__legend a:hover .atlas-relic-map__explore,
+.atlas-relic-map__legend a:focus-visible .atlas-relic-map__explore {
+  color: #d0ad6a;
+  translate: 0.18rem 0;
 }
 
 .atlas-domains-section {
@@ -1811,17 +1952,11 @@ svg {
 }
 
 .atlas-domain-cover__image {
+  object-fit: cover;
+  object-position: var(--atlas-focus-desktop);
   transition:
     scale 500ms cubic-bezier(0.22, 1, 0.36, 1),
     filter 500ms ease;
-}
-
-.atlas-domain-cover__image--cover {
-  object-fit: cover;
-}
-
-.atlas-domain-cover__image--contain {
-  object-fit: contain;
 }
 
 .atlas-domain-cover:hover .atlas-domain-cover__image {
@@ -1944,6 +2079,11 @@ svg {
 }
 
 @media (max-width: 64rem) {
+  .atlas-kingdoms-hero__panel img,
+  .atlas-domain-cover__image {
+    object-position: var(--atlas-focus-tablet);
+  }
+
   .atlas-section-heading {
     grid-template-columns: 1fr;
   }
@@ -1964,6 +2104,19 @@ svg {
       linear-gradient(90deg, rgb(0 0 0 / 65%), transparent);
   }
 
+  .atlas-kingdoms-hero__mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .atlas-kingdoms-hero__panel:nth-child(3) {
+    display: none;
+  }
+
+  .atlas-kingdoms-hero__panel img,
+  .atlas-domain-cover__image {
+    object-position: var(--atlas-focus-mobile);
+  }
+
   .atlas-map-section,
   .atlas-domains-section {
     width: min(100% - 1.25rem, 95rem);
@@ -1978,7 +2131,12 @@ svg {
   }
 
   .atlas-relic-map__legend a {
-    min-height: 2.75rem;
+    min-height: 3.15rem;
+  }
+
+  .atlas-relic-map__destination small,
+  .atlas-relic-map__explore {
+    display: none;
   }
 
   .atlas-relic-map__compass {
