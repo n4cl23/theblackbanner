@@ -420,7 +420,7 @@ function MiniaturesSection({
       className="latest-miniatures-domain relative isolate overflow-hidden bg-coal-950 py-24 sm:py-36"
       id="chapter-miniatures"
     >
-      <Container>
+      <Container className="max-w-[97.5rem]">
         <SectionIntro
           action={{
             href: localizedPath(locale, 'miniaturas'),
@@ -495,7 +495,7 @@ function EditorialFeature({
         src={guardian.media[0]?.url ?? '/images/home/asterheim-hero.webp'}
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-black/10" />
-      <Container className="flex min-h-[70svh] items-center py-20">
+      <Container className="flex min-h-[70svh] max-w-[97.5rem] items-center py-20">
         <div className="editorial-feature__content max-w-2xl">
           <Eyebrow>{messages.featuredGuardian}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6.5rem)] leading-[.88] uppercase">
@@ -538,7 +538,7 @@ function ProjectClosing({
         src={miniature?.cover?.src ?? '/images/home/asterheim-hero.webp'}
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent" />
-      <Container className="flex min-h-[62svh] items-center py-20">
+      <Container className="flex min-h-[62svh] max-w-[97.5rem] items-center py-20">
         <div className="project-closing__content max-w-2xl">
           <Eyebrow>{messages.projectEyebrow}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6rem)] leading-[.88] uppercase">

@@ -592,6 +592,14 @@ svg {
     linear-gradient(to bottom, #020202 0%, #050403 82%, #090704 100%);
 }
 
+.kingdom-domain,
+.featured-collections-domain,
+.latest-miniatures-domain,
+.editorial-feature-domain,
+.project-closing-domain {
+  scroll-margin-top: var(--header-height);
+}
+
 .kingdom-domain::before {
   position: absolute;
   inset: -7rem 0 auto;
@@ -955,6 +963,12 @@ svg {
   box-shadow: 0 2rem 5.5rem rgb(0 0 0 / 30%);
 }
 
+.featured-collection:focus-visible,
+.home-miniature-card:focus-visible {
+  outline: 1px solid rgb(205 169 101 / 82%);
+  outline-offset: 0.25rem;
+}
+
 .featured-collection:hover .featured-collection__image,
 .featured-collection:focus-visible .featured-collection__image {
   filter: contrast(1.035);
@@ -1133,6 +1147,8 @@ svg {
 }
 
 .home-miniature-card {
+  min-width: 0;
+  outline: none;
   animation: editorial-card-rise linear both;
   animation-range: entry 8% cover 34%;
   animation-timeline: view();
@@ -1154,6 +1170,67 @@ svg {
   z-index: -5;
   content: '';
   pointer-events: none;
+}
+
+@media (max-width: 63.99rem) {
+  .featured-collections-domain__header {
+    max-width: 48rem;
+    margin-bottom: clamp(2.25rem, 6vw, 3.5rem);
+  }
+
+  .featured-collection__description {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .section-intro {
+    display: block;
+  }
+
+  .latest-miniatures-domain,
+  .editorial-feature-domain,
+  .project-closing-domain {
+    scroll-margin-top: calc(var(--header-height) - 0.5rem);
+  }
+
+  .featured-collection__content {
+    padding: clamp(1.25rem, 6vw, 1.75rem);
+  }
+
+  .featured-collection--primary h3 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .featured-collection--boss h3,
+  .featured-collection--minor h3,
+  .featured-collection--compact h3 {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .featured-collection__description {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .featured-collection__cta {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 23.5rem) {
+  .featured-collections-domain__header h2 {
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
+
+  .featured-collection--primary h3 {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+
+  .featured-showcase__footer a {
+    line-height: 1.6;
+  }
 }
 
 .editorial-feature-domain::before {
