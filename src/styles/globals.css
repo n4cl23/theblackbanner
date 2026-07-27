@@ -436,7 +436,7 @@ svg {
 }
 
 .page-transition {
-  animation: fade-in var(--duration-base) var(--ease-standard) both;
+  animation: page-arrival 420ms var(--ease-reveal) both;
 }
 
 .text-reveal {
@@ -515,6 +515,17 @@ svg {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes page-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -2342,12 +2353,174 @@ svg {
   will-change: transform;
 }
 
+.living-atlas__world::before {
+  position: absolute;
+  z-index: -1;
+  inset: 1.5% 2.5%;
+  border: 1px solid rgb(188 157 98 / 16%);
+  background:
+    repeating-linear-gradient(
+      88deg,
+      transparent 0 7rem,
+      rgb(99 76 39 / 2.5%) 7rem 7.08rem
+    ),
+    radial-gradient(circle at 46% 40%, rgb(123 101 62 / 9%), transparent 48%),
+    #15120d;
+  box-shadow:
+    0 3.5rem 7rem rgb(0 0 0 / 68%),
+    0 0 0 0.5rem rgb(5 5 4 / 24%),
+    inset 0 0 5rem rgb(0 0 0 / 34%);
+  clip-path: polygon(
+    0.8% 2.4%,
+    23% 1.1%,
+    49% 2%,
+    75% 0.9%,
+    99% 2.2%,
+    98.7% 34%,
+    99.2% 66%,
+    98.2% 98%,
+    73% 99.1%,
+    49% 98.4%,
+    24% 99%,
+    0.6% 97.8%,
+    1.2% 67%,
+    0.5% 35%
+  );
+  content: "";
+  rotate: -0.22deg;
+}
+
 .living-atlas__map {
   display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
   filter: drop-shadow(0 2rem 3rem rgb(0 0 0 / 42%));
+}
+
+/* Narrative route loading */
+.narrative-loading {
+  position: relative;
+  display: grid;
+  min-height: min(100svh, 60rem);
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  padding: 2rem;
+  color: #eee5d5;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 50%, rgb(126 92 44 / 10%), transparent 22rem),
+    #070706;
+  isolation: isolate;
+}
+
+.narrative-loading::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.18;
+  background:
+    linear-gradient(rgb(193 158 94 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(193 158 94 / 4%) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  content: "";
+  mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+}
+
+.narrative-loading__mark {
+  position: relative;
+  display: grid;
+  width: 4.25rem;
+  aspect-ratio: 1;
+  margin-bottom: 2rem;
+  place-items: center;
+  border: 1px solid rgb(189 150 79 / 64%);
+  color: #d7bd89;
+  rotate: 45deg;
+  box-shadow:
+    0 0 2.5rem rgb(173 120 40 / 12%),
+    inset 0 0 1.6rem rgb(173 120 40 / 6%);
+  animation: loading-mark-breathe 2.4s ease-in-out infinite alternate;
+}
+
+.narrative-loading__mark::before {
+  position: absolute;
+  inset: 0.35rem;
+  border: 1px solid rgb(189 150 79 / 20%);
+  content: "";
+}
+
+.narrative-loading__mark span {
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  rotate: -45deg;
+}
+
+.narrative-loading > p {
+  margin: 0 0 0.9rem;
+  color: rgb(191 155 90 / 62%);
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.narrative-loading h1 {
+  max-width: 26rem;
+  margin: 0;
+  color: rgb(238 229 213 / 78%);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+}
+
+.narrative-loading__embers {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.narrative-loading__embers i {
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: #b88b45;
+  box-shadow: 0 0 0.8rem rgb(184 139 69 / 56%);
+  animation: loading-ember 1.6s ease-in-out infinite;
+}
+
+.narrative-loading__embers i:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.narrative-loading__embers i:nth-child(3) {
+  animation-delay: 360ms;
+}
+
+@keyframes loading-mark-breathe {
+  from {
+    opacity: 0.55;
+    scale: 0.985;
+  }
+  to {
+    opacity: 1;
+    scale: 1.015;
+  }
+}
+
+@keyframes loading-ember {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-0.24rem);
+  }
 }
 
 .living-atlas__charted-border {

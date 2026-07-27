@@ -23,7 +23,7 @@ export async function generateMetadata({
   const k = await getAtlasKingdomBySlug(slug);
   return k
     ? {
-        title: `Atlas — ${k.title}`,
+        title: k.title,
         description: k.excerpt,
         alternates: { canonical: `/pt-br/atlas/reinos/${slug}` },
       }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="The Black Banner">
+  <rect width="512" height="512" rx="48" fill="#080807"/>
+  <path d="M256 55 457 256 256 457 55 256Z" fill="#11100d" stroke="#b18c4f" stroke-width="18"/>
+  <path d="M256 93 419 256 256 419 93 256Z" fill="none" stroke="#695431" stroke-width="5"/>
+  <path d="M169 365 256 137 343 365M201 282h110M219 234l74 74" fill="none" stroke="#e5d6b7" stroke-linecap="square" stroke-linejoin="miter" stroke-width="26"/>
+  <circle cx="256" cy="256" r="182" fill="none" stroke="#b18c4f" stroke-dasharray="2 20" stroke-linecap="round" stroke-width="5" opacity=".7"/>
+</svg>

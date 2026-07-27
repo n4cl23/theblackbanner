@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import { getPublicEnvironment } from '@/config/env';
 import { siteConfig } from '@/config/site';
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  manifest: '/manifest.webmanifest',
   authors: [{ name: siteConfig.creator }],
   creator: siteConfig.creator,
   publisher: siteConfig.creator,
@@ -58,6 +59,38 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.socialImage],
   },
+  icons: {
+    icon: [
+      { url: '/icons/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icons/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icons/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icons/black-banner-mark.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      {
+        url: '/icons/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/icons/mask-icon.svg',
+        color: '#b18c4f',
+      },
+    ],
+  },
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.name,
+    statusBarStyle: 'black-translucent',
+  },
+};
+
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#080807',
 };
 
 export default function RootLayout({

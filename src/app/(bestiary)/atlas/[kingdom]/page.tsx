@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getAtlasPageData(kingdom);
   if (!data) return { title: 'Bioma não encontrado', robots: { index: false } };
   return {
-    title: `Atlas — ${data.kingdom.title}`,
+    title: data.kingdom.title,
     description: data.biome?.atmosphere ?? data.kingdom.excerpt,
     alternates: { canonical: `/atlas/${kingdom}` },
     openGraph: {

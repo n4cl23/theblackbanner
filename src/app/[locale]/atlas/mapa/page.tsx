@@ -15,7 +15,7 @@ const signatures = {
 } as const;
 
 export const metadata: Metadata = {
-  title: "Mapa Vivo de Asterheim | The Black Banner",
+  title: "Mapa Vivo de Asterheim",
   description:
     "Explore os seis domínios registrados no Atlas de Asterheim.",
 };

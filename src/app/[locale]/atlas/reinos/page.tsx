@@ -187,7 +187,7 @@ export async function generateMetadata({
   const path = `/${locale}/atlas/reinos`;
 
   return {
-    title: `${messages.title} | The Black Banner`,
+    title: messages.title,
     description: messages.intro,
     alternates: {
       canonical: path,

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
@@ -102,12 +103,15 @@ export function SiteHeader({
           className="group flex min-w-max items-center gap-3"
           href={localizedPath(locale)}
         >
-          <span
+          <Image
+            alt=""
             aria-hidden="true"
-            className="border-aged-gold-500/60 text-aged-gold-500 grid size-10 rotate-45 place-items-center border text-sm"
-          >
-            <span className="-rotate-45">ᚨ</span>
-          </span>
+            className="size-10"
+            height={40}
+            priority
+            src="/icons/black-banner-mark.svg"
+            width={40}
+          />
           <span>
             <strong className="font-display text-ivory-100 block text-sm tracking-[0.2em] uppercase sm:text-base">
               The Black Banner
