@@ -6,6 +6,7 @@ import type { MouseEvent } from 'react';
 
 import { i18nConfig, type Locale } from '@/config/i18n';
 import { localizePathname } from '@/features/i18n/data/route-registry';
+import { cn } from '@/lib/cn';
 
 const languageNames: Record<Locale, string> = {
   'pt-br': 'PT — Português',
@@ -22,10 +23,12 @@ const switcherLabels: Record<Locale, string> = {
 export function LanguageSwitcher({
   locale,
   compact = false,
+  className,
   onNavigate,
 }: {
   locale: Locale;
   compact?: boolean;
+  className?: string;
   onNavigate?: () => void;
 }) {
   const pathname = usePathname() ?? `/${locale}`;
@@ -42,7 +45,7 @@ export function LanguageSwitcher({
   }
 
   return (
-    <nav aria-label={switcherLabels[locale]}>
+    <nav aria-label={switcherLabels[locale]} className={cn(className)}>
       <ul className="flex items-center gap-1">
         {i18nConfig.locales.map((item) => (
           <li key={item}>
