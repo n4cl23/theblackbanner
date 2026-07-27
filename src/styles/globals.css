@@ -2216,6 +2216,619 @@ svg {
   }
 }
 
+/* Atlas / Living World Map */
+.living-atlas-page {
+  min-height: 100svh;
+  overflow: hidden;
+  background: #050504;
+}
+
+.living-atlas {
+  position: relative;
+  min-height: calc(100svh - 4rem);
+  color: #ece3d0;
+  background:
+    radial-gradient(circle at 50% 44%, rgb(109 91 58 / 10%), transparent 38rem),
+    #050504;
+  isolation: isolate;
+}
+
+.living-atlas__header {
+  position: absolute;
+  z-index: 8;
+  top: clamp(1.2rem, 3vw, 2.6rem);
+  left: clamp(1rem, 4vw, 4.5rem);
+  max-width: min(34rem, calc(100% - 8rem));
+  pointer-events: none;
+}
+
+.living-atlas__header p {
+  margin: 0 0 0.72rem;
+  color: rgb(195 162 101 / 72%);
+  font-size: 0.58rem;
+  letter-spacing: 0.27em;
+  text-transform: uppercase;
+}
+
+.living-atlas__header h1 {
+  margin: 0;
+  color: #f0e7d7;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.2rem, 4.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-shadow: 0 0.4rem 1.5rem rgb(0 0 0 / 72%);
+  text-transform: uppercase;
+}
+
+.living-atlas__header span {
+  display: block;
+  margin-top: 0.85rem;
+  color: rgb(236 227 208 / 42%);
+  font-family: var(--font-body), serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+.living-atlas__viewport {
+  position: relative;
+  min-height: calc(100svh - 4rem);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  background:
+    linear-gradient(rgb(201 174 119 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(201 174 119 / 3%) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 48%, #262116 0%, #100e0b 57%, #050504 100%);
+  background-size:
+    4rem 4rem,
+    4rem 4rem,
+    auto;
+}
+
+.living-atlas__viewport:active {
+  cursor: grabbing;
+}
+
+.living-atlas__viewport::before,
+.living-atlas__viewport::after {
+  position: absolute;
+  z-index: 7;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.living-atlas__viewport::before {
+  background:
+    linear-gradient(90deg, rgb(4 4 3 / 82%), transparent 15%, transparent 84%, rgb(4 4 3 / 78%)),
+    linear-gradient(0deg, rgb(4 4 3 / 92%), transparent 20%, transparent 80%, rgb(4 4 3 / 58%));
+}
+
+.living-atlas__viewport::after {
+  opacity: 0.12;
+  background-image:
+    repeating-radial-gradient(
+      circle at 16% 21%,
+      transparent 0 0.3rem,
+      rgb(224 198 144 / 12%) 0.31rem 0.33rem,
+      transparent 0.34rem 4.5rem
+    );
+  mix-blend-mode: overlay;
+}
+
+.living-atlas__coordinates {
+  position: absolute;
+  z-index: 9;
+  right: clamp(1rem, 3vw, 3rem);
+  bottom: 1.25rem;
+  left: clamp(1rem, 3vw, 3rem);
+  display: flex;
+  justify-content: space-between;
+  color: rgb(210 187 142 / 28%);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  pointer-events: none;
+}
+
+.living-atlas__world {
+  position: absolute;
+  z-index: 2;
+  inset: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 6rem) clamp(2.5rem, 5vw, 4.5rem);
+  min-width: 48rem;
+  transform-origin: center;
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.living-atlas__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 2rem 3rem rgb(0 0 0 / 42%));
+}
+
+.living-atlas__charted-border {
+  fill: none;
+  stroke: rgb(205 176 119 / 18%);
+  stroke-dasharray: 3 9;
+  stroke-width: 1;
+}
+
+.living-atlas__territory {
+  cursor: pointer;
+  outline: none;
+}
+
+.living-atlas__territory-art {
+  opacity: 0.25;
+  filter: saturate(0.25) contrast(1.12) brightness(0.55);
+  transition:
+    opacity 700ms ease,
+    filter 700ms ease;
+}
+
+.living-atlas__territory-wash {
+  fill: var(--living-territory-color, rgb(75 68 52 / 60%));
+  stroke: rgb(189 157 98 / 36%);
+  stroke-width: 1.3;
+  transition:
+    fill 600ms ease,
+    stroke 600ms ease,
+    opacity 600ms ease;
+}
+
+.living-atlas__territory-fog {
+  fill: rgb(8 8 7 / 68%);
+  opacity: 0.72;
+  transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.living-atlas__territory[data-visual="frost"] {
+  --living-territory-color: rgb(87 124 143 / 36%);
+}
+
+.living-atlas__territory[data-visual="storm"] {
+  --living-territory-color: rgb(54 77 105 / 38%);
+}
+
+.living-atlas__territory[data-visual="iron"] {
+  --living-territory-color: rgb(125 70 39 / 36%);
+}
+
+.living-atlas__territory[data-visual="forest"] {
+  --living-territory-color: rgb(58 82 49 / 38%);
+}
+
+.living-atlas__territory[data-visual="abyss"] {
+  --living-territory-color: rgb(38 54 78 / 44%);
+}
+
+.living-atlas__territory[data-visual="scorched"] {
+  --living-territory-color: rgb(132 72 31 / 40%);
+}
+
+.living-atlas__territory[data-active] .living-atlas__territory-art {
+  opacity: 0.5;
+  filter: saturate(0.62) contrast(1.08) brightness(0.82);
+}
+
+.living-atlas__territory[data-active] .living-atlas__territory-wash {
+  fill: transparent;
+  stroke: rgb(218 184 116 / 76%);
+  stroke-width: 2;
+  filter: url("#living-map-light");
+}
+
+.living-atlas__territory[data-active] .living-atlas__territory-fog {
+  opacity: 0.12;
+}
+
+.living-atlas__territory[data-muted] .living-atlas__territory-art {
+  opacity: 0.12;
+  filter: saturate(0) brightness(0.42);
+}
+
+.living-atlas__territory[data-muted] .living-atlas__territory-fog {
+  opacity: 0.84;
+}
+
+.living-atlas__territory:focus-visible .living-atlas__territory-wash {
+  stroke: #dfbd79;
+  stroke-width: 3;
+}
+
+.living-atlas__territory-number,
+.living-atlas__territory-name {
+  fill: rgb(232 216 182 / 42%);
+  font-family: var(--font-body), serif;
+  pointer-events: none;
+  text-transform: uppercase;
+  transition:
+    fill 500ms ease,
+    opacity 500ms ease;
+}
+
+.living-atlas__territory-number {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.living-atlas__territory-name {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.living-atlas__territory[data-active] .living-atlas__territory-number {
+  fill: rgb(215 180 111 / 82%);
+}
+
+.living-atlas__territory[data-active] .living-atlas__territory-name {
+  fill: #eee4d1;
+}
+
+.living-atlas__territory[data-muted] .living-atlas__territory-number,
+.living-atlas__territory[data-muted] .living-atlas__territory-name {
+  opacity: 0.25;
+}
+
+.living-atlas__routes path {
+  fill: none;
+  stroke: rgb(220 194 142 / 17%);
+  stroke-dasharray: 2 8;
+  stroke-width: 1;
+}
+
+.living-atlas__poi circle {
+  fill: #c5a261;
+  stroke: #17130e;
+  stroke-width: 2;
+}
+
+.living-atlas__poi text {
+  fill: rgb(236 227 208 / 58%);
+  font-family: var(--font-body), serif;
+  font-size: 10px;
+}
+
+.living-atlas__global-fog {
+  opacity: 0.34;
+  mix-blend-mode: multiply;
+  transition: opacity 600ms ease;
+}
+
+.living-atlas__viewport:has(.living-atlas__territory[data-active])
+  .living-atlas__global-fog {
+  opacity: 0.2;
+}
+
+.living-atlas__kingdom-note {
+  position: absolute;
+  z-index: 5;
+  width: min(15rem, 28vw);
+  padding: 1rem 1.15rem;
+  border-left: 1px solid rgb(202 168 103 / 48%);
+  opacity: 0;
+  background: linear-gradient(90deg, rgb(8 8 7 / 90%), rgb(8 8 7 / 64%));
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 36%);
+  pointer-events: none;
+  translate: 1.4rem -48%;
+  transition:
+    opacity 320ms ease,
+    translate 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.living-atlas__kingdom-note[data-visible] {
+  opacity: 1;
+  pointer-events: auto;
+  translate: 1.8rem -50%;
+}
+
+.living-atlas__kingdom-note p {
+  margin: 0;
+  color: #eee4d1;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(0.9rem, 1.15vw, 1.12rem);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.living-atlas__kingdom-note > span {
+  display: block;
+  margin-top: 0.52rem;
+  color: rgb(236 227 208 / 42%);
+  font-size: 0.52rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.living-atlas__kingdom-note a {
+  display: inline-flex;
+  margin-top: 0.9rem;
+  color: #c7a463;
+  font-size: 0.57rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.living-atlas__kingdom-note a span {
+  margin-left: 0.35rem;
+  transition: translate 250ms ease;
+}
+
+.living-atlas__kingdom-note a:hover span,
+.living-atlas__kingdom-note a:focus-visible span {
+  translate: 0.2rem 0;
+}
+
+.living-atlas__compass {
+  position: absolute;
+  z-index: 9;
+  right: clamp(1.3rem, 3vw, 3rem);
+  bottom: clamp(4.5rem, 8vw, 7rem);
+  display: grid;
+  width: clamp(5rem, 8vw, 7.5rem);
+  aspect-ratio: 1;
+  place-items: start center;
+  border: 1px solid rgb(203 174 115 / 23%);
+  border-radius: 50%;
+  color: rgb(217 192 142 / 42%);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  pointer-events: none;
+}
+
+.living-atlas__compass::before,
+.living-atlas__compass::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgb(203 174 115 / 22%);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.living-atlas__compass::before {
+  width: 145%;
+  height: 1px;
+}
+
+.living-atlas__compass::after {
+  width: 1px;
+  height: 145%;
+}
+
+.living-atlas__compass span {
+  margin-top: 0.42rem;
+}
+
+.living-atlas__compass i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-right: 0.3rem solid transparent;
+  border-bottom: 1.7rem solid rgb(190 154 90 / 34%);
+  border-left: 0.3rem solid transparent;
+  transform: translate(-50%, -100%);
+}
+
+.living-atlas__controls {
+  position: absolute;
+  z-index: 10;
+  top: clamp(1rem, 3vw, 2.5rem);
+  right: clamp(1rem, 3vw, 3rem);
+  display: flex;
+  border: 1px solid rgb(199 166 102 / 20%);
+  background: rgb(7 7 6 / 72%);
+}
+
+.living-atlas__controls button {
+  display: grid;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  place-items: center;
+  border: 0;
+  border-right: 1px solid rgb(199 166 102 / 16%);
+  color: rgb(236 227 208 / 62%);
+  background: transparent;
+  cursor: pointer;
+}
+
+.living-atlas__controls button:last-child {
+  border-right: 0;
+}
+
+.living-atlas__controls button:hover,
+.living-atlas__controls button:focus-visible {
+  color: #ddbb77;
+  background: rgb(199 166 102 / 8%);
+}
+
+.living-atlas__layers {
+  position: absolute;
+  z-index: 10;
+  bottom: clamp(2.5rem, 5vw, 4.5rem);
+  left: clamp(1rem, 3vw, 3rem);
+  display: grid;
+  min-width: 10.5rem;
+  gap: 0.1rem;
+  padding: 0;
+  border: 0;
+}
+
+.living-atlas__layers legend {
+  margin-bottom: 0.65rem;
+  color: rgb(194 161 99 / 52%);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.living-atlas__layers label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  min-height: 1.75rem;
+  gap: 0.6rem;
+  color: rgb(236 227 208 / 25%);
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.living-atlas__layers label[data-available] {
+  color: rgb(236 227 208 / 62%);
+  cursor: pointer;
+}
+
+.living-atlas__layers input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.living-atlas__layers label > span {
+  width: 0.42rem;
+  height: 0.42rem;
+  border: 1px solid rgb(194 161 99 / 40%);
+  rotate: 45deg;
+}
+
+.living-atlas__layers input:checked + span {
+  background: #b89350;
+  box-shadow: 0 0 0 2px rgb(7 7 6), 0 0 0 3px rgb(184 147 80 / 32%);
+}
+
+.living-atlas__layers input:focus-visible + span {
+  outline: 2px solid #e3c481;
+  outline-offset: 3px;
+}
+
+.living-atlas__layers small {
+  color: rgb(236 227 208 / 18%);
+  font-size: 0.44rem;
+  letter-spacing: 0.12em;
+}
+
+.living-atlas__instruction {
+  position: absolute;
+  z-index: 10;
+  right: 50%;
+  bottom: 1.2rem;
+  max-width: 26rem;
+  margin: 0;
+  color: rgb(236 227 208 / 34%);
+  font-family: var(--font-body), serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  translate: 50% 0;
+  pointer-events: none;
+}
+
+@media (max-width: 62rem) {
+  .living-atlas__header {
+    max-width: calc(100% - 10rem);
+  }
+
+  .living-atlas__world {
+    right: -24rem;
+    left: -10rem;
+  }
+
+  .living-atlas__kingdom-note {
+    width: 12rem;
+  }
+
+  .living-atlas__layers label:not([data-available]) {
+    display: none;
+  }
+}
+
+@media (max-width: 42rem) {
+  .living-atlas,
+  .living-atlas__viewport {
+    min-height: calc(100svh - 3.5rem);
+  }
+
+  .living-atlas__header {
+    top: 1rem;
+    left: 1rem;
+    max-width: calc(100% - 8.5rem);
+  }
+
+  .living-atlas__header h1 {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .living-atlas__header span {
+    display: none;
+  }
+
+  .living-atlas__controls {
+    top: 1rem;
+    right: 0.75rem;
+  }
+
+  .living-atlas__controls button {
+    min-width: 2.35rem;
+    min-height: 2.35rem;
+  }
+
+  .living-atlas__world {
+    top: 6rem;
+    right: -32rem;
+    bottom: 4rem;
+    left: -13rem;
+  }
+
+  .living-atlas__territory-name {
+    font-size: 13px;
+  }
+
+  .living-atlas__kingdom-note {
+    width: 10rem;
+    padding: 0.75rem;
+  }
+
+  .living-atlas__kingdom-note > span {
+    display: none;
+  }
+
+  .living-atlas__layers {
+    bottom: 2.4rem;
+    left: 1rem;
+  }
+
+  .living-atlas__layers legend {
+    display: none;
+  }
+
+  .living-atlas__compass {
+    right: 1.4rem;
+    bottom: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .living-atlas__coordinates span:nth-child(2) {
+    display: none;
+  }
+
+  .living-atlas__instruction {
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 12rem;
+    text-align: right;
+    translate: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2267,6 +2880,18 @@ svg {
     transition: none !important;
     transform: none !important;
     translate: none !important;
+  }
+
+  .living-atlas__world,
+  .living-atlas__territory-art,
+  .living-atlas__territory-wash,
+  .living-atlas__territory-fog,
+  .living-atlas__territory-number,
+  .living-atlas__territory-name,
+  .living-atlas__global-fog,
+  .living-atlas__kingdom-note,
+  .living-atlas__kingdom-note a span {
+    transition: none !important;
   }
 
 }
