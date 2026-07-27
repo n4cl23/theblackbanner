@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Miniatura indisponível', robots: { index: false } };
   }
   return {
-    title: `${data.miniature.title} — Miniatura`,
+    title: data.miniature.title,
     description: data.miniature.description ?? 'Miniatura de Asterheim.',
     alternates: { canonical: `/${locale}/miniaturas/${slug}` },
     openGraph: data.miniature.cover

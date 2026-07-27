@@ -23,7 +23,7 @@ export async function generateMetadata({
   const r = await getAtlasRegionBySlug(slug);
   return r
     ? {
-        title: `${r.title} — Atlas`,
+        title: r.title,
         description: r.description,
         alternates: { canonical: `/pt-br/atlas/regioes/${slug}` },
         openGraph: {

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getKingdomPageData(slug);
   if (!data) return { title: 'Reino não encontrado', robots: { index: false } };
   return {
-    title: data.kingdom.seo.title,
+    title: data.kingdom.title,
     description: data.kingdom.seo.description,
     alternates: { canonical: `/world/kingdoms/${slug}` },
     openGraph: {

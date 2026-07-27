@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'The Black Banner V2',
+  name: 'The Black Banner',
   alternateName: 'Chronicles of Asterheim',
   description:
     'Explore Asterheim through its kingdoms, characters, creatures, collections, and connected chronicles.',

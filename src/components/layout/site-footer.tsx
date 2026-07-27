@@ -1,82 +1,179 @@
 import Link from 'next/link';
 
 import { Container, OrnamentalDivider } from '@/components/ui/primitives';
-import { publicNavigation } from '@/config/navigation';
+import type { Locale } from '@/config/i18n';
+import { LanguageSwitcher } from '@/features/i18n/components/language-switcher';
+import { localizedPath } from '@/features/i18n/data/route-registry';
 
-export function SiteFooter() {
+export function SiteFooter({ locale = 'pt-br' }: { locale?: Locale }) {
+  const home = localizedPath(locale);
+  const t = {
+    'pt-br': {
+      quote: 'As crônicas nunca terminam. Apenas o estandarte permanece.',
+      body: 'Um códice vivo de reinos, juramentos, criaturas e miniaturas nascidas sob a mesma bandeira.',
+      explore: 'Explorar',
+      resources: 'Recursos',
+      navigation: 'Navegação do rodapé',
+      home: 'Início',
+      characters: 'Personagens',
+      bestiary: 'Bestiário',
+      collections: 'Coleções',
+      chronicles: 'Crônicas',
+      gallery: 'Galeria',
+      printingGuide: 'Guia de impressão',
+      project: 'Projeto',
+      newsletter: 'Mensagens além da muralha',
+      newsletterBody:
+        'Receba novas crônicas, diários de desenvolvimento e futuras coleções.',
+      soon: 'Em breve',
+      language: 'Idioma',
+      epilogue: 'O estandarte permanece.',
+      credit: 'Projeto autoral',
+    },
+    en: {
+      quote: 'The chronicles are never finished. Only the banner remains.',
+      body: 'A living codex of kingdoms, oaths, creatures, and miniatures born beneath the same banner.',
+      explore: 'Explore',
+      resources: 'Resources',
+      navigation: 'Footer navigation',
+      home: 'Home',
+      characters: 'Characters',
+      bestiary: 'Bestiary',
+      collections: 'Collections',
+      chronicles: 'Chronicles',
+      gallery: 'Gallery',
+      printingGuide: 'Printing Guide',
+      project: 'Project',
+      newsletter: 'Messages beyond the wall',
+      newsletterBody:
+        'Receive new chronicles, development journals, and future collections.',
+      soon: 'Coming soon',
+      language: 'Language',
+      epilogue: 'The banner remains.',
+      credit: 'Original project',
+    },
+    es: {
+      quote: 'Las crónicas nunca terminan. Solo permanece el estandarte.',
+      body: 'Un códice vivo de reinos, juramentos, criaturas y miniaturas nacidas bajo el mismo estandarte.',
+      explore: 'Explorar',
+      resources: 'Recursos',
+      navigation: 'Navegación del pie',
+      home: 'Inicio',
+      characters: 'Personajes',
+      bestiary: 'Bestiario',
+      collections: 'Colecciones',
+      chronicles: 'Crónicas',
+      gallery: 'Galería',
+      printingGuide: 'Guía de impresión',
+      project: 'Proyecto',
+      newsletter: 'Mensajes más allá de la muralla',
+      newsletterBody:
+        'Recibe nuevas crónicas, diarios de desarrollo y futuras colecciones.',
+      soon: 'Próximamente',
+      language: 'Idioma',
+      epilogue: 'El estandarte permanece.',
+      credit: 'Proyecto original',
+    },
+  }[locale];
+
+  const exploreLinks = [
+    { href: home, label: t.home },
+    { href: localizedPath(locale, 'atlas'), label: 'Asterheim' },
+    { href: localizedPath(locale, 'personagens'), label: t.characters },
+    { href: localizedPath(locale, 'bestiario'), label: t.bestiary },
+    { href: localizedPath(locale, 'colecoes'), label: t.collections },
+    { href: localizedPath(locale, 'chronicles'), label: t.chronicles },
+  ];
+  const resourceLinks = [
+    { href: `${home}#gallery`, label: t.gallery },
+    { href: '/design-system', label: 'Art Bible' },
+    { href: '/guia-de-impressao', label: t.printingGuide },
+    { href: `${home}#editorial`, label: t.project },
+  ];
+
   return (
-    <footer className="relative overflow-hidden border-t border-stone-600/25 bg-black py-16">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(circle_at_18%_15%,rgba(168,138,69,.12),transparent_25rem),linear-gradient(115deg,transparent,rgba(255,255,255,.018),transparent)]"
-      />
-      <Container>
-        <div className="relative grid gap-12 xl:grid-cols-[1.1fr_2fr_1fr]">
-          <div>
-            <p className="font-display text-2xl tracking-wider uppercase">
+    <footer className="premium-footer">
+      <Container className="relative max-w-[97.5rem]">
+        <div className="premium-footer__grid">
+          <section
+            aria-labelledby="footer-brand"
+            className="premium-footer__brand"
+          >
+            <h2
+              className="font-display text-ivory-100 text-2xl tracking-[0.14em] uppercase sm:text-3xl"
+              id="footer-brand"
+            >
               The Black Banner
-            </p>
-            <p className="text-aged-gold-500 mt-2 text-xs tracking-[0.2em] uppercase">
+            </h2>
+            <p className="text-aged-gold-500 mt-2 text-[0.6rem] tracking-[0.28em] uppercase">
               Chronicles of Asterheim
             </p>
-            <p className="text-parchment-200/40 mt-5 max-w-md text-xs">
-              Um códice vivo de reinos, juramentos, criaturas e miniaturas
-              nascidas sob a mesma bandeira.
+            <blockquote className="font-subtitle text-parchment-200/76 mt-6 max-w-sm text-base leading-7 italic">
+              “{t.quote}”
+            </blockquote>
+            <p className="text-parchment-200/45 mt-4 max-w-md text-xs leading-6">
+              {t.body}
             </p>
-          </div>
-          <nav aria-label="Navegação do rodapé">
-            <ul className="grid gap-x-8 gap-y-4 text-sm sm:grid-cols-2 lg:grid-cols-3">
-              {publicNavigation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    className="text-parchment-200/70 hover:text-aged-gold-500 font-semibold uppercase"
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                  {'children' in item ? (
-                    <ul className="text-parchment-200/45 mt-2 space-y-1.5">
-                      {item.children.map((child) => (
-                        <li key={`${child.href}-${child.label}`}>
-                          <Link href={child.href}>{child.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
+          </section>
+
+          <nav aria-label={t.navigation} className="premium-footer__navigation">
+            <FooterLinkGroup links={exploreLinks} title={t.explore} />
+            <FooterLinkGroup links={resourceLinks} title={t.resources} />
           </nav>
-          <section aria-labelledby="footer-newsletter">
-            <p
-              className="text-aged-gold-500 text-xs font-bold tracking-wider uppercase"
-              id="footer-newsletter"
-            >
-              Mensagens além da muralha
+
+          <section
+            aria-labelledby="footer-newsletter"
+            className="premium-footer__newsletter"
+          >
+            <p className="premium-footer__heading" id="footer-newsletter">
+              {t.newsletter}
             </p>
-            <p className="text-parchment-200/55 mt-4 text-sm">
-              Newsletter em preparação. Nenhum dado é enviado nesta versão.
+            <p className="text-parchment-200/58 mt-4 max-w-xs text-sm leading-6">
+              {t.newsletterBody}
             </p>
-            <div className="mt-5 flex border-b border-stone-600/40">
-              <span className="text-parchment-200/45 flex min-h-11 flex-1 items-center text-xs">
-                contato@theblackbanner
-              </span>
-              <span className="text-aged-gold-500 grid min-h-11 place-items-center px-3 text-xs uppercase">
-                Em breve
-              </span>
-            </div>
-            <div className="mt-6 flex gap-4 text-xs uppercase">
-              <Link href="/pt-br">PT</Link>
-              <Link href="/en">EN</Link>
-              <Link href="/es">ES</Link>
+            <p className="premium-footer__coming-soon">{t.soon}</p>
+            <div className="premium-footer__language">
+              <p>{t.language}</p>
+              <LanguageSwitcher
+                className="footer-language-switcher"
+                compact
+                locale={locale}
+              />
             </div>
           </section>
         </div>
-        <OrnamentalDivider className="my-10" />
-        <p className="text-parchment-200/30 text-center text-[0.65rem] tracking-wider uppercase">
-          © 2026 The Black Banner · Chronicles of Asterheim · Projeto autoral
-        </p>
+
+        <div className="premium-footer__epilogue">
+          <OrnamentalDivider className="premium-footer__divider" />
+          <p className="font-subtitle text-parchment-200/52 text-sm italic">
+            {t.epilogue}
+          </p>
+          <p className="text-parchment-200/30 mt-4 text-[0.6rem] tracking-[0.18em] uppercase">
+            © 2026 The Black Banner · Chronicles of Asterheim · {t.credit} · V2
+          </p>
+        </div>
       </Container>
     </footer>
+  );
+}
+
+function FooterLinkGroup({
+  links,
+  title,
+}: {
+  links: readonly { href: string; label: string }[];
+  title: string;
+}) {
+  return (
+    <section>
+      <h2 className="premium-footer__heading">{title}</h2>
+      <ul className="premium-footer__links">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

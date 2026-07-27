@@ -1,57 +1,68 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
-import HomePage from '@/app/page';
+import { LocalizedHomePage } from '@/app/page';
 
 describe('cinematic Home', () => {
   it('renders every requested section', async () => {
-    render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
 
     const headings = [
-      'The Black Banner',
-      'O ambiente guarda a primeira memória',
-      'Reinos separados pela mesma guerra',
-      'Personagens em destaque',
-      'Há coisas antigas sob as ruínas',
-      'Coleções moldadas pela narrativa',
-      'Ecos através das eras',
-      'Galeria de atmosferas',
-      'Toda guerra deixa um registro. Nem todo registro diz a verdade.',
-      'Receba sinais além da muralha',
+      'Seis domínios. Um destino.',
+      'Exércitos, tavernas e lendas',
+      'Latest Miniatures',
+      'King Aldric',
+      'Construindo Asterheim',
     ];
 
-    for (const heading of headings) {
-      expect(
-        screen.getByRole('heading', { name: heading }),
-      ).toBeInTheDocument();
-    }
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    expect(container.querySelector('h1')).toHaveTextContent(
+      /The Black\s*Banner/,
+    );
+    const renderedHeadings = [...container.querySelectorAll('h1, h2')].map(
+      (heading) => heading.textContent?.replace(/\s+/g, ' ').trim(),
+    );
+    expect(renderedHeadings).toEqual(expect.arrayContaining(headings));
+    expect(container.querySelector('footer')).toBeInTheDocument();
   });
 
-  it('provides functional primary and secondary calls to action', async () => {
-    render(await HomePage());
+  it('provides one focused primary call to action', async () => {
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
     expect(
-      screen.getByRole('link', { name: 'Entrar em Asterheim' }),
-    ).toHaveAttribute('href', '#asterheim');
+      container.querySelector(
+        'section[aria-labelledby="home-hero-title"] a[href="#asterheim"]',
+      ),
+    ).toHaveTextContent('Explore Asterheim');
     expect(
-      screen.getByRole('link', { name: 'Explorar coleções' }),
-    ).toHaveAttribute('href', '#collections');
+      container.querySelector(
+        'section[aria-labelledby="home-hero-title"] a[href="/pt-br/miniaturas"]',
+      ),
+    ).not.toBeInTheDocument();
   });
 
   it('shows an accessible fallback when critical media fails', async () => {
-    render(await HomePage());
-    const hero = screen.getByRole('img', {
-      name: 'Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas',
-    });
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
+    const hero = container.querySelector(
+      'img[alt="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"]',
+    );
+    expect(hero).not.toBeNull();
+    if (!hero) throw new Error('Hero image not rendered');
     fireEvent.error(hero);
     expect(
-      screen.getByRole('img', {
-        name: 'Uma fortaleza monumental de Asterheim além de um vale coberto por cinzas',
-      }),
+      container.querySelector(
+        '[role="img"][aria-label="Aster, o coração do mundo de Asterheim, diante de uma paisagem monumental"]',
+      ),
     ).toHaveTextContent('A paisagem de Asterheim não pôde ser carregada');
   });
 
   it('embeds the complete Home structured-data graph', async () => {
-    const { container } = render(await HomePage());
+    const { container } = render(
+      await LocalizedHomePage({ locale: 'pt-br' }),
+    );
     const schemas = container.querySelectorAll(
       'script[type="application/ld+json"]',
     );

@@ -1,5 +1,5 @@
 import { NarrativeLoading } from "@/components/shared/narrative-loading";
 
 export default function Loading() {
-  return <NarrativeLoading area="collections" />;
+  return <NarrativeLoading area="home" />;
 }
