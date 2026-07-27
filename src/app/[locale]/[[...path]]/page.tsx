@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = routeTitles[routeKey][locale];
   const href = localizedHref(locale, routeKey);
   return {
-    title,
+    title: routeKey === 'home' ? { absolute: 'The Black Banner' } : title,
     description: getDictionary(locale).heroBody,
     alternates: { canonical: href, ...localizedAlternates(routeKey) },
     openGraph: {
