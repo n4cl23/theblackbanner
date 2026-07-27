@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getContentRepository } from '@/features/content/repository/repository';
 import { FieldGallery } from '@/features/bestiary/components/field-gallery';
 import { ModelInspectorContract } from '@/features/bestiary/components/model-inspector-contract';
+import { CreatureHero } from '@/features/bestiary/components/creature-hero';
 import { getCreaturePageData } from '@/features/bestiary/data/bestiary-repository';
+import { resolveCreatureHero } from '@/features/bestiary/data/creature-hero-presentation';
 import { getMiniaturesByEntity } from '@/features/collections/data/miniature-repository';
 import { isRemovedDemoSlug } from '@/content/removed-demo-content';
 type Props = { params: Promise<{ slug: string }> };
@@ -49,40 +50,22 @@ export default async function CreaturePage({ params }: Props) {
     profiles,
     related,
   } = data;
-  const hero =
-    presentation.evidence[0]?.image ?? '/images/home/bestiary-ruins.webp';
+  const hero = resolveCreatureHero({
+    slug: creature.slug,
+    title: creature.title,
+    fallbackImage:
+      presentation.evidence[0]?.image ?? '/images/home/bestiary-ruins.webp',
+  });
   return (
     <main>
-      <section className="relative min-h-[86vh] overflow-hidden">
-        <Image
-          alt={`Habitat provisório de ${creature.title}`}
-          className="object-cover opacity-65"
-          fill
-          priority
-          sizes="100vw"
-          src={hero}
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#030303_8%,transparent_65%,#030303),linear-gradient(to_top,#030303,transparent_60%)]" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-[90rem] flex-col justify-end px-5 py-14 sm:px-8">
-          <nav
-            aria-label="Breadcrumb"
-            className="text-parchment-200/55 text-xs uppercase"
-          >
-            <Link href="/bestiario">Bestiário</Link> / {creature.title}
-          </nav>
-          <div className="max-w-5xl pt-32">
-            <p className="text-aged-gold-500 text-xs tracking-[.32em] uppercase">
-              {presentation.category} · {presentation.documentationStatus}
-            </p>
-            <h1 className="font-display mt-5 text-[clamp(4rem,11vw,9rem)] leading-[.82] uppercase">
-              {creature.title}
-            </h1>
-            <p className="text-parchment-200/65 mt-7 text-xl">
-              {creature.classification} · ameaça {creature.threatLevel}
-            </p>
-          </div>
-        </div>
-      </section>
+      <CreatureHero
+        category={presentation.category}
+        classification={creature.classification}
+        documentationStatus={presentation.documentationStatus}
+        hero={hero}
+        threatLevel={creature.threatLevel}
+        title={creature.title}
+      />
       <CodexSection label="Classificação" title="Taxonomia">
         <div className="grid gap-6 md:grid-cols-2">
           <dl className="grid grid-cols-2 gap-4">
