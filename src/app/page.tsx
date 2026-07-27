@@ -83,7 +83,7 @@ function SectionIntro({
   action?: { href: string; label: string };
 }) {
   return (
-    <div className="mb-12 flex items-end justify-between gap-8 sm:mb-16">
+    <div className="section-intro mb-12 flex items-end justify-between gap-8 sm:mb-16">
       <div>
         <Eyebrow>{eyebrow}</Eyebrow>
         <h2 className="font-display mt-4 max-w-5xl text-[clamp(2.8rem,7vw,6.5rem)] leading-[.86] uppercase">
@@ -417,7 +417,7 @@ function MiniaturesSection({
 }) {
   return (
     <section
-      className="bg-coal-950 py-24 sm:py-36"
+      className="latest-miniatures-domain relative isolate overflow-hidden bg-coal-950 py-24 sm:py-36"
       id="chapter-miniatures"
     >
       <Container>
@@ -432,7 +432,7 @@ function MiniaturesSection({
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {miniatures.slice(0, 5).map((miniature, index) => (
             <Link
-              className={`group relative overflow-hidden bg-black ${
+              className={`home-miniature-card group relative overflow-hidden bg-black ${
                 index % 11 === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
               }`}
               href={localizedPath(locale, `miniaturas/${miniature.slug}`)}
@@ -484,7 +484,7 @@ function EditorialFeature({
 
   return (
     <section
-      className="relative isolate min-h-[70svh] overflow-hidden border-y border-stone-600/20"
+      className="editorial-feature-domain relative isolate min-h-[70svh] overflow-hidden border-y border-stone-600/20"
       id="gallery"
     >
       <Image
@@ -496,7 +496,7 @@ function EditorialFeature({
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-black/10" />
       <Container className="flex min-h-[70svh] items-center py-20">
-        <div className="max-w-2xl">
+        <div className="editorial-feature__content max-w-2xl">
           <Eyebrow>{messages.featuredGuardian}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6.5rem)] leading-[.88] uppercase">
             {guardian.title}
@@ -527,7 +527,7 @@ function ProjectClosing({
 }) {
   return (
     <section
-      className="relative isolate min-h-[62svh] overflow-hidden border-y border-stone-600/20"
+      className="project-closing-domain relative isolate min-h-[62svh] overflow-hidden border-y border-stone-600/20"
       id="editorial"
     >
       <Image
@@ -539,7 +539,7 @@ function ProjectClosing({
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent" />
       <Container className="flex min-h-[62svh] items-center py-20">
-        <div className="max-w-2xl">
+        <div className="project-closing__content max-w-2xl">
           <Eyebrow>{messages.projectEyebrow}</Eyebrow>
           <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,6rem)] leading-[.88] uppercase">
             {messages.projectTitle}

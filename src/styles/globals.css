@@ -586,9 +586,22 @@ svg {
 
 .kingdom-domain {
   position: relative;
+  isolation: isolate;
   background:
     radial-gradient(circle at 50% 10%, rgb(91 74 47 / 8%), transparent 38%),
     linear-gradient(to bottom, #020202 0%, #050403 82%, #090704 100%);
+}
+
+.kingdom-domain::before {
+  position: absolute;
+  inset: -7rem 0 auto;
+  z-index: -1;
+  height: 14rem;
+  background:
+    radial-gradient(ellipse at 50% 62%, rgb(154 163 165 / 8%), transparent 58%),
+    linear-gradient(to bottom, transparent, #020202 78%);
+  content: '';
+  pointer-events: none;
 }
 
 .kingdom-domain__header > * {
@@ -726,6 +739,16 @@ svg {
   z-index: -1;
   height: clamp(6rem, 12vw, 12rem);
   background: linear-gradient(to bottom, rgb(28 19 9 / 36%), transparent);
+  content: '';
+  pointer-events: none;
+}
+
+.featured-collections-domain::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  height: clamp(6rem, 10vw, 10rem);
+  background: linear-gradient(to bottom, transparent, rgb(7 8 8 / 92%));
   content: '';
   pointer-events: none;
 }
@@ -1075,6 +1098,80 @@ svg {
   }
 }
 
+.latest-miniatures-domain {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(112 84 47 / 9%), transparent 34%),
+    linear-gradient(180deg, #080807 0%, #070808 48%, #030404 100%);
+}
+
+.latest-miniatures-domain::before,
+.latest-miniatures-domain::after {
+  position: absolute;
+  inset-inline: 0;
+  z-index: -1;
+  height: clamp(5rem, 10vw, 10rem);
+  content: '';
+  pointer-events: none;
+}
+
+.latest-miniatures-domain::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(24 18 11 / 44%), transparent);
+}
+
+.latest-miniatures-domain::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgb(0 0 0 / 72%));
+}
+
+.latest-miniatures-domain .section-intro > *,
+.editorial-feature__content > *,
+.project-closing__content > * {
+  animation: editorial-rise linear both;
+  animation-range: entry 12% cover 36%;
+  animation-timeline: view();
+}
+
+.home-miniature-card {
+  animation: editorial-card-rise linear both;
+  animation-range: entry 8% cover 34%;
+  animation-timeline: view();
+}
+
+.home-miniature-card:nth-child(2),
+.home-miniature-card:nth-child(5) {
+  animation-range: entry 11% cover 37%;
+}
+
+.home-miniature-card:nth-child(3) {
+  animation-range: entry 14% cover 40%;
+}
+
+.editorial-feature-domain::before,
+.project-closing-domain::before {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  content: '';
+  pointer-events: none;
+}
+
+.editorial-feature-domain::before {
+  background:
+    linear-gradient(to bottom, rgb(0 0 0 / 72%), transparent 22%, transparent 74%, rgb(7 6 5 / 76%)),
+    radial-gradient(ellipse at 20% 50%, rgb(111 78 46 / 10%), transparent 42%);
+}
+
+.project-closing-domain::before {
+  background: linear-gradient(
+    to bottom,
+    rgb(7 6 5 / 62%),
+    transparent 24%,
+    transparent 68%,
+    rgb(0 0 0 / 88%)
+  );
+}
+
 @keyframes editorial-rise {
   from {
     opacity: 0;
@@ -1122,7 +1219,11 @@ svg {
   .kingdom-domain__header > *,
   .kingdom-poster,
   .featured-collections-domain__header > *,
-  .featured-collection {
+  .featured-collection,
+  .latest-miniatures-domain .section-intro > *,
+  .home-miniature-card,
+  .editorial-feature__content > *,
+  .project-closing__content > * {
     animation: none !important;
     opacity: 1;
     transform: none;
